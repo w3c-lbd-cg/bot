@@ -70,7 +70,7 @@ bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
                         "Grund"@da ;
         rdfs:comment    "Area containing one or more buildings."@en ,
-                        "Område, som indeholder en eller flere bygninger."@da .
+                        "Område som indeholder en eller flere bygninger."@da .
 bot:Building a owl:Class ;
         rdfs:label      "Building"@en ,
 			"Gebäude"@de ,
@@ -90,7 +90,7 @@ bot:Storey a owl:Class ;
 bot:Element a owl:Class ;
         rdfs:label      "Building element"@en ,
 			"Bauteil (Bauwesen)"@de ,
-                        "Elemento architettonico"@it ;
+                        "Elemento architettonico"@it ,
                         "Bygningsdel"@da ;
         rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
 						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird"@de ,
@@ -107,12 +107,17 @@ bot:Space a owl:Class ;
 #################################
 # OBJECT PROPERTIES
 #################################
+bot:hasBuilding a owl:ObjectProperty ;
+        rdfs:label      "has building"@en ,
+                        "har bygning"@da ;
+        rdfs:comment    "Relation to buildings contained on a site"@en ,
+                        "Relation til bygninger indeholdt på en grund"@da .
 bot:hasStorey a owl:ObjectProperty ;
         rdfs:label      "has storey"@en ,
-						"hat geschoss"@de ,
+			"hat geschoss"@de ,
                         "har etage"@da ;
         rdfs:comment    "Relation to storeys contained in the building."@en ,
-						"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
+			"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
                         "Relation til etager indeholdt i bygningen."@da ;
         rdfs:domain     bot:Building ;
         rdfs:range      bot:Storey .
