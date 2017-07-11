@@ -1,0 +1,159 @@
+# Copyright 2017 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the BOT Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# BOT uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:<http://purl.org/dc/terms/> .
+@prefix vann:   <http://purl.org/vocab/vann/> .
+@prefix voaf:   <http://purl.org/vocommons/voaf#> .
+@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix dce:    <http://purl.org/dc/elements/1.1/> .
+@prefix dbo:    <http://dbpedia.org/ontology/> .
+
+@prefix bot: <https://w3id.org/bot#> .
+@base <https://w3id.org/bot#> .
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################
+# METADATA
+#################################
+<https://w3id.org/bot#> rdf:type voaf:Vocabulary , 
+                                 owl:Ontology ;
+    dce:modified "November 23rd 2016"^^xsd:string ;
+    owl:versionInfo "November 23rd 2016"^^xsd:string ;
+    owl:versionIRI <https://w3id.org/bot/bot-1.0> ;
+    owl:versionInfo "v1.0" ;
+    #owl:priorVersion <https://w3id.org/bot/bot-0.9> ;
+    dcterms:title "BOT: Building Topology Ontology"@en ;
+    dcterms:description """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
+It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
+
+The ontology is documented in:
+
+Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"""@en ;
+    dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
+    dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+    dcterms:issued "2016-05-25"^^xsd:date ;
+    dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
+    vann:preferredNamespacePrefix "bot" ;
+    vann:preferredNamespaceUri <https://w3id.org/bot#> ;
+    dce:Language "en" ;
+    dce:title "BOT" ;
+    dce:description "A simple ontology describing the topology of a building" .
+    
+#################################
+# CLASSES
+#################################
+bot:Building a owl:Class ;
+        rdfs:label      "Building"@en ,
+			            "Gebäude"@de ,
+                        "Bygning"@da ;
+        rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
+						"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
+                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
+bot:Storey a owl:Class ;
+        rdfs:label      "Storey"@en ,
+			            "Geschoss (Architektur)"@de ,
+                        "Etage"@da ;
+        rdfs:comment    "A level part of a building"@en ,
+						"Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
+                        "Et plan i en bygning"@da .
+bot:Element a owl:Class ;
+        rdfs:label      "Building element"@en ,
+			            "Bauteil (Bauwesen)"@de ,
+                        "Bygningsdel"@da ;
+        rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
+						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird"@de ,
+                        "Bestanddel af et bygværk med en karakteristisk funktion, form eller position"@da .
+bot:Space a owl:Class ;
+        rdfs:label      "Space"@en ,
+						"Raum"@de ,
+                        "Rum"@da ;
+        rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
+						"Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
+                        "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da .
+
+#################################
+# OBJECT PROPERTIES
+#################################
+bot:hasStorey a owl:ObjectProperty ;
+        rdfs:label      "has storey"@en ,
+						"hat geschoss"@de ,
+                        "har etage"@da ;
+        rdfs:comment    "Relation to storeys contained in the building."@en ,
+						"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
+                        "Relation til etager indeholdt i bygningen."@da ;
+        rdfs:domain     bot:Building ;
+        rdfs:range      bot:Storey .
+bot:hasSpace a owl:ObjectProperty ;
+        rdfs:label      "has space"@en ,
+                        "hat raum"@de ,
+                        "har rum"@da ;
+        rdfs:comment    "Relation to spaces whose plan is located at the storey."@en ,
+						"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
+                        "Relation til rum, hvis plan er placeret på etagen."@da ;
+        rdfs:domain     bot:Storey ;
+        rdfs:range      bot:Space .
+bot:adjacentElement a owl:ObjectProperty ;
+        rdfs:label      "adjacent element"@en ,
+			            "benachbartes bauteil"@de ,
+                        "tilstødende element"@da ;
+        rdfs:comment    "Relation of a space to its bounding building elements"@en ,
+			            "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de ,
+                        "Relation til bygningsdele, som afgrænser et fysisk rum"@da ;
+        rdfs:domain     bot:Space ;
+        rdfs:range      bot:Element .
+bot:containsElement a owl:ObjectProperty ;
+        rdfs:label      "contains element"@en ,
+                        "enthält"@de ,
+                        "indeholder bygningsdel"@da ;
+        rdfs:comment    "Relation of a space to a building element"@en ,
+                        "Beziehung eines Raums zu einem Bauteil"@de ,
+                        "Relation til en bygningsdel, som er indeholdt i et rum"@da ;
+        rdfs:domain     bot:Space ;
+        rdfs:range      bot:Element .
+bot:hasElement a owl:ObjectProperty ;
+        rdfs:label      "has element"@en ,
+                        "hat bauteil"@de ,
+                        "har bygningsdel"@da ;
+        rdfs:comment    "Relation to elements belonging to a building or a storey."@en ,
+                        "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ,
+                        "Relation til elementer, hørende til en en bygning eller en etage."@da ;
+        rdfs:domain     owl:Thing ;
+        rdfs:range      bot:Element ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ,
+                                ( bot:hasStorey bot:hasElement ) ,
+                                ( bot:hasSpace bot:containsElement ) .
+
+#################################
+# CONSTRAINTS
+#################################
+# Disjunctive classes
+[] a owl:AllDisjointClasses ;
+        owl:members
+              ( bot:Element
+                bot:Space
+                bot:Storey
+                bot:Building ) .
