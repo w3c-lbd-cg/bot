@@ -19,18 +19,23 @@ Example of using BOT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle
 ```turtle
 @prefix bot:  <https://w3id.org/bot#> .
 @prefix inst: <https://example.org/projectXX/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 inst:buildingA a bot:Building ;
                bot:hasStorey inst:storey00 ,
                              inst:storey01 .
+							 
 inst:storey00 a bot:Storey ;
               bot:hasSpace inst:space00aa ,
                            inst:space00cg .
+						   
 inst:storey01 a bot:Storey .
+
 inst:space00aa a bot:Space ;
                bot:containsElement inst:heater235 .
                bot:adjacentElement inst:wall443 ,
                                    inst:floor23 .
+								   
 inst:space00cg a bot:Space .
 inst:heater235 a bot:Element .
 inst:wall443 a bot:Element .
@@ -44,6 +49,9 @@ The following will automatically infer that an instance is a bot:Element given t
 ```turtle
 @prefix bot:  <https://w3id.org/bot#> .
 @prefix h:  <https://example.org/heatingSystem#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 
 h:SpaceHeater a owl:Class ;
               rdfs:subClassOf bot:Element .
@@ -53,6 +61,9 @@ The following will automatically infer bot:containsElement between a space and a
 ```turtle
 @prefix bot:  <https://w3id.org/bot#> .
 @prefix h:  <https://example.org/heatingSystem#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
 
 h:SpaceHeater a owl:Class .
 h:heatedBy a owl:ObjectProperty ;
