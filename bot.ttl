@@ -40,11 +40,12 @@ foaf:name a owl:DatatypeProperty .
 #################################
 <https://w3id.org/bot#> rdf:type voaf:Vocabulary , 
                                  owl:Ontology ;
-    dce:modified "November 23rd 2016"^^xsd:string ;
-    owl:versionInfo "November 23rd 2016"^^xsd:string ;
-    #owl:versionIRI <https://w3id.org/bot/bot-0.1.0> ;
-    owl:versionInfo "v0.1.0" ;
-    #owl:priorVersion <https://w3id.org/bot/bot-0.9> ;
+    dce:modified "July 11th 2017"^^xsd:string ;
+    owl:versionInfo "July 11th 2017"^^xsd:string ;
+    dcterms:issued "2017-07-11"^^xsd:date ;
+    #owl:versionIRI <https://w3id.org/bot/bot-0.1.1> ;
+    owl:versionInfo "v0.1.1" ;
+    #owl:priorVersion <https://w3id.org/bot/bot-0.1.0> ;
     dcterms:title "BOT: Building Topology Ontology"@en ;
     dcterms:description """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
@@ -55,7 +56,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
     dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
     dcterms:contributor [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
-    dcterms:issued "2016-05-25"^^xsd:date ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix "bot" ;
     vann:preferredNamespaceUri <https://w3id.org/bot#> ;
