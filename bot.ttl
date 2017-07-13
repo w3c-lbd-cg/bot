@@ -6,17 +6,18 @@
 # BOT uses W3C's RDF technology, an open Web standard that can be freely 
 # used by anyone.
 
-@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl:    <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms:<http://purl.org/dc/terms/> .
-@prefix vann:   <http://purl.org/vocab/vann/> .
-@prefix voaf:   <http://purl.org/vocommons/voaf#> .
-@prefix vs:     <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
-@prefix dce:    <http://purl.org/dc/elements/1.1/> .
-@prefix dbo:    <http://dbpedia.org/ontology/> .
+@prefix rdf:    	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    	<http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+@prefix vann:   	<http://purl.org/vocab/vann/> .
+@prefix voaf:   	<http://purl.org/vocommons/voaf#> .
+@prefix vs:     	<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:   	<http://xmlns.com/foaf/0.1/> .
+@prefix dce:    	<http://purl.org/dc/elements/1.1/> .
+@prefix dbo:    	<http://dbpedia.org/ontology/> .
+@prefix saref4bldg:	<https://w3id.org/def/saref4bldg#> .
 
 @prefix bot: <https://w3id.org/bot#> .
 @base <https://w3id.org/bot#> .
@@ -75,13 +76,14 @@ bot:Site a owl:Class ;
 						
 bot:Building a owl:Class ;
         rdfs:label      "Building"@en ,
-			"Gebäude"@de ,
+						"Gebäude"@de ,
                         "Edificio"@it ,
                         "Bygning"@da ,
 						"Gebouw"@nl ;
         rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
-			"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
-                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
+						"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
+                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ;
+		owl:equivalentClass saref4bldg:Building .
 						
 bot:Storey a owl:Class ;
         rdfs:label      "Storey"@en ,
@@ -103,8 +105,9 @@ bot:Element a owl:Class ;
         rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
 						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
                         "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
-						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl.
-						
+						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl ;
+		rdfs:subClassOf	saref4bldg:PhysicalObject .
+
 bot:Space a owl:Class ;
         rdfs:label      "Space"@en ,
 						"Raum"@de ,
@@ -114,7 +117,8 @@ bot:Space a owl:Class ;
         rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
 						"Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
                         "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da ,
-						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl .
+						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl ;
+		owl:equivalentClass saref4bldg:BuildingSpace .
 
 #################################
 # OBJECT PROPERTIES
@@ -127,6 +131,7 @@ bot:hasBuilding a owl:ObjectProperty ;
         rdfs:comment    "Relation to buildings contained on a site"@en ,
 						"Relatie tot gebouwen die zich op een site bevinden"@nl ,
                         "Relation til bygninger indeholdt på en grund"@da .
+
 						
 bot:hasStorey a owl:ObjectProperty ;
         rdfs:label      "has storey"@en ,
@@ -149,6 +154,7 @@ bot:hasSpace a owl:ObjectProperty ;
 						"Relatie tot ruimtes die zich op een verdieping bevinden"@nl ,
 						"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
                         "Relation til rum, hvis plan er placeret på etagen."@da ;
+		owl:equivalentProperty saref4bldg:hasSpace ;
         rdfs:domain     bot:Storey ;
         rdfs:range      bot:Space .
 		
@@ -173,6 +179,7 @@ bot:containsElement a owl:ObjectProperty ;
                         "Beziehung eines Raums zu einem Bauteil"@de ,
                         "Relatie tussen ruimte en een gebouwelement in die ruimte"@nl ,
                         "Relation til en bygningsdel, som er indeholdt i et rum"@da ;
+		owl:equivalentProperty saref4bldg:contains ;
         rdfs:domain     bot:Space ;
         rdfs:range      bot:Element .
 		
