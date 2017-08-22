@@ -193,6 +193,39 @@ bot:hostsElement a owl:ObjectProperty ;
                         "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da ;
         rdfs:domain     bot:Element ;
         rdfs:range      bot:Element .
+
+bot:aggregates a owl:ObjectProperty ;
+        rdfs:label      "aggregates"@en ,
+                        "aggregerer"@da ;
+        rdfs:comment    """Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.
+        
+Example of how to use bot:aggregates in a product ontology:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```"""@en ,
+                        """Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
+        
+Eksempel på brug af bot:aggregates i en produkt-ontologi:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```"""@da .
+
 		
 bot:hasElement a owl:ObjectProperty ;
         rdfs:label      "has element"@en ,
