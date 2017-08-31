@@ -17,7 +17,6 @@
 @prefix foaf:   	<http://xmlns.com/foaf/0.1/> .
 @prefix dce:    	<http://purl.org/dc/elements/1.1/> .
 @prefix dbo:    	<http://dbpedia.org/ontology/> .
-@prefix saref4bldg:	<https://w3id.org/def/saref4bldg#> .
 
 @prefix bot: <https://w3id.org/bot#> .
 @base <https://w3id.org/bot#> .
@@ -69,10 +68,12 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 #################################
 bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
-                        "Grund"@da ;
+                        "Grund"@da ,
+						"Grundstück"@de
         rdfs:comment    "Area containing one or more buildings."@en ,
                         "Område som indeholder en eller flere bygninger."@da ,
-						"Omgeving die één of meerdere gebouwen bevat."@nl .
+						"Omgeving die één of meerdere gebouwen bevat."@nl ,
+						"Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de .
 						
 bot:Building a owl:Class ;
         rdfs:label      "Building"@en ,
@@ -82,8 +83,8 @@ bot:Building a owl:Class ;
 						"Gebouw"@nl ;
         rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
 						"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
-                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ;
-		owl:equivalentClass saref4bldg:Building .
+                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
+		
 						
 bot:Storey a owl:Class ;
         rdfs:label      "Storey"@en ,
@@ -105,8 +106,8 @@ bot:Element a owl:Class ;
         rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
 						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
                         "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
-						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl ;
-		rdfs:subClassOf	saref4bldg:PhysicalObject .
+						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
+		
 
 bot:Space a owl:Class ;
         rdfs:label      "Space"@en ,
@@ -117,8 +118,8 @@ bot:Space a owl:Class ;
         rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
 						"Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
                         "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da ,
-						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl ;
-		owl:equivalentClass saref4bldg:BuildingSpace .
+						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl .
+		
 
 #################################
 # OBJECT PROPERTIES
@@ -154,8 +155,7 @@ bot:hasSpace a owl:ObjectProperty ;
 						"Relatie tot ruimtes die zich op een verdieping bevinden"@nl ,
 						"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
                         "Relation til rum, hvis plan er placeret på etagen."@da ;
-		owl:equivalentProperty saref4bldg:hasSpace ;
-        rdfs:domain     bot:Storey ;
+		rdfs:domain     bot:Storey ;
         rdfs:range      bot:Space .
 		
 bot:adjacentElement a owl:ObjectProperty ;
@@ -179,8 +179,7 @@ bot:containsElement a owl:ObjectProperty ;
                         "Beziehung eines Raums zu einem Bauteil"@de ,
                         "Relatie tussen ruimte en een gebouwelement in die ruimte"@nl ,
                         "Relation til en bygningsdel, som er indeholdt i et rum"@da ;
-		owl:equivalentProperty saref4bldg:contains ;
-        rdfs:domain     bot:Space ;
+		rdfs:domain     bot:Space ;
         rdfs:range      bot:Element .
 		
 bot:hostsElement a owl:ObjectProperty ;
