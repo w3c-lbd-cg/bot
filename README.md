@@ -18,7 +18,7 @@ As BOT is proposed as a central ontology in the domain of AEC/FM industry alignm
 
 So far an alignment for the following ontologied has been provided:
 
-*SAREF4Bldg* [link](https://w3id.org/def/saref4bldg#)
+SAREF4Bldg [link](https://w3id.org/def/saref4bldg#)
 
 Intended alignments include (non-exhaustively)
 
