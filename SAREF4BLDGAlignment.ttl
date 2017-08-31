@@ -1,0 +1,66 @@
+# Copyright 2017 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the BOT Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# BOT uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix rdf:    	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:    	<http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:   	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    	<http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms:	<http://purl.org/dc/terms/> .
+@prefix vann:   	<http://purl.org/vocab/vann/> .
+@prefix voaf:   	<http://purl.org/vocommons/voaf#> .
+@prefix vs:     	<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:   	<http://xmlns.com/foaf/0.1/> .
+@prefix dce:    	<http://purl.org/dc/elements/1.1/> .
+@prefix dbo:    	<http://dbpedia.org/ontology/> .
+@prefix saref4bldg:	<https://w3id.org/def/saref4bldg#> .
+
+@prefix bot: <https://w3id.org/bot#> .
+@base <https://w3id.org/SAREF4BLDGAlignment#> .
+
+voaf:Vocabulary a owl:Class .
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+vs:term_status a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################
+# METADATA
+#################################
+
+:SAREFG4BLDGAlignment a owl:Ontology , voaf:Vocabulary ;
+  dcterms:title "SAREF4BLDG Alignment."@en ;
+  dcterms:description """This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."""@en ;
+  dcterms:issued "2017-07-13"^^xsd:date ;
+  dce:modified "2017-08-31"^^xsd:date ;
+  dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+  dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+  dcterms:contributor [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
+  dcterms:contributor [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
+  dcterms:contributor <http://www.maxime-lefrancois.info/me#> ;
+  dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
+  owl:versionInfo "v0.1.0" ;
+  owl:imports <https://w3id.org/bot> ;
+  owl:imports <https://w3id.org/def/saref4bldg> .
+   
+#################################
+# ALIGNMENTS
+#################################
+      
+bot:Building		owl:equivalentClass		saref4bldg:Building .
+bot:Element			rdfs:subClassOf			saref4bldg:PhysicalObject .
+bot:Space			owl:equivalentClass 	saref4bldg:BuildingSpace .
+bot:hasSpace 		rdfs:subPropertyOf  	saref4bldg:hasSpace .
+bot:containsElement	owl:equivalentProperty 	saref4bldg:contains .
