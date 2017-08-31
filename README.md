@@ -22,9 +22,11 @@ So far an alignment for the following ontologied has been provided:
 
 Intended alignments include (non-exhaustively)
 
-*ThinkHome [link](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)*
-*DogOnt [link](http://elite.polito.it/ontologies/dogont.owl#)*
-*ifcOWL [link](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)*
+ThinkHome [link](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
+
+DogOnt [link](http://elite.polito.it/ontologies/dogont.owl#)
+
+ifcOWL [link](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
 
 ## Example of using BOT
 
