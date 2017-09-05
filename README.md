@@ -13,6 +13,21 @@ Developments are stored in the Development branch and feature branches are creat
 ## BOT in the literature
 *Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153*
 
+## Aligning to BOT
+As BOT is proposed as a central ontology in the domain of AEC/FM industry alignments with existing domains need to be provided. Ontologies defining the alignment are given in this repository and file naming is given by <ontologname>Alignment.ttl.
+
+So far an alignment for the following ontologied has been provided:
+
+SAREF4Bldg [link](https://w3id.org/def/saref4bldg#)
+
+Intended alignments include (non-exhaustively)
+
+ThinkHome [link](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
+
+DogOnt [link](http://elite.polito.it/ontologies/dogont.owl#)
+
+ifcOWL [link](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
+
 ## Example of using BOT
 
 Example of using BOT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).
