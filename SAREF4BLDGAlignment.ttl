@@ -20,7 +20,7 @@
 @prefix saref4bldg:	<https://w3id.org/def/saref4bldg#> .
 
 @prefix bot: <https://w3id.org/bot#> .
-@base <https://w3id.org/SAREF4BLDGAlignment#> .
+@base <https://w3id.org/bot/SAREF4BLDGAlignment#> .
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
