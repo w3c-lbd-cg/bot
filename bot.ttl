@@ -69,6 +69,7 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
                         "Grund"@da ,
+                        "Site"@nl ,
 						"Grundstück"@de .
         rdfs:comment    "Area containing one or more buildings."@en ,
                         "Område som indeholder en eller flere bygninger."@da ,
@@ -246,7 +247,9 @@ bot:hasElement a owl:ObjectProperty ;
 # Disjunctive classes
 [] a owl:AllDisjointClasses ;
         owl:members
-              ( bot:Element
+              ( 
+				bot:Site
+				bot:Element
                 bot:Space
                 bot:Storey
                 bot:Building ) .
