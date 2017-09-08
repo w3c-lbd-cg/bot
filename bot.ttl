@@ -132,7 +132,9 @@ bot:hasBuilding a owl:ObjectProperty ;
                         "har bygning"@da ;
         rdfs:comment    "Relation to buildings contained on a site"@en ,
 						"Relatie tot gebouwen die zich op een site bevinden"@nl ,
-                        "Relation til bygninger indeholdt på en grund"@da .
+                        "Relation til bygninger indeholdt på en grund"@da ;
+        rdfs:domain     bot:Site ;
+        rdfs:range      bot:Building .
 
 						
 bot:hasStorey a owl:ObjectProperty ;
