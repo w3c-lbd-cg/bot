@@ -20,8 +20,6 @@ So far an alignment for the following ontologied has been provided:
 
 SAREF4Bldg [link](https://w3id.org/def/saref4bldg#)
 
-Intended alignments include (non-exhaustively)
-
 ThinkHome [link](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
 
 DogOnt [link](http://elite.polito.it/ontologies/dogont.owl#)
