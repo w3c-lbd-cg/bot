@@ -70,7 +70,7 @@ bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
                         "Grund"@da ,
                         "Site"@nl ,
-						"Grundstück"@de .
+						"Grundstück"@de ;
         rdfs:comment    "Area containing one or more buildings."@en ,
                         "Område som indeholder en eller flere bygninger."@da ,
 						"Omgeving die één of meerdere gebouwen bevat."@nl ,
