@@ -1,0 +1,53 @@
+@prefix : <https://w3id.org/bot/DOGONTAlignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix bot: <https://w3id.org/bot#> .
+@prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
+@base <https://w3id.org/bot/DOGONTAlignment> .
+
+<https://w3id.org/bot/DOGONTAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "DogOnt to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the DogOnt ontology."""@en ;
+	dcterms:issued "2017-09-12"^^xsd:date ;
+	dcterms:modified "2017-09-12"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+	owl:imports 	<https://w3id.org/bot> ,
+					<http://elite.polito.it/ontologies/dogont.owl> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################################################
+#    Classes
+#################################################################
+
+bot:Building owl:equivalentClass dogont:Building .
+dogont:Flat rdfs:subClassOf bot:Building .
+bot:Storey owl:equivalentClass dogont:Storey .
+
+bot:Space rdfs:subClassOf dogont:BuildingEnvironment .
+dogont:Room rdfs:subClassOf bot:Space .
+dogont:Garage rdfs:subClassOf bot:Space .
+dogont:Garden rdfs:subClassOf bot:Space .
+
+dogont:Controllable 	rdfs:subClassOf bot:Element .
+dogont:Device 			rdfs:subClassOf bot:Element .
+dogont:UnControllable	rdfs:subClassOf bot:Element .
+dogont:TechnicalSystem	rdfs:subClassOf bot:Element .

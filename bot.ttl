@@ -13,13 +13,10 @@
 @prefix dcterms:	<http://purl.org/dc/terms/> .
 @prefix vann:   	<http://purl.org/vocab/vann/> .
 @prefix voaf:   	<http://purl.org/vocommons/voaf#> .
-@prefix vs:     	<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:   	<http://xmlns.com/foaf/0.1/> .
 @prefix dce:    	<http://purl.org/dc/elements/1.1/> .
-@prefix dbo:    	<http://dbpedia.org/ontology/> .
-
 @prefix bot: <https://w3id.org/bot#> .
-@base <https://w3id.org/bot#> .
+@base <https://w3id.org/bot> .
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
@@ -31,17 +28,16 @@ dcterms:contributor a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
-vs:term_status a owl:AnnotationProperty .
 foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
 
 #################################
 # METADATA
 #################################
-<https://w3id.org/bot#> rdf:type voaf:Vocabulary , 
+<https://w3id.org/bot> rdf:type voaf:Vocabulary , 
                                  owl:Ontology ;
-    dce:modified "July 11th 2017"^^xsd:string ;
-    owl:versionInfo "July 11th 2017"^^xsd:string ;
+    dce:modified "2017-07-11"^^xsd:date ;
+    owl:versionInfo "2017-07-11"^^xsd:date ;
     dcterms:issued "2017-07-11"^^xsd:date ;
     #owl:versionIRI <https://w3id.org/bot/bot-0.1.1> ;
     owl:versionInfo "v0.1.1" ;
@@ -70,7 +66,7 @@ bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
                         "Grund"@da ,
                         "Site"@nl ,
-						"Grundstück"@de .
+						"Grundstück"@de ;
         rdfs:comment    "Area containing one or more buildings."@en ,
                         "Område som indeholder en eller flere bygninger."@da ,
 						"Omgeving die één of meerdere gebouwen bevat."@nl ,
@@ -96,7 +92,7 @@ bot:Storey a owl:Class ;
         rdfs:comment    "A level part of a building"@en ,
 						"Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
                         "Et plan i en bygning"@da ,
-						"Een horizontaal gedeelte van een gebouw"@nl.
+						"Een horizontaal gedeelte van een gebouw"@nl .
 						
 bot:Element a owl:Class ;
         rdfs:label      "Building element"@en ,

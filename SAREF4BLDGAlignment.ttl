@@ -45,8 +45,8 @@ foaf:name a owl:DatatypeProperty .
   dcterms:description """This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."""@en ;
   dcterms:issued "2017-07-13"^^xsd:date ;
   dce:modified "2017-08-31"^^xsd:date ;
-  dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
   dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+  dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
   dcterms:contributor [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
   dcterms:contributor [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
   dcterms:contributor <http://www.maxime-lefrancois.info/me#> ;
@@ -60,7 +60,7 @@ foaf:name a owl:DatatypeProperty .
 #################################
       
 bot:Building		owl:equivalentClass		saref4bldg:Building .
-bot:Element			rdfs:subClassOf			saref4bldg:PhysicalObject .
+bot:Element			owl:equivalentClass		saref4bldg:PhysicalObject .
 bot:Space			owl:equivalentClass 	saref4bldg:BuildingSpace .
 bot:hasSpace 		rdfs:subPropertyOf  	saref4bldg:hasSpace .
 bot:containsElement	owl:equivalentProperty 	saref4bldg:contains .

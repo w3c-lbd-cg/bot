@@ -1,0 +1,56 @@
+@prefix : <https://w3id.org/bot/IFC4_ADD2Alignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix bot: <https://w3id.org/bot#> .
+@prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
+@base <https://w3id.org/bot/IFC4_ADD2Alignment> .
+
+<https://w3id.org/bot/IFC4_ADD2Alignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "ifcOWL4_Add2 to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."""@en ;
+	dcterms:issued "2017-09-12"^^xsd:date ;
+	dcterms:modified "2017-09-12"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+	owl:imports 	<https://w3id.org/bot> ,
+					<http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################################################
+#    Classes
+#################################################################
+
+bot:Site owl:equivalentClass ifc:IfcSite .
+bot:Building owl:equivalentClass ifc:IfcBuilding .
+bot:Storey owl:equivalentClass ifc:IfcBuildingStorey .
+bot:Space owl:equivalentClass ifc:IfcSpace .
+bot:Element owl:equivalentClass ifc:IfcElement .
+
+
+
+
+
+
+
+
+
+
+
