@@ -304,4 +304,4 @@ bot:Interface rdfs:subClassOf [
     a owl:Restriction ;
     owl:onProperty bot:interfaceOf ;
     owl:cardinality 2
-]
+] .
