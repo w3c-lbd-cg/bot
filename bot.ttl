@@ -40,12 +40,12 @@ foaf:name a owl:DatatypeProperty .
 #################################
 <https://w3id.org/bot#> rdf:type voaf:Vocabulary , 
                                  owl:Ontology ;
-    dce:modified "July 11th 2017"^^xsd:string ;
-    owl:versionInfo "July 11th 2017"^^xsd:string ;
-    dcterms:issued "2017-07-11"^^xsd:date ;
-    #owl:versionIRI <https://w3id.org/bot/bot-0.1.1> ;
-    owl:versionInfo "v0.1.1" ;
-    #owl:priorVersion <https://w3id.org/bot/bot-0.1.0> ;
+    dce:modified "September 26th 2017"^^xsd:string ;
+    owl:versionInfo "September 26th 2017"^^xsd:string ;
+    dcterms:issued "2017-09-26"^^xsd:date ;
+    #owl:versionIRI <https://w3id.org/bot/bot-0.1.2> ;
+    owl:versionInfo "v0.1.2" ;
+    #owl:priorVersion <https://w3id.org/bot/bot-0.1.1> ;
     dcterms:title "BOT: Building Topology Ontology"@en ;
     dcterms:description """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
@@ -66,6 +66,11 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 #################################
 # CLASSES
 #################################
+bot:Zone a owl:Class ;
+        rdfs:label      "Zone"@en ,
+                        "Zone"@da ;
+        rdfs:comment    "A delimited area. Any bot:Site, bot:Building, bot:Storey or bot:Space is also a bot:Zone. A bot:Zone can contain other bot:Zones defined by the relation bot:hasZone, and it can be connected to other bot:Zones defined by the relation bot:connectedTo."@en .
+
 bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
                         "Grund"@da ,
@@ -74,8 +79,9 @@ bot:Site a owl:Class ;
         rdfs:comment    "Area containing one or more buildings."@en ,
                         "Område som indeholder en eller flere bygninger."@da ,
 						"Omgeving die één of meerdere gebouwen bevat."@nl ,
-						"Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de .
-						
+						"Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ;
+        rdfs:subClassOf bot:Zone .
+
 bot:Building a owl:Class ;
         rdfs:label      "Building"@en ,
 						"Gebäude"@de ,
@@ -84,9 +90,9 @@ bot:Building a owl:Class ;
 						"Gebouw"@nl ;
         rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
 						"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
-                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
-		
-						
+                        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ;
+        rdfs:subClassOf bot:Zone .
+
 bot:Storey a owl:Class ;
         rdfs:label      "Storey"@en ,
 						"Geschoss (Architektur)"@de ,
@@ -96,19 +102,8 @@ bot:Storey a owl:Class ;
         rdfs:comment    "A level part of a building"@en ,
 						"Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
                         "Et plan i en bygning"@da ,
-						"Een horizontaal gedeelte van een gebouw"@nl.
-						
-bot:Element a owl:Class ;
-        rdfs:label      "Building element"@en ,
-						"Bauteil (Bauwesen)"@de ,
-                        "Elemento architettonico"@it ,
-                        "Bygningsdel"@da ,
-						"Gebouwelement"@nl ;
-        rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
-						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
-                        "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
-						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
-		
+						"Een horizontaal gedeelte van een gebouw"@nl ;
+        rdfs:subClassOf bot:Zone .
 
 bot:Space a owl:Class ;
         rdfs:label      "Space"@en ,
@@ -119,12 +114,38 @@ bot:Space a owl:Class ;
         rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
 						"Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
                         "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da ,
-						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl .
-		
+						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl ;
+        rdfs:subClassOf bot:Zone .
+
+bot:Element a owl:Class ;
+        rdfs:label      "Building element"@en ,
+						"Bauteil (Bauwesen)"@de ,
+                        "Elemento architettonico"@it ,
+                        "Bygningsdel"@da ,
+						"Gebouwelement"@nl ;
+        rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
+						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
+                        "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
+						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
 
 #################################
 # OBJECT PROPERTIES
 #################################
+
+bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
+        rdfs:label      "contains zone"@en ,
+                        "indeholder zone"@da ;
+        rdfs:comment    "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a builidng zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone."@en ;
+        rdfs:domain     bot:Zone ;
+        rdfs:range      bot:Zone .
+
+bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
+        rdfs:label      "adjacent zone"@en ,
+                        "tilstødende zone"@da ;
+        rdfs:comment    "Relationship between two zones sharing a common interface."@en ,
+                        "Relation mellem to zoner, der deler en fælles grænseflade."@da ;
+        rdfs:domain     bot:Zone ;
+        rdfs:range      bot:Zone .
 
 bot:hasBuilding a owl:ObjectProperty ;
         rdfs:label      "has building"@en ,
@@ -133,6 +154,7 @@ bot:hasBuilding a owl:ObjectProperty ;
         rdfs:comment    "Relation to buildings contained on a site"@en ,
 						"Relatie tot gebouwen die zich op een site bevinden"@nl ,
                         "Relation til bygninger indeholdt på en grund"@da ;
+        rdfs:subPropertyOf bot:containsZone ;
         rdfs:domain     bot:Site ;
         rdfs:range      bot:Building .
 
@@ -142,11 +164,12 @@ bot:hasStorey a owl:ObjectProperty ;
 						"heeft verdieping"@nl ,
 						"hat geschoss"@de ,
                         "har etage"@da ;
-        rdfs:comment    "Relation to storeys contained in the building."@en ,
-						"Relatie tot de verdiepingen die zich in het gebouw bevinden"@nl ,
-						"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
-                        "Relation til etager indeholdt i bygningen."@da ;
-        rdfs:domain     bot:Building ;
+        rdfs:comment    "Relation to storeys contained within the boundary of the zone."@en ,
+						#"Relatie tot de verdiepingen die zich in het gebouw bevinden"@nl ,
+						#"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
+                        "Relation til etager indeholdt i zonen."@da ;
+        rdfs:subPropertyOf bot:containsZone ;
+        rdfs:domain     bot:Zone ;
         rdfs:range      bot:Storey .
 		
 bot:hasSpace a owl:ObjectProperty ;
@@ -154,11 +177,12 @@ bot:hasSpace a owl:ObjectProperty ;
                         "hat raum"@de ,
                         "heeft ruimte"@nl ,
                         "har rum"@da ;
-        rdfs:comment    "Relation to spaces whose plan is located at the storey."@en ,
-						"Relatie tot ruimtes die zich op een verdieping bevinden"@nl ,
-						"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
-                        "Relation til rum, hvis plan er placeret på etagen."@da ;
-		rdfs:domain     bot:Storey ;
+        rdfs:comment    "Relation to spaces whose plan is located within boundary of the zone."@en ,
+						#"Relatie tot ruimtes die zich op een verdieping bevinden"@nl ,
+						#"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
+                        "Relation til rum, hvis plan er placeret inden for zonen."@da ;
+        rdfs:subPropertyOf bot:containsZone ;
+		rdfs:domain     bot:Zone ;
         rdfs:range      bot:Space .
 		
 bot:adjacentElement a owl:ObjectProperty ;
@@ -166,11 +190,11 @@ bot:adjacentElement a owl:ObjectProperty ;
 			            "aangrenzend element"@nl ,
 			            "benachbartes bauteil"@de ,
                         "tilstødende element"@da ;
-        rdfs:comment    "Relation of a space to its bounding building elements"@en ,
-			            "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de ,
-			            "Relatie tot de begrenzingen van een ruimte door fysieke gebouwelementen"@nl ,
-                        "Relation til bygningsdele, som afgrænser et fysisk rum"@da ;
-        rdfs:domain     bot:Space ;
+        rdfs:comment    "Relation between a zone and its adjacent building elements, bounding the physical space."@en ,
+			            #"Beziehung eines Raumes zu Bauteilen die in begrenzen"@de ,
+			            #"Relatie tot de begrenzingen van een ruimte door fysieke gebouwelementen"@nl ,
+                        "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."@da ;
+        rdfs:domain     bot:Zone ;
         rdfs:range      bot:Element .
 		
 bot:containsElement a owl:ObjectProperty ;
@@ -178,11 +202,11 @@ bot:containsElement a owl:ObjectProperty ;
                         "bevat element"@nl ,
                         "enthält"@de ,
                         "indeholder bygningsdel"@da ;
-        rdfs:comment    "Relation of a space to a building element"@en ,
-                        "Beziehung eines Raums zu einem Bauteil"@de ,
-                        "Relatie tussen ruimte en een gebouwelement in die ruimte"@nl ,
-                        "Relation til en bygningsdel, som er indeholdt i et rum"@da ;
-		rdfs:domain     bot:Space ;
+        rdfs:comment    "Relation to a building element contained in a zone."@en ,
+                        #"Beziehung eines Raums zu einem Bauteil"@de ,
+                        #"Relatie tussen ruimte en een gebouwelement in die ruimte"@nl ,
+                        "Relation til en bygningsdel, som er indeholdt i en zone."@da ;
+		rdfs:domain     bot:Zone ;
         rdfs:range      bot:Element .
 		
 bot:hostsElement a owl:ObjectProperty ;
@@ -234,14 +258,13 @@ bot:hasElement a owl:ObjectProperty ;
                         "hat bauteil"@de ,
                         "heeft gebouwelement"@nl ,
                         "har bygningsdel"@da ;
-        rdfs:comment    "Relation to elements belonging to a building or a storey."@en ,
-                        "Relatie tussen een gebouwelement en het gebouw of de verdieping waartoe het behoort"@nl ,
-                        "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ,
-                        "Relation til elementer, hørende til en en bygning eller en etage."@da ;
+        rdfs:comment    "Relation to elements belonging to a zone. The relationship is inferred for all elements contained in or adjacent to a zone and to all the zones that the zone is contained in. A building having a space that contains a radiator hence also has the radiator."@en ,
+                        #"Relatie tussen een gebouwelement en het gebouw of de verdieping waartoe het behoort"@nl ,
+                        #"Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ,
+                        "Relation til elementer, hørende til en en zone. Relationen infereres for alle elementer indeholdt i eller tilstødende til en zone og til alle de zoner, som zonen er indeholdt i. En bygning der har et rum, som indeholder en radiator har deraf også radiatoren."@da ;
         rdfs:range      bot:Element ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ,
-                                ( bot:hasStorey bot:hasElement ) ,
-                                ( bot:hasSpace bot:containsElement ) .
+        owl:propertyChainAxiom  ( bot:containsZone bot:adjacentElement ) ,
+                                ( bot:containsZone bot:containsElement ) .
 
 #################################
 # CONSTRAINTS
@@ -255,3 +278,9 @@ bot:hasElement a owl:ObjectProperty ;
                 bot:Space
                 bot:Storey
                 bot:Building ) .
+# Disjunctive classes
+[] a owl:AllDisjointClasses ;
+        owl:members
+              ( 
+				bot:Zone
+				bot:Element ) .
