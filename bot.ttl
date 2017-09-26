@@ -69,7 +69,8 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 bot:Zone a owl:Class ;
         rdfs:label      "Zone"@en ,
                         "Zone"@da ;
-        rdfs:comment    "A delimited area. Any bot:Site, bot:Building, bot:Storey or bot:Space is also a bot:Zone. A bot:Zone can contain other bot:Zones defined by the relation bot:hasZone, and it can be connected to other bot:Zones defined by the relation bot:connectedTo."@en .
+        rdfs:comment    "An area or stretch of land having a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone."@en ,
+                        "Et areal eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone."@da .
 
 bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
@@ -127,6 +128,12 @@ bot:Element a owl:Class ;
 						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
                         "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
 						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
+
+bot:Interface a owl:Class ;
+        rdfs:label      "Interface"@en ,
+                        "Grænseflade"@da ;
+        rdfs:comment    "An interface is the point/surface where two building elements, two zones or a building element and a zone meets. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
+                        "En grænseflade er punktet/fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da .
 
 #################################
 # OBJECT PROPERTIES
@@ -266,6 +273,13 @@ bot:hasElement a owl:ObjectProperty ;
         owl:propertyChainAxiom  ( bot:containsZone bot:adjacentElement ) ,
                                 ( bot:containsZone bot:containsElement ) .
 
+bot:interfaceOf a owl:ObjectProperty ;
+        rdfs:label      "interface of"@en ,
+                        "grænseflade for"@da ;
+        rdfs:comment    "Relationship between an interface and an adjacent zone or element."@en ,
+                        "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."@da ;
+        rdfs:domain     bot:Interface .
+
 #################################
 # CONSTRAINTS
 #################################
@@ -284,3 +298,10 @@ bot:hasElement a owl:ObjectProperty ;
               ( 
 				bot:Zone
 				bot:Element ) .
+
+# An interface is the interface of exactly two instances
+bot:Interface rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty bot:interfaceOf ;
+    owl:cardinality 2
+]
