@@ -132,8 +132,8 @@ bot:Element a owl:Class ;
 bot:Interface a owl:Class ;
         rdfs:label      "Interface"@en ,
                         "Grænseflade"@da ;
-        rdfs:comment    "An interface is the point/surface where two building elements, two zones or a building element and a zone meets. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
-                        "En grænseflade er punktet/fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da .
+        rdfs:comment    "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
+                        "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da .
 
 #################################
 # OBJECT PROPERTIES
@@ -214,7 +214,8 @@ bot:containsElement a owl:ObjectProperty ;
                         #"Relatie tussen ruimte en een gebouwelement in die ruimte"@nl ,
                         "Relation til en bygningsdel, som er indeholdt i en zone."@da ;
 		rdfs:domain     bot:Zone ;
-        rdfs:range      bot:Element .
+        rdfs:range      bot:Element ;
+        owl:propertyChainAxiom  ( bot:containsZone bot:containsElement ) .
 		
 bot:hostsElement a owl:ObjectProperty ;
         rdfs:label      "hosts element"@en ,
@@ -258,20 +259,6 @@ product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
                         rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
                         rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
 ```"""@da .
-
-		
-bot:hasElement a owl:ObjectProperty ;
-        rdfs:label      "has element"@en ,
-                        "hat bauteil"@de ,
-                        "heeft gebouwelement"@nl ,
-                        "har bygningsdel"@da ;
-        rdfs:comment    "Relation to elements belonging to a zone. The relationship is inferred for all elements contained in or adjacent to a zone and to all the zones that the zone is contained in. A building having a space that contains a radiator hence also has the radiator."@en ,
-                        #"Relatie tussen een gebouwelement en het gebouw of de verdieping waartoe het behoort"@nl ,
-                        #"Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ,
-                        "Relation til elementer, hørende til en en zone. Relationen infereres for alle elementer indeholdt i eller tilstødende til en zone og til alle de zoner, som zonen er indeholdt i. En bygning der har et rum, som indeholder en radiator har deraf også radiatoren."@da ;
-        rdfs:range      bot:Element ;
-        owl:propertyChainAxiom  ( bot:containsZone bot:adjacentElement ) ,
-                                ( bot:containsZone bot:containsElement ) .
 
 bot:interfaceOf a owl:ObjectProperty ;
         rdfs:label      "interface of"@en ,
