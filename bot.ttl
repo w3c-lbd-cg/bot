@@ -40,22 +40,28 @@ foaf:name a owl:DatatypeProperty .
 #################################
 <https://w3id.org/bot#> rdf:type voaf:Vocabulary , 
                                  owl:Ontology ;
-    dce:modified "September 26th 2017"^^xsd:string ;
-    owl:versionInfo "September 26th 2017"^^xsd:string ;
-    dcterms:issued "2017-09-26"^^xsd:date ;
-    #owl:versionIRI <https://w3id.org/bot/bot-0.1.2> ;
-    owl:versionInfo "v0.1.2" ;
-    #owl:priorVersion <https://w3id.org/bot/bot-0.1.1> ;
+    dce:modified "October 27th 2017"^^xsd:string ;
+    owl:versionInfo "October 27th 2017"^^xsd:string ;
+    dcterms:issued "2017-10-27"^^xsd:date ;
+    owl:versionIRI <https://w3id.org/bot/0.2.0> ;
+    owl:versionInfo "0.2.0" ;
+    owl:priorVersion <https://w3id.org/bot/0.1.1> ;
+    rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
     dcterms:title "BOT: Building Topology Ontology"@en ;
     dcterms:description """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
 
-The ontology is documented in:
+Version 0.2.0 of the ontology is documented in:
 
-Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"""@en ;
+Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology
+
+The initial version of the ontology was documented in:
+
+Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"""@en ;
     dcterms:creator [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
     dcterms:creator [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
     dcterms:contributor [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+    dcterms:contributor [a foaf:Person ; foaf:name "Maxime Lefrançois" ] ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix "bot" ;
     vann:preferredNamespaceUri <https://w3id.org/bot#> ;
@@ -158,11 +164,11 @@ bot:hasBuilding a owl:ObjectProperty ;
         rdfs:label      "has building"@en ,
 						"heeft gebouw"@nl ,
                         "har bygning"@da ;
-        rdfs:comment    "Relation to buildings contained on a site"@en ,
+        rdfs:comment    "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ,
 						"Relatie tot gebouwen die zich op een site bevinden"@nl ,
-                        "Relation til bygninger indeholdt på en grund"@da ;
+                        "Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site."@da ;
         rdfs:subPropertyOf bot:containsZone ;
-        rdfs:domain     bot:Site ;
+        rdfs:domain     bot:Zone ;
         rdfs:range      bot:Building .
 
 						
@@ -171,10 +177,10 @@ bot:hasStorey a owl:ObjectProperty ;
 						"heeft verdieping"@nl ,
 						"hat geschoss"@de ,
                         "har etage"@da ;
-        rdfs:comment    "Relation to storeys contained within the boundary of the zone."@en ,
+        rdfs:comment    "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ,
 						#"Relatie tot de verdiepingen die zich in het gebouw bevinden"@nl ,
 						#"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
-                        "Relation til etager indeholdt i zonen."@da ;
+                        "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da ;
         rdfs:subPropertyOf bot:containsZone ;
         rdfs:domain     bot:Zone ;
         rdfs:range      bot:Storey .
@@ -184,10 +190,10 @@ bot:hasSpace a owl:ObjectProperty ;
                         "hat raum"@de ,
                         "heeft ruimte"@nl ,
                         "har rum"@da ;
-        rdfs:comment    "Relation to spaces whose plan is located within boundary of the zone."@en ,
+        rdfs:comment    "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ,
 						#"Relatie tot ruimtes die zich op een verdieping bevinden"@nl ,
 						#"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
-                        "Relation til rum, hvis plan er placeret inden for zonen."@da ;
+                        "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da ;
         rdfs:subPropertyOf bot:containsZone ;
 		rdfs:domain     bot:Zone ;
         rdfs:range      bot:Space .
