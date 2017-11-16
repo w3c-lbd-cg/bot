@@ -90,7 +90,7 @@ Hylar is a simple js library for doing reasoning on a set of triples. To get it 
 1) Initialize a new project with ```npm init```
 2) Add Hylar as dependency ```npm install --save hylar``` (first you need node and node-gyp: [https://github.com/nodejs/node-gyp](https://github.com/nodejs/node-gyp))
 3) Adjust the following code sample to your needs and try it out
-```
+```javascript
 var Hylar = require('hylar');
 var fs = require('fs');
 h = new Hylar();
