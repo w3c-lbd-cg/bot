@@ -45,7 +45,7 @@ inst:storey00 a bot:Storey ;
 inst:storey01 a bot:Storey .
 
 inst:space00aa a bot:Space ;
-               bot:containsElement inst:heater235 .
+               bot:containsElement inst:heater235 ;
                bot:adjacentElement inst:wall443 ,
                                    inst:floor23 .
 								   
@@ -82,6 +82,49 @@ h:SpaceHeater a owl:Class .
 h:heatedBy a owl:ObjectProperty ;
              rdfs:subPropertyOf bot:containsElement ;
              rdfs:range h:SpaceHeater .
+```
+
+## BOT and reasoning
+Hylar is a simple js library for doing reasoning on a set of triples. To get it up and running, do the following:
+
+1) Initialize a new project with ```npm init```
+2) Add Hylar as dependency ```npm install --save hylar``` (first you need node and node-gyp: [https://github.com/nodejs/node-gyp](https://github.com/nodejs/node-gyp))
+3) Adjust the following code sample to your needs and try it out
+```
+var Hylar = require('hylar');
+var fs = require('fs');
+h = new Hylar();
+
+//Files and settings
+var mimeType = 'text/turtle';
+var files = [];
+files.push('triples.ttl');
+files.push('bot.ttl');
+
+var query = "PREFIX bot: <https://w3id.org/bot#>\
+SELECT * WHERE {?subject a bot:Zone}";
+
+//Get file content
+triples = '';
+for(var i in files){
+    var string = fs.readFileSync(files[i], "utf8").toString();
+    if(i == 0){
+        triples = string;
+    }else{
+        triples+='\n'+string;
+    }
+}
+
+var keepOldValues = false;
+// var reasoningMethod = 'incremental'; //'incremental', 'tagBased', 'incrementalBf'
+
+h.load(triples, mimeType, keepOldValues)
+    .then(response => {
+        return h.query(query);
+    })
+    .then(results => {
+        console.log(results) // is a JSON object 
+    });
 ```
 
 ## BOT in the literature
