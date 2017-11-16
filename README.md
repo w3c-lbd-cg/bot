@@ -7,11 +7,9 @@ Developments are stored in the Development branch and feature branches are creat
 ## Adding content to BOT
 1. Fork this repository. 
 2. Add contribution to bot or separate alignment file.
-3. Commit your changes and submit a [pull request](https://github.com/perma-id/w3id.org/pulls).
-4. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
-
-## BOT in the literature
-*Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 [http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153](http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153)*
+3. Validate that the turtle file is still valid using for example Protegé or http://ttl.summerofcode.be/
+4. Commit your changes and submit a [pull request](https://github.com/perma-id/w3id.org/pulls).
+5. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
 
 ## Aligning to BOT
 As BOT is proposed as a central ontology in the domain of AEC/FM industry alignments with existing domains need to be provided. Ontologies defining the alignment are given in this repository and file naming is given by <ontologname>Alignment.ttl.
@@ -85,3 +83,12 @@ h:heatedBy a owl:ObjectProperty ;
              rdfs:subPropertyOf bot:containsElement ;
              rdfs:range h:SpaceHeater .
 ```
+
+## BOT in the literature
+*Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 [http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153](http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153)*
+
+*Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, [https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology](https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology)*
+
+*Mads Holten Rasmussen, Christian Anker Hviid and Jan Karlshøj (2017) Web-based topology queries on a BIM model, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, [https://www.researchgate.net/publication/320757039_Web-based_topology_queries_on_a_BIM_model](https://www.researchgate.net/publication/320757039_Web-based_topology_queries_on_a_BIM_model)*
+
+*Georg Ferdinand Schneider (2017) Towards Aligning Domain Ontologies with the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, [https://www.researchgate.net/publication/320878270_Towards_Aligning_Domain_Ontologies_with_the_Building_Topology_Ontology](https://www.researchgate.net/publication/320878270_Towards_Aligning_Domain_Ontologies_with_the_Building_Topology_Ontology)*
