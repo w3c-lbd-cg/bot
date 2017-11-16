@@ -19,7 +19,6 @@
 @prefix dbo:    	<http://dbpedia.org/ontology/> .
 
 @prefix bot: <https://w3id.org/bot#> .
-@base <https://w3id.org/bot#> .
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
