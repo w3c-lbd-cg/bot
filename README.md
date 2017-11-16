@@ -115,15 +115,13 @@ for(var i in files){
     }
 }
 
-var keepOldValues = false;
-// var reasoningMethod = 'incremental'; //'incremental', 'tagBased', 'incrementalBf'
-
-h.load(triples, mimeType, keepOldValues)
+//Do reasoning and run query
+h.load(triples, mimeType)
     .then(response => {
         return h.query(query);
     })
     .then(results => {
-        console.log(results) // is a JSON object 
+        console.log(results) // log results to console
     });
 ```
 
