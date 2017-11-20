@@ -73,89 +73,100 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 #################################
 bot:Zone a owl:Class ;
         rdfs:label      "Zone"@en ,
-						"Zona"@es ,
-						"Zone"@nl ,
+			"Zona"@es ,
+			"Zone"@nl ,
                         "Zone"@da ;
         
         rdfs:comment    "An area or stretch of land having a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone."@en ,
-						"Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone."@es ,
+			"Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone."@es ,
                         "Et areal eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone."@da ,
                         "Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone."@nl .
+
 bot:Site a owl:Class ;
         rdfs:label      "Site"@en ,
-						"Sitio"@es ,
+			"Sitio"@es ,
                         "Grund"@da ,
                         "Terrein"@nl ,
-						"Grundstück"@de ;
-        rdfs:comment    "Area containing one or more buildings."@en ,
-						"Área que contiene uno o más edificios."@es ,
+			"Grundstück"@de ;
+
+	rdfs:comment    "Area containing one or more buildings."@en ,
+			"Área que contiene uno o más edificios."@es ,
                         "Område som indeholder en eller flere bygninger."@da ,
-						"Omgeving die één of meerdere gebouwen bevat."@nl ,
-						"Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ;
-        rdfs:subClassOf bot:Zone .
+			"Omgeving die één of meerdere gebouwen bevat."@nl ,
+			"Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ;
+        
+	rdfs:subClassOf bot:Zone .
 
 bot:Building a owl:Class ;
         rdfs:label      "Building"@en ,
-						"Edificio"@es ,
-						"Gebäude"@de ,
+			"Edificio"@es ,
+			"Gebäude"@de ,
                         "Edificio"@it ,
                         "Bygning"@da ,
-						"Gebouw"@nl ;
-        rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
-						"Una unidad de entorno construido intependiente con una estructura espacial característica, para proporcionar al menos una función o actividad de usuario"@es ,
-						"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
+			"Gebouw"@nl ;
+        
+	rdfs:comment    "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
+			"Una unidad de entorno construido intependiente con una estructura espacial característica, para proporcionar al menos una función o actividad de usuario"@es ,
+			"Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
                         "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ,
                         "Een onafhankelijke entiteit met een ruimtelijke structuur die onderdeel is van de gebouwde omgeving, en bedoeld is om minimaal één functie of gebruikersactiviteit te bedienen [ISO 12006-2:2013]."@nl ;
-        rdfs:subClassOf bot:Zone .
+
+	rdfs:subClassOf	bot:Zone .
 
 bot:Storey a owl:Class ;
         rdfs:label      "Storey"@en ,
-						"Piso"@es ,
-						"Geschoss (Architektur)"@de ,
+			"Piso"@es ,
+			"Geschoss (Architektur)"@de ,
                         "Piano di edificio"@it ,
-						"Verdieping"@nl,
+			"Verdieping"@nl,
                         "Etage"@da ;
-        rdfs:comment    "A level part of a building"@en ,
-						"Un nivel de un edificio"@es ,
-						"Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
+        
+	rdfs:comment    "A level part of a building"@en ,
+			"Un nivel de un edificio"@es ,
+			"Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
                         "Een vlak gedeelte van een gebouw"@nl,
                         "Et plan i en bygning"@da ,
-						"Een horizontaal gedeelte van een gebouw"@nl ;
-        rdfs:subClassOf bot:Zone .
+			"Een horizontaal gedeelte van een gebouw"@nl ;
+
+	rdfs:subClassOf	bot:Zone .
 
 bot:Space a owl:Class ;
         rdfs:label      "Space"@en ,
-						"Espacio"@es ,
-						"Raum"@de ,
+			"Espacio"@es ,
+			"Raum"@de ,
                         "Spazio"@it ,
-						"Ruimte"@nl,
+			"Ruimte"@nl,
                         "Rum"@da ;
-        rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
-						"Una extensión tridimensional limitada y definida fisica o teóricamente"@es ,
-						"Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
+        
+	rdfs:comment    "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ,
+			"Una extensión tridimensional limitada y definida fisica o teóricamente"@es ,
+			"Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
                         "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da ,
-						"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl ;
-        rdfs:subClassOf bot:Zone .
+			"Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl ;
+        
+	rdfs:subClassOf	bot:Zone .
 
 bot:Element a owl:Class ;
         rdfs:label      "Building element"@en ,
-						"Elemento arquitectónico"@es ,
-						"Bauteil (Bauwesen)"@de ,
+			"Elemento arquitectónico"@es ,
+			"Bauteil (Bauwesen)"@de ,
                         "Elemento architettonico"@it ,
                         "Bygningsdel"@da ,
-						"Gebouwelement"@nl ;
-        rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
-						"Componente de una construcción con una función técnica, forma o posición característica"@es ,
-						"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
+			"Gebouwelement"@nl ;
+        
+	rdfs:comment    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
+			"Componente de una construcción con una función técnica, forma o posición característica"@es ,
+			"Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
                         "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
-						"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
+			"Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
 
 bot:Interface a owl:Class ;
         rdfs:label      "Interface"@en ,
-        				"Interface"@nl ,
+        		"Interface"@nl ,
                         "Grænseflade"@da ;
-        rdfs:comment    "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
-        				"Een interface is een vlak waar twee gebouwelementen, twee zones of een gebouw elementen en een zone elkaar raken. Het kan worden gebruikt om de verbinding tussen de twee te kwalificeren. Een use case kan de kwalificatie van het warmteoverbrengingsoppervlak tussen een zone en een muur over meerdere zones zijn."@nl ,
+        
+	rdfs:comment    "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
+        		"Een interface is een vlak waar twee gebouwelementen, twee zones of een gebouw elementen en een zone elkaar raken. Het kan worden gebruikt om de verbinding tussen de twee te kwalificeren. Een use case kan de kwalificatie van het warmteoverbrengingsoppervlak tussen een zone en een muur over meerdere zones zijn."@nl ,
                         "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da .
 
 #################################
@@ -164,165 +175,187 @@ bot:Interface a owl:Class ;
 
 bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
         rdfs:label      "contains zone"@en ,
-						"contiene zona"@es ,
-						"bevat zone"@nl ,
+			"contiene zona"@es ,
+			"bevat zone"@nl ,
                         "indeholder zone"@da ;
-        rdfs:comment    "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone."@en ,
-        				"Relatie tussen subzones van een hoofd zone. Een ruimtezone kan bijvoorbeeld worden bevat door een verdiepingszone, die wederom bevat wordt door een gebouwzone. bot:containsZone is een transitieve eigenschap, wat betekent dat in het vorige voorbeeld de ruimtezone ook bevat wordt door de gebouwzone."@nl ;
-        rdfs:domain     bot:Zone ;
+        
+	rdfs:comment    "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone."@en ,
+        		"Relatie tussen subzones van een hoofd zone. Een ruimtezone kan bijvoorbeeld worden bevat door een verdiepingszone, die wederom bevat wordt door een gebouwzone. bot:containsZone is een transitieve eigenschap, wat betekent dat in het vorige voorbeeld de ruimtezone ook bevat wordt door de gebouwzone."@nl ;
+        
+	rdfs:domain	bot:Zone ;
         rdfs:range      bot:Zone .
 
 bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
         rdfs:label      "adjacent zone"@en ,
-						"zona adyacente"@es ,
-						"aangrenzende zone"@nl ,
+			"zona adyacente"@es ,
+			"aangrenzende zone"@nl ,
                         "tilstødende zone"@da ;
-        rdfs:comment    "Relationship between two zones sharing a common interface."@en ,
+
+	rdfs:comment    "Relationship between two zones sharing a common interface."@en ,
                         "Relatie tussen twee zones die een interface delen"@nl ,
                         "Relation mellem to zoner, der deler en fælles grænseflade."@da ;
-        rdfs:domain     bot:Zone ;
+        
+	rdfs:domain     bot:Zone ;
         rdfs:range      bot:Zone .
 
 bot:hasBuilding a owl:ObjectProperty ;
         rdfs:label      "has building"@en ,
-						"tiene edificio"@es ,
-						"heeft gebouw"@nl ,
+			"tiene edificio"@es ,
+			"heeft gebouw"@nl ,
                         "har bygning"@da ;
-        rdfs:comment    "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ,
-						"Relatie tot gebouwen die zich op een terrein bevinden"@nl ,
+        
+	rdfs:comment    "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ,
+			"Relatie tot gebouwen die zich op een terrein bevinden"@nl ,
                         "Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site."@da ;
-        rdfs:subPropertyOf bot:containsZone ;
-        rdfs:domain     bot:Zone ;
+        
+	rdfs:subPropertyOf bot:containsZone ;
+        
+	rdfs:domain     bot:Zone ;
         rdfs:range      bot:Building .
 
 						
 bot:hasStorey a owl:ObjectProperty ;
         rdfs:label      "has storey"@en ,
-						"tiene piso"@es ,
-						"heeft verdieping"@nl ,
-						"hat geschoss"@de ,
+			"tiene piso"@es ,
+			"heeft verdieping"@nl ,
+			"hat geschoss"@de ,
                         "har etage"@da ;
-        rdfs:comment    "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ,
-						"Relatie tot de verdiepingen die zich in een zone bevinden. De typische domeinen van bot:hasStorey zijn instanties van bot:Building"@nl ,
-						#"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
+        
+	rdfs:comment    "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ,
+			"Relatie tot de verdiepingen die zich in een zone bevinden. De typische domeinen van bot:hasStorey zijn instanties van bot:Building"@nl ,
+			#"Beziehung zu in Gebäude enthaltenden Geschossen"@de ,
                         "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da ;
-        rdfs:subPropertyOf bot:containsZone ;
-        rdfs:domain     bot:Zone ;
+        
+	rdfs:subPropertyOf bot:containsZone ;
+        
+	rdfs:domain     bot:Zone ;
         rdfs:range      bot:Storey .
 		
 bot:hasSpace a owl:ObjectProperty ;
         rdfs:label      "has space"@en ,
-						"tiene espacio"@es ,
+			"tiene espacio"@es ,
                         "hat raum"@de ,
                         "heeft ruimte"@nl ,
                         "har rum"@da ;
-        rdfs:comment    "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ,
-						"Relación a espacios contenidos en una zona. Los dominios típicos de bot:hasSPace son instancias de bot:Storey y bot:Building."@es ,
-						"Relatie tot ruimtes die zich in een zone bevinden. De typische domeinen van bot:hasSpace zijn instanties van bot:Storey en bot:Building."@nl ,
-						#"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
+        
+	rdfs:comment    "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ,
+			"Relación a espacios contenidos en una zona. Los dominios típicos de bot:hasSPace son instancias de bot:Storey y bot:Building."@es ,
+			"Relatie tot ruimtes die zich in een zone bevinden. De typische domeinen van bot:hasSpace zijn instanties van bot:Storey en bot:Building."@nl ,
+			#"Beziehung zu Räumen, die sich in einem Geschoss befinden"@de ,
                         "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da ;
-        rdfs:subPropertyOf bot:containsZone ;
-		rdfs:domain     bot:Zone ;
+        
+	rdfs:subPropertyOf bot:containsZone ;
+	
+	rdfs:domain     bot:Zone ;
         rdfs:range      bot:Space .
 		
 bot:adjacentElement a owl:ObjectProperty ;
         rdfs:label      "adjacent element"@en ,
-						"elemento adyacente"@es ,
-			            "aangrenzend element"@nl ,
-			            "benachbartes bauteil"@de ,
+			"elemento adyacente"@es ,
+			"aangrenzend element"@nl ,
+			"benachbartes bauteil"@de ,
                         "tilstødende element"@da ;
-        rdfs:comment    "Relation between a zone and its adjacent building elements, bounding the physical space."@en ,
-						"Relación entre una zona y sus elementos arquitectónicos adyacentes, que limitan el espacio físico."@es ,
-			            #"Beziehung eines Raumes zu Bauteilen die in begrenzen"@de ,
-			            "Relatie tussen een zone en zijn aangrenzende gebouwelementen, begrensd door fysieke ruimte."@nl ,
+        
+	rdfs:comment    "Relation between a zone and its adjacent building elements, bounding the physical space."@en ,
+			"Relación entre una zona y sus elementos arquitectónicos adyacentes, que limitan el espacio físico."@es ,
+			#"Beziehung eines Raumes zu Bauteilen die in begrenzen"@de ,
+			"Relatie tussen een zone en zijn aangrenzende gebouwelementen, begrensd door fysieke ruimte."@nl ,
                         "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."@da ;
-        rdfs:domain     bot:Zone ;
+        
+	rdfs:domain     bot:Zone ;
         rdfs:range      bot:Element .
 		
 bot:containsElement a owl:ObjectProperty ;
         rdfs:label      "contains element"@en ,
-						"contiene elemento"@es ,
+			"contiene elemento"@es ,
                         "bevat element"@nl ,
                         "enthält"@de ,
                         "indeholder bygningsdel"@da ;
-        rdfs:comment    "Relation to a building element contained in a zone."@en ,
-						"Relación a un elemento arquitectónico contenido en una zona."@es ,
+        
+	rdfs:comment    "Relation to a building element contained in a zone."@en ,
+			"Relación a un elemento arquitectónico contenido en una zona."@es ,
                         #"Beziehung eines Raums zu einem Bauteil"@de ,
                         "Relatie tussen zone en een gebouwelement in die zone"@nl ,
                         "Relation til en bygningsdel, som er indeholdt i en zone."@da ;
-		rdfs:domain     bot:Zone ;
+		
+	rdfs:domain     bot:Zone ;
         rdfs:range      bot:Element ;
-        owl:propertyChainAxiom  ( bot:containsZone bot:containsElement ) .
+        
+	owl:propertyChainAxiom  ( bot:containsZone bot:containsElement ) .
 		
 bot:hostsElement a owl:ObjectProperty ;
         rdfs:label      "hosts element"@en ,
-						"alberga elemento"@es ,
+			"alberga elemento"@es ,
                         "hoster element"@nl ,
                         "hoster element"@da ,
-						"heeft element"@nl ;
-        rdfs:comment    "Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en ,
+			"heeft element"@nl ;
+        
+	rdfs:comment    "Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en ,
                         "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"@nl ,
                         "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da ;
-        rdfs:domain     bot:Element ;
+        
+	rdfs:domain     bot:Element ;
         rdfs:range      bot:Element .
 
 bot:aggregates a owl:ObjectProperty ;
         rdfs:label      "aggregates"@en ,
- 						"aggregaat"@nl ,
- 						"agrega"@es ,
+ 			"aggregaat"@nl ,
+ 			"agrega"@es ,
                         "aggregerer"@da ;
-        rdfs:comment    """Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.
         
-Example of how to use bot:aggregates in a product ontology:
-```
-product:Fan             rdfs:subClassOf     bot:Element .
-product:Filter          rdfs:subClassOf     bot:Element .
-product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
-                        rdfs:range          product:Fan .
-product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
-                        rdfs:range          product:Filter .
-product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
-                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
-                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
-```"""@en ,
-                        """Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
-        
-Eksempel på brug af bot:aggregates i en produkt-ontologi:
-```
-product:Fan             rdfs:subClassOf     bot:Element .
-product:Filter          rdfs:subClassOf     bot:Element .
-product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
-                        rdfs:range          product:Fan .
-product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
-                        rdfs:range          product:Filter .
-product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
-                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
-                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
-```"""@da ,
+	rdfs:comment    """Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.
 
-						"""Verbindt een aggregaat (een kluster van elementen die dat kan worden behandeld als een eenheid) met zijn sub-elementen. Bijvoorbeeld een luchtbehandelingsunit met, onder andere, een ventilator en een filter.
-        
-Voorbeeld van hoe bot:aggregates worden gebruikt in een product ontology:
-```
-product:Fan             rdfs:subClassOf     bot:Element .
-product:Filter          rdfs:subClassOf     bot:Element .
-product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
-                        rdfs:range          product:Fan .
-product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
-                        rdfs:range          product:Filter .
-product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
-                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
-                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
-```"""@nl .
+				Example of how to use bot:aggregates in a product ontology:
+				```
+				product:Fan             rdfs:subClassOf     bot:Element .
+				product:Filter          rdfs:subClassOf     bot:Element .
+				product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+							rdfs:range          product:Fan .
+				product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+							rdfs:range          product:Filter .
+				product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+							rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+							rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+				```"""@en ,
+                        """Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
+
+				Eksempel på brug af bot:aggregates i en produkt-ontologi:
+				```
+				product:Fan             rdfs:subClassOf     bot:Element .
+				product:Filter          rdfs:subClassOf     bot:Element .
+				product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+							rdfs:range          product:Fan .
+				product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+							rdfs:range          product:Filter .
+				product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+							rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+							rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+				```"""@da ,
+			"""Verbindt een aggregaat (een kluster van elementen die dat kan worden behandeld als een eenheid) met zijn sub-elementen. Bijvoorbeeld een luchtbehandelingsunit met, onder andere, een ventilator en een filter.
+
+				Voorbeeld van hoe bot:aggregates worden gebruikt in een product ontology:
+				```
+				product:Fan             rdfs:subClassOf     bot:Element .
+				product:Filter          rdfs:subClassOf     bot:Element .
+				product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+							rdfs:range          product:Fan .
+				product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+							rdfs:range          product:Filter .
+				product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+							rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+							rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+				```"""@nl .
 
 bot:interfaceOf a owl:ObjectProperty ;
         rdfs:label      "interface of"@en ,
-        				"interface van"@nl ,
+			"interface van"@nl ,
                         "grænseflade for"@da ;
-        rdfs:comment    "Relationship between an interface and an adjacent zone or element."@en ,
+        
+	rdfs:comment    "Relationship between an interface and an adjacent zone or element."@en ,
                         "Relatie tussen een interface en een aanliggende zone of element."@nl ,
                         "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."@da ;
-        rdfs:domain     bot:Interface .
+        
+	rdfs:domain     bot:Interface .
 
 #################################
 # CONSTRAINTS
@@ -331,17 +364,18 @@ bot:interfaceOf a owl:ObjectProperty ;
 [] a owl:AllDisjointClasses ;
         owl:members
               ( 
-				bot:Site
-				bot:Element
+		bot:Site
+		bot:Element
                 bot:Space
                 bot:Storey
                 bot:Building ) .
+
 # Disjunctive classes
 [] a owl:AllDisjointClasses ;
         owl:members
               ( 
-				bot:Zone
-				bot:Element ) .
+		bot:Zone
+		bot:Element ) .
 
 # An interface is the interface of exactly two instances
 bot:Interface rdfs:subClassOf [
