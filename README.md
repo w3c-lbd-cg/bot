@@ -8,7 +8,7 @@ Developments are stored in the Development branch and feature branches are creat
 1. Fork this repository. 
 2. Add contribution to bot or separate alignment file.
 3. Validate that the turtle file is still valid using for example Protegé or http://ttl.summerofcode.be/
-4. Commit your changes and submit a [pull request](https://github.com/perma-id/w3id.org/pulls).
+4. Commit your changes and submit a [pull request](https://github.com/w3c-lbd-cg/bot/pulls).
 5. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
 
 ## Aligning to BOT
