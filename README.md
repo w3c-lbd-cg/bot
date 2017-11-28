@@ -14,7 +14,7 @@ Developments are stored in the Development branch and feature branches are creat
 ## Aligning to BOT
 As BOT is proposed as a central ontology in the domain of AEC/FM industry alignments with existing domains need to be provided. Ontologies defining the alignment are given in this repository and file naming is given by <ontologname>Alignment.ttl.
 
-So far an alignment for the following ontologied has been provided:
+So far an alignment for the following ontologies has been provided:
 
 SAREF4Bldg [Ontology](https://w3id.org/def/saref4bldg#) [Alignment](https://github.com/w3c-lbd-cg/bot/pull/10)
 
