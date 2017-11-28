@@ -56,6 +56,18 @@ inst:floor23 a bot:Element .
 ```
 specifying classes is not necessary as these are inferred by the domain and range specified in the ontology.
 
+Since version v0.2.0 BOT features the `bot:Interface` concept to describe connections between instances of `bot:Element`. See also the following example.
+
+```turtle
+@prefix bot:  <https://w3id.org/bot#> .
+@prefix inst: <https://example.org/projectXX/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+inst:interfaceA bot:interfaceOf inst:space00aa .
+inst:interfaceA bot:interfaceOf inst:wall443 .
+inst:interfaceA rdf:type bot:Interface .
+```
+
 ## Extending BOT
 ### By specifying subclasses
 The following will automatically infer that an instance is a bot:Element given that the instance is specified as a h:SpaceHeater:
