@@ -79,7 +79,7 @@ bot:Zone a owl:Class ;
         
         rdfs:comment    "An area or stretch of land having a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone."@en ,
 			"Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone."@es ,
-                        "Et areal eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone."@da ,
+                        "Et område eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone."@da ,
                         "Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone."@nl .
 
 bot:Site a owl:Class ;
