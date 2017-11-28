@@ -85,7 +85,7 @@ h:heatedBy a owl:ObjectProperty ;
 ```
 
 ## BOT and reasoning
-Hylar is a simple js library for doing reasoning on a set of triples. To get it up and running, do the following:
+[Hylar](https://www.npmjs.com/package/hylar) is a simple js library for doing reasoning on a set of triples. To get it up and running, do the following:
 
 1) Initialize a new project with ```npm init```
 2) Add Hylar as dependency ```npm install --save hylar``` (first you need node and node-gyp: [https://github.com/nodejs/node-gyp](https://github.com/nodejs/node-gyp))
