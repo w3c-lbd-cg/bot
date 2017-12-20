@@ -26,6 +26,8 @@ DogOnt [link](http://elite.polito.it/ontologies/dogont.owl#)
 
 ifcOWL [link](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
 
+rooms [link](http://vocab.deri.ie/rooms.html)
+
 ## Example of using BOT
 
 Example of using BOT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).

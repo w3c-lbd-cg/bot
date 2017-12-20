@@ -38,27 +38,30 @@ foaf:name a owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-bot:Site owl:equivalentClass th:Campus .
-bot:Building owl:equivalentClass th:Building .
-bot:Storey owl:equivalentClass th:BuildingStorey .
+th:Campus rdfs:subClassOf bot:Site .
+th:Building rdfs:subClassOf bot:Building .
+th:BuildingStorey rdfs:subClassOf bot:Storey .
 
 th:Zone rdfs:subClassOf bot:Space .
 th:Space rdfs:subClassOf bot:Space .
+
+th:SpaceBoundary rdfs:subClassOf bot:Interface .
+th:Surface rdfs:subClassOf bot:Interface .
 
 th:Equipment rdfs:subClassOf bot:Element .
 th:Construction rdfs:subClassOf bot:Element .
 th:Layer rdfs:subClassOf bot:Element .
 th:Material rdfs:subClassOf bot:Element .
 th:Opening rdfs:subClassOf bot:Element .
-th:Surface rdfs:subClassOf bot:Element .
 
+th:containsBuilding rdfs:subPropertyOf bot:containsZone .
+th:containsBuildingStorey rdfs:subPropertyOf bot:containsZone .
+th:containsLocation rdfs:subPropertyOf bot:containsZone .
 
+th:containsOpening rdfs:subPropertyOf bot:hosts .
 
+th:containsSpace rdfs:subPropertyOf bot:hasSpace .
 
+th:hasDefinedAdjacentSpace rdfs:subPropertyOf bot:adjacentZone .
 
-
-
-
-
-
-
+th:isDefinedAdjacentSurfaceOf rdfs:subPropertyOf bot:interfaceOf .

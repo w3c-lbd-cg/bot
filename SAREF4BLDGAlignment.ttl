@@ -51,16 +51,18 @@ foaf:name a owl:DatatypeProperty .
   dcterms:contributor [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
   dcterms:contributor <http://www.maxime-lefrancois.info/me#> ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-  owl:versionInfo "v0.1.0" ;
+  owl:versionInfo "v0.2.0" ;
   owl:imports <https://w3id.org/bot> ;
   owl:imports <https://w3id.org/def/saref4bldg> .
    
 #################################
 # ALIGNMENTS
 #################################
-      
-bot:Building		owl:equivalentClass		saref4bldg:Building .
-bot:Element			owl:equivalentClass		saref4bldg:PhysicalObject .
-bot:Space			owl:equivalentClass 	saref4bldg:BuildingSpace .
-bot:hasSpace 		rdfs:subPropertyOf  	saref4bldg:hasSpace .
-bot:containsElement	owl:equivalentProperty 	saref4bldg:contains .
+
+saref4bldg:Building         rdfs:subClassOf bot:Building .      
+saref4bldg:PhysicalObject   rdfs:subClassOf bot:Element .
+saref4bldg:BuildingSpace    rdfs:subClassOf bot:Space .
+
+saref4bldg:hasSpace         rdfs:subPropertyOf bot:hasSpace .
+saref4bldg:contains         rdfs:subPropertyOf bot:containsElement .
+

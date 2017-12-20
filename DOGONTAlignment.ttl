@@ -38,16 +38,19 @@ foaf:name a owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-bot:Building owl:equivalentClass dogont:Building .
+dogont:Building rdfs:subClassOf bot:Building .
 dogont:Flat rdfs:subClassOf bot:Building .
-bot:Storey owl:equivalentClass dogont:Storey .
+dogont:Storey rdfs:subClassOf bot:Storey .
 
-bot:Space rdfs:subClassOf dogont:BuildingEnvironment .
+bot:Zone rdfs:subClassOf dogont:Environment .
+dogont:BuildingEnvironment rdfs:subClassOf bot:Zone.
+
 dogont:Room rdfs:subClassOf bot:Space .
-dogont:Garage rdfs:subClassOf bot:Space .
-dogont:Garden rdfs:subClassOf bot:Space .
 
 dogont:Controllable 	rdfs:subClassOf bot:Element .
 dogont:Device 			rdfs:subClassOf bot:Element .
 dogont:UnControllable	rdfs:subClassOf bot:Element .
 dogont:TechnicalSystem	rdfs:subClassOf bot:Element .
+
+dogont:hasWallOpening rdfs:subPropertyOf bot:hosts .
+

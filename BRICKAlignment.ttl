@@ -46,7 +46,7 @@ brick:contains rdfs:subPropertyOf bot:containsElement .
 #    Classes
 #################################################################
 
-bot:Space rdfs:subClassOf brick:Location .
+bot:Zone rdfs:subClassOf brick:Location .
 brick:Basement rdfs:subClassOf bot:Space .
 brick:Outside rdfs:subClassOf bot:Space .
 brick:Room rdfs:subClassOf bot:Space .
@@ -54,11 +54,12 @@ brick:Space rdfs:subClassOf bot:Space .
 brick:Wing rdfs:subClassOf bot:Space .
 brick:Zone rdfs:subClassOf bot:Space .
 
-bot:Building owl:equivalentClass brick:Building .
-bot:Storey owl:equivalentClass brick:Floor .
+brick:Building rdfs:subClassOf bot:Building .
+brick:Floor rdfs:subClassOf bot:Storey .
 
 brick:Equipment rdfs:subClassOf bot:Element .
 
 brick:Point rdfs:subClassOf bot:Element .
 
+brick:contains rdfs:subPropertyOf bot:containsElement  .
 
