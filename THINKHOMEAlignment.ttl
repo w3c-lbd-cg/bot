@@ -1,0 +1,67 @@
+@prefix : <https://w3id.org/bot/THINKHOMEAlignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix bot: <https://w3id.org/bot#> .
+@prefix th: <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#> .
+@base <https://w3id.org/bot/THINKHOMEAlignment> .
+
+<https://w3id.org/bot/THINKHOMEAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "ThinkHome to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the ThinkHome ontologies."""@en ;
+	dcterms:issued "2017-09-12"^^xsd:date ;
+	dcterms:modified "2017-09-12"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+	owl:imports 	<https://w3id.org/bot> ,
+					<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################################################
+#    Classes
+#################################################################
+
+th:Campus rdfs:subClassOf bot:Site .
+th:Building rdfs:subClassOf bot:Building .
+th:BuildingStorey rdfs:subClassOf bot:Storey .
+
+th:Zone rdfs:subClassOf bot:Space .
+th:Space rdfs:subClassOf bot:Space .
+
+th:SpaceBoundary rdfs:subClassOf bot:Interface .
+th:Surface rdfs:subClassOf bot:Interface .
+
+th:Equipment rdfs:subClassOf bot:Element .
+th:Construction rdfs:subClassOf bot:Element .
+th:Layer rdfs:subClassOf bot:Element .
+th:Material rdfs:subClassOf bot:Element .
+th:Opening rdfs:subClassOf bot:Element .
+
+th:containsBuilding rdfs:subPropertyOf bot:containsZone .
+th:containsBuildingStorey rdfs:subPropertyOf bot:containsZone .
+th:containsLocation rdfs:subPropertyOf bot:containsZone .
+
+th:containsOpening rdfs:subPropertyOf bot:hosts .
+
+th:containsSpace rdfs:subPropertyOf bot:hasSpace .
+
+th:hasDefinedAdjacentSpace rdfs:subPropertyOf bot:adjacentZone .
+
+th:isDefinedAdjacentSurfaceOf rdfs:subPropertyOf bot:interfaceOf .
