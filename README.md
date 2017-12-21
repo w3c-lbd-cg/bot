@@ -16,15 +16,15 @@ As BOT is proposed as a central ontology in the domain of AEC/FM industry alignm
 
 So far an alignment for the following ontologies has been provided:
 
-SAREF4Bldg [Ontology](https://w3id.org/def/saref4bldg#) [Alignment](https://github.com/w3c-lbd-cg/bot/pull/10)
+SAREF4Bldg [Ontology](https://w3id.org/def/saref4bldg#)
 
-Intended alignments include (non-exhaustively)
+ThinkHome [Ontology](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
 
-ThinkHome [Ontology](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl) [Alignment](https://github.com/w3c-lbd-cg/bot/pull/10)
+DogOnt [Ontology](http://elite.polito.it/ontologies/dogont.owl#)
 
-DogOnt [Ontology](http://elite.polito.it/ontologies/dogont.owl#) [Alignment](https://github.com/w3c-lbd-cg/bot/pull/10)
+ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
 
-ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#) [Alignment](https://github.com/w3c-lbd-cg/bot/pull/10)
+DERI Rooms [Ontology](http://vocab.deri.ie/rooms.html)
 
 ## Example of using BOT
 
