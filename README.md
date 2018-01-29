@@ -11,6 +11,10 @@ Developments are stored in the Development branch and feature branches are creat
 4. Commit your changes and submit a [pull request](https://github.com/w3c-lbd-cg/bot/pulls).
 5. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
 
+## Live demos using BOT
+[Step by step introduction with visualizations](https://madsholten.github.io/bot-visualizer/)
+[Queries on a 3D-model](https://forge-sparql.herokuapp.com/)
+
 ## Aligning to BOT
 As BOT is proposed as a central ontology in the domain of AEC/FM industry alignments with existing domains need to be provided. Ontologies defining the alignment are given in this repository and file naming is given by <ontologname>Alignment.ttl.
 
