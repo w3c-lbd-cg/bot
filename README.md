@@ -13,6 +13,7 @@ Developments are stored in the Development branch and feature branches are creat
 
 ## Live demos using BOT
 [Step by step introduction with visualizations](https://madsholten.github.io/bot-visualizer/)
+
 [Queries on a 3D-model](https://forge-sparql.herokuapp.com/)
 
 ## Aligning to BOT
