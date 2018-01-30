@@ -22,7 +22,7 @@
             "@prefix bot:  <https://w3id.org/bot#> .",
             "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
             "@prefix prod: <https://w3id.org/prod#> .",
-            "@prefix prod: <https://w3id.org/props#> .",
+            "@prefix props: <https://w3id.org/props#> .",
             "@prefix ifc:  <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
             "@prefix bsdd: <http://www.example.com/bsdd#> .\n",
 
