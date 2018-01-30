@@ -109,6 +109,9 @@
             "SELECT *",
             "WHERE {",
             "\t?s a prod:Wall .",
+            "\t?interface a bot:Interface ;",
+            "\t\tbot:interfaceOf ?wall ;",
+            "\t\tds418:heatTransmissionArea ?htArea .",
             "}" 
         ],
         "triples": [
