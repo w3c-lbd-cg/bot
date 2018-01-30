@@ -37,7 +37,7 @@
             "Doing a `SELECT` query on the dataset will return a table with the results. This example returns all the properties defined in the architect's dataset."
         ],
         "query": [
-            "SELECT *",
+            "SELECT ?property ?value",
             "WHERE {",
             "\t<http://some-arch.com/proj/100100/Walls/123> ?property ?value",
             "}"
@@ -61,9 +61,54 @@
             "In this example, also data from the HVAC engineer and the structural engineer is included in the dataset. Try to do the query from the previous step to get all the properties of the wall including the ones not defined by the architect."
         ],
         "query": [
+            "CONSTRUCT",
+            "WHERE {",
+            "\t?subject ?predicate ?object",
+            "}"
+        ],
+        "triples": [
+            "@prefix bot:   <https://w3id.org/bot#> .",
+            "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix prod:  <https://w3id.org/prod#> .",
+            "@prefix props: <https://w3id.org/props#> .",
+            "@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
+            "@prefix bsdd:  <http://www.example.com/bsdd#> .",
+            "@prefix stat:  <http://www.example.com/stat#> .",
+            "@prefix ds418: <http://www.example.com/ds418#> .\n",
+            
+            "# ARCHITECT'S DATASET",
+            "<http://some-arch.com/proj/100100/Walls/123> a bot:Element , prod:Wall , ifc:IfcWall ;",
+            "\tprops:area \"20.3 m2\" ;",
+            "\tbsdd:area \"20.3 m2\" .\n",
+            
+            "# HVAC ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Walls/123> props:uValue \"0.21 W/m2K\" .",
+            "<http://some-eng.com/proj/100222/Interfaces/23> a bot:Interface ;",
+            "\tbot:interfaceOf <http://some-arch.com/proj/100100/Walls/123> ;",
+            "\tprops:surfaceResistance \"0.13 m2K/W\" ;",
+            "\tprops:area \"10.5 m2\" ;",
+            "\tds418:heatTransmissionArea \"10.5 m2\" .\n",
+            
+            "# STRUCTURAL ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Walls/123> props:concreteStrength \"20 MPa\" ;",
+            "\tbsdd:strength \"20 MPa\" ;",
+            "\tstat:reinforcementDefinition <http://other-eng.com/proj/123211/Reinf/23> .",
+            "<http://other-eng.com/proj/123211/Reinf/23> a stat:ReinforcementDefinition ;",
+            "\tstat:verticalBars \"5 bars/m\" ;",
+            "\tstat:horisontalBars \"5 bars/m\" ."
+        ]
+    },
+    {
+        "title": "1.4: Wall - interface",
+        "description": [
+            "This is a query to return the DS418 heat transfer area of all interfaces of walls. ^ is used to retrieve the relationship in opposite direction. In `SELECT *` the asterisk symbol specifies that all variables should be returned."
+        ],
+        "query": [
             "SELECT *",
             "WHERE {",
-            "\t<http://some-arch.com/proj/100100/Walls/123> ?property ?value",
+            "\t?wall a prod:Wall ;",
+            "\t\t^bot:interfaceOf ?interface .",
+            "\t?interface ds418:heatTransmissionArea ?htArea .",
             "}"
         ],
         "triples": [
