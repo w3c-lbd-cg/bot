@@ -108,10 +108,7 @@
             "PREFIX bot: <https://w3id.org/bot#>\n",
             "SELECT *",
             "WHERE {",
-            "\t?wall a prod:Wall .",
-            "\t?interface a bot:Interface ;",
-            "\t\tbot:interfaceOf ?wall ;",
-            "\t\tds418:heatTransmissionArea ?htArea .",
+            "\t?s a prod:Wall .",
             "}" 
         ],
         "triples": [
