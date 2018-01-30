@@ -105,7 +105,8 @@
         ],
         "query": [
             "PREFIX prod: <https://w3id.org/prod#>",
-            "PREFIX bot: <https://w3id.org/bot#>\n",
+            "PREFIX bot: <https://w3id.org/bot#>",
+            "PREFIX ds418: <http://www.example.com/ds418#>\n",
             "SELECT *",
             "WHERE {",
             "\t?wall a prod:Wall .",
