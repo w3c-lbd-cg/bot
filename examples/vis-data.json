@@ -73,6 +73,7 @@
             "@prefix props: <https://w3id.org/props#> .",
             "@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
             "@prefix bsdd:  <http://www.example.com/bsdd#> .",
+            "@prefix stat:  <http://www.example.com/stat#> .",
             "@prefix ds418: <http://www.example.com/ds418#> .\n",
             
             "# ARCHITECT'S DATASET",
@@ -86,7 +87,15 @@
             "\tbot:interfaceOf <http://some-arch.com/proj/100100/Walls/123> ;",
             "\tprops:surfaceResistance \"0.13 m2K/W\" ;",
             "\tprops:area \"10.5 m2\" ;",
-            "\tds418:heatTransmissionArea \"10.5 m2\" ."
+            "\tds418:heatTransmissionArea \"10.5 m2\" .\n",
+            
+            "# STRUCTURAL ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Walls/123> props:concreteStrength \"20 MPa\" ;",
+            "\tbsdd:strength \"20 MPa\" ;",
+            "\tstat:reinforcementDefinition <http://other-eng.com/proj/123211/Reinf/23> .",
+            "<http://other-eng.com/proj/123211/Reinf/23> a stat:ReinforcementDefinition ;",
+            "\tstat:verticalBars \"5 bars/m\" ;",
+            "\tstat:horisontalBars \"5 bars/m\" ."
         ]
     }
 ]
