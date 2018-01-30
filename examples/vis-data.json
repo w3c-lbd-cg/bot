@@ -1,0 +1,33 @@
+[
+    {
+        "title": "0: Introduction",
+        "description": [
+            "This is a test"
+        ],
+        "query": "",
+        "triples": ""
+    },
+    {
+        "title": "1.1: Wall",
+        "description": [
+            "First dataset"
+        ],
+        "query": [
+            "CONSTRUCT",
+            "WHERE {",
+            "\t<http://some-arch.com/proj/100100/Walls/123> ?property ?value",
+            "}"
+        ],
+        "triples": [
+            "@prefix bot:  <https://w3id.org/bot#> .",
+            "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix prod: <https://w3id.org/prod#> .",
+            "@prefix ifc:  <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
+            "@prefix bsdd: <http://www.example.com/bsdd#> .",
+
+            "<http://some-arch.com/proj/100100/Walls/123> a bot:Element , prod:Wall , ifc:IfcWall ;",
+            "\tprops:area "20.3 m2" ;",
+            "\tbsdd:area "20.3 m2" ."
+        ]
+    }
+]
