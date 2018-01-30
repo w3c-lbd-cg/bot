@@ -101,14 +101,17 @@
     {
         "title": "1.4: Wall - interface",
         "description": [
-            "This is a query to return the DS418 heat transfer area of all interfaces of walls. ^ is used to retrieve the relationship in opposite direction. In `SELECT *` the asterisk symbol specifies that all variables should be returned."
+            "This is a query to return the DS418 heat transfer area of all interfaces of walls. In `SELECT *` the asterisk symbol specifies that all variables should be returned."
         ],
         "query": [
+            "PREFIX prod: <https://w3id.org/prod#>",
+            "PREFIX bot: <https://w3id.org/bot#>\n",
             "SELECT *",
             "WHERE {",
-            "\t?wall a prod:Wall ;",
-            "\t\t^bot:interfaceOf ?interface .",
-            "\t?interface ds418:heatTransmissionArea ?htArea .",
+            "\t?wall a prod:Wall .",
+            "\t?interface a bot:Interface ;",
+            "\t\tbot:interfaceOf ?wall ;",
+            "\t\tds418:heatTransmissionArea ?htArea .",
             "}"
         ],
         "triples": [
