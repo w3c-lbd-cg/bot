@@ -112,7 +112,7 @@
             "\t?interface a bot:Interface ;",
             "\t\tbot:interfaceOf ?wall ;",
             "\t\tds418:heatTransmissionArea ?htArea .",
-            "}"
+            "}" 
         ],
         "triples": [
             "@prefix bot:   <https://w3id.org/bot#> .",
