@@ -148,20 +148,14 @@
         ]
     },
     {
-        "title": "1.4: Wall - interface",
+        "title": "2.1: Systems - full dataset",
         "description": [
             "This is a query to return the DS418 heat transfer area of all interfaces of walls. In `SELECT *` the asterisk symbol specifies that all variables should be returned."
         ],
         "query": [
-            "PREFIX prod: <https://w3id.org/prod#>",
-            "PREFIX bot: <https://w3id.org/bot#>",
-            "PREFIX ds418: <http://www.example.com/ds418#>\n",
-            "SELECT *",
+            "CONSTRUCT",
             "WHERE {",
-            "\t?wall a prod:Wall .",
-            "\t?interface a bot:Interface ;",
-            "\t\tbot:interfaceOf ?wall ;",
-            "\t\tds418:heatTransmissionArea ?htArea .",
+            "\t?s ?p ?o",
             "}" 
         ],
         "triples": [
