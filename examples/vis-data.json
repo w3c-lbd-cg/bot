@@ -146,5 +146,48 @@
             "\tstat:verticalBars \"5 bars/m\" ;",
             "\tstat:horisontalBars \"5 bars/m\" ."
         ]
+    },
+    {
+        "title": "1.4: Wall - interface",
+        "description": [
+            "This is a query to return the DS418 heat transfer area of all interfaces of walls. In `SELECT *` the asterisk symbol specifies that all variables should be returned."
+        ],
+        "query": [
+            "PREFIX prod: <https://w3id.org/prod#>",
+            "PREFIX bot: <https://w3id.org/bot#>",
+            "PREFIX ds418: <http://www.example.com/ds418#>\n",
+            "SELECT *",
+            "WHERE {",
+            "\t?wall a prod:Wall .",
+            "\t?interface a bot:Interface ;",
+            "\t\tbot:interfaceOf ?wall ;",
+            "\t\tds418:heatTransmissionArea ?htArea .",
+            "}" 
+        ],
+        "triples": [
+            "@prefix bot:   <https://w3id.org/bot#> .",
+            "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix pto:   <http://www.productontology.org/id/> .",
+            "@prefix props: <https://w3id.org/props#> .",
+            "@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
+            "@prefix bsdd:  <http://www.example.com/bsdd#> .",
+            "@prefix stat:  <http://www.example.com/stat#> .",
+            "@prefix ds418: <http://www.example.com/ds418#> .\n",
+            
+            "# ARCHITECT'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
+            
+            "# ICE ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/O21> prop:heatingDemand \"500 W\" .\n",
+            
+            "# HVAC ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
+            "<http://some-eng.com/proj/100222/Heaters/a21> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" ;",
+            "\tfso:roomCoverage \"0.5\" .",
+            "<http://some-eng.com/proj/100222/Heaters/a22> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" ;",
+            "\tfso:roomCoverage \"0.5\" ."
+        ]
     }
 ]
