@@ -1,0 +1,89 @@
+[
+    {
+        "title": "0: Introduction",
+        "description": [
+            "The purpose of this app is to visualise and communicate the capabilities of the [Building Topology Ontology (BOT)](https://github.com/w3c-lbd-cg/bot). By default the data samples are queried as an in-memory graph using the [rdflib](https://www.npmjs.com/package/rdflib) library, but unfortnately this library has its shortcomings in terms of SPARQL capabilities. We therefor recommend running it on a [Stardog](https://www.stardog.com/) based endpoint.",
+            "### Use a Stardog triplestore",
+            "To use the app with a Stardog tripestore this must either be available online, or this app must be run in a local environment. To do the latter, simply clone the repository, install the dependencies with `npm install` (requires [node.js](https://nodejs.org/en/)) and run a development server with `ng serve` (requires [Angular CLI](https://cli.angular.io/)).",
+            "With a local copy of the app running, make sure you have a Stardog running (defaults to port 5820) with an empty database (let's call it 'test'), so that you don't delete anything important. Then click the \"Switch to triplestore\" button and type in \"http://localhost:5820\" as endpoint and \"test\" as database. If you haven't changed the username and password they both default to \"admin\"."
+        ],
+        "query": "",
+        "triples": ""
+    },
+    {
+        "title": "1: A simple building",
+        "description": [
+            "Let's start as simple as it gets. A building with a single storey and a single space.\n",
+            "The default query is a \"CONSTRUCT\" query which returns a force graph with the full dataset. Changing \"`CONSTRUCT`\" to \"`SELECT *`\" will tell the system to instead return a table displaying the query results. If you change. `CONSTRUCT WHERE { ?s ?p ?o }` to `SELECT * WHERE { ?s a bot:Space }` it will return all the space instances in the dataset.\n",
+            "#### Challenges",
+            "Try adding some more spaces to the dataset and re-run the query. Then try to add another storey with some more spaces.\n",
+            "Try traversing the graph by adding some more statements to the query.",
+            "#### Help",
+            "A SPARQL query consists of triples (subject, predicate, object) to be matched, and by adding `?` as a suffix the triple component becomes a variable that will match anything.\n",
+            "`?s rdf:type bot:Space` will therefore return anything that is an instance of `bot:Space`.\n",
+            "A triple ends with (`.`), but if using (`;`) the first component of the triple will be reused in the next statement. \"`?s ?p ?o ; ?key ?value .`\" will therefore be interpreted the same as \"`?s ?p ?o . ?s ?key ?value .`\". (`,`) will repeat both the subject and the predicate of the previous triple, so \"`?s rdf:type bot:Space , bot:Zone .`\" is equal to \"`?s rdf:type bot:Space . ?s rdf:type bot:Zone .`\".\n",
+            "As an abbreviation for `rdf:type`, (`a`) can be used. For example `?s a bot:Space .`"
+        ],
+        "query": [
+            "PREFIX bot:  <https://w3id.org/bot#>",
+            "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n",
+            "CONSTRUCT",
+            "WHERE {",
+            "\t?s ?p ?o",
+            "}"
+        ],
+        "triples": [
+            "@prefix bot:  <https://w3id.org/bot#> .",
+            "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix inst: <https://example.org/projectXX/> .\n",
+
+            "# INSTANCES",
+            "inst:siteXX a bot:Site .",
+            "inst:buildingA a bot:Building .",
+            "inst:storey00 a bot:Storey .",
+            "inst:spaceR-01 a bot:Space .\n",
+
+            "# RELATIONS",
+            "inst:siteXX bot:hasBuilding inst:buildingA .",
+            "inst:buildingA bot:hasStorey inst:storey00 .",
+            "inst:storey00 bot:hasSpace inst:spaceR-01 ."
+        ]
+    },
+    {
+        "title": "2: Elements",
+        "description": "...",
+        "query": [
+            "PREFIX bot:  <https://w3id.org/bot#>",
+            "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n",
+            "SELECT *",
+            "WHERE {",
+            "\t?s a bot:Space",
+            "}"
+        ],
+        "triples": [
+            "@prefix bot:  <https://w3id.org/bot#> .",
+            "@prefix inst: <https://example.org/projectXX/> .",
+            "@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n",
+            
+            "inst:buildingA a bot:Building ;",
+            "\tbot:hasStorey inst:storey00 ,",
+            "\t\tinst:storey01 .\n",
+                                         
+            "inst:storey00 a bot:Storey ;",
+            "\tbot:hasSpace inst:space00aa ,",
+            "\t\tinst:space00cg .\n",
+                                       
+            "inst:storey01 a bot:Storey .\n",
+            
+            "inst:space00aa a bot:Space ;",
+            "\tbot:containsElement inst:heater235 ;",
+            "\tbot:adjacentElement inst:wall443 ,",
+            "\t\tinst:floor23 .\n",
+                                               
+            "inst:space00cg a bot:Space .",
+            "inst:heater235 a bot:Element .",
+            "inst:wall443 a bot:Element .",
+            "inst:floor23 a bot:Element ."
+        ]
+    }
+]
