@@ -173,7 +173,7 @@
             "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
             
             "# ICE ENGINEER'S DATASET",
-            "<http://some-arch.com/proj/100100/Spaces/O21> prop:heatingDemand \"500 W\" .\n",
+            "<http://some-arch.com/proj/100100/Spaces/O21> props:heatingDemand \"500 W\" .\n",
             
             "# HVAC ENGINEER'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
