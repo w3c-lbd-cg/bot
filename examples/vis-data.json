@@ -156,5 +156,103 @@
             "\tstat:verticalBars \"5 bars/m\" ;",
             "\tstat:horisontalBars \"5 bars/m\" ."
         ]
+    },
+    {
+        "title": "2.1: Systems - full dataset",
+        "description": [
+            "This is a full overview of the dataset used for Case 2."
+        ],
+        "query": [
+            "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+            "PREFIX fso: <http://www.example.com/fso#>",
+            "PREFIX ice: <http://www.example.com/ice#>\n",
+            "CONSTRUCT",
+            "WHERE {",
+            "\t?s ?p ?o",
+            "}" 
+        ],
+        "triples": [
+            "@prefix bot:   <https://w3id.org/bot#> .",
+            "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix pto:   <http://www.productontology.org/id/> .",
+            "@prefix ice:  <http://www.example.com/ice#> .",
+            "@prefix fso:   <http://www.example.com/fso#> .\n",
+            
+            "# ARCHITECT'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/A15> a bot:Space .",
+            "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
+            
+            "# ICE ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/A15> ice:heatingDemand \"550 W\" .",
+            "<http://some-arch.com/proj/100100/Spaces/O21> ice:heatingDemand \"500 W\" .\n",
+            
+            "# HVAC ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/A15> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/b21> .",
+            "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
+            "<http://some-eng.com/proj/100222/Heaters/a21> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" .",
+            "<http://some-eng.com/proj/100222/Heaters/a22> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" .",
+            "<http://some-eng.com/proj/100222/Heaters/b21> a pto:Radiator ;",
+            "\tfso:heatOutput \"600 W\" ."
+        ]
+    },
+    {
+        "title": "2.2: Systems - heating demand vs. heat output",
+        "description": [
+            "*NB! This is query only works with Stardog.*",
+            "The query compares the heating demand of each space to the total output of the devices that heat the room."
+        ],
+        "query": [
+            "PREFIX bot: <https://w3id.org/bot#>",
+            "PREFIX fso: <http://www.example.com/fso#>",
+            "PREFIX ice: <http://www.example.com/ice#>\n",
+
+            "SELECT *",
+            "WHERE {",
+            "\t?space a bot:Space ;",
+            "\t\tice:heatingDemand ?hd .\n",
+            "# STRIP UNIT AND CONVERT TO A DECIMAL NUMBER",
+            "\tBIND(if(contains(str( ?hd ), \" \") , xsd:decimal(strbefore(str(?hd), \" \")), xsd:decimal(?hd)) AS ?heatingDemand)\n",
+            "# GET THE TOTAL HEAT OUTPUT OF HEATERS IN THE SPACE",
+            "\t{",
+            "\t\tSELECT ?space (SUM(?hoNumber) AS ?heatOutput) WHERE {",
+            "\t\t\t?space  fso:heatedBy ?heater .",
+            "\t\t\t?heater fso:heatOutput ?ho .\n",
+            "# STRIP UNIT AND CONVERT TO A DECIMAL NUMBER",
+            "\t\t\tBIND(if(contains(str( ?ho ), \" \") , xsd:decimal(strbefore(str(?ho), \" \")), xsd:decimal(?ho)) AS ?hoNumber)",
+            "\t\t} GROUP BY ?space",
+            "\t}\n",
+            "# CALCULATE OVER CAPACITY",
+            "BIND(?heatOutput /?heatingDemand AS ?overCapacity)\n",
+            "# CHECK IF REQUIREMENT IS FULFILLED",
+            "BIND(IF(?overCapacity > 1, xsd:boolean(true), xsd:boolean(false)) AS ?heatRequirementFulfilled)",
+            "}"
+        ],
+        "triples": [
+            "@prefix bot:   <https://w3id.org/bot#> .",
+            "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix pto:   <http://www.productontology.org/id/> .",
+            "@prefix ice:  <http://www.example.com/ice#> .",
+            "@prefix fso:   <http://www.example.com/fso#> .\n",
+            
+            "# ARCHITECT'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/A15> a bot:Space .",
+            "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
+            
+            "# ICE ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/A15> ice:heatingDemand \"400 W\" .",
+            "<http://some-arch.com/proj/100100/Spaces/O21> ice:heatingDemand \"500 W\" .\n",
+            
+            "# HVAC ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/A15> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/b21> .",
+            "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
+            "<http://some-eng.com/proj/100222/Heaters/a21> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" .",
+            "<http://some-eng.com/proj/100222/Heaters/a22> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" .",
+            "<http://some-eng.com/proj/100222/Heaters/b21> a pto:Radiator ;",
+            "\tfso:heatOutput \"500 W\" ."
+        ]
     }
 ]
