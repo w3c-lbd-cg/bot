@@ -175,18 +175,14 @@
             "@prefix bot:   <https://w3id.org/bot#> .",
             "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
             "@prefix pto:   <http://www.productontology.org/id/> .",
-            "@prefix props: <https://w3id.org/props#> .",
-            "@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
-            "@prefix bsdd:  <http://www.example.com/bsdd#> .",
-            "@prefix fso:   <http://www.example.com/fso#> .",
-            "@prefix stat:  <http://www.example.com/stat#> .",
-            "@prefix ds418: <http://www.example.com/ds418#> .\n",
+            "@prefix ice:  <http://www.example.com/ice#> .",
+            "@prefix fso:   <http://www.example.com/fso#> ."\n",
             
             "# ARCHITECT'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
             
             "# ICE ENGINEER'S DATASET",
-            "<http://some-arch.com/proj/100100/Spaces/O21> props:heatingDemand \"500 W\" .\n",
+            "<http://some-arch.com/proj/100100/Spaces/O21> ice:heatingDemand \"500 W\" .\n",
             
             "# HVAC ENGINEER'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
@@ -205,27 +201,27 @@
             "The query compares the heating demand of each space to the total output of the devices that heat the room."
         ],
         "query": [
-            "CONSTRUCT",
+            "PREFIX bot: <https://w3id.org/bot#>",
+            "REFIX ice: <http://www.example.com/ice#>\n",
+
+            "SELECT *",
             "WHERE {",
-            "\t?s ?p ?o",
-            "}" 
+            "\t?s a bot:Space ;",
+            "\t\tice:heatingDemand ?hd .",
+            "}"
         ],
         "triples": [
             "@prefix bot:   <https://w3id.org/bot#> .",
             "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
             "@prefix pto:   <http://www.productontology.org/id/> .",
-            "@prefix props: <https://w3id.org/props#> .",
-            "@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
-            "@prefix bsdd:  <http://www.example.com/bsdd#> .",
-            "@prefix fso:   <http://www.example.com/fso#> .",
-            "@prefix stat:  <http://www.example.com/stat#> .",
-            "@prefix ds418: <http://www.example.com/ds418#> .\n",
+            "@prefix ice:  <http://www.example.com/ice#> .",
+            "@prefix fso:   <http://www.example.com/fso#> ."\n",
             
             "# ARCHITECT'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
             
             "# ICE ENGINEER'S DATASET",
-            "<http://some-arch.com/proj/100100/Spaces/O21> props:heatingDemand \"500 W\" .\n",
+            "<http://some-arch.com/proj/100100/Spaces/O21> ice:heatingDemand \"500 W\" .\n",
             
             "# HVAC ENGINEER'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
