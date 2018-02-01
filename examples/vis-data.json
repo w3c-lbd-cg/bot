@@ -156,44 +156,44 @@
             "\tstat:verticalBars \"5 bars/m\" ;",
             "\tstat:horisontalBars \"5 bars/m\" ."
         ]
-    },
-    {
-        "title": "2.1: Systems - full dataset",
-        "description": [
-            "This is a full overview of the dataset used for Case 2."
-        ],
-        "query": [
-            "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
-            "PREFIX props: <https://w3id.org/props#>",
-            "PREFIX fso:  <http://www.example.com/fso#>\n",
-            "CONSTRUCT",
-            "WHERE {",
-            "\t?s ?p ?o",
-            "}" 
-        ],
-        "triples": [
-            "@prefix bot:   <https://w3id.org/bot#> .",
-            "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
-            "@prefix pto:   <http://www.productontology.org/id/> .",
-            "@prefix ice:  <http://www.example.com/ice#> .",
-            "@prefix fso:   <http://www.example.com/fso#> .\n",
-            
-            "# ARCHITECT'S DATASET",
-            "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
-            
-            "# ICE ENGINEER'S DATASET",
-            "<http://some-arch.com/proj/100100/Spaces/O21> ice:heatingDemand \"500 W\" .\n",
-            
-            "# HVAC ENGINEER'S DATASET",
-            "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
-            "<http://some-eng.com/proj/100222/Heaters/a21> a pto:Radiator ;",
-            "\tfso:heatOutput \"200 W\" ;",
-            "\tfso:roomCoverage \"0.5\" .",
-            "<http://some-eng.com/proj/100222/Heaters/a22> a pto:Radiator ;",
-            "\tfso:heatOutput \"200 W\" ;",
-            "\tfso:roomCoverage \"0.5\" ."
-        ]
     }
+    // {
+    //     "title": "2.1: Systems - full dataset",
+    //     "description": [
+    //         "This is a full overview of the dataset used for Case 2."
+    //     ],
+    //     "query": [
+    //         "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+    //         "PREFIX fso: <http://www.example.com/fso#>",
+    //         "PREFIX ice: <http://www.example.com/ice#>\n",
+    //         "CONSTRUCT",
+    //         "WHERE {",
+    //         "\t?s ?p ?o",
+    //         "}" 
+    //     ],
+    //     "triples": [
+    //         "@prefix bot:   <https://w3id.org/bot#> .",
+    //         "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+    //         "@prefix pto:   <http://www.productontology.org/id/> .",
+    //         "@prefix ice:  <http://www.example.com/ice#> .",
+    //         "@prefix fso:   <http://www.example.com/fso#> .\n",
+            
+    //         "# ARCHITECT'S DATASET",
+    //         "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
+            
+    //         "# ICE ENGINEER'S DATASET",
+    //         "<http://some-arch.com/proj/100100/Spaces/O21> ice:heatingDemand \"500 W\" .\n",
+            
+    //         "# HVAC ENGINEER'S DATASET",
+    //         "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
+    //         "<http://some-eng.com/proj/100222/Heaters/a21> a pto:Radiator ;",
+    //         "\tfso:heatOutput \"200 W\" ;",
+    //         "\tfso:roomCoverage \"0.5\" .",
+    //         "<http://some-eng.com/proj/100222/Heaters/a22> a pto:Radiator ;",
+    //         "\tfso:heatOutput \"200 W\" ;",
+    //         "\tfso:roomCoverage \"0.5\" ."
+    //     ]
+    // }
     // {
     //     "title": "2.2: Systems - heating demand vs. heat output",
     //     "description": [
@@ -202,7 +202,7 @@
     //     ],
     //     "query": [
     //         "PREFIX bot: <https://w3id.org/bot#>",
-    //         "REFIX ice: <http://www.example.com/ice#>\n",
+    //         "PREFIX ice: <http://www.example.com/ice#>\n",
 
     //         "SELECT *",
     //         "WHERE {",
