@@ -163,6 +163,9 @@
             "This is a full overview of the dataset used for Case 2."
         ],
         "query": [
+            "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+            "PREFIX props: <https://w3id.org/props#>",
+            "PREFIX fso:  <http://www.example.com/fso#>\n",
             "CONSTRUCT",
             "WHERE {",
             "\t?s ?p ?o",
