@@ -13,6 +13,10 @@
             "The triples tab holds the architect's dataset. The query is just a `CONSTRUCT` query, which returns the full graph."
         ],
         "query": [
+            "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+            "PREFIX props: <https://w3id.org/props#>",
+            "PREFIX bsdd:  <http://www.example.com/bsdd#>",
+            "PREFIX ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#>\n",
             "CONSTRUCT",
             "WHERE {",
             "\t?subject ?predicate ?object",
@@ -61,6 +65,12 @@
             "In this example, also data from the HVAC engineer and the structural engineer is included in the dataset. Try to do the query from the previous step to get all the properties of the wall including the ones not defined by the architect."
         ],
         "query": [
+            "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
+            "PREFIX props: <https://w3id.org/props#>",
+            "PREFIX bsdd:  <http://www.example.com/bsdd#>",
+            "PREFIX stat:  <http://www.example.com/stat#>",
+            "PREFIX ds418: <http://www.example.com/ds418#>",
+            "PREFIX ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#>\n",
             "CONSTRUCT",
             "WHERE {",
             "\t?subject ?predicate ?object",
@@ -151,6 +161,45 @@
         "title": "2.1: Systems - full dataset",
         "description": [
             "This is a full overview of the dataset used for Case 2."
+        ],
+        "query": [
+            "CONSTRUCT",
+            "WHERE {",
+            "\t?s ?p ?o",
+            "}" 
+        ],
+        "triples": [
+            "@prefix bot:   <https://w3id.org/bot#> .",
+            "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
+            "@prefix pto:   <http://www.productontology.org/id/> .",
+            "@prefix props: <https://w3id.org/props#> .",
+            "@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .",
+            "@prefix bsdd:  <http://www.example.com/bsdd#> .",
+            "@prefix fso:   <http://www.example.com/fso#> .",
+            "@prefix stat:  <http://www.example.com/stat#> .",
+            "@prefix ds418: <http://www.example.com/ds418#> .\n",
+            
+            "# ARCHITECT'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
+            
+            "# ICE ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/O21> props:heatingDemand \"500 W\" .\n",
+            
+            "# HVAC ENGINEER'S DATASET",
+            "<http://some-arch.com/proj/100100/Spaces/O21> fso:heatedBy <http://some-eng.com/proj/100222/Heaters/a21> , <http://some-eng.com/proj/100222/Heaters/a22> .",
+            "<http://some-eng.com/proj/100222/Heaters/a21> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" ;",
+            "\tfso:roomCoverage \"0.5\" .",
+            "<http://some-eng.com/proj/100222/Heaters/a22> a pto:Radiator ;",
+            "\tfso:heatOutput \"200 W\" ;",
+            "\tfso:roomCoverage \"0.5\" ."
+        ]
+    },
+    {
+        "title": "2.2: Systems - heating demand vs. heat output",
+        "description": [
+            "*NB! This is query only works with Stardog.*",
+            "The query compares the heating demand of each space to the total output of the devices that heat the room."
         ],
         "query": [
             "CONSTRUCT",
