@@ -201,14 +201,22 @@
         "title": "2.2: Systems - heating demand vs. heat output",
         "description": [
             "*NB! This is query only works with Stardog.*",
-            "The query compares the heating demand of each space to the total output of the devices that heat the room."
+            "The query compares the heating demand of each space to the total output of the devices that heat the room. The query is constructed in the following way:\n",
+            "First anything that is classified as a `bot:Space` is assigned variable `?space`. The space must have a heating demand assigned in order to do the check so the triple `?space ice:heatingDemand ?hd` must also return a result. The heating demand is assigned to variable `?hd`. `?hd` needs to be converted to a decimal number in order to do calculations with it, and this is accomplished using a `BIND`. The `BIND` method also checks if the string contains a space and if so, only takes what is before the space, thereby stripping the unit. The decimal number is assigned to variable `?heatingDemand`\n",
+            "Next step is to sum the total heat output of everything that heats the space. A subquery is used for this purpose. This query checks for `fso:heatedBy` relationships from the spaces and thereby achieves all heat sources that supply heat to the space. The `fso:heatOutput` of these is found, converted to a decimal number and assigned to variable `?hoNumber`. The subquery groups the results by variable `?space` and returns the sum of `?hoNumber`.\n",
+            "The last step is to use two `BIND` methods to calculate the over capacity and check if the heat requirement is fulfilled.\n",
+            "The result of the query is the following:\n",
+            "| space       | heatingDemand | heatOutput | overCapacity | heatRequirementFulfilled ",
+            "| ----------- | ------------- | ---------- | ------------ | ------------------------ ",
+            "| inst:O21    | 500           | 400        | 0.8          | false ",
+            "| inst:O21    | 400           | 500        | 1.25         | true "
         ],
         "query": [
             "PREFIX bot: <https://w3id.org/bot#>",
             "PREFIX fso: <http://www.example.com/fso#>",
             "PREFIX ice: <http://www.example.com/ice#>\n",
 
-            "SELECT *",
+            "SELECT ?space ?heatingDemand ?heatOutput ?overCapacity ?heatRequirementFulfilled",
             "WHERE {",
             "\t?space a bot:Space ;",
             "\t\tice:heatingDemand ?hd .\n",
