@@ -176,7 +176,7 @@
             "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
             "@prefix pto:   <http://www.productontology.org/id/> .",
             "@prefix ice:  <http://www.example.com/ice#> .",
-            "@prefix fso:   <http://www.example.com/fso#> ."\n",
+            "@prefix fso:   <http://www.example.com/fso#> .\n",
             
             "# ARCHITECT'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
@@ -215,7 +215,7 @@
             "@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .",
             "@prefix pto:   <http://www.productontology.org/id/> .",
             "@prefix ice:  <http://www.example.com/ice#> .",
-            "@prefix fso:   <http://www.example.com/fso#> ."\n",
+            "@prefix fso:   <http://www.example.com/fso#> .\n",
             
             "# ARCHITECT'S DATASET",
             "<http://some-arch.com/proj/100100/Spaces/O21> a bot:Space .\n",
