@@ -1,7 +1,9 @@
 [
   {
     "title": "test",
-    "description": "test",
+    "description": [
+      "test"
+    ],
     "triples": [
       "@prefix geo:  <http://www.opengis.net/ont/geosparql#> .",
       "@prefix bot:  <https://w3id.org/bot#> .",
