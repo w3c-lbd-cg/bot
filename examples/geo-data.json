@@ -10,7 +10,7 @@
       "inst:A a bot:Space ;",
       "\tschema:additionalProperty inst:PropA .",
       "inst:PropA a opm:Property ;",
-      "\topm:hasState [ a opm:CurrentState , schema:PropertyValue , geo:Geometry ;
+      "\topm:hasState [ a opm:CurrentState , schema:PropertyValue , geo:Geometry ;",
       "\t\tgeo:asWKT \"POLYGON((0.2085 -17.5915, 6.262 -17.5915, 6.262 -13.8, 6.2 -13.8, 6.2 -12.6, 6.0882304 -12.6, 0.2085 -12.6, 0.2085 -17.5915))\"^^geo:wktLiteral ]
     ],
     "query": "CONSTRUCT * WHERE {?s ?p ?o}"
