@@ -165,6 +165,9 @@
         "query": [
             "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>",
             "PREFIX fso: <http://www.example.com/fso#>",
+            "PREFIX pto: <http://www.productontology.org/id/>",
+            "PREFIX owl: <http://www.w3.org/2002/07/owl#>",
+            "PREFIX bot: <https://w3id.org/bot#>",
             "PREFIX ice: <http://www.example.com/ice#>\n",
             "CONSTRUCT",
             "WHERE {",
