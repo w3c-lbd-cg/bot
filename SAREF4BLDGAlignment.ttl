@@ -60,9 +60,9 @@ foaf:name a owl:DatatypeProperty .
 #################################
 
 saref4bldg:Building         rdfs:subClassOf bot:Building .      
-saref4bldg:PhysicalObject   rdfs:subClassOf bot:Element .
+saref4bldg:PhysicalObject   rdfs:subClassOf bot:Zone .
 saref4bldg:BuildingSpace    rdfs:subClassOf bot:Space .
 
 saref4bldg:hasSpace         rdfs:subPropertyOf bot:hasSpace .
-saref4bldg:contains         rdfs:subPropertyOf bot:containsElement .
+saref4bldg:contains         rdfs:subPropertyOf bot:containsZone .
 
