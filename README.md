@@ -12,7 +12,7 @@ Developments are stored in the Development branch and feature branches are creat
 5. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
 
 ## Live demos using BOT
-[Step by step introduction with visualizations](https://madsholten.github.io/bot-visualizer/)
+[Step by step introduction with visualizations](https://w3c-lbd-cg.github.io/bot/)
 
 [Queries on a 3D-model](https://forge-sparql.herokuapp.com/)
 
