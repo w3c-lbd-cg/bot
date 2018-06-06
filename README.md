@@ -1,105 +1,30 @@
 # BOT: Building Topology Ontology
 
-## Version control
-The latest version is available from [https://w3id.org/bot#](https://w3id.org/bot#). This points to the master branch of this repository.
-Developments are stored in the Development branch and feature branches are created for features that are not yet implemented in the development branch.
+
+## HTML Documentation
+
+Latest versions of BOT: 
+
+- URI: [https://w3id.org/bot#](https://w3id.org/bot#).
+- Canonical URI for the HTML Representation [https://w3id.org/bot/bot.html](https://w3id.org/bot/bot.html).
+- Canonical URI for the Turtle Representation [https://w3id.org/bot/bot.ttl](https://w3id.org/bot/bot.ttl).
+
 
 ## Adding content to BOT
+
 1. Fork this repository. 
 2. Add contribution to bot or separate alignment file.
 3. Validate that the turtle file is still valid using for example Protegé or http://ttl.summerofcode.be/
 4. Commit your changes and submit a [pull request](https://github.com/w3c-lbd-cg/bot/pulls).
 5. w3c-lbd administrators will review your pull request and merge it if everything looks correct. Once the pull request is merged, the changes go live immediately.
 
+
 ## Live demos using BOT
+
 [Step by step introduction with visualizations](https://w3c-lbd-cg.github.io/bot/)
 
 [Queries on a 3D-model](https://forge-sparql.herokuapp.com/)
 
-## Aligning to BOT
-As BOT is proposed as a central ontology in the domain of AEC/FM industry alignments with existing domains need to be provided. Ontologies defining the alignment are given in this repository and file naming is given by <ontologname>Alignment.ttl.
-
-So far an alignment for the following ontologies has been provided:
-
-SAREF4Bldg [Ontology](https://w3id.org/def/saref4bldg#)
-
-ThinkHome [Ontology](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
-
-DogOnt [Ontology](http://elite.polito.it/ontologies/dogont.owl#)
-
-ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
-
-DERI Rooms [Ontology](http://vocab.deri.ie/rooms.html)
-
-## Example of using BOT
-
-Example of using BOT in [Turtle syntax](https://www.w3.org/TeamSubmission/turtle/).
-```turtle
-@prefix bot:  <https://w3id.org/bot#> .
-@prefix inst: <https://example.org/projectXX/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-inst:buildingA a bot:Building ;
-               bot:hasStorey inst:storey00 ,
-                             inst:storey01 .
-							 
-inst:storey00 a bot:Storey ;
-              bot:hasSpace inst:space00aa ,
-                           inst:space00cg .
-						   
-inst:storey01 a bot:Storey .
-
-inst:space00aa a bot:Space ;
-               bot:containsElement inst:heater235 ;
-               bot:adjacentElement inst:wall443 ,
-                                   inst:floor23 .
-								   
-inst:space00cg a bot:Space .
-inst:heater235 a bot:Element .
-inst:wall443 a bot:Element .
-inst:floor23 a bot:Element .
-```
-specifying classes is not necessary as these are inferred by the domain and range specified in the ontology.
-
-Since version v0.2.0 BOT features the `bot:Interface` concept to describe connections between instances of `bot:Element`. See also the following example.
-
-```turtle
-@prefix bot:  <https://w3id.org/bot#> .
-@prefix inst: <https://example.org/projectXX/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-inst:interfaceA bot:interfaceOf inst:space00aa .
-inst:interfaceA bot:interfaceOf inst:wall443 .
-inst:interfaceA rdf:type bot:Interface .
-```
-
-## Extending BOT
-### By specifying subclasses
-The following will automatically infer that an instance is a bot:Element given that the instance is specified as a h:SpaceHeater:
-```turtle
-@prefix bot:  <https://w3id.org/bot#> .
-@prefix h:  <https://example.org/heatingSystem#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
-h:SpaceHeater a owl:Class ;
-              rdfs:subClassOf bot:Element .
-```
-### By specifying subproperties
-The following will automatically infer bot:containsElement between a space and an element when the h:heatedBy property is present between the two. Furthermore it will be inferred that the element is both a h:SpaceHeater and a bot:Element.
-```turtle
-@prefix bot:  <https://w3id.org/bot#> .
-@prefix h:  <https://example.org/heatingSystem#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
-
-h:SpaceHeater a owl:Class .
-h:heatedBy a owl:ObjectProperty ;
-             rdfs:subPropertyOf bot:containsElement ;
-             rdfs:range h:SpaceHeater .
-```
 
 ## BOT and reasoning
 [Hylar](https://www.npmjs.com/package/hylar) is a simple js library for doing reasoning on a set of triples. To get it up and running, do the following:
