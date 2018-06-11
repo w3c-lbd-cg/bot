@@ -36,7 +36,7 @@ foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
 
 
-<https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary , 
+<https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
     dcterms:modified    "2017-10-27"^^xsd:date ;
     dcterms:issued    "2017-10-27"^^xsd:date ;
     owl:versionInfo    "0.2.0"^^xsd:date ;
