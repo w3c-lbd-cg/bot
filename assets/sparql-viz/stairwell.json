@@ -1,0 +1,26 @@
+{
+    "project": {
+        "title": "BOT example: stairwell",
+        "creator": "Mads Holten Rasmussen"
+    },
+    "tabs": [
+        {
+            "title": "1: The dataset",
+            "description": "Visualizing the Abox containing the following:\n\n* A building with three storeys\n* One storey (<Level_2>) containing two spaces, the others containing none\n* The building itself containing a multi storey space (a stairwell)\n* Intersections between the stairwell space and the storeys it passes through",
+            "triples": "@prefix bot:  <https://w3id.org/bot#> .\n@prefix ex:   <https://example.org/bot#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n# ABOX\n<Stairwell>  a bot:Space .\n<Space_A>    a bot:Space .\n<Space_B>    a bot:Space .\n<Building_A>  a bot:Building .\n<Level_1>    a bot:Storey .\n<Level_2>    a bot:Storey .\n<Level_3>    a bot:Storey .\n\n# building / storeys relations\n<Building_A> bot:hasStorey <Level_1> , <Level_2> , <Level_3> .\n\n# regular spaces\n<Level_2> bot:hasSpace <Space_A> , <Space_B> .\n\n# special case\n<Building_A> bot:hasSpace <Stairwell> .\n<wellLvl1> ex:intersectsZone <Level_1> , <Stairwell> .\n<wellLvl2> ex:intersectsZone <Level_2> , <Stairwell> .\n<wellLvl3> ex:intersectsZone <Level_3> , <Stairwell> .",
+            "query": "PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX inst: <https://example.org/projectXX/>\nPREFIX bot:  <https://w3id.org/bot#>\nPREFIX prop: <https://w3id.org/prop#>\n\nCONSTRUCT\nWHERE {\n  ?b ?p ?o \n}"
+        },
+        {
+            "title": "2: Query spaces related to storey <Level_1>",
+            "description": "This query returns spaces that either intersect with or are located at <Level_1>.\n\nShould return 1 result as the stairwell intersects with <Level_1>.",
+            "triples": "@prefix bot:  <https://w3id.org/bot#> .\n@prefix ex:   <https://example.org/bot#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n# tbox\nex:ZoneIntersection rdfs:subClassOf bot:Interface .\nex:intersectsZone rdfs:subPropertyOf bot:interfaceOf ;\n    rdfs:domain ex:ZoneIntersection ;\n    rdfs:range  bot:Zone .\n\n# abox\n<Stairwell>  a bot:Space .\n<Space_A>    a bot:Space .\n<Space_B>    a bot:Space .\n<Building_A>  a bot:Building .\n<Level_1>    a bot:Storey .\n<Level_2>    a bot:Storey .\n<Level_3>    a bot:Storey .\n\n# building / storeys relations\n<Building_A> bot:hasStorey <Level_1> , <Level_2> , <Level_3> .\n\n# regular spaces\n<Level_2> bot:hasSpace <Space_A> , <Space_B> .\n\n# special case\n<Building_A> bot:hasSpace <Stairwell> .\n<wellLvl1> a ex:ZoneIntersection ;\n    ex:intersectsZone <Level_1> , <Stairwell> .\n<wellLvl2> a ex:ZoneIntersection ;\n    ex:intersectsZone <Level_2> , <Stairwell> .\n<wellLvl3> a ex:ZoneIntersection ;\n    ex:intersectsZone <Level_3> , <Stairwell> .",
+            "query": "PREFIX bot:  <https://w3id.org/bot#>\nPREFIX ex:   <https://example.org/bot#>\n\nSELECT DISTINCT ?space\nWHERE {\n  {\n    ?i ex:intersectsZone <Level_1> ;\n       ex:intersectsZone ?space .\n  } UNION {\n    <Level_1> bot:hasSpace ?space .\n  }\n  FILTER(?space != <Level_1>)\n}"
+        },
+        {
+            "title": "2: Query spaces related to storey <Level_2>",
+            "description": "This query returns spaces that either intersect with or are located at <Level_2>.\n\nShould return 3 result as <Space_A> and <Space_B> are directly contained in the Storey-zone, which also intersects with the stairwell.",
+            "triples": "@prefix bot:  <https://w3id.org/bot#> .\n@prefix ex:   <https://example.org/bot#> .\n@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .\n\n# tbox\nex:ZoneIntersection rdfs:subClassOf bot:Interface .\nex:intersectsZone rdfs:subPropertyOf bot:interfaceOf ;\n    rdfs:domain ex:ZoneIntersection ;\n    rdfs:range  bot:Zone .\n\n# abox\n<Stairwell>  a bot:Space .\n<Space_A>    a bot:Space .\n<Space_B>    a bot:Space .\n<Building_A>  a bot:Building .\n<Level_1>    a bot:Storey .\n<Level_2>    a bot:Storey .\n<Level_3>    a bot:Storey .\n\n# building / storeys relations\n<Building_A> bot:hasStorey <Level_1> , <Level_2> , <Level_3> .\n\n# regular spaces\n<Level_2> bot:hasSpace <Space_A> , <Space_B> .\n\n# special case\n<Building_A> bot:hasSpace <Stairwell> .\n<wellLvl1> a ex:ZoneIntersection ;\n    ex:intersectsZone <Level_1> , <Stairwell> .\n<wellLvl2> a ex:ZoneIntersection ;\n    ex:intersectsZone <Level_2> , <Stairwell> .\n<wellLvl3> a ex:ZoneIntersection ;\n    ex:intersectsZone <Level_3> , <Stairwell> .",
+            "query": "PREFIX bot:  <https://w3id.org/bot#>\nPREFIX ex:   <https://example.org/bot#>\n\nSELECT DISTINCT ?space\nWHERE {\n  {\n    ?i ex:intersectsZone <Level_2> ;\n       ex:intersectsZone ?space .\n  } UNION {\n    <Level_2> bot:hasSpace ?space .\n  }\n  FILTER(?space != <Level_2>)\n}"
+        }
+    ]
+}
