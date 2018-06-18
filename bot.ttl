@@ -79,9 +79,9 @@ bot:Zone a owl:Class ;
     "Zon"@se ,
     "Zone"@fr ;
   rdfs:comment
-    "A defined area with spatial 3D volume that groups spaces and has a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone. Connections can be made with other ontologies; namely, BRICK:HVAC_Zone would be a subClass of bot:Zone, for example."@en ,
+    "A spatial 3D division. Sub-classes of bot:Zones include bot:Site, bot:Building, bot:Storey, or bot:Space. An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to other bot:Zone instances. Finally, a bot:Zone can instantiate two relations to bot:Element, which are either contained in (bot:containsElement), or adjacent to it (bot:adjacentElement)."@en ,
     "Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone."@es ,
-    "Et område eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone."@da ,
+    "En rummelig 3D-inddeling. Underklasser af bot:Zone inkluderer bot:Site, bot:Building, bot:Storey eller bot:Space. En bot:Zone forekomst kan indeholde andre bot:Zone forekomster, hvilket gør det muligt at gruppere eller underinddele zoner. En forekomst af bot:Zone kan være tilstødende til andre bot:Zone forekomster. Endelig kan en bot:Zone instantiere to relationer til et bot:Element, hvilke er enten indeholdt i (bot:containsElement) eller tilstødende dertil (bot:adjacentElement)."@da ,
     "En area eller ett stycke land som har en specifik karaktäristik, syfte, användning eller är förmål för specifika restriktioner. En bot:Zone kan innehålla andra bot:Zoner genom relationen bot:containsZone, och den kan kopplas till andra bot:Zoner genom relationen bot:adjacentZone."@se ,
     "Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone."@nl ,
     "Une zone ou une étendue de terrain avec des caractéristiques et usages spécifiques, ou pouvant être sujette à des restrictions spécifiques. Un élément bot:Zone peut contenir d'autres éléments bot:Zone comme défini par la relation bot:containsZone. La connection entre plusieurs éléments bot:Zone est définie en utilisant la propriété bot:adjacentZone."@fr ;
@@ -364,14 +364,14 @@ bot:hasElement a owl:ObjectProperty ;
     "has element"@en ,
     "alberga elemento"@es ,
     "hoster element"@nl ,
-    "hoster element"@da ,
+    "har element"@da ,
     "värd för element"@se ,
     "heeft element"@nl ,
     "a élément"@fr ;        
   rdfs:comment
-    "Links a Zone to an Element that is contained in, or adjacent to, the Zone "@en ,
+    "Links a Zone to an Element that is either contained in or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en ,
     " TODO "@nl ,
-    " TODO "@da ,
+    " Forbinder en Zone til en bygningsdel der enten er indeholdt i eller tilstødende til zonen. Det er ikke hensigten at denne relation angives eksplicit, men at den udledes af dennes underegneskaber. Det vil for eksempel tillade en forespørgsel på alle døre i en bygning givet at disse er enten tilstødende eller indeholdt i rum i bygningen."@da ,
     " TODO "@se ,
     " TODO "@fr ;
   rdfs:domain bot:Zone ;
