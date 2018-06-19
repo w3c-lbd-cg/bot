@@ -39,7 +39,7 @@ foaf:name a owl:DatatypeProperty .
 #    Object Properties
 #################################################################
 
-brick:contains rdfs:subPropertyOf bot:containsZone .
+brick:contains rdfs:subPropertyOf bot:hasElement .
 
 
 #################################################################
