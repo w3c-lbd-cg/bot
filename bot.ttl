@@ -536,20 +536,26 @@ bot:interfaceOf a owl:ObjectProperty ;
 
 ## 3DModel
 
+bot:hasZeroPoint a owl:ObjectProperty ;
+  rdfs:label "has zero point"@en ;
+  rdfs:comment "Links a bot:Site to a wgs84:Point that encodes the latitude and longitude of the Zero Point of the building site."@en ;
+  rdfs:domain bot:Site ;
+  rdfs:range bot:Site ;    
+  rdfs:isDefinedBy bot: .
 
 bot:hasSimple3DModel a owl:DatatypeProperty ;
-    rdfs:label "has Simple 3D Model"@en ;
-    rdfs:comment "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ;
-    schema:domainIncludes
-      bot:Element,
-      bot:Zone ;
+  rdfs:label "has Simple 3D Model"@en ;
+  rdfs:comment "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ;
+  schema:domainIncludes
+    bot:Element,
+    bot:Zone ;
   rdfs:isDefinedBy bot: .
 
 bot:has3DModel a owl:ObjectProperty ;
-    rdfs:label "has 3D Model"@en ;
-    rdfs:comment "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ;
-    schema:domainIncludes
-      bot:Element,
-      bot:Zone ;
+  rdfs:label "has 3D Model"@en ;
+  rdfs:comment "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ;
+  schema:domainIncludes
+    bot:Element,
+    bot:Zone ;
   rdfs:isDefinedBy bot: .
 
