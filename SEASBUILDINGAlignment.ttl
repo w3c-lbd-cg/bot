@@ -1,0 +1,38 @@
+@prefix : <https://w3id.org/bot/SEASBUILDINGAlignment#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix seas: <https://w3id.org/seas/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix seasbldg: <https://w3id.org/seas/BuildingOntology-1.0> .
+@base <https://w3id.org/bot/SEASBUILDINGAlignment> .
+
+<https://w3id.org/bot/SEASBUILDINGAlignment> rdf:type owl:Ontology ;
+                                              owl:imports <https://w3id.org/bot/0.2.0> ,
+                                                          seas:BuildingOntology-1.0 ;
+                                              dcterms:description "This ontology defines proposed alignments with the SEASBUILDING ontology."@en ;
+                                              dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+                                              dcterms:issued "2018-06-21"^^xsd:date ;
+                                              dcterms:title "SEASBUILDING to BOT alignment."@en ;
+                                              dcterms:creator [ rdf:type foaf:Person ;
+                                                                foaf:name "Georg Ferdinand Schneider"
+                                                              ] ;
+                                              dcterms:modified "2018-06-21"^^xsd:date ;
+                                              dcterms:license <http://creativecommons.org/licenses/by/3.0/> .
+
+# Alignments
+
+seas:subZoneOf rdfs:subPropertyOf bot:containsZone .
+
+seas:Building rdfs:subClassOf bot:Building .
+seas:Device rdfs:subClassOf bot:Element .
+seas:Room rdfs:subClassOf bot:Space .
+seas:SiteOfBuilding rdfs:subClassOf bot:Site .
+seas:Zone rdfs:subClassOf bot:Zone .
+seas:ZoneConnection rdfs:subClassOf bot:Interface .
