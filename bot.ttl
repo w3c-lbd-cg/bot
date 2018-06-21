@@ -37,17 +37,21 @@ foaf:name a owl:DatatypeProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
-    dcterms:modified    "2017-10-27"^^xsd:date ;
-    dcterms:issued    "2017-10-27"^^xsd:date ;
-    owl:versionInfo    "0.2.0" ;
-    owl:versionIRI <https://w3id.org/bot/0.2.0> ;
-    owl:priorVersion <https://w3id.org/bot/0.1.1> ;
+    dcterms:modified    "2018-06-21"^^xsd:date ;
+    dcterms:issued    "2018-06-21"^^xsd:date ;
+    owl:versionInfo    "0.3.0" ;
+    owl:versionIRI <https://w3id.org/bot/0.3.0> ;
+    owl:priorVersion <https://w3id.org/bot/0.2.0> ;
   rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
     dcterms:title    "The Building Topology Ontology (BOT)"@en ;
     dcterms:description    """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
 
-Version 0.2.0 of the ontology is documented in:
+Changes since version 0.2.0 of the ontology are documented in:
+
+https://w3id.org/bot/bot.html#changes
+
+The version 0.2.0 of the ontology is documented in:
 
 Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology
 
@@ -201,11 +205,11 @@ bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
     "angränsande zon"@se ,
     "zone adjacente"@fr ;
   rdfs:comment
-    "Relationship between two zones sharing a common interface."@en ,
-    "Relatie tussen twee zones die een interface delen"@nl ,
-    "Relation mellem to zoner, der deler en fælles grænseflade."@da ,
-    "Relation mellan två zoner som delar ett gemensamt gränssnitt."@se ,
-    "Relation entre deux zones partageant une interface commune"@fr ;
+    "Relationship between two zones that share a common interface, but do not intersect."@en ,
+    "TODO: Relatie tussen twee zones die een interface delen"@nl ,
+    "TODO: Relation mellem to zoner, der deler en fælles grænseflade."@da ,
+    "TODO: Relation mellan två zoner som delar ett gemensamt gränssnitt."@se ,
+    "Relation entre deux zones partageant une interface commune, sans intersection"@fr ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone ;
   schema:domainIncludes
@@ -218,6 +222,41 @@ bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
     bot:Building ,
     bot:Storey ,
     bot:Space ;
+  owl:propertyDisjointWith
+#    bot:containsZone, # not allowed in OWL 2 DL
+    bot:intersectsZone ;
+  rdfs:isDefinedBy bot: .
+
+
+bot:intersectsZone a owl:ObjectProperty , owl:SymmetricProperty ;
+  rdfs:label
+    "intersects zone"@en ,
+    "TODO"@es ,
+    "TODO"@nl ,
+    "TODO"@da ,
+    "TODO"@se ,
+    "TODO"@fr ;
+  rdfs:comment
+    "Relationship between two zones whose 3D extent intersect. For example, a stairwell intersects different storeys."@en ,
+    "TODO"@nl ,
+    "TODO"@da ,
+    "TODO"@se ,
+    "TODO"@fr ;
+  rdfs:domain bot:Zone ;
+  rdfs:range bot:Zone ;
+  schema:domainIncludes
+    bot:Site , 
+    bot:Building ,
+    bot:Storey ,
+    bot:Space ;
+  schema:rangeIncludes
+    bot:Site , 
+    bot:Building ,
+    bot:Storey ,
+    bot:Space ;
+  owl:propertyDisjointWith
+#    bot:containsZone , # not allowed in OWL 2 DL
+    bot:adjacentZone ;
   rdfs:isDefinedBy bot: .
 
 
@@ -247,6 +286,9 @@ bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
     bot:Building ,
     bot:Storey ,
     bot:Space ;
+#  owl:propertyDisjointWith # not allowed in OWL 2 DL
+#    bot:adjacentZone,
+#    bot:intersectsZone ;
   rdfs:isDefinedBy bot: .
 
   bot:hasBuilding a owl:ObjectProperty ;
@@ -397,6 +439,9 @@ bot:hasElement a owl:ObjectProperty ;
       "Relation mellan en zon och dess angränsande byggdelar, som avgränsar det fysiska utrymmet."@se ,
       "Relation entre une zone et ses éléments adjacents, délimitant l'espace physique"@fr ;
     rdfs:subPropertyOf bot:hasElement ;
+    owl:propertyDisjointWith
+#      bot:containsElement, # not allowed in OWL 2 DL
+      bot:intersectingElement ;
     rdfs:isDefinedBy bot: .
     
   bot:containsElement a owl:ObjectProperty ;
@@ -418,8 +463,32 @@ bot:hasElement a owl:ObjectProperty ;
       "Relation à définir entre un élément de bâti et la zone le contenant"@fr ;
     rdfs:subPropertyOf bot:hasElement ;
     owl:propertyChainAxiom  ( bot:containsZone bot:containsElement ) ;
+#    owl:propertyDisjointWith # not allowed in OWL 2 DL
+#      bot:adjacentElement,
+#      bot:intersectingElement ;
     rdfs:isDefinedBy bot: .
 
+  bot:intersectingElement a owl:ObjectProperty ;
+    rdfs:label
+      "intersecting element"@en ,
+      "TODO"@es ,
+      "TODO"@nl ,
+      "TODO"@de ,
+      "TODO"@da ,
+      "TODO"@se ,
+      "élément intersectant"@fr ;
+    rdfs:comment
+      "Relation between a Zone and a building Element that intersects it. "@en ,
+      "TODO"@es ,
+      "TODO"@nl ,
+      "TODO"@da ,
+      "TODO"@se ,
+      "TODO"@fr ;
+    rdfs:subPropertyOf bot:hasElement ;
+    owl:propertyDisjointWith
+#      bot:containsElement, # not allowed in OWL 2 DL
+      bot:adjacentElement ;
+    rdfs:isDefinedBy bot: .
 
 
 ## Interfaces
@@ -465,15 +534,22 @@ bot:interfaceOf a owl:ObjectProperty ;
 
 
 
-#################################
-# CONSTRAINTS
-#################################
-# Disjunctive classes
-[] a owl:AllDisjointClasses ;
-        owl:members
-              ( 
-    bot:Site
-    bot:Element
-                bot:Space
-                bot:Storey
-                bot:Building ) .
+## 3DModel
+
+
+bot:hasSimple3DModel a owl:DatatypeProperty ;
+    rdfs:label "has Simple 3D Model"@en ;
+    rdfs:comment "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ;
+    schema:domainIncludes
+      bot:Element,
+      bot:Zone ;
+  rdfs:isDefinedBy bot: .
+
+bot:has3DModel a owl:ObjectProperty ;
+    rdfs:label "has 3D Model"@en ;
+    rdfs:comment "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ;
+    schema:domainIncludes
+      bot:Element,
+      bot:Zone ;
+  rdfs:isDefinedBy bot: .
+
