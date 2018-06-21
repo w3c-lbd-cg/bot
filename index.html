@@ -120,7 +120,8 @@
                         <a href="#hasElement">bot:hasElement</a> , 
                         <a href="#hasSubElement">bot:hasSubElement</a> , 
                         <a href="#hasSpace">bot:hasSpace</a> , 
-                        <a href="#hasStorey">bot:hasStorey</a> 
+                        <a href="#hasStorey">bot:hasStorey</a> ,
+                        <a href="#hasZeroPoint">bot:hasZeroPoint</a>
                     </p>
                 </div>
                 <div class="azlist">
@@ -387,10 +388,10 @@
                             <th>Range Includes</th>
                             <td><span rel="schema:rangeIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:rangeIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:rangeIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:rangeIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
                         </tr>
-                        <tr>
+                        <!--<tr>
                             <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
                             <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentZone"><a href="#intersectsZone">bot:adjacentZone</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:intersectsZone"><a href="#containsZone">bot:intersectsZone</a></span></td>
-                        </tr>
+                        </tr>--><!-- not allowed in OWL 2 DL-->
                         <tr>
                             <th  colspan="2"><span about="bot:containsZone" typeof="owl:TransitiveProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Transitive_Object_Properties">Transitive</a></span></th>
                         </tr>
@@ -526,7 +527,7 @@
                         </tr>
                         <tr>
                             <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
-                            <td><span rel="owl:propertyDisjointWith" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:intersectsZone"><a href="#intersectsZone">bot:intersectsZone</a></span></td>
+                            <td><!--<span rel="owl:propertyDisjointWith" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>, --><span rel="owl:propertyDisjointWith" resource="bot:intersectsZone"><a href="#intersectsZone">bot:intersectsZone</a></span></td>
                         </tr>
                         <tr>
                             <th  colspan="2"><span about="bot:adjacentZone" typeof="owl:SymmetricProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Symmetric_Object_Properties">Symmetric</a></span></th>
@@ -564,7 +565,7 @@
                         </tr>
                         <tr>
                             <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
-                            <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentZone"><a href="#intersectsZone">bot:adjacentZone</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span></td>
+                            <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentZone"><a href="#intersectsZone">bot:adjacentZone</a></span><!--, <span rel="owl:propertyDisjointWith" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>--><!-- not allowed with OWL 2 DL--></td>
                         </tr>
                         <tr>
                             <th  colspan="2"><span about="bot:intersectsZone" typeof="owl:SymmetricProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Symmetric_Object_Properties">Symmetric</a></span></th>
@@ -720,10 +721,10 @@
                                 <span about="[_:containsElement2]" rel="rdf:rest" resource="rdf:nil"></span>
                             </td>
                         </tr>
-                        <tr>
+                        <!--<tr>
                             <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
                             <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentElement"><a href="#adjacentElement">bot:adjacentElement</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:intersectingElement"><a href="#intersectingElement">bot:intersectingElement</a></span></td>
-                        </tr>
+                        </tr>--> <!-- Not allowed in OWL 2 DL -->
                     </tbody>
                 </table>
             </section>
@@ -745,7 +746,7 @@
                         </tr>
                         <tr>
                             <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
-                            <td><span rel="owl:propertyDisjointWith" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:intersectingElement"><a href="#intersectingElement">bot:intersectingElement</a></span></td>
+                            <td><!--<span rel="owl:propertyDisjointWith" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>, --><!-- Not allowed in OWL 2 DL --><span rel="owl:propertyDisjointWith" resource="bot:intersectingElement"><a href="#intersectingElement">bot:intersectingElement</a></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -768,7 +769,7 @@
                         </tr>
                         <tr>
                             <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
-                            <td><span rel="owl:propertyDisjointWith" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:adjacentElement"><a href="#adjacentElement">bot:adjacentElement</a></span></td>
+                            <td><!--<span rel="owl:propertyDisjointWith" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>, --><!-- Not allowed in OWL 2 DL --><span rel="owl:propertyDisjointWith" resource="bot:adjacentElement"><a href="#adjacentElement">bot:adjacentElement</a></span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -893,7 +894,8 @@
                   <div class="azlist">
                     <p>
                        <a href="#has3DModel">bot:has3DModel</a>,
-                       <a href="#hasSimple3DModel">bot:hasSimple3DModel</a>
+                       <a href="#hasSimple3DModel">bot:hasSimple3DModel</a>,
+                       <a href="#hasZeroPoint">bot:hasZeroPoint</a>
                      </p>
                   </div>
 
@@ -1421,7 +1423,7 @@ h:heatedBy a owl:ObjectProperty ;
         <h2>Changes decided during LDAC2018</h2>
         <ol>
             <li>Added <a href="#intersectingElement">bot:intersectingElement</a> and <a href="#intersectsZone">bot:intersectsZone</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/30">GitHub issue #30</a></li>
-            <li>Added <a href="#has3DModel">bot:has3DModel</a> and <a href="#hasSimple3DModel">bot:hasSimple3DModel</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/37">GitHub issue #37</a></li>
+            <li>Added <a href="#hasZeroPoint">bot:hasZeroPoint</a>, <a href="#has3DModel">bot:has3DModel</a>, <a href="#hasSimple3DModel">bot:hasSimple3DModel</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/37">GitHub issue #37</a></li>
         </ol>
         <h2>Changes since <a href="https://doi.org/10.13140/RG.2.2.32365.28647">Recent changes in the Building Topology Ontology</a> presented at LDAC2017</h2>
         <ol>
