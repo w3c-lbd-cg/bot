@@ -537,23 +537,28 @@ bot:interfaceOf a owl:ObjectProperty ;
 ## 3DModel
 
 bot:hasZeroPoint a owl:ObjectProperty ;
-  rdfs:label "has zero point"@en ;
-  rdfs:comment "Links a bot:Site to a wgs84:Point that encodes the latitude and longitude of the Zero Point of the building site."@en ;
-  rdfs:domain bot:Site ;
-  rdfs:range bot:Site ;    
+  rdfs:label    "has zero point"@en ,
+                "har nulpunkt"@da ;
+  rdfs:comment  "Links a bot:Site to a wgs84:Point that encodes the latitude and longitude of the Zero Point of the building site."@en ,
+                "Forbinder et bot:Site med et wgs84:Point som beskriver længde- og breddegrad for projektets nulpunkt"@da ;
+  rdfs:domain   bot:Site ;  
   rdfs:isDefinedBy bot: .
 
 bot:hasSimple3DModel a owl:DatatypeProperty ;
-  rdfs:label "has Simple 3D Model"@en ;
-  rdfs:comment "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ;
+  rdfs:label    "has Simple 3D Model"@en ,
+                "har simpel 3D-model"@da ;
+  rdfs:comment  "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ,
+                "Forbinder enhver instans af bot:Zone eller bot:Element med en 3D-model beskrevet som en literal."@da ;
   schema:domainIncludes
     bot:Element,
     bot:Zone ;
   rdfs:isDefinedBy bot: .
 
 bot:has3DModel a owl:ObjectProperty ;
-  rdfs:label "has 3D Model"@en ;
-  rdfs:comment "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ;
+  rdfs:label    "has 3D Model"@en ,
+                "har 3D-model"@da ;
+  rdfs:comment  "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ,
+                "Forbinder enhver instans af bot:Zone eller bot:Element med en IRI som identificerer dennes 3D-model. Denne 3D-model kan så beskrives ved brug af et dedikeret RDF-vokabular. Alternativt kan 3D-modellens IRI være dereferencerbar, sådan at der modtages en repræsentation af 3D-modellen i et eksisterende dataformat for 3D-modeller når IRIen slås op."@da ;
   schema:domainIncludes
     bot:Element,
     bot:Zone ;
