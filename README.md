@@ -21,7 +21,7 @@ Latest versions of BOT:
 
 ## Live demos using BOT
 
-[Step by step introduction with visualizations](https://w3c-lbd-cg.github.io/bot/tutorial/)
+[Step by step introduction with visualizations](https://bit.ly/2Ql5XtD)
 
 [Queries on a 3D-model](https://forge-sparql.herokuapp.com/)
 
