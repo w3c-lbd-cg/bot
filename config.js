@@ -26,16 +26,13 @@ var respecConfig = {
         company: "École Nationale Supérieure des Mines de Saint-Étienne",
         url: "http://www.maxime-lefrancois.info/",
         companyURL: "https://www.mines-stetienne.fr/"
+    },
+    {
+        name: "Georg Ferdinand Schneider",
+        company: "Fraunhofer Institute for Building Physics, Technische Hochschule Nürnberg",
+        url: "https://www.researchgate.net/profile/Georg_Schneider3",
+        companyURL: "https://www.ibp.fraunhofer.de/"
     }],
-	otherLinks: [
-      {
-      key: "Contributors (ordered alphabetically)",
-      data: [
-      {
-        value: "Georg Ferdinand Schneider, Fraunhofer Institute for Building Physics, Technische Hochschule Nürnberg"
-      }]
-      },
-      ],
     wg: "Linked Building Data Community Group",
     wgURI: "https://www.w3.org/community/lbd/",
     wgPublicList: "",
