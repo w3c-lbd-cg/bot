@@ -1,4 +1,4 @@
-# Copyright 2017 W3C Linked Building Data Community Group.
+# Copyright 2017-2019 W3C Linked Building Data Community Group.
 # 
 # This work is licensed under a Creative Commons Attribution License. 
 # This copyright applies to the BOT Vocabulary Specification and
@@ -44,25 +44,34 @@ foaf:name a owl:DatatypeProperty .
   dcterms:title "SAREF4BLDG Alignment."@en ;
   dcterms:description """This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."""@en ;
   dcterms:issued "2017-07-13"^^xsd:date ;
-  dce:modified "2017-08-31"^^xsd:date ;
+  dce:modified "2019-03-02"^^xsd:date ;
   dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
   dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+  rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
   dcterms:contributor [a foaf:Person ; foaf:name "Mads Holten Rasmussen" ] ;
   dcterms:contributor [a foaf:Person ; foaf:name "Pieter Pauwels" ] ;
   dcterms:contributor <http://www.maxime-lefrancois.info/me#> ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
-  owl:versionInfo "v0.2.0" ;
+  owl:versionInfo "v1.0.0" ;
+  owl:versionIRI <https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0> ;
+  owl:priorVersion <https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0> ;
   owl:imports <https://w3id.org/bot> ;
   owl:imports <https://w3id.org/def/saref4bldg> .
    
 #################################
-# ALIGNMENTS
+# Class alignments
 #################################
 
-saref4bldg:Building         rdfs:subClassOf bot:Building .      
+saref4bldg:Building         rdfs:subClassOf bot:Building .
 saref4bldg:PhysicalObject   rdfs:subClassOf bot:Element .
+saref4bldg:Sensor           rdfs:subClassOf bot:Element .
+saref4bldg:Actuator         rdfs:subClassOf bot:Element .
 saref4bldg:BuildingSpace    rdfs:subClassOf bot:Space .
 
-saref4bldg:hasSpace         rdfs:subPropertyOf bot:hasSpace .
+#################################
+# Object property alignments
+#################################
+
+saref4bldg:hasSpace         rdfs:subPropertyOf bot:containsZone .
 saref4bldg:contains         rdfs:subPropertyOf bot:containsElement .
 
