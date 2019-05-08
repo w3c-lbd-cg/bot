@@ -51,8 +51,7 @@ foaf:name a owl:DatatypeProperty .
 #    Classes
 #################################################################
 
-bot:Site rdfs:subClassOf dul:PhysicalObject .
-bot:Interface rdfs:subClassOf dul:PhysicalObject .#really?
+bot:Interface rdfs:subClassOf dul:PhysicalObject .
 
 bot:Site rdfs:subClassOf dul:PhysicalPlace .
 
