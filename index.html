@@ -1416,22 +1416,37 @@ h:heatedBy a owl:ObjectProperty ;
         </section>
     </section>
     <section class="appendix" id="acknowledgments">
-        <h2>Acknowledgments</h2> The Editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.</section>
+        <h2>Acknowledgments</h2> The editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.</section>
     <section class="appendix" id="changes">
         <h2>Change History</h2>
         <p><em>List not complete</em></p>
-        <h2>Changes decided during LDAC2018</h2>
+		
+		<h3>Revisions of BOT to version v0.3.1</h3>
+        <p>These changes are documented via a <a href="https://github.com/w3c-lbd-cg/bot/pull/49">Pull Request (PR)</a> in the groups Github repository.</p>
+        <p>Changes applied based on <a href="http://www.semantic-web-journal.net/comment/321#comment-321">comments</a> receives by Antoine Zimmermann</p>
+		<ol>
+            <li> Removal of cardinality restriction on <a href="#Interface"><code>bot:Interface</code></a> to ensure BOT stays in OWL RL.</li>
+            <li>Removal of TODO language tags</li>
+			<li>Removal of commented axioms</li>
+        </ol>
+		<p>In addition the following changes are applied:</p>
+        <ol>
+            <li>Revision of labels and comments in German language</li>
+            <li>Addition of W3C Linked Building Data Community Group members as contributors</li>
+        </ol>
+		
+		<h3>Changes decided during LDAC2018</h3>
         <ol>
             <li>Added <a href="#intersectingElement">bot:intersectingElement</a> and <a href="#intersectsZone">bot:intersectsZone</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/30">GitHub issue #30</a></li>
             <li>Added <a href="#hasZeroPoint">bot:hasZeroPoint</a>, <a href="#has3DModel">bot:has3DModel</a>, <a href="#hasSimple3DModel">bot:hasSimple3DModel</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/37">GitHub issue #37</a></li>
         </ol>
-        <h2>Changes since <a href="https://doi.org/10.13140/RG.2.2.32365.28647">Recent changes in the Building Topology Ontology</a> presented at LDAC2017</h2>
+        <h3>Changes since <a href="https://doi.org/10.13140/RG.2.2.32365.28647">Recent changes in the Building Topology Ontology</a> presented at LDAC2017</h3>
         <ol>
             <li>Renamed <a href="#hostsElement">bot:hostsElement</a> to <a href="#hasSubElement">bot:hasSubElement</a>.</li>
             <li>Define <a href="#hasElement">hasElement</a> as super property of <a href="#adjacentElement">bot:adjacentElement</a> and <a href="#containsElement">bot:containsElement</a></li>
         </ol>
-        <h2>Changes since Original <a href="http://www.student.dtu.dk/~mhoras/bot/index-en.html">
-            (http://www.student.dtu.dk/~mhoras/bot/index-en.html)</a> presented at LC3</h2>
+        <h3>Changes since Original <a href="http://www.student.dtu.dk/~mhoras/bot/index-en.html">
+            (http://www.student.dtu.dk/~mhoras/bot/index-en.html)</a> presented at LC3</h3>
         <p>These changes are documented in <a href="https://doi.org/10.13140/RG.2.2.32365.28647">Recent changes in the Building Topology Ontology</a></p>
         <ol>
             <li><a href="#Site"><code>bot:Site</code></a> added.</li>
