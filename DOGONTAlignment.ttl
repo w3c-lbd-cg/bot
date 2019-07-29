@@ -1,3 +1,11 @@
+# Copyright 2017-2019 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
 @prefix : <https://w3id.org/bot/DOGONTAlignment#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -15,9 +23,13 @@
 	dcterms:title "DogOnt to BOT alignment."@en ;
 	dcterms:description """This ontology defines proposed alignments with the DogOnt ontology."""@en ;
 	dcterms:issued "2017-09-12"^^xsd:date ;
-	dcterms:modified "2017-09-12"^^xsd:date ;
+	dcterms:modified "2019-03-02"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+    owl:versionInfo "v1.0.0" ;
+    owl:versionIRI <https://w3id.org/bot/DOGONTAlignment/1.0.0> ;
+    owl:priorVersion <https://w3id.org/bot/DOGONTAlignment/0.1.0> ;
 	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+    rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
 	owl:imports 	<https://w3id.org/bot> ,
 					<http://elite.polito.it/ontologies/dogont.owl> .
@@ -35,22 +47,37 @@ foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
 
 #################################################################
+#    Object properties
+#################################################################
+
+dogont:contains rdfs:subPropertyOf bot:containsElement .
+dogont:belongsTo rdfs:subPropertyOf [ owl:inverseOf bot:hasSubElement ] .
+dogont:floorOf rdfs:subPropertyOf bot:interfaceOf .
+dogont:ceilingOf rdfs:subPropertyOf bot:interfaceOf .
+dogont:hasWall rdfs:subPropertyOf bot:adjacentElement .
+dogont:hasWallOpening rdfs:subPropertyOf bot:hasSubElement .
+
+#################################################################
 #    Classes
 #################################################################
 
 dogont:Building rdfs:subClassOf bot:Building .
-dogont:Flat rdfs:subClassOf bot:Building .
 dogont:Storey rdfs:subClassOf bot:Storey .
+dogont:Room rdfs:subClassOf bot:Space .
 
 bot:Zone rdfs:subClassOf dogont:Environment .
-dogont:BuildingEnvironment rdfs:subClassOf bot:Zone.
-
+dogont:BuildingEnvironment rdfs:subClassOf bot:Zone .
 dogont:Room rdfs:subClassOf bot:Space .
+dogont:Balcony	rdfs:subClassOf bot:Zone .
+dogont:Terrace	rdfs:subClassOf bot:Zone .
 
 dogont:Controllable 	rdfs:subClassOf bot:Element .
 dogont:Device 			rdfs:subClassOf bot:Element .
-dogont:UnControllable	rdfs:subClassOf bot:Element .
 dogont:TechnicalSystem	rdfs:subClassOf bot:Element .
 
-dogont:hasWallOpening rdfs:subPropertyOf bot:hosts .
+dogont:Vertical	    rdfs:subClassOf bot:Element .
+dogont:Furniture    rdfs:subClassOf bot:Element .
+
+dogont:Ceiling	rdfs:subClassOf bot:Interface .
+dogont:Floor	rdfs:subClassOf bot:Interface .
 
