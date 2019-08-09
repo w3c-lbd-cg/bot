@@ -39,8 +39,8 @@ foaf:name a owl:DatatypeProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
-    dcterms:modified    "2019-07-23"^^xsd:dateTime ;
-    dcterms:issued    "2018-06-21"^^xsd:dateTime ;
+    dcterms:modified    "2019-07-23"^^xsd:date ;
+    dcterms:issued    "2018-06-21"^^xsd:date ;
     owl:versionInfo    "0.3.1" ;
     owl:versionIRI <https://w3id.org/bot/0.3.1> ;
     owl:priorVersion <https://w3id.org/bot/0.3.0> ;
