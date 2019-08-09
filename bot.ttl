@@ -31,14 +31,16 @@ dcterms:contributor a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
+schema:domainIncludes a owl:AnnotationProperty .
+schema:rangeIncludes a owl:AnnotationProperty .
 vs:term_status a owl:AnnotationProperty .
 foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
-    dcterms:modified    "2019-07-23"^^xsd:date ;
-    dcterms:issued    "2018-06-21"^^xsd:date ;
+    dcterms:modified    "2019-07-23"^^xsd:dateTime ;
+    dcterms:issued    "2018-06-21"^^xsd:dateTime ;
     owl:versionInfo    "0.3.1" ;
     owl:versionIRI <https://w3id.org/bot/0.3.1> ;
     owl:priorVersion <https://w3id.org/bot/0.3.0> ;
