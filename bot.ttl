@@ -31,6 +31,8 @@ dcterms:contributor a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
+schema:domainIncludes a owl:AnnotationProperty .
+schema:rangeIncludes a owl:AnnotationProperty .
 vs:term_status a owl:AnnotationProperty .
 foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
