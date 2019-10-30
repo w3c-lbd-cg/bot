@@ -407,8 +407,8 @@ bot:hasSubElement a owl:ObjectProperty ;
 	"hat Unterbauteil"@de ,
     "a sous-élément"@fr ;        
   rdfs:comment
-    "Relation between an element a) and another element b) hosted by element a)"@en ,
-    "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hasSubElement inst:window"@nl ,
+    "Relation between two building elements, either one element hosting another (e.g. a window hosted by a wall) or a subcomposition of a building element into smaller parts (e.g. a fan as part of an air handling unit)."@en ,
+    "Relatie tussen twee gebouwelementen, ofwel een gebouwelement dat een ander element in zich heeft (bv. een venster in een muur), ofwel een subcompositie van een gebouwelement in kleinere delen (bv. een ventilator als deel van een air handling unit)"@nl ,
 	"Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de ,
     "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da ,
     "Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv ,
