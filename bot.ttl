@@ -412,7 +412,7 @@ bot:hasSubElement a owl:ObjectProperty ;
 	"Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de ,
     "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da ,
     "Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv ,
-    "Relation entre un élément du bâti A et un autre élément du bâti, B, contenu ou abrité dans A"@fr ;
+    "Relation entre deux éléments du bâtiment, par exemple pour indiquer qu'un élément a un sous-élément (ex. un mur a une fenêtre comme sous-élément), ou qu'un élément se décompose en sous-parties (ex., un ventilateur est un sous-élément d'une unité de traitement de l'air)"@fr ;
   rdfs:domain bot:Element ;
   rdfs:range bot:Element ;
   vs:term_status "stable" ;
