@@ -32,7 +32,7 @@ jobs:
         tar zxf jena.tar.gz && \
         rm jena.tar.gz*
     - name: generate other syntaxes for ontologies 
-      run: for onto in *.ttl; do echo "Generate for ${onto%.*}"; for syntax in "RDF/XML rdf" "N-TRIPLE nt" "N3 n3" "JSON-LD jsonld"; do set -- $syntax; echo " - ${onto%.*}.$2"; apache-jena-3.14.0/bin/riot --output=$1 ${onto%.*}.ttl >> public/${onto%.*}.$2; done; done
+      run: for onto in *.ttl; do echo "Generate for ${onto%.*}"; for syntax in "RDF/XML rdf" "N-TRIPLE nt" "N3 n3" "JSON-LD jsonld"; do set -- $syntax; echo " - ${onto%.*}.$2"; apache-jena-3.14.0/bin/riot --output=$1 ${onto%.*}.ttl >> ${onto%.*}.$2; done; done
     - name: delete jena
       run: rm -r apache-jena-$JENA_VERSION
     - name: GitHub Pages Deploy
