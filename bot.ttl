@@ -39,9 +39,9 @@ foaf:name a owl:DatatypeProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
-    dcterms:modified    "2019-07-23T12:00:00"^^xsd:dateTime ;
+    dcterms:modified    "2020-02-25T12:00:00"^^xsd:dateTime ;
     dcterms:issued    "2018-06-21T12:00:00"^^xsd:dateTime ;
-    owl:versionInfo    "0.3.1" ;
+    owl:versionInfo    "0.3.2" ;
     owl:versionIRI <https://w3id.org/bot/0.3.1> ;
     owl:priorVersion <https://w3id.org/bot/0.3.0> ;
   rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
@@ -409,9 +409,9 @@ bot:hasSubElement a owl:ObjectProperty ;
   rdfs:comment
     "Relation between two building elements, either one element hosting another (e.g. a window hosted by a wall) or a subcomposition of a building element into smaller parts (e.g. a fan as part of an air handling unit)."@en ,
     "Relatie tussen twee gebouwelementen, ofwel een gebouwelement dat een ander element in zich heeft (bv. een venster in een muur), ofwel een subcompositie van een gebouwelement in kleinere delen (bv. een ventilator als deel van een air handling unit)"@nl ,
-	"Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de ,
-    "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da ,
-    "Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv ,
+	#OUTDATED"Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de ,
+    #OUTDATED"Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da ,
+    #OUTDATED"Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv ,
     "Relation entre deux éléments du bâtiment, par exemple pour indiquer qu'un élément a un sous-élément (ex. un mur a une fenêtre comme sous-élément), ou qu'un élément se décompose en sous-parties (ex., un ventilateur est un sous-élément d'une unité de traitement de l'air)"@fr ;
   rdfs:domain bot:Element ;
   rdfs:range bot:Element ;
