@@ -19,6 +19,7 @@
 @prefix dbo:    	<http://dbpedia.org/ontology/> .
 @prefix saref4bldg:	<https://w3id.org/def/saref4bldg#> .
 
+@prefix : <https://w3id.org/bot/> .
 @prefix bot: <https://w3id.org/bot#> .
 @base <https://w3id.org/bot/SAREF4BLDGAlignment#> .
 
