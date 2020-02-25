@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: create public folder and copy everything there 
-      run: mkdir public && mv !(public) public
+      run: mkdir public && shopt -s extglob dotglob; mv !(public) public; shopt -u dotglob
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
