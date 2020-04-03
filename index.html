@@ -949,6 +949,7 @@
     <section id="AlignmentModules">
         <h2>Alignment Modules</h2>
         <p>As BOT is proposed as a central ontology in the domain of AEC/FM industry, alignments with existing domains are provided as separate modules.</p>
+		<p>The evolution of the alignment definitions and their rationale is described in detail in the publications by [[Schneider-2017]] and [[Schneider-2019]].</p>
 
 <!-- So far an alignment for the following ontologies has been provided:
 
@@ -967,106 +968,64 @@ ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
         <!-- BRICK alignment -->
         <section id="BRICK_Alignment" class="informative">
             <h3>BRICK Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the BRICK ontology</p>
-            The BRICK alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl</a>.
-            <p></p>
-            <section id="DUL_Alignment-namespaces" class="informative">
-                <h3>Namespaces</h3>
-                <p>The following namespace prefixes are used in the alignment to SOSA and SSN</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th> Prefix </th>
-                            <th> Namespace </th>
-                        </tr>
-                        <tr>
-                            <td> bot: </td>
-                            <td> <a href="https://w3id.org/bot">https://w3id.org/bot#</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td> brick: </td>
-                            <td> <a href="http://brickschema.org/ttl/Brick.ttl">https://brickschema.org/schema/1.0.2/Brick#</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section id="BRICK-Classes-Alignment" class="informative">
-                <h3>Class Alignments</h3>
-                <p>The following classes in BOT can be aligned via a subclass relation as follows. </p>
-                <p><em>MHRA: I am not sure I agree with all the alignments we have defined. both brick:Wing and brick:Basement are subclasses of bot:Zone IMO.</em></p>
-                <table>
-                    <tbody>
-
-                        <tr>
-                            <td> bot:Zone </td>
-                            <td> subclass of </td>
-                            <td> brick:Location </td>
-                        </tr>
-                        <tr>
-                            <td> brick:Basement</td>
-                            <td> subclass of </td>
-                            <td> bot:Space </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>For more complex alignments, the axiomatic alignments are defined as follows.</p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td> sosa:Result </td>
-                            <td> subclass of </td>
-                            <td> owl:unionOf ( dul:Region dul:Object ) </td>
-                        </tr>
-                        <tr>
-                            <td> (not (oldssn:Observation)) and (old-ssn:observationResult some owl:Thing)</td>
-                            <td> subclass of </td>
-                            <td> sosa:Observation </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p><em>List not complete</em></p>
-            </section>
-            <section id="BRICK_Alignment_property" class="informative">
-                <h3>Property Alignments</h3>
-                <p>Additional alignments from BOT to BRICK properties are defined as follows. </p>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td> brick:contains </td>
-                            <td> sub-property of </td>
-                            <td> bot:containsElement </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </section>
+            <p>This section introduces the alignment of BOT to the BRICK ontology (v1.0.2)</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl</a>.
+            
+			<p></p>
+        </section>    
 
         <!-- DERIROOMS alignment -->
         <section id="DERIROOMS_Alignment" class="informative">
             <h3>DERIROOMS Alignment Module</h3>
             <p>This section introduces the alignment of BOT to the DERIROOMS ontology</p>
-            The DERIROOMS alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl</a>.
-            <p></p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl</a>.
+            
+			<p></p>
         </section>
 
         <!-- DogOnt alignment -->
         <section id="DOGONT_Alignment" class="informative">
             <h3>DogOnt Alignment Module</h3>
             <p>This section introduces the alignment of BOT to the DogOnt ontology</p>
-            The DogOnt alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl</a>.
-            <p></p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+
+		<!-- DUL alignment -->
+        <section id="DUL_Alignment" class="informative">
+            <h3>DUL Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the DUL ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl</a>.
+            
+			<p></p>
         </section>
 
         <!-- ifcOWL alignment -->
         <section id="IFCOWL_Alignment" class="informative">
             <h3>ifcOWL Alignment Module</h3>
             <p>This section introduces the alignment of BOT to the ifcOWL ontology</p>
-            The ifcOWL alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl</a>.
-            <p></p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl</a>.
+            
+			<p></p>
         </section>
-
+		<!-- SAREF4Building alignment -->
+        <section id="SAREF4Bldg_Alignment" class="informative">
+            <h3>SAREF4Bldg Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the SAREF4Bldg ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+		
+		<!-- ThinkHome alignment -->
+        <section id="ThinkHome_Alignment" class="informative">
+            <h3>ThinkHome Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the ThinkHome ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
     </section>
 
     <section class="informative" id="common-modeling-questions">

@@ -66,6 +66,20 @@ var respecConfig = {
         title:"Linked Building Data Community Group Use Cases & Requirements",
         authors: ["Linked Building Data Community Group"],
         date: "ongoing work"
+       },
+	   "Schneider-2017":{
+        href:"http://linkedbuildingdata.net/ldac2017/files/Presentations/LDAC2017_georgschneider.pdf",
+        type: "Proceedings of the Workshop on Linked Data in Architecture and Construction",
+        title:"Towards Aligning Domain Ontologies with the Building Topology Ontology",
+        authors: ["Georg Ferdinand Schneider"],
+        date: "Proceedings of the Workshop on Linked Data in Architecture and Construction, November 2017, Dijon, France"
+       },
+	   "Schneider-2019":{
+        href:"http://ceur-ws.org/Vol-2389/03paper.pdf",
+        type: "Proceedings of the Workshop on Linked Data in Architecture and Construction",
+        title:"Automated Ontology Matching in the Architecture, Engineering and Construction Domain-A Case Study",
+        authors: ["Georg Ferdinand Schneider"],
+        date: "Proceedings of the Workshop on Linked Data in Architecture and Construction, June 2019, Lisbon, Portugal"
        }
     },
     issueBase: ""
