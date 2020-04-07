@@ -551,8 +551,8 @@ bot:hasZeroPoint a owl:ObjectProperty ;
 	"hat Nullpunkt"@de ,
     "har nulpunkt"@da ;
   rdfs:comment
-  "Links a bot:Site to a instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and not encouraged by the developers"@en ,
-    "Verbindet eine Instanz von bot:Site mit einer Instanz, die den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert. Dies kann eine Instanz eines wgs84:Point sein. Die Definition von GIS und Geometrie ist nicht Bestandteil von BOT. Die Nutzung dieses Properties ist potenziell zweideutig und wird von den Entwicklern nicht empfohlen."@de ;
+  "Links a bot:Site to a instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology."@en ,
+    "Verbindet eine Instanz von bot:Site mit einer Instanz, die den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert. Dies kann eine Instanz eines wgs84:Point sein. Die Definition von GIS und Geometrie ist nicht Bestandteil von BOT. Die Nutzung dieses Properties ist potenziell zweideutig und es besteht die Möglichkeit das es in Zukunft überarbeitet oder entfernt wird."@de ;
   rdfs:domain bot:Site ;
   vs:term_status "unstable" ;
   rdfs:seeAlso <https://github.com/w3c-lbd-cg/bot/issues/41> ;
