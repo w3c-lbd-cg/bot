@@ -1,0 +1,88 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/bot/DERIROOMSAlignment#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rooms="http://vocab.deri.ie/rooms#"
+    xmlns:bot="https://w3id.org/bot#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Building">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot/DERIROOMSAlignment">
+    <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="http://vocab.deri.ie/rooms#"/>
+    <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <dcterms:description xml:lang="en">This ontology defines proposed alignments with the DERI Rooms ontology.</dcterms:description>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/DERIROOMSAlignment/0.1.0"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-01</dcterms:modified>
+    <owl:imports rdf:resource="https://w3id.org/bot"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/DERIROOMSAlignment/1.0.0"/>
+    <dcterms:title xml:lang="en">DERIROOMS to BOT alignment.</dcterms:title>
+    <dcterms:creator rdf:nodeID="A0"/>
+    <owl:versionInfo>v1.0.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Room">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#FloorSection">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Floor">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#contains">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Site">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Desk">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>

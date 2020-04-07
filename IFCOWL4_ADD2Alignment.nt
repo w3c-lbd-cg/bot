@@ -1,0 +1,33 @@
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/title> "ifcOWL4_Add2 to BOT alignment."@en .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."@en .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/issued> "2017-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/modified> "2019-03-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
+_:B4e4256807fbcb363c7244e8f4f33a70f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B4e4256807fbcb363c7244e8f4f33a70f <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://purl.org/dc/terms/creator> _:B4e4256807fbcb363c7244e8f4f33a70f .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<https://w3id.org/bot/IFC4_ADD2Alignment> <http://www.w3.org/2002/07/owl#imports> <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Site> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Building> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingStorey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Storey> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Space> .
+<http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .

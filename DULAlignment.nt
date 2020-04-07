@@ -1,0 +1,47 @@
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/title> "DUL to BOT alignment."@en .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments with the DUL ontology."@en .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/issued> "2019-05-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/modified> "2019-05-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2002/07/owl#versionInfo> "v0.1.0" .
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/DULAlignment/0.1.0> .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info/me#> .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/contributor> <https://www.researchgate.net/profile/Georg_Schneider3> .
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
+_:Ba990c2e553d9c890a17d5aec6912338a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Ba990c2e553d9c890a17d5aec6912338a <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/contributor> _:Ba990c2e553d9c890a17d5aec6912338a .
+_:B5579ce974d4fcc1e9f8a3e67c0cbf0ae <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B5579ce974d4fcc1e9f8a3e67c0cbf0ae <http://xmlns.com/foaf/0.1/name> "Maxime Lefrançois" .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/creator> _:B5579ce974d4fcc1e9f8a3e67c0cbf0ae .
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalObject> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact> .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact> .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRegion> .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SpaceRegion> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#overlaps> .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#overlaps> .

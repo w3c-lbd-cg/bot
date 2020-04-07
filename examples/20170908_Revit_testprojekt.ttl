@@ -1,0 +1,261 @@
+ @prefix bot:  	<https://w3id.org/bot#> .
+ @prefix rdfs: 	<http://www.w3.org/2000/01/rdf-schema#> .
+ @prefix rvt:  	<https://eample.org/rvt#> .
+
+# ELEMENTS
+<https://localhost/0001/Walls/9499a8c6-2e95-4531-b828-c64330c19895> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a658" .
+<https://localhost/0001/Walls/39b126d0-65d5-4848-ab2d-6f99fe31c747> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a659" .
+<https://localhost/0001/Walls/4eff7ee7-2424-4f1d-bf9e-93de7dcb23d6> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a65b" .
+<https://localhost/0001/Walls/9e348c83-63b7-4d95-9635-628c23735951> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a65e" .
+<https://localhost/0001/Walls/bb3aabcd-32cf-4aa1-aa7c-8963455bd68d> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a65f" .
+<https://localhost/0001/Walls/fa4cf90a-893f-4cbb-86ce-a813fe31cfdb> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a660" .
+<https://localhost/0001/Walls/f0b79061-4005-447d-bed2-9de1e82fd17c> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a66b" .
+<https://localhost/0001/Walls/9c071b9b-a689-4afc-928b-0ccc8c173bb8> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a66c" .
+<https://localhost/0001/Walls/06636c54-0656-4d51-892d-7966be220e36> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a66d" .
+<https://localhost/0001/Walls/c1163666-2733-47c8-90fe-4b76d117786a> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a691" .
+<https://localhost/0001/Walls/21aa2dbb-9f88-4a10-92ac-aeb8dded2236> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a6ba" .
+<https://localhost/0001/Walls/b1573c93-cb62-4d8e-8eda-324c4b9bf96f> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a787" .
+<https://localhost/0001/Walls/91b2f898-c3a5-48c8-a249-d458db9bae0d> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a871" .
+<https://localhost/0001/Walls/2f73b55b-0b00-4e7b-9f0d-39e92cc0de72> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004a8db" .
+<https://localhost/0001/Walls/16f256c9-7ba9-49e8-bd71-88381afc18a2> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004aaaa" .
+<https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abbe" .
+<https://localhost/0001/Walls/e8d24614-aba8-4930-a078-e9b1595a138e> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abbf" .
+<https://localhost/0001/Walls/57d27eb3-efd3-4186-92f6-01a42dd308c9> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc0" .
+<https://localhost/0001/Walls/4a3e9994-79da-4b18-9863-2965deb674a7> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc1" .
+<https://localhost/0001/Walls/a3461348-7f87-4a7c-9c5f-e300e5d767f4> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc2" .
+<https://localhost/0001/Walls/2bd92f56-8903-4de8-898c-dd0644f17eea> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc3" .
+<https://localhost/0001/Walls/17518689-76a1-41ea-bb64-2392f3aa98e6> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc4" .
+<https://localhost/0001/Walls/d6e96e8b-8b21-41be-9421-c95fb0a25b58> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc5" .
+<https://localhost/0001/Walls/218357fd-bedd-495e-9b06-d5200646e54e> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc6" .
+<https://localhost/0001/Walls/b8fd6058-e98a-422b-b7ca-1aeaafc2879c> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004abc7" .
+<https://localhost/0001/Walls/437b3b67-6e42-4b46-bc99-01bd4532a28c> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b010" .
+<https://localhost/0001/Walls/f4af5cbd-81bb-4cb1-864c-0d841e4dac75> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b011" .
+<https://localhost/0001/Walls/2253712e-5ae0-4bfc-9345-20d09425ec7a> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b012" .
+<https://localhost/0001/Walls/87f0fe78-5c3d-457a-8893-7d662629560c> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b013" .
+<https://localhost/0001/Walls/8d718534-b8fa-421b-b809-34c356520b05> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b014" .
+<https://localhost/0001/Walls/20c9c2d8-dfce-4ee1-852b-162ccc2136c0> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b015" .
+<https://localhost/0001/Walls/9ef9959e-269b-4d30-85b3-7314146a35f3> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b016" .
+<https://localhost/0001/Walls/6f819ea8-cfb9-43c5-bf5f-e0fd559fa2d9> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b017" .
+<https://localhost/0001/Walls/75bf9c93-04a5-4597-9b06-8e437ba72e60> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b018" .
+<https://localhost/0001/Walls/f49fdd5e-6258-4fba-8e19-a1edf2174d6f> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b019" .
+<https://localhost/0001/Walls/f7df899a-e66a-4516-b1f4-4c69f8f351cb> a bot:Element ;
+	 rdfs:label "Generic -450mm" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004b01a" .
+<https://localhost/0001/Walls/0b69d063-93d1-480f-9623-9a20887f124a> a bot:Element ;
+	 rdfs:label "Interior - 135mm Partition (2-hr)" ;
+	 rvt:guid "5f6218f7-0bfe-44e8-b67b-d3e8b3fdefd8-0004b59a" .
+
+# STOREYS
+<https://localhost/0001/Levels/5bcd6e78-b85d-48c4-b869-9c3ff468a42a> a bot:Storey ;
+	 rdfs:label "Level 1" ;
+	 rvt:guid "e3e052f9-0156-11d5-9301-0000863f27ad-00000137" .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> a bot:Storey ;
+	 rdfs:label "Level 2" ;
+	 rvt:guid "458c0e49-01bb-11d5-9302-0000863f27ad-000002b6" .
+<https://localhost/0001/Levels/51dd481f-8679-4d42-8075-4c12fdc73f4a> a bot:Storey ;
+	 rdfs:label "Level 3" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004ab95" .
+<https://localhost/0001/Levels/a930174a-a136-49dc-a4db-21719f070d3b> a bot:Storey ;
+	 rdfs:label "Level 4" ;
+	 rvt:guid "b9b8e6fb-21e9-459d-b60d-2ade56169fed-0004aba6" .
+
+# SPACES
+<https://localhost/0001/Spaces/c235c63e-0c29-4ef8-a7ab-fc7db5396601> a bot:Space ;
+	 rdfs:label "Space 1" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb0" .
+<https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> a bot:Space ;
+	 rdfs:label "Space 2" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb1" .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> a bot:Space ;
+	 rdfs:label "Space 3" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb2" .
+<https://localhost/0001/Spaces/9c05716c-5adb-4eb7-b803-388b38bed4c0> a bot:Space ;
+	 rdfs:label "Space 4" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb6" .
+<https://localhost/0001/Spaces/18a52f79-6113-4f07-ac06-9769b22fc2e8> a bot:Space ;
+	 rdfs:label "Space 5" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb7" .
+<https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> a bot:Space ;
+	 rdfs:label "Space 6" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb8" .
+<https://localhost/0001/Spaces/edef2323-c69d-429d-bdc2-9866156db31e> a bot:Space ;
+	 rdfs:label "Space 7" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfb9" .
+<https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> a bot:Space ;
+	 rdfs:label "Space 8" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfba" .
+<https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> a bot:Space ;
+	 rdfs:label "Space 9" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfbb" .
+<https://localhost/0001/Spaces/b8fac804-32e9-4813-8beb-bad2d2775a1f> a bot:Space ;
+	 rdfs:label "Space 10" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfbc" .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> a bot:Space ;
+	 rdfs:label "Space 11" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfbd" .
+<https://localhost/0001/Spaces/00ac4865-2ccd-496f-b1c3-29061f9a2c73> a bot:Space ;
+	 rdfs:label "Space 12" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfbe" .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> a bot:Space ;
+	 rdfs:label "Space 13" ;
+	 rvt:guid "ccae7f8a-5812-44e5-a374-30cef01306f4-0004cfbf" .
+
+# ROOMS AT EACH STOREY
+<https://localhost/0001/Levels/5bcd6e78-b85d-48c4-b869-9c3ff468a42a> bot:hasSpace <https://localhost/0001/Spaces/c235c63e-0c29-4ef8-a7ab-fc7db5396601> .
+<https://localhost/0001/Levels/5bcd6e78-b85d-48c4-b869-9c3ff468a42a> bot:hasSpace <https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> .
+<https://localhost/0001/Levels/5bcd6e78-b85d-48c4-b869-9c3ff468a42a> bot:hasSpace <https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/9c05716c-5adb-4eb7-b803-388b38bed4c0> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/18a52f79-6113-4f07-ac06-9769b22fc2e8> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/edef2323-c69d-429d-bdc2-9866156db31e> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/b8fac804-32e9-4813-8beb-bad2d2775a1f> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/00ac4865-2ccd-496f-b1c3-29061f9a2c73> .
+<https://localhost/0001/Levels/3e7dceac-25cd-4489-9724-c7a608144dab> bot:hasSpace <https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> .
+
+# ELEMENTS ADJACENT TO ROOMS
+<https://localhost/0001/Spaces/c235c63e-0c29-4ef8-a7ab-fc7db5396601> bot:adjacentElement <https://localhost/0001/Walls/f0b79061-4005-447d-bed2-9de1e82fd17c> .
+<https://localhost/0001/Spaces/c235c63e-0c29-4ef8-a7ab-fc7db5396601> bot:adjacentElement <https://localhost/0001/Walls/9c071b9b-a689-4afc-928b-0ccc8c173bb8> .
+<https://localhost/0001/Spaces/c235c63e-0c29-4ef8-a7ab-fc7db5396601> bot:adjacentElement <https://localhost/0001/Walls/91b2f898-c3a5-48c8-a249-d458db9bae0d> .
+<https://localhost/0001/Spaces/c235c63e-0c29-4ef8-a7ab-fc7db5396601> bot:adjacentElement <https://localhost/0001/Walls/b1573c93-cb62-4d8e-8eda-324c4b9bf96f> .
+<https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> bot:adjacentElement <https://localhost/0001/Walls/9499a8c6-2e95-4531-b828-c64330c19895> .
+<https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> bot:adjacentElement <https://localhost/0001/Walls/16f256c9-7ba9-49e8-bd71-88381afc18a2> .
+<https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> bot:adjacentElement <https://localhost/0001/Walls/2f73b55b-0b00-4e7b-9f0d-39e92cc0de72> .
+<https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> bot:adjacentElement <https://localhost/0001/Walls/4eff7ee7-2424-4f1d-bf9e-93de7dcb23d6> .
+<https://localhost/0001/Spaces/1080e925-5e5f-46d2-a063-aabc8338e991> bot:adjacentElement <https://localhost/0001/Walls/bb3aabcd-32cf-4aa1-aa7c-8963455bd68d> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/9499a8c6-2e95-4531-b828-c64330c19895> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/9e348c83-63b7-4d95-9635-628c23735951> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/39b126d0-65d5-4848-ab2d-6f99fe31c747> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/fa4cf90a-893f-4cbb-86ce-a813fe31cfdb> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/21aa2dbb-9f88-4a10-92ac-aeb8dded2236> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/b1573c93-cb62-4d8e-8eda-324c4b9bf96f> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/91b2f898-c3a5-48c8-a249-d458db9bae0d> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/9c071b9b-a689-4afc-928b-0ccc8c173bb8> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/06636c54-0656-4d51-892d-7966be220e36> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/c1163666-2733-47c8-90fe-4b76d117786a> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/2f73b55b-0b00-4e7b-9f0d-39e92cc0de72> .
+<https://localhost/0001/Spaces/e432d25b-6d0d-4437-9182-e69cc0d2349b> bot:adjacentElement <https://localhost/0001/Walls/16f256c9-7ba9-49e8-bd71-88381afc18a2> .
+<https://localhost/0001/Spaces/9c05716c-5adb-4eb7-b803-388b38bed4c0> bot:adjacentElement <https://localhost/0001/Walls/06636c54-0656-4d51-892d-7966be220e36> .
+<https://localhost/0001/Spaces/9c05716c-5adb-4eb7-b803-388b38bed4c0> bot:adjacentElement <https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> .
+<https://localhost/0001/Spaces/9c05716c-5adb-4eb7-b803-388b38bed4c0> bot:adjacentElement <https://localhost/0001/Walls/e8d24614-aba8-4930-a078-e9b1595a138e> .
+<https://localhost/0001/Spaces/9c05716c-5adb-4eb7-b803-388b38bed4c0> bot:adjacentElement <https://localhost/0001/Walls/57d27eb3-efd3-4186-92f6-01a42dd308c9> .
+<https://localhost/0001/Spaces/18a52f79-6113-4f07-ac06-9769b22fc2e8> bot:adjacentElement <https://localhost/0001/Walls/9c071b9b-a689-4afc-928b-0ccc8c173bb8> .
+<https://localhost/0001/Spaces/18a52f79-6113-4f07-ac06-9769b22fc2e8> bot:adjacentElement <https://localhost/0001/Walls/06636c54-0656-4d51-892d-7966be220e36> .
+<https://localhost/0001/Spaces/18a52f79-6113-4f07-ac06-9769b22fc2e8> bot:adjacentElement <https://localhost/0001/Walls/57d27eb3-efd3-4186-92f6-01a42dd308c9> .
+<https://localhost/0001/Spaces/18a52f79-6113-4f07-ac06-9769b22fc2e8> bot:adjacentElement <https://localhost/0001/Walls/e8d24614-aba8-4930-a078-e9b1595a138e> .
+<https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> bot:adjacentElement <https://localhost/0001/Walls/9c071b9b-a689-4afc-928b-0ccc8c173bb8> .
+<https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> bot:adjacentElement <https://localhost/0001/Walls/e8d24614-aba8-4930-a078-e9b1595a138e> .
+<https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> bot:adjacentElement <https://localhost/0001/Walls/e8d24614-aba8-4930-a078-e9b1595a138e> .
+<https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> bot:adjacentElement <https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> .
+<https://localhost/0001/Spaces/d8e5d343-f00e-4ebd-b4e3-d1db8c6a0450> bot:adjacentElement <https://localhost/0001/Walls/4a3e9994-79da-4b18-9863-2965deb674a7> .
+<https://localhost/0001/Spaces/edef2323-c69d-429d-bdc2-9866156db31e> bot:adjacentElement <https://localhost/0001/Walls/39b126d0-65d5-4848-ab2d-6f99fe31c747> .
+<https://localhost/0001/Spaces/edef2323-c69d-429d-bdc2-9866156db31e> bot:adjacentElement <https://localhost/0001/Walls/d6e96e8b-8b21-41be-9421-c95fb0a25b58> .
+<https://localhost/0001/Spaces/edef2323-c69d-429d-bdc2-9866156db31e> bot:adjacentElement <https://localhost/0001/Walls/17518689-76a1-41ea-bb64-2392f3aa98e6> .
+<https://localhost/0001/Spaces/edef2323-c69d-429d-bdc2-9866156db31e> bot:adjacentElement <https://localhost/0001/Walls/218357fd-bedd-495e-9b06-d5200646e54e> .
+<https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> bot:adjacentElement <https://localhost/0001/Walls/9499a8c6-2e95-4531-b828-c64330c19895> .
+<https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> bot:adjacentElement <https://localhost/0001/Walls/b8fd6058-e98a-422b-b7ca-1aeaafc2879c> .
+<https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> bot:adjacentElement <https://localhost/0001/Walls/a3461348-7f87-4a7c-9c5f-e300e5d767f4> .
+<https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> bot:adjacentElement <https://localhost/0001/Walls/4eff7ee7-2424-4f1d-bf9e-93de7dcb23d6> .
+<https://localhost/0001/Spaces/609244e9-86ca-491f-b3ba-fc97e84fad4b> bot:adjacentElement <https://localhost/0001/Walls/bb3aabcd-32cf-4aa1-aa7c-8963455bd68d> .
+<https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> bot:adjacentElement <https://localhost/0001/Walls/39b126d0-65d5-4848-ab2d-6f99fe31c747> .
+<https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> bot:adjacentElement <https://localhost/0001/Walls/fa4cf90a-893f-4cbb-86ce-a813fe31cfdb> .
+<https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> bot:adjacentElement <https://localhost/0001/Walls/21aa2dbb-9f88-4a10-92ac-aeb8dded2236> .
+<https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> bot:adjacentElement <https://localhost/0001/Walls/2bd92f56-8903-4de8-898c-dd0644f17eea> .
+<https://localhost/0001/Spaces/24dc2bd8-fcf3-4f1b-a5ed-579477adda40> bot:adjacentElement <https://localhost/0001/Walls/0b69d063-93d1-480f-9623-9a20887f124a> .
+<https://localhost/0001/Spaces/b8fac804-32e9-4813-8beb-bad2d2775a1f> bot:adjacentElement <https://localhost/0001/Walls/f0b79061-4005-447d-bed2-9de1e82fd17c> .
+<https://localhost/0001/Spaces/b8fac804-32e9-4813-8beb-bad2d2775a1f> bot:adjacentElement <https://localhost/0001/Walls/9c071b9b-a689-4afc-928b-0ccc8c173bb8> .
+<https://localhost/0001/Spaces/b8fac804-32e9-4813-8beb-bad2d2775a1f> bot:adjacentElement <https://localhost/0001/Walls/4a3e9994-79da-4b18-9863-2965deb674a7> .
+<https://localhost/0001/Spaces/b8fac804-32e9-4813-8beb-bad2d2775a1f> bot:adjacentElement <https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/9499a8c6-2e95-4531-b828-c64330c19895> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/9e348c83-63b7-4d95-9635-628c23735951> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/39b126d0-65d5-4848-ab2d-6f99fe31c747> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/218357fd-bedd-495e-9b06-d5200646e54e> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/17518689-76a1-41ea-bb64-2392f3aa98e6> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/17518689-76a1-41ea-bb64-2392f3aa98e6> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/0b69d063-93d1-480f-9623-9a20887f124a> .
+<https://localhost/0001/Spaces/cf1895e8-cafa-49b6-a7db-7801798de881> bot:adjacentElement <https://localhost/0001/Walls/b8fd6058-e98a-422b-b7ca-1aeaafc2879c> .
+<https://localhost/0001/Spaces/00ac4865-2ccd-496f-b1c3-29061f9a2c73> bot:adjacentElement <https://localhost/0001/Walls/39b126d0-65d5-4848-ab2d-6f99fe31c747> .
+<https://localhost/0001/Spaces/00ac4865-2ccd-496f-b1c3-29061f9a2c73> bot:adjacentElement <https://localhost/0001/Walls/0b69d063-93d1-480f-9623-9a20887f124a> .
+<https://localhost/0001/Spaces/00ac4865-2ccd-496f-b1c3-29061f9a2c73> bot:adjacentElement <https://localhost/0001/Walls/17518689-76a1-41ea-bb64-2392f3aa98e6> .
+<https://localhost/0001/Spaces/00ac4865-2ccd-496f-b1c3-29061f9a2c73> bot:adjacentElement <https://localhost/0001/Walls/d6e96e8b-8b21-41be-9421-c95fb0a25b58> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/06636c54-0656-4d51-892d-7966be220e36> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/c1163666-2733-47c8-90fe-4b76d117786a> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/a3461348-7f87-4a7c-9c5f-e300e5d767f4> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/0b69d063-93d1-480f-9623-9a20887f124a> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/2bd92f56-8903-4de8-898c-dd0644f17eea> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/21aa2dbb-9f88-4a10-92ac-aeb8dded2236> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> .
+<https://localhost/0001/Spaces/a149c12b-9810-488c-80a6-2e234c78e2ea> bot:adjacentElement <https://localhost/0001/Walls/753667be-4b09-48c6-9de8-b98ed278d048> .

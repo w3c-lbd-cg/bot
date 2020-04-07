@@ -1,0 +1,458 @@
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/modified> "2019-07-23T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/issued> "2018-06-21T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/bot#> <http://www.w3.org/2002/07/owl#versionInfo> "0.3.1" .
+<https://w3id.org/bot#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/0.3.1> .
+<https://w3id.org/bot#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/0.3.0> .
+<https://w3id.org/bot#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.24928/JC3-2017/0153> .
+<https://w3id.org/bot#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/title> "The Building Topology Ontology (BOT)"@en .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/description> "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nChanges since version 0.2.0 of the ontology are documented in:\n\nhttps://w3id.org/bot/bot.html#changes\n\nThe version 0.2.0 of the ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology\n\nThe initial version 0.1.0 of the ontology was documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"@en .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/creator> "Mads Holten Rasmussen" .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/creator> "Pieter Pauwels" .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/creator> "Maxime Lefrançois" .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/creator> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info/me#> .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-2033-859X> .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/contributor> "All contributing members of the W3C Linked Building Data Community Group" .
+<https://w3id.org/bot#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
+<https://w3id.org/bot#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bot" .
+<https://w3id.org/bot#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/bot#> .
+<http://maxime-lefrancois.info/me#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://maxime-lefrancois.info/me#> <http://xmlns.com/foaf/0.1/name> "Maxime Lefrançois" .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-2033-859X> <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@en .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zona"@es .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@nl .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@da .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zon"@sv .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@de .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@fr .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "A spatial 3D division. Sub-classes of bot:Zones include bot:Site, bot:Building, bot:Storey, or bot:Space. An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to other bot:Zone instances. Finally, a bot:Zone can instantiate two relations to bot:Element, which are either contained in (bot:containsElement), or adjacent to it (bot:adjacentElement)."@en .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "Ein abstraktes Konzept für eine räumliche, dreidimensionale Einteilung eines Raums. Spezialisierungen von bot:Zone sind bot:Site, bot:Building, bot:Storey oder bot:Space. Eine Instanz von bot:Zone kannn andere Instanzen von bot:Zone enthalten. So ist es möglich Instanzen von bot:Zone zu gruppieren, oder zu unterteilen. Eine Instanz einer bot:Zone kann an eine andere Instanz von bot:Zone angrenzen. Es bestehen zwei Möglichkeiten Instanzen von bot:Zone und bot:Element in Beziehung zu setzen. Entweder ein Element ist in einer Zone enthalten (bot:containsElement) oder es grenzt an eine andere Zone an (bot:adjacentElement)."@de .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone."@es .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "En rummelig 3D-inddeling. Underklasser af bot:Zone inkluderer bot:Site, bot:Building, bot:Storey eller bot:Space. En bot:Zone forekomst kan indeholde andre bot:Zone forekomster, hvilket gør det muligt at gruppere eller underinddele zoner. En forekomst af bot:Zone kan være tilstødende til andre bot:Zone forekomster. Endelig kan en bot:Zone instantiere to relationer til et bot:Element, hvilke er enten indeholdt i (bot:containsElement) eller tilstødende dertil (bot:adjacentElement)."@da .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "En area eller ett stycke land som har en specifik karaktäristik, syfte, användning eller är förmål för specifika restriktioner. En bot:Zone kan innehålla andra bot:Zoner genom relationen bot:containsZone, och den kan kopplas till andra bot:Zoner genom relationen bot:adjacentZone."@sv .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone."@nl .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "Une zone ou une étendue de terrain avec des caractéristiques et usages spécifiques, ou pouvant être sujette à des restrictions spécifiques. Un élément bot:Zone peut contenir d'autres éléments bot:Zone comme défini par la relation bot:containsZone. La connection entre plusieurs éléments bot:Zone est définie en utilisant la propriété bot:adjacentZone."@fr .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Interface> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Sitio"@es .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Grund"@da .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Plats"@sv .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Terrein"@nl .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Grundstück"@de .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@fr .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Area containing one or more buildings."@en .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Área que contiene uno o más edificios."@es .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Område som indeholder en eller flere bygninger."@da .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "En plats som rymmer en eller flera byggnader."@sv .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Omgeving die één of meerdere gebouwen bevat."@nl .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#comment> "Un site comprend un ou plusieurs bâtiments"@fr .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Edificio"@es .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Gebäude"@de .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Edificio"@it .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Bygning"@da .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Byggnad"@sv .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Gebouw"@nl .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Bâtiment"@fr .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "Una unidad de entorno construido intependiente con una estructura espacial característica, para proporcionar al menos una función o actividad de usuario"@es .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "En oberoende enhet i den byggda miljön med en karaktäristisk rumslig struktur som stödjer minst en funktion eller användaraktivitet.  [ISO 12006-2:2013]"@sv .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "Een onafhankelijke entiteit met een ruimtelijke structuur die onderdeel is van de gebouwde omgeving, en bedoeld is om minimaal één functie of gebruikersactiviteit te bedienen [ISO 12006-2:2013]."@nl .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "Une unité indépendante de l'environnement bâti avec une structure spatiale caractéristique, conçue pour répondre à une fonction ou une activité de l'utilisateur [ISO 12006-2:2013]"@fr .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey"@en .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Piso"@es .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Geschoss (Architektur)"@de .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Piano di edificio"@it .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Verdieping"@nl .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Etage"@da .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Våning"@sv .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Etage"@fr .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "A level part of a building"@en .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Un nivel de un edificio"@es .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Een vlak gedeelte van een gebouw"@nl .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Et plan i en bygning"@da .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Ett plan i en byggnad"@sv .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Een horizontaal gedeelte van een gebouw"@nl .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "Correspond à un niveau du bâtiment"@fr .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Espacio"@es .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Raum"@de .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Spazio"@it .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Ruimte"@nl .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Utrymme"@sv .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Rum"@da .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Pièce"@fr .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "Una extensión tridimensional limitada y definida fisica o teóricamente"@es .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "En avgränsad tredimensionell utsträckning som definierats fysiskt eller fiktivt [ISO 12006-2 (DIS 2013), 3.4.3]"@sv .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "Une extension 3D bornée, définie d'un point de vue physique ou théorique [ISO 12006-2 (DIS 2013), 3.4.3]"@fr .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent zone"@en .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "zona adyacente"@es .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "aangrenzende zone"@nl .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "tilstødende zone"@da .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "angränsande zon"@sv .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "angrenzende Zone"@de .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#label> "zone adjacente"@fr .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between two zones that share a common interface, but do not intersect."@en .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tussen twee zones die een interface delen"@nl .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellem to zoner, der deler en fælles grænseflade."@da .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellan två zoner som delar ett gemensamt gränssnitt."@sv .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen zwei Zonen die eine gemeinsame Grenzfläche haben, aber sich nicht schneiden."@de .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre deux zones partageant une interface commune, sans intersection"@fr .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#adjacentZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/bot#intersectsZone> .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#adjacentZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#label> "intersects zone"@en .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#label> "sich schneidende Zone"@de .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between two zones whose 3D extent intersect. For example, a stairwell intersects different storeys."@en .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen zwei Zonen, die sich schneiden. Zum Beispiel schneidet eine Treppe verschiedene Geschosse."@de .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#intersectsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/bot#adjacentZone> .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#intersectsZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contains zone"@en .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contiene zona"@es .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "bevat zone"@nl .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "indeholder zone"@da .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "innehåller zon"@sv .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "enthält Zone"@de .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contient zone"@fr .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property. This implies that in the previous example a bot:containsZone relationship holds between the space zone and the building zone."@en .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen Zonen, wobei eine die andere enthält. Zum Beispiel kann eine Raumzone in einer Geschossszone enthalten sein, die wiederrum in einer Gebäudezone enthalten ist. bot:containsZone is eine transitive Beziehung, dass heisst zwischen der Raumzone im vorherigen Beispiel und der Gebäudezone besteht auch die Beziehung bot:containsZone."@de .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til underzoner i en større zone. En rum-zone kan for eksempel være indeholdt i en etage-zone som ydermere er indeholdt i en bygnings-zone. bot:containsZone er en transitiv egenskab, hvilket betyder at rum-zonen i det forrige eksempel også er indeholdt i bygnings-zonen."@da .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation till delzoner i en huvudzon. En rumszon kan till exempel inrymmas i en våningszon som i sin tur inryms i en byggnadszon. bot:containsZone är en transitiv relation vilket i exemplet betyder att rumszonen också inryms i byggnadszonen."@sv .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tussen subzones van een hoofd zone. Een ruimtezone kan bijvoorbeeld worden bevat door een verdiepingszone, die wederom bevat wordt door een gebouwzone. bot:containsZone is een transitieve eigenschap, wat betekent dat in het vorige voorbeeld de ruimtezone ook bevat wordt door de gebouwzone."@nl .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre les sous-zones composant une zone plus grande. Cette propriété est transitive."@fr .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#containsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#containsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#containsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#containsZone> <http://schema.org/domainIncludes> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#containsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#containsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#containsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#containsZone> <http://schema.org/rangeIncludes> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "has building"@en .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "tiene edificio"@es .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "heeft gebouw"@nl .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "har bygning"@da .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "har byggnad"@sv .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "hat Gebäude"@de .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "contient bâtiment"@fr .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen Gebäuden, die in einer Zone enthalten sind. Oft ist hier die rdfs:domain eine Instanz von bot:Site."@de .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tot gebouwen die zich op een terrein bevinden"@nl .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site."@da .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation till byggnader som inryms i en zon. Typiska domäner för bot:hasBuilding är förekomster av bot:Site."@sv .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre les bâtiments d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Site."@fr .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsZone> .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasBuilding> <http://schema.org/domainIncludes> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "has storey"@en .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "tiene piso"@es .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "heeft verdieping"@nl .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "har etage"@da .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "har våning"@sv .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "hat Geschoss"@de .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "a étage"@fr .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen Geschossen, die in einer Zone enthalten sind. Oft ist die rdfs:domain eine Instanz von bot:Building."@de .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tot de verdiepingen die zich in een zone bevinden. De typische domeinen van bot:hasStorey zijn instanties van bot:Building"@nl .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre les étages d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Building."@fr .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsZone> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasStorey> <http://schema.org/domainIncludes> <https://w3id.org/bot#Building> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "has space"@en .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "tiene espacio"@es .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "hat Raum"@de .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "heeft ruimte"@nl .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "har rum"@da .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "har rum"@sv .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "contient pièce"@fr .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación a espacios contenidos en una zona. Los dominios típicos de bot:hasSPace son instancias de bot:Storey y bot:Building."@es .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tot ruimtes die zich in een zone bevinden. De typische domeinen van bot:hasSpace zijn instanties van bot:Storey en bot:Building."@nl .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung von Räumen, die sich in einer Zone befinden. Oft ist die rdfs:domain eine Instanz von bot:Storey oder bot:Building."@de .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation till rum som inryms i en zon. Typiska domäner för bot:hasSpace är förekomster av bot:Storey och bot:Building."@sv .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre les pièces d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Building."@fr .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsZone> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasSpace> <http://schema.org/domainIncludes> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Building element"@en .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Elemento arquitectónico"@es .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Bauteil (Bauwesen)"@de .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Elemento architettonico"@it .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Bygningsdel"@da .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Byggdel"@sv .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Gebouwelement"@nl .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Elément d'un bâtiment"@fr .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Componente de una construcción con una función técnica, forma o posición característica"@es .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Beståndsdel av ett byggnadsverk med en karaktäristisk teknisk funktion, form eller position [12006-2, 3.4.7]"@sv .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituant d'un bâtiment remplissant une fonction technique spécifique ou ayant une forme ou une position spécifiques"@fr .
+<https://w3id.org/bot#Element> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Interface> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-element"@en .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "alberga sub elemento"@es .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "hoster sub element"@nl .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "hoster sub element"@da .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "värd för sub element"@sv .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "heeft sub element"@nl .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "hat Unterbauteil"@de .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "a sous-élément"@fr .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an element a) and another element b) hosted by element a)"@en .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hasSubElement inst:window"@nl .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un élément du bâti A et un autre élément du bâti, B, contenu ou abrité dans A"@fr .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "has element"@en .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "alberga elemento"@es .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "hoster element"@nl .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "har element"@da .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "värd för element"@sv .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "heeft element"@nl .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "hat Bauteil"@de .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "a élément"@fr .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Zone to an Element that is either contained in or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Forbinder en Zone til en bygningsdel der enten er indeholdt i eller tilstødende til zonen. Det er ikke hensigten at denne relation angives eksplicit, men at den udledes af dennes underegneskaber. Det vil for eksempel tillade en forespørgsel på alle døre i en bygning givet at disse er enten tilstødende eller indeholdt i rum i bygningen."@da .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen einer Zone und einem Bauteil, dass entweder in der Zone enthalten ist, oder sich mit ihr schneidet. Diese Beziehung sollte nicht explizit benutzt werden, sondern ergibt sich implizit aus den Unterbeziehungen. Es ermöglicht, zum Beispiel, dass mit einer Abfrage alle Türen eines Gebäudes, die sich mit einer Zone schneiden ermittelt werden können."@de .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
+_:B0cc7d162X2D9810X2D47d7X2Da27bX2Df7cb2ed6655e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:B0cc7d162X2D9810X2D47d7X2Da27bX2Df7cb2ed6655e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B40d761e2X2D8920X2D48fbX2D8f4cX2D7bde934c80b7 .
+_:B40d761e2X2D8920X2D48fbX2D8f4cX2D7bde934c80b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
+_:B40d761e2X2D8920X2D48fbX2D8f4cX2D7bde934c80b7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B0cc7d162X2D9810X2D47d7X2Da27bX2Df7cb2ed6655e .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent element"@en .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "elemento adyacente"@es .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "aangrenzend element"@nl .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "benachbartes Bauteil"@de .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "tilstødende element"@da .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "angränsande element"@sv .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "élément adjacent"@fr .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a zone and its adjacent building elements, bounding the zone."@en .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre una zona y sus elementos arquitectónicos adyacentes, que limitan el espacio físico."@es .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen einer Zone und dessen angrenzenden Bauteilen. Die Bauteile begrenzen die Zone."@de .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tussen een zone en zijn aangrenzende gebouwelementen, begrensd door fysieke ruimte."@nl .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."@da .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellan en zon och dess angränsande byggdelar, som avgränsar det fysiska utrymmet."@sv .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre une zone et ses éléments adjacents, délimitant l'espace physique"@fr .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasElement> .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/bot#intersectingElement> .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "contains element"@en .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "contiene elemento"@es .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "bevat element"@nl .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "enthält Bauteil"@de .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "indeholder bygningsdel"@da .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "innehåller byggdel"@sv .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#label> "contient élément"@fr .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to a building element contained in a zone."@en .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación a un elemento arquitectónico contenido en una zona."@es .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung einer Zone zu einem Bauteil, dass es enthält."@de .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tussen zone en een gebouwelement in die zone"@nl .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation til en bygningsdel, som er indeholdt i en zone."@da .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation till en byggdel som inryms i en zon."@sv .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre un élément de bâti et la zone le contenant"@fr .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasElement> .
+_:Bf5b57664X2D8c3bX2D4681X2Db42cX2D05b18d4080d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:Bf5b57664X2D8c3bX2D4681X2Db42cX2D05b18d4080d4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B4f6904ffX2Df6e0X2D4207X2Db00dX2De2932d9c02d7 .
+_:B4f6904ffX2Df6e0X2D4207X2Db00dX2De2932d9c02d7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
+_:B4f6904ffX2Df6e0X2D4207X2Db00dX2De2932d9c02d7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bf5b57664X2D8c3bX2D4681X2Db42cX2D05b18d4080d4 .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#label> "intersecting element"@en .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#label> "schneidendes Bauteil"@de .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#label> "élément intersectant"@fr .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Zone and a building Element that intersects it. "@en .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen einer Zone und einem Bauteil, das die Zone schneidet."@de .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasElement> .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/bot#adjacentElement> .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#Interface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Interface"@en .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Interface"@nl .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Grenzfläche"@de .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Grænseflade"@da .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Gränssnitt"@sv .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#label> "Interface"@fr .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "Eine Grenzfläche ist die Fläche, an der sich zwei Bauteile, zwei Zonen oder ein Bauteil und eine Zone treffen. Das Konzept kann verwendet werden, um die Beziehung zwischen den Beteiligten zu qualifizieren. Ein Beispiel ist die Qualifizierung der Wärmeaustauschfläche zwischen eine Zone und einer Wand, die mehrere Zonen überdeckt."@de .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "Een interface is een vlak waar twee gebouwelementen, twee zones of een gebouw elementen en een zone elkaar raken. Het kan worden gebruikt om de verbinding tussen de twee te kwalificeren. Een use case kan de kwalificatie van het warmteoverbrengingsoppervlak tussen een zone en een muur over meerdere zones zijn."@nl .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "Ett gränssnitt är den yta där två byggdelar, två zoner eller en b yggdel och en zon möts. Det kan användas för att beskriva kopplingen mellan de två. Ett användningsfall kan vara att kvalificera värmetransmissionsarean mellan en zon och en vägg som täcker flera zoner."@sv .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "Une interface correspond à la surface où se rencontrent a) deux éléments d'un bâtiment, b) deux zones ou  encore c) un élément d'un bâtiment avec une zone. Un cas d'utilisation type est constituée par la qualification de la zone de transmission de chaleur entre une zone et un mur couvrant plusieurs zones."@fr .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "interface of"@en .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "Grenzfläche von"@de .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "interface van"@nl .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "grænseflade for"@da .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "gränssnitt för"@sv .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "interface de"@fr .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an interface and an adjacent zone or element."@en .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen einer Grenzfläche und einer angrenzenden Zone oder einem Bauteil."@de .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relatie tussen een interface en een aanliggende zone of element."@nl .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."@da .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation mellan ett gränssnitt och en angränsande zon eller byggdel."@sv .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre une interface et une zone ou un élément adjacents."@fr .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Interface> .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+<https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has zero point"@en .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#label> "hat Nullpunkt"@de .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#label> "har nulpunkt"@da .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a bot:Site to a wgs84:Point that encodes the latitude and longitude of the Zero Point of the building site."@en .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Verbindet eine Instanz von bot:Site mit einem wgs84:Point, der den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert."@de .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Forbinder et bot:Site med et wgs84:Point som beskriver længde- og breddegrad for projektets nulpunkt"@da .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Site> .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<https://w3id.org/bot#hasZeroPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "has Simple 3D Model"@en .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "hat einfaches 3D Modell"@de .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "har simpel 3D-model"@da .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Verbindet jede bot:Zone oder bot:Element zu einem 3D Model, dass als Literal codiert ist."@de .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Forbinder enhver instans af bot:Zone eller bot:Element med en 3D-model beskrevet som en literal."@da .
+<https://w3id.org/bot#hasSimple3DModel> <http://schema.org/domainIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasSimple3DModel> <http://schema.org/domainIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<https://w3id.org/bot#hasSimple3DModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "has 3D Model"@en .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "hat 3D Modell"@de .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "har 3D-model"@da .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Verbindet eine Instanz von bot:Zone oder bot:Element zu einer IRI, die das zugehörige 3D Modell identifiziert. Das Modell kann in einem spezifischen RDF Vokabular kodiert sein. Andernfalls kann die IRI auch dereferenzierbar sein."@de .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#comment> "Forbinder enhver instans af bot:Zone eller bot:Element med en IRI som identificerer dennes 3D-model. Denne 3D-model kan så beskrives ved brug af et dedikeret RDF-vokabular. Alternativt kan 3D-modellens IRI være dereferencerbar, sådan at der modtages en repræsentation af 3D-modellen i et eksisterende dataformat for 3D-modeller når IRIen slås op."@da .
+<https://w3id.org/bot#has3DModel> <http://schema.org/domainIncludes> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#has3DModel> <http://schema.org/domainIncludes> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+<https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .

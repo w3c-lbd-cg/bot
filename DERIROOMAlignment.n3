@@ -1,0 +1,66 @@
+@prefix :      <https://w3id.org/bot/DERIROOMSAlignment#> .
+@prefix rooms: <http://vocab.deri.ie/rooms#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+rooms:Room  rdfs:subClassOf  bot:Space .
+
+rooms:Desk  rdfs:subClassOf  bot:Element .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+foaf:name  a    owl:DatatypeProperty .
+
+rooms:contains  rdfs:subPropertyOf  bot:containsZone .
+
+foaf:Person  a  owl:Class .
+
+rooms:Site  rdfs:subClassOf  bot:Site .
+
+rooms:FloorSection  rdfs:subClassOf  bot:Storey .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+rooms:Building  rdfs:subClassOf  bot:Building .
+
+rooms:Floor  rdfs:subClassOf  bot:Storey .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+<https://w3id.org/bot/DERIROOMSAlignment>
+        a                    owl:Ontology , voaf:Vocabulary ;
+        rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
+        dcterms:creator      [ a          foaf:Person ;
+                               foaf:name  "Georg Ferdinand Schneider"
+                             ] ;
+        dcterms:description  "This ontology defines proposed alignments with the DERI Rooms ontology."@en ;
+        dcterms:issued       "2017-09-12"^^xsd:date ;
+        dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dcterms:modified     "2019-03-01"^^xsd:date ;
+        dcterms:title        "DERIROOMS to BOT alignment."@en ;
+        owl:imports          rooms: , <https://w3id.org/bot> ;
+        owl:priorVersion     <https://w3id.org/bot/DERIROOMSAlignment/0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/DERIROOMSAlignment/1.0.0> ;
+        owl:versionInfo      "v1.0.0" .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

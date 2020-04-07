@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Building Topology Ontology</title>
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <script class="remove" src="config.js"></script>
+    <script src="https://www.w3.org/2007/OWL/toggles.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="small.css" media="only all and (max-width: 649px)">
+</head>
+
+<body prefix="rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# rdfs: http://www.w3.org/2000/01/rdf-schema# owl: http://www.w3.org/2002/07/owl# xsd: http://www.w3.org/2001/XMLSchema# skos: http://www.w3.org/2004/02/skos/core# dcterms: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/>. vann: http://purl.org/vocab/vann/ voaf: http://purl.org/vocommons/voaf# time: http://www.w3.org/2006/time# bot: https://w3id.org/bot#">
+
+    <section id="abstract">
+        <p>
+            The Building Topology Ontology (BOT) is a minimal ontology for describing the core topological concepts of a building.
+        </p>
+        <p style="text-align: center;">
+            The namespace for BOT terms is <span class="repeated" style="font-family: courier;">
+        https://w3id.org/bot#</span>
+        </p>
+        <p style="text-align: center;">
+            The suggested prefix for the BOT namespace is <span class="repeated" style="font-family: courier;">
+        bot</span>
+        </p>
+        <p style="text-align: center;">
+            The Turtle version of the BOT ontology is available at <a href="http://www.w3id.org/bot/bot.ttl">http://www.w3id.org/bot/bot.ttl</a>
+        </p>
+    </section>
+    <section id="sotd">
+        <p>
+            <b>General Information</b>
+        </p>
+        <p>This is a Public Draft of a document prepared by the Linked Building Data Community Group (<a href="https://www.w3.org/community/lbd/">LBD</a>). The document is prepared following W3C conventions. The document is released at this time to solicit public comment.</p>
+    </section>
+    <section id="intro" class="informative">
+        <h2>Introduction</h2>
+        <p>
+            Designing, planning, constructing and maintaining a building are tasks that involve multiple stakeholders each having their own interpretations and requirements for the common dataset. Furthermore, each stakeholder consumes, processes and manipulates information about the building during it's full life cycle.
+        </p>
+        <p>
+            Several industries have interfaces to the construction industry and buildings in particular without this being their main industry. As there is often a need to describe some sensor, product, device in the context of the building in which it sits and as the building is itself also a feature of interest in the context of a smart city, there is a demand for a minimal, extendable ontology that describes anything in its context of a building. 
+        </p>
+        <p>The Building Topology Ontology (BOT) is a minimal OWL DL [[owl2-primer]] ontology for defining relationships between the sub-components of a building. It was suggested as an extensible baseline for use along with more domain specific ontologies following general W3C principles of encouraging reuse and keeping the schema no more complex than necessary. 
+    </section>
+
+
+    <section id="Requirements" class="informative">
+        <h2>Requirements</h2>
+        <p><em>Section to be consolidated with the Final Draft of the Linked Building Data Community Group Use Cases &amp; Requirements [[LBD-UCR]]</em></p>
+        <p>This section lists the set of competency questions the BOT ontology answers.</p>
+        <ol>
+            <li>Zones are areas with spatial 3D volumes, and include, Buildings, Storeys, and Spaces.</li>
+            <li>Zones may contain other zones, Buildings may contain storeys, Storeys may contain spaces.</li>
+            <li>Zones may intersect, or be adjacent to other zones.</li>
+            <li>There are building elements, which may have sub elements.</li>
+            <li>Zones may have elements, either contained, adjacent, or intersecting it.</li>
+            <li>A adjacent zones and/or elements share some interface.</li>
+            <li>Zones and Elements have a 3D Model (including geometry, material, etc.).</li>
+        </ol>
+    </section>
+    <section id="Axiomatization" class="normative">
+        <h2>Axiomatization</h2>
+        <p>This section introduces the specifications for BOT.</p>
+
+        <section>
+            <h2>Namespace</h2>
+            <p style="text-align: center;">
+                The namespace for BOT terms is <span class="repeated" style="font-family: courier;">
+            https://w3id.org/bot#</span>
+            </p>
+            <p style="text-align: center;">
+                The suggested prefix for the BOT namespace is <span class="repeated" style="font-family: courier;">
+            bot</span>
+            </p>
+            <p style="text-align: center;">
+                The Turtle version of the BOT ontology is available at <a href="http://www.w3id.org/bot/bot.ttl">http://www.w3id.org/bot/bot.ttl</a>
+            </p>
+        </section>
+
+        <section class="informative" id="overview-of-classes-and-properties">
+            <h3>Overview of Classes and Properties</h3>
+            <div id="index-of-classes-and-properties">
+                <div class="azlist">
+                    <p>Classes:
+                        <a href="#Building">bot:Building</a> , 
+                        <a href="#Element">bot:Element</a> , 
+                        <a href="#Interface">bot:Interface</a> ,
+                        <a href="#Site">bot:Site</a> , 
+                        <a href="#Space">bot:Space</a> , 
+                        <a href="#Storey">bot:Storey</a> , 
+                        <a href="#Zone">bot:Zone</a> 
+                    </p>
+
+                </div>
+                <div class="azlist">
+                    <p>Object Properties:
+                        <a href="#adjacentElement">bot:adjacentElement</a> , 
+                        <a href="#adjacentZone">bot:adjacentZone</a> , 
+                        <a href="#containsElement">bot:containsElement</a> , 
+                        <a href="#containsZone">bot:containsZone</a> , 
+                        <a href="#interfaceOf">bot:interfaceOf</a>
+                        <a href="#intersectingElement">bot:intersectingElement</a>
+                        <a href="#intersectsZone">bot:intersectsZone</a>
+                        <a href="#has3DModel">bot:has3DModel</a> 
+                        <a href="#hasBuilding">bot:hasBuilding</a> , 
+                        <a href="#hasElement">bot:hasElement</a> , 
+                        <a href="#hasSubElement">bot:hasSubElement</a> , 
+                        <a href="#hasSpace">bot:hasSpace</a> , 
+                        <a href="#hasStorey">bot:hasStorey</a> ,
+                        <a href="#hasZeroPoint">bot:hasZeroPoint</a>
+                    </p>
+                </div>
+                <div class="azlist">
+                    <p>Datatype Properties:
+                        <a href="#hasSimple3DModel">bot:hasSimple3DModel</a> 
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    <section id="Zones">
+        <h3>Zones and sub-zones</h3>
+
+        <section class="informative" id="Zones-Overview">
+            <h4>Overview and Examples</h4>
+
+            <p>Zones are defined area with spatial 3D volume that group space. This specification defines four sub types
+             of Zones: </p>
+            <ul>
+               <li>Site: An area containing one or more buildings;</li>
+               <li>Building: An independent unit of the built environment with a characteristic spatial structure;</li>
+               <li>Storey: A level part of a building;</li>
+               <li>Space: A limited three-dimensional extent defined physically or notionally.</li>
+            </ul>
+            <p>
+            </p>
+
+            <figure>
+                <a href="assets/zones.png"><img alt="Zones" src="assets/zones.png"></a>
+                <figcaption>Classes and relationships involved in Zones</figcaption>
+            </figure>
+            <p>
+                Zones must be understood as a Matryoshka doll principle. The <a href="#Site"><code>bot:Site</code></a>
+                instance, &lt;siteX&gt;, contains one building, &lt;buildingA&gt;, specified by the <a href="#hasBuilding">
+                <code>bot:hasBuilding</code></a> relationship. &lt;buildingA&gt; contains one storey, &lt;storey01&gt;,
+                specified by the <a href="#hasStorey"><code>bot:hasStorey</code></a> relationship. &lt;storey01&gt;
+                contains two spaces, &lt;spaceA12&gt; and &lt;spaceA13&gt;, specified by the <a href="#hasSpace">
+                <code>bot:hasSpace</code></a> relationship. 
+            </p>
+            <ul>
+                <li>Spaces  &lt;spaceA12&gt; and &lt;spaceA13&gt; are adjacent, which is specified by the
+                <a href="#Site"><code>bot:adjacentZone</code></a> relationship.</li>
+                <li>The transitive <a href="#containsZone">
+                <code>bot:containsZone</code></a> relationship is a super-property of both <a href="#hasBuilding">
+                <code>bot:hasBuilding</code></a>, <a href="#hasStorey"><code>bot:hasStorey</code></a> and 
+                <a href="#hasSpace"><code>bot:hasSpace</code></a> - therefore &lt;siteX&gt; contains all the other 
+                <a href="#Zone"><code>bot:Zone</code></a> instances.</li>
+                <li>A stairwell would be modeled as a <a href="#Zone">
+                <code>bot:Zone</code></a>, linked to the different <a href="#Storey"><code>bot:Storey</code>s</a> through the <a href="#intersectsZone">
+                <code>bot:intersectsZone</code></a> relation.</li>
+            </ul>
+
+            <p>
+                This specification does not restrict what an instance of the <code>bot:Zone</code> class can be. BOT may be used in conjunction with other ontologies to specify this. Examples include:
+            <p>
+            <ul>
+                <li>A category of zones (e.g., office building)</li>
+                <li>A specification of zones (e.g., office buildings with energy efficiency class above A)</li>
+                <li>An actual zone (e.g., the kitchen in Marc's home)</li>
+            </ul>
+
+        </section>
+        <section id="Zones-specification">
+                <h4>Specification</h4>
+              <p>This section introduces the following classes and properties:</p>
+              <div class="azlist">
+                <p>
+                   <a href="#adjacentZone">bot:adjacentZone</a>,
+                   <a href="#Building">bot:Building</a>,
+                   <a href="#containsZone">bot:containsZone</a>,
+                   <a href="#hasBuilding">bot:hasBuilding</a>,
+                   <a href="#hasSpace">bot:hasSpace</a>
+                   <a href="#hasStorey">bot:hasStorey</a>,
+                   <a href="#intersectsZone">bot:intersectsZone</a>,
+                   <a href="#Site">bot:Site</a>,
+                   <a href="#Space">bot:Space</a>,
+                   <a href="#Storey">bot:Storey</a>,
+                   <a href="#Zone">bot:Zone</a>,
+                 </p>
+              </div>
+
+            <!-- Zone -->
+            <section class="specterm" id="Zone" about="bot:Zone" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Zone">bot:Zone</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Zone</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Zone</em> -
+                <span property="rdfs:comment skos:definition">A spatial 3D division. Sub-classes of <a href="#Zone">bot:Zone</a> include <a href="#Site">bot:Site</a>, <a href="#Building">bot:Building</a>, <a href="#Storey">bot:Storey</a>, or <a href="#Space">bot:Space</a>. An instance of <a href="#Zone">bot:Zone</a> can contain other <a href="#Zone">bot:Zone</a> instances, making it possible to group or subdivide zones. An instance of <a href="#Zone">bot:Zone</a> can be adjacent to other <a href="#Zone">bot:Zone</a> instances. Finally, a <a href="#Zone">bot:Zone</a> can instantiate two relations to <a href="#Element">bot:Element</a>, which are either contained in (<a href="#containsElement">bot:containsElement</a>), or adjacent to it (<a href="#adjacentElement">bot:adjacentElement</a>).</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">A site, a building, a space, an appartment or a fire cell.</span></td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="bot:Zone" rel="owl:disjointWith" resource="bot:Element"><a href="#Element">bot:Element</a></span>, 
+                                <span about="bot:Zone" rel="owl:disjointWith" resource="bot:Interface"><a href="#Interface">bot:Interface</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Site -->
+            <section class="specterm" id="Site" about="bot:Site" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Site">bot:Site</a> ⊑ bot:Zone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Site</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Site</em> -
+                <span property="rdfs:comment skos:definition">Area containing one or more buildings.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">A hospital campus or a single family residential lot.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="bot:Site" rel="owl:disjointWith" resource="bot:Building"><a href="#Building">bot:Building</a></span>, 
+                                <span about="bot:Site" rel="owl:disjointWith" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, 
+                                <span about="bot:Site" rel="owl:disjointWith" resource="bot:Space"><a href="#Space">bot:Space</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Building -->
+            <section class="specterm" id="Building" about="bot:Building" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Building">bot:Building</a> ⊑ bot:Zone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Building</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Building</em> -
+                <span property="rdfs:comment skos:definition">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013].</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">A hospital or an office building.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="bot:Building" rel="owl:disjointWith" resource="bot:Site"><a href="#Site">bot:Site</a></span>, 
+                                <span about="bot:Building" rel="owl:disjointWith" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, 
+                                <span about="bot:Building" rel="owl:disjointWith" resource="bot:Space"><a href="#Space">bot:Space</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Storey -->
+            <section class="specterm" id="Storey" about="bot:Storey" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Storey">bot:Storey</a> ⊑ bot:Zone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Storey</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Storey</em> -
+                <span property="rdfs:comment skos:definition">A level part of a building.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">The ground floor.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="bot:Storey" rel="owl:disjointWith" resource="bot:Site"><a href="#Site">bot:Site</a></span>, 
+                                <span about="bot:Storey" rel="owl:disjointWith" resource="bot:Building"><a href="#Building">bot:Building</a></span>, 
+                                <span about="bot:Storey" rel="owl:disjointWith" resource="bot:Space"><a href="#Space">bot:Space</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Space -->
+            <section class="specterm" id="Space" about="bot:Space" typeof="owl:Class rdfs:Class">
+                <h5><a href="#Space">bot:Space</a> ⊑ bot:Zone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Space</p>
+                <p><strong>a OWL Class</strong></p>
+
+                <em property="rdfs:label">Space</em> -
+                <span property="rdfs:comment skos:definition">A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3].</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example">A classroom or a kitchen.</span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub class of</th>
+                            <td>
+                                <span rel="rdfs:subClassOf" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="restrictions">Disjoint with</th>
+                            <td>
+                                <span about="bot:Space" rel="owl:disjointWith" resource="bot:Site"><a href="#Site">bot:Site</a></span>, 
+                                <span about="bot:Space" rel="owl:disjointWith" resource="bot:Building"><a href="#Building">bot:Building</a></span>, 
+                                <span about="bot:Space" rel="owl:disjointWith" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- containsZone -->
+            <section class="specterm" id="containsZone" about="bot:containsZone" typeof="owl:ObjectProperty">
+                <h5><a href="#containsZone">bot:containsZone</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#containsZone</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">contains zone</em> -
+                <span property="rdfs:comment skos:definition">Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain Includes</th>
+                            <td><span rel="schema:domainIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:domainIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:domainIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:domainIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range Includes</th>
+                            <td><span rel="schema:rangeIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:rangeIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:rangeIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:rangeIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <!--<tr>
+                            <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
+                            <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentZone"><a href="#intersectsZone">bot:adjacentZone</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:intersectsZone"><a href="#containsZone">bot:intersectsZone</a></span></td>
+                        </tr>--><!-- not allowed in OWL 2 DL-->
+                        <tr>
+                            <th  colspan="2"><span about="bot:containsZone" typeof="owl:TransitiveProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Transitive_Object_Properties">Transitive</a></span></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- hasBuilding -->
+            <section class="specterm" id="hasBuilding" about="bot:hasBuilding" typeof="owl:ObjectProperty">
+                <h5><a href="#hasBuilding">bot:hasBuilding</a> ⊑ bot:containsZone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasBuilding</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">has building</em> -
+                <span property="rdfs:comment skos:definition">Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td>
+                                <span rel="rdfs:subPropertyOf" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Building"><a href="#Building">bot:Building</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain Includes</th>
+                            <td><span rel="schema:domainIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- hasStorey -->
+            <section class="specterm" id="hasStorey" about="bot:hasStorey" typeof="owl:ObjectProperty">
+                <h5><a href="#hasStorey">bot:hasStorey</a> ⊑ bot:containsZone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasStorey</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">has storey</em> -
+                <span property="rdfs:comment skos:definition">Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td>
+                                <span rel="rdfs:subPropertyOf" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain Includes</th>
+                            <td><span rel="schema:domainIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- hasSpace -->
+            <section class="specterm" id="hasSpace" about="bot:hasSpace" typeof="owl:ObjectProperty">
+                <h5><a href="#hasSpace">bot:hasSpace</a> ⊑ bot:containsZone</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasSpace</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">has space</em> -
+                <span property="rdfs:comment skos:definition">Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td>
+                                <span rel="rdfs:subPropertyOf" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain Includes</th>
+                            <td><span rel="schema:domainIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:domainIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- adjacentZone -->
+            <section class="specterm" id="adjacentZone" about="bot:adjacentZone" typeof="owl:ObjectProperty">
+                <h5><a href="#adjacentZone">bot:adjacentZone</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#adjacentZone</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">adjacent zone</em> -
+                <span property="rdfs:comment skos:definition">Relationship between two zones that share a common interface, but do not intersect.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain Includes</th>
+                            <td><span rel="schema:domainIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:domainIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:domainIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:domainIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range Includes</th>
+                            <td><span rel="schema:rangeIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:rangeIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:rangeIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:rangeIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
+                            <td><!--<span rel="owl:propertyDisjointWith" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>, --><span rel="owl:propertyDisjointWith" resource="bot:intersectsZone"><a href="#intersectsZone">bot:intersectsZone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th  colspan="2"><span about="bot:adjacentZone" typeof="owl:SymmetricProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Symmetric_Object_Properties">Symmetric</a></span></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- intersectsZone -->
+            <section class="specterm" id="intersectsZone" about="bot:intersectsZone" typeof="owl:ObjectProperty">
+                <h5><a href="#intersectsZone">bot:intersectsZone</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#intersectsZone</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">intersects zone</em> -
+                <span property="rdfs:comment skos:definition">Relationship between two zones whose 3D extent intersect. For example, a stairwell intersects different storeys.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain Includes</th>
+                            <td><span rel="schema:domainIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:domainIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:domainIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:domainIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range Includes</th>
+                            <td><span rel="schema:rangeIncludes" resource="bot:Site"><a href="#Site">bot:Site</a></span>, <span rel="schema:rangeIncludes" resource="bot:Building"><a href="#Building">bot:Building</a></span>, <span rel="schema:rangeIncludes" resource="bot:Storey"><a href="#Storey">bot:Storey</a></span>, <span rel="schema:rangeIncludes" resource="bot:Space"><a href="#Space">bot:Space</a></span></td>
+                        </tr>
+                        <tr>
+                            <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
+                            <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentZone"><a href="#intersectsZone">bot:adjacentZone</a></span><!--, <span rel="owl:propertyDisjointWith" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span>--><!-- not allowed with OWL 2 DL--></td>
+                        </tr>
+                        <tr>
+                            <th  colspan="2"><span about="bot:intersectsZone" typeof="owl:SymmetricProperty">is <a href="https://www.w3.org/TR/owl2-syntax/#Symmetric_Object_Properties">Symmetric</a></span></th>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+    </section>
+
+    <section id="Elements">
+            <h3>Elements</h3>
+            <section class="informative" id="Elements-overview">
+                <h4>Overview and Examples</h4>
+                <p>
+                    Building elements are physical parts of building constructions. Examples of elements include walls, doors, pipes, heaters, lights, smart sensors, tables, chairs. 
+                </p>
+                <p>
+                    Elements can contain sub elements. Zones can contain elements, or be adjacent to elements.  
+                </p>
+                <p>
+                    This specification does not restrict what an instance of the <code>bot:Element</code> class can be. BOT may be used in conjunction with other ontologies to specify this. Examples include:
+                <p>
+                <ul>
+                    <li>A category of elements (e.g., air conditioner with class A energy efficiency ratio)</li>
+                    <li>A specification of elements (e.g., air conditioner with energy efficiency ratio above B)</li>
+                    <li>A element in a specific catalogue (e.g., air conditioner with reference xyz manufactured by abc)</li>
+                    <li>An actual element (e.g., the air conditioner Marc installed yesterday at his home)</li>
+                </ul>
+
+            </section>
+    
+            <section id="Elements-specification">
+                    <h4>Specification</h4>
+                  <p>This section introduces the following classes and properties:</p>
+                  <div class="azlist">
+                    <p>
+                       <a href="#Element">bot:Element</a>,
+                       <a href="#adjacentElement">bot:adjacentElement</a>,
+                       <a href="#containsElement">bot:containsElement</a>,
+                       <a href="#hasSubElement">bot:hasSubElement</a>,
+                       <a href="#intersectingElement">bot:intersectingElement</a>
+                     </p>
+                  </div>
+    
+                <!-- Element -->
+                <section class="specterm" id="Element" about="bot:Element" typeof="owl:Class rdfs:Class">
+                    <h5><a href="#Element">bot:Element</a></h5>
+                    <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Element</p>
+                    <p><strong>a OWL Class</strong></p>
+    
+                    <em property="rdfs:label">Element</em> -
+                    <span property="rdfs:comment skos:definition">Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7].</span>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Example</th>
+                                <td><span property="skos:example">Any product or device that is described in its context of a building. For example a wall, a chair or a temperature sensor.</span></td>
+                            </tr>
+                            <tr>
+                                <th class="restrictions">Disjoint with</th>
+                                <td>
+                                    <span about="bot:Element" rel="owl:disjointWith" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>, 
+                                    <span about="bot:Element" rel="owl:disjointWith" resource="bot:Interface"><a href="#Interface">bot:Interface</a></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            <!-- hasSubElement -->
+            <section class="specterm" id="hasSubElement" about="bot:hasSubElement" typeof="owl:ObjectProperty">
+                <h5><a href="#hasSubElement">bot:hasSubElement</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasSubElement</p>
+                <p><strong>a OWL Object Property</strong></p>
+                <em property="rdfs:label">hosts element</em> -
+                <span property="rdfs:comment skos:definition">Relation between an element a) and another element b) hosted by element a).</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Example</th>
+                            <td><span property="skos:example"><code>&lt;wall> bot:hasSubElement &lt;window> .</code></span></td>
+                        </tr>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- hasElement -->
+            <section class="specterm" id="hasElement" about="bot:hasElement" typeof="owl:ObjectProperty">
+                <h5><a href="#hasElement">bot:hasElement</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasElement</p>
+                <p><strong>a OWL Object Property</strong></p>
+                <em property="rdfs:label">has element</em> -
+                <span property="rdfs:comment skos:definition">Links a <code>Zone</code> to an <code>Element</code> that is contained in, or adjacent to, the <code>Zone</code>. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range</th>
+                            <td><span rel="rdfs:range" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub property of Chain</th>
+                            <td>
+                                <span rel="owl:propertyChainAxiom" resource="[_:hasElement1]"></span>
+                                <span about="[_:hasElement1]" rel="rdf:first" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span> o
+                                <span about="[_:hasElement1]" rel="rdf:rest" resource="[_:hasElement2]"></span>
+                                <span about="[_:hasElement2]" rel="rdf:first" resource="bot:hasElement"><a href="#hasElement">bot:hasElement</a></span>
+                                <span about="[_:hasElement2]" rel="rdf:rest" resource="rdf:nil"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <!-- containsElement -->
+            <section class="specterm" id="containsElement" about="bot:containsElement" typeof="owl:ObjectProperty">
+                <h5><a href="#containsElement">bot:containsElement</a> ⊑ bot:hasElement</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#containsElement</p>
+                <p><strong>a OWL Object Property</strong></p>
+                <em property="rdfs:label">contains element</em> -
+                <span property="rdfs:comment skos:definition">Relation between a <code>Zone</code> and a building <code>Element</code> it contains.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td><span rel="rdfs:subPropertyOf"><a href="#hasElement">bot:hasElement</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Sub property of Chain</th>
+                            <td>
+                                <span rel="owl:propertyChainAxiom" resource="[_:containsElement1]"></span>
+                                <span about="[_:containsElement1]" rel="rdf:first" resource="bot:containsZone"><a href="#containsZone">bot:containsZone</a></span> o
+                                <span about="[_:containsElement1]" rel="rdf:rest" resource="[_:containsElement2]"></span>
+                                <span about="[_:containsElement2]" rel="rdf:first" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>
+                                <span about="[_:containsElement2]" rel="rdf:rest" resource="rdf:nil"></span>
+                            </td>
+                        </tr>
+                        <!--<tr>
+                            <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
+                            <td><span rel="owl:propertyDisjointWith" resource="bot:adjacentElement"><a href="#adjacentElement">bot:adjacentElement</a></span>, <span rel="owl:propertyDisjointWith" resource="bot:intersectingElement"><a href="#intersectingElement">bot:intersectingElement</a></span></td>
+                        </tr>--> <!-- Not allowed in OWL 2 DL -->
+                    </tbody>
+                </table>
+            </section>
+
+
+            <!-- adjacentElement -->
+            <section class="specterm" id="adjacentElement" about="bot:adjacentElement" typeof="owl:ObjectProperty">
+                <h5><a href="#adjacentElement">bot:adjacentElement</a> ⊑ bot:hasElement</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#adjacentElement</p>
+                <p><strong>a OWL Object Property</strong></p>
+                <em property="rdfs:label">adjacent element</em> -
+                <span property="rdfs:comment skos:definition">Relation between a <code>Zone</code> and its adjacent building <code>Element</code>, bounding the <code>Zone</code>.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td><span rel="rdfs:subPropertyOf"><a href="#hasElement">bot:hasElement</a></span></td>
+                        </tr>
+                        <tr>
+                            <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
+                            <td><!--<span rel="owl:propertyDisjointWith" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>, --><!-- Not allowed in OWL 2 DL --><span rel="owl:propertyDisjointWith" resource="bot:intersectingElement"><a href="#intersectingElement">bot:intersectingElement</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
+            <!-- intersectingElement -->
+            <section class="specterm" id="intersectingElement" about="bot:intersectingElement" typeof="owl:ObjectProperty">
+                <h5><a href="#intersectingElement">bot:intersectingElement</a> ⊑ bot:hasElement</h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#intersectingElement</p>
+                <p><strong>a OWL Object Property</strong></p>
+                <em property="rdfs:label">intersecting element</em> -
+                <span property="rdfs:comment skos:definition">Relation between a <code>Zone</code> and a building <code>Element</code> that intersects it.</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Sub property of</th>
+                            <td><span rel="rdfs:subPropertyOf"><a href="#hasElement">bot:hasElement</a></span></td>
+                        </tr>
+                        <tr>
+                            <th><a href="https://www.w3.org/TR/owl2-syntax/#Disjoint_Object_Properties">Disjoint object properties</a></th>
+                            <td><!--<span rel="owl:propertyDisjointWith" resource="bot:containsElement"><a href="#containsElement">bot:containsElement</a></span>, --><!-- Not allowed in OWL 2 DL --><span rel="owl:propertyDisjointWith" resource="bot:adjacentElement"><a href="#adjacentElement">bot:adjacentElement</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </section>
+    </section>
+
+    <section id="Interfaces">
+            <h3>Interfaces</h3>
+    
+            <section id="Interfaces-overview" class="informative">
+                    <h4>Overview and Examples</h4>
+                    <p>
+                        Interfaces are used in situations where it is necessary to quantify a relationship between
+                        two elements or zones or an element and a zone. The following figure provides an overview of the core classes
+                        and properties that are specifically related to modeling Interfaces.
+                    </p>
+                    <figure>
+                        <a href="assets/interfaces.png"><img alt="Interfaces" src="assets/interfaces.png"></a>
+                        <figcaption>Classes and relationships involved in Interfaces</figcaption>
+                    </figure>
+
+                    <p> In the figure, there are two 
+                        <a href="#Zone"><code>bot:Zone</code></a> instances that are both adjacent to the same
+                        <a href="#Element"><code>bot:Element</code></a> instance &lt;wall22&gt;. To quantify
+                        the heat transfer areas between &lt;spaceA12&gt;/&lt;wall22&gt; and &lt;zoneB&gt;/&lt;wall22&gt;
+                        respectively, two interfaces, &lt;interfaceA&gt; and &lt;interfaceB&gt;, are introduced.
+                        Both interfaces are related to &lt;wall22&gt; through the <a href="#interfaceOf"><code>bot:interfaceOf</code></a>
+                        relationships, but their second <a href="#interfaceOf"><code>bot:interfaceOf</code></a> relationship is to
+                        either &lt;spaceA12&gt; or &lt;zoneB&gt;.
+                    </p>
+            </section>
+            <section id="Interfaces-specification">
+                    <h4>Specification</h4>
+                  <p>This section introduces the following classes and properties:</p>
+                  <div class="azlist">
+                    <p>
+                       <a href="#Interface">bot:Interface</a>,
+                       <a href="#interfaceOf">bot:interfaceOf</a>
+                     </p>
+                  </div>
+    
+                <!-- Interface -->
+                <section class="specterm" id="Interface" about="bot:Interface" typeof="owl:Class rdfs:Class">
+                    <h5><a href="#Interface">bot:Interface</a></h5>
+                    <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#Interface</p>
+                    <p><strong>a OWL Class</strong></p>
+    
+                    <em property="rdfs:label">Interface</em> -
+                    <span property="rdfs:comment skos:definition">An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones.</span>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Example</th>
+                                <td><span property="skos:example">A heat transfer area between a space and an adjecent wall, the pipe surface facing the space that the pipe passes through, a joint between two concrete elements or connection between a window and a wall.</span></td>
+                            </tr>
+                            <tr>
+                                <th class="restrictions">Disjoint with</th>
+                                <td>
+                                    <span about="bot:Interface" rel="owl:disjointWith" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>, 
+                                    <span about="bot:Interface" rel="owl:disjointWith" resource="bot:Element"><a href="#Element">bot:Element</a></span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            <!-- interfaceOf -->
+            <section class="specterm" id="interfaceOf" about="bot:interfaceOf" typeof="owl:ObjectProperty">
+                <h5><a href="#interfaceOf">bot:interfaceOf</a></h5>
+                <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#interfaceOf</p>
+                <p><strong>a OWL Object Property</strong></p>
+
+                <em property="rdfs:label">interface of</em> -
+                <span property="rdfs:comment skos:definition">Relationship between an interface and its adjacent zone(s) and/or element(s).</span>
+                <br>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Domain</th>
+                            <td><span rel="rdfs:domain" resource="bot:Interface"><a href="#Interface">bot:Interface</a></span></td>
+                        </tr>
+                        <tr>
+                            <th>Range Includes</th>
+                            <td><span rel="schema:rangeIncludes" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span>, <span rel="schema:rangeIncludes" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            </section>
+    </section>
+
+    <section id="3DModel">
+            <h3>3D Model</h3>
+    
+            <section id="3DModel-overview" class="informative">
+                    <h4>Overview and Examples</h4>
+                    <p>
+                        Any <a href="#Zone"><code>bot:Zone</code></a> or <a href="#Element"><code>bot:Element</code></a> can be assigned a 3D Model (including geometry, material, etc.), using some <a href="https://www.iana.org/assignments/media-types#model">existing data format for 3D models</a>. Two properties are defined for this:
+                    </p>
+                    <ul>
+                        <li>The <a href="#hasSimple3DModel"><code>bot:hasSimple3DModel</code></a> datatype property links a <a href="#Zone"><code>bot:Zone</code></a> or <a href="#Element"><code>bot:Element</code></a> to a 3D Model encoded as a literal. Note that we encourage the use of URIs for mediatype with the IANA authority. For example <a href="https://www.iana.org/assignments/media-types/model/3mf"><code>https://www.iana.org/assignments/media-types/model/3mf</code></a> for the mediatype <code>model/3mf</code>. Other mediatypes for OBJ, STP, IFC, W3D, etc. can be defined. If the data format is textual, then the lexical form of the 3D Model literal SHOULD be encoded as a Unicode [[!UNICODE]] string, which SHOULD be in Normal Form C [[!NFC]]. If the data format is binary, then the lexical form of the 3D Model literal SHOULD be encoded using a base32 encoding [[!rfc4648]].</li>
+                        <li>The <a href="#has3DModel"><code>bot:has3DModel</code></a> object property links a <a href="#Zone"><code>bot:Zone</code></a> or <a href="#Element"><code>bot:Element</code></a> to some IRI that identifies a 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some <a href="https://www.iana.org/assignments/media-types#model">existing data format for 3D models</a>.  </li>
+                    </ul>
+            </section>
+
+            <section id="Interfaces-specification">
+                    <h4>Specification</h4>
+                  <p>This section introduces the following classes and properties:</p>
+                  <div class="azlist">
+                    <p>
+                       <a href="#has3DModel">bot:has3DModel</a>,
+                       <a href="#hasSimple3DModel">bot:hasSimple3DModel</a>,
+                       <a href="#hasZeroPoint">bot:hasZeroPoint</a>
+                     </p>
+                  </div>
+
+                <!-- hasZeroPoint -->
+                <section class="specterm" id="hasZeroPoint" about="bot:hasZeroPoint" typeof="owl:ObjectProperty">
+                    <h5><a href="#hasZeroPoint">bot:hasZeroPoint</a></h5>
+                    <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasZeroPoint</p>
+                    <p><strong>a OWL Object Property</strong></p>
+
+                    <em property="rdfs:label">has Zero Point</em> -
+                    <span property="rdfs:comment skos:definition">Links a bot:Site to a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><code>wgs84:Point</code></a> that encodes the latitude and longitude of the Zero Point of the building site.</span>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Domain</th>
+                                <td><span rel="rdfs:domain" resource="bot:Site"><a href="#Site">bot:Site</a></span></td>
+                            </tr>
+                            <tr>
+                                <th>Range</th>
+                                <td><span rel="rdfs:range" resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">http://www.w3.org/2003/01/geo/wgs84_pos#Point</a></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+        
+                <!-- hasSimple3DModel -->
+                <section class="specterm" id="hasSimple3DModel" about="bot:hasSimple3DModel" typeof="owl:DatatypeProperty">
+                    <h5><a href="#hasSimple3DModel">bot:hasSimple3DModel</a></h5>
+                    <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasSimple3DModel</p>
+                    <p><strong>a OWL Datatype Property</strong></p>
+
+                    <em property="rdfs:label">has Simple 3D Model</em> -
+                    <span property="rdfs:comment skos:definition">Links any bot:Zone or bot:Element to a 3D Model encoded as a literal.</span>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Domain Includes</th>
+                                <td><span rel="schema:domainIncludes" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                                <td><span rel="schema:domainIncludes" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+        
+                <!-- has3DModel -->
+                <section class="specterm" id="has3DModel" about="bot:has3DModel" typeof="owl:ObjectProperty">
+                    <h5><a href="#has3DModel">bot:has3DModel</a></h5>
+                    <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#has3DModel</p>
+                    <p><strong>a OWL Object Property</strong></p>
+
+                    <em property="rdfs:label">has 3D Model</em> -
+                    <span property="rdfs:comment skos:definition">Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.</span>
+                    <br>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Domain Includes</th>
+                                <td><span rel="schema:domainIncludes" resource="bot:Zone"><a href="#Zone">bot:Zone</a></span></td>
+                                <td><span rel="schema:domainIncludes" resource="bot:Element"><a href="#Element">bot:Element</a></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+            </section>
+    </section>
+    </section>
+
+    <section id="AlignmentModules">
+        <h2>Alignment Modules</h2>
+        <p>As BOT is proposed as a central ontology in the domain of AEC/FM industry, alignments with existing domains are provided as separate modules.</p>
+		<p>The evolution of the alignment definitions and their rationale is described in detail in the publications by [[Schneider-2017]] and [[Schneider-2019]].</p>
+
+<!-- So far an alignment for the following ontologies has been provided:
+
+SAREF4Bldg [Ontology](https://w3id.org/def/saref4bldg#)
+
+ThinkHome [Ontology](https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl)
+
+DogOnt [Ontology](http://elite.polito.it/ontologies/dogont.owl#)
+
+DERI Rooms [Ontology](http://vocab.deri.ie/rooms.html)
+
+ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
+
+<p>This section introduces the specifications for the vertical segmentation modules that align BOT to a variety of related ontologies and specifications. </p> -->
+        
+        <!-- BRICK alignment -->
+        <section id="BRICK_Alignment" class="informative">
+            <h3>BRICK Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the BRICK ontology (v1.0.2)</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl</a>.
+            
+			<p></p>
+        </section>    
+
+        <!-- DERIROOMS alignment -->
+        <section id="DERIROOMS_Alignment" class="informative">
+            <h3>DERIROOMS Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the DERIROOMS ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+
+        <!-- DogOnt alignment -->
+        <section id="DOGONT_Alignment" class="informative">
+            <h3>DogOnt Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the DogOnt ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+
+		<!-- DUL alignment -->
+        <section id="DUL_Alignment" class="informative">
+            <h3>DUL Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the DUL ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+
+        <!-- ifcOWL alignment -->
+        <section id="IFCOWL_Alignment" class="informative">
+            <h3>ifcOWL Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the ifcOWL ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl</a>.
+            
+			<p></p>
+        </section>
+		<!-- SAREF4Building alignment -->
+        <section id="SAREF4Bldg_Alignment" class="informative">
+            <h3>SAREF4Bldg Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the SAREF4Bldg ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+		
+		<!-- ThinkHome alignment -->
+        <section id="ThinkHome_Alignment" class="informative">
+            <h3>ThinkHome Alignment Module</h3>
+            <p>This section introduces the alignment of BOT to the ThinkHome ontology</p>
+            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl</a>.
+            
+			<p></p>
+        </section>
+    </section>
+
+    <section class="informative" id="common-modeling-questions">
+        <h2>Common Modeling Questions</h2> This section informally discusses how to handle common modeling questions such as zone- and element adjacencies and containment or the use of interfaces.
+
+        <section id="zones">
+            <h3>Zones - appartment example</h3>
+            <p>BOT defines a Zone as <em>"An area or stretch of land having a particular characteristic, 
+                purpose, or use, or subject to particular restrictions."</em>. Any area of interest is hence 
+                a <a href="#Zone"><code>bot:Zone</code></a>. The building itself is a zone and so are all the spaces within it. 
+                Grouping sub-zones into one zone can be handled with the <a href="#containsZone"><code>bot:containsZone</code></a> property. 
+                In the example below, <a href="#Zone"><code>bot:Zone</code></a> is used to group spaces into an appartment.
+            </p>
+
+            <pre class="example" id="ex-appartment">
+                @prefix bot: &lt;https://w3id.org/bot#&gt; .
+
+                &lt;Bathroom_1&gt;   a bot:Space .
+                &lt;Bedroom_1&gt;    a bot:Space .
+                &lt;Kitchen_1&gt;    a bot:Space .
+                &lt;LivingRoom_1&gt; a bot:Space .
+
+                &lt;Appartment_A&gt; a bot:Zone ;
+                    bot:containsZone &lt;Bathroom_1&gt; , &lt;Bedroom_1&gt; , &lt;Kitchen_1&gt; , &lt;LivingRoom_1&gt; .
+            </pre>
+        </section>
+
+        <section id="stairwell">
+            <h3>Stairwell</h3>
+            <p>A stairwell stretches across the full height of a building and intersects with all the storeys it serves.
+                Modeling the space inside a stairwell can be tricky since it is not just assosiated to one single storey 
+                like most other spaces.
+            </p>
+            <p>
+                In most BIM authoring tools the stairwell space would just be located on the base level and hence belong
+                to this storey. In BOT, however, we have the concept of interfaces that we can use to model the relationships
+                to the different storeys. See example below:
+            </p>
+            <p>
+                Reference: <a href="https://github.com/w3c-lbd-cg/bot/issues/21">GitHub issue</a>
+            </p>
+            <p>
+                <a href="https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/assets/sparql-viz/stairwell.json">Interactive example</a>
+            </p>
+
+            <pre class="example" id="ex-stairwell">
+                @prefix bot:  &lt;https://w3id.org/bot#&gt; .
+                @prefix ex:   &lt;https://example.org/bot#&gt; .
+                @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+
+                # TBOX
+                ex:ZoneIntersection rdfs:subClassOf     bot:Interface .
+                ex:intersectsZone   rdfs:subPropertyOf  bot:interfaceOf ;
+                                    rdfs:domain         ex:ZoneIntersection ;
+                                    rdfs:range          bot:Zone .
+
+                # ABOX
+                &lt;Stairwell&gt;  a bot:Space .
+                &lt;Space_A&gt;    a bot:Space .
+                &lt;Space_B&gt;    a bot:Space .
+                &lt;Builing_A&gt;  a bot:Building .
+                &lt;Level_1&gt;    a bot:Storey .
+                &lt;Level_2&gt;    a bot:Storey .
+                &lt;Level_3&gt;    a bot:Storey .
+
+                # building / storeys relations
+                &lt;Builing_A&gt; bot:hasStorey &lt;Level_1&gt; , &lt;Level_2&gt; , &lt;Level_3&gt; .
+
+                # regular spaces
+                &lt;Level_2&gt; bot:hasSpace &lt;Space_A&gt; , &lt;Space_B&gt; .
+
+                # special case
+                &lt;Builing_A&gt; bot:hasSpace &lt;Stairwell&gt; .
+                &lt;wellLvl1&gt; ex:intersectsZone &lt;Level_1&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl2&gt; ex:intersectsZone &lt;Level_2&gt; , &lt;Stairwell&gt; .
+                &lt;wellLvl3&gt; ex:intersectsZone &lt;Level_3&gt; , &lt;Stairwell&gt; .
+            </pre>
+
+            Query to get all spaces that are either located at or intersects with a specific storey:
+            
+            <pre class="example" id="ex-stairwell-query">
+                PREFIX bot:  &lt;https://w3id.org/bot#&gt;
+                PREFIX ex:   &lt;https://example.org/bot#&gt;
+                
+                SELECT ?space
+                WHERE {
+                    BIND(&lt;Level_2&gt; AS ?storey)
+                    {
+                    ?i ex:intersectsZone ?storey ;
+                        ex:intersectsZone ?space .
+                    } UNION {
+                        ?storey bot:hasSpace ?space .
+                    }
+                    FILTER(?space != ?storey)
+                }
+            </pre>
+        </section>
+
+        <section id="windows">
+            <h3>Windows</h3>
+            <p>Windows are sub elements of the wall in which they are hosted, but there are no
+                logics to infer that because the wall is adjacent to some space, so are the
+                windows hosted in the wall. The reason for this is that a wall can span multiple
+                storeys and hence be adjacent to several spaces where the window should only
+                be adjacent to one space.
+            </p>
+
+            <pre class="example" id="ex-stairwell">
+                @prefix bot:  &lt;https://w3id.org/bot#&gt; .
+            </pre>
+        </section>
+
+    </section>
+
+    <section class="appendix" id="wide-review">
+        <h3>Implementation Report</h3>
+        <p>The following ontologies and softwares produce or consume terms from the BOT ontology.</p>
+
+    </section>
+
+    <section class="appendix" id="examples">
+        <h2>Complete Examples</h2>
+        <section id="two-storey-building">
+            <h3>Two storey building</h3>
+
+            <p>A SPARQL-visualizer example is <a href="https://w3c-lbd-cg.github.io/bot/?tab=0">available here</a>. </p>
+            <pre class="example">
+@prefix bot: &lt;https://w3id.org/bot#&gt; .
+
+# A simple two storey building with two spaces at each floor.
+
+&lt;SiteA&gt; a bot:Site ;
+    bot:hasBuilding &lt;BuildingA&gt; .
+
+# Since the range of bot:hasBuilding is bot:Building it is 
+# automatically inferred that &lt;BuildingA&gt; is a bot:Building.
+
+&lt;BuildingA&gt; bot:hasStorey &lt;Storey00&gt; , &lt;Storey01&gt; .
+
+# Since the range of bot:hasStorey is bot:Storey it is automatically 
+# inferred that &lt;Storey00&gt; and &lt;Storey01&gt; are instances of bot:Storey.
+
+&lt;Storey00&gt; bot:hasSpace &lt;SpaceA&gt; , &lt;SpaceB&gt; .
+
+&lt;Storey01&gt; bot:hasSpace &lt;SpaceC&gt; , &lt;SpaceD&gt; .
+
+# Since the range of bot:hasSpace is bot:Space it is automatically inferred
+# that &lt;SpaceA&gt;, &lt;SpaceB&gt;, &lt;SpaceC&gt; and &lt;SpaceD&gt; are instances of bot:Space.
+
+# Since bot:Site, bot:Building, bot:Storey and bot:Building are all sub classes of
+# bot:Zone, &lt;SiteA&gt;, &lt;BuildingA&gt;, &lt;Storey00&gt; , &lt;Storey01&gt;, &lt;SpaceA&gt;, &lt;SpaceB&gt;,
+# &lt;SpaceC&gt; and &lt;SpaceD&gt; are all instances of bot:Zone
+
+# Since bot:hasBuilding, bot:hasStorey and bot:hasSpace are all sub properties of 
+# bot:containsZone the following can also be deduced:
+# 
+# &lt;SiteA&gt; bot:containsZone &lt;BuildingA&gt; .
+# &lt;BuildingA&gt; bot:containsZone &lt;Storey00&gt; , &lt;Storey01&gt; .
+            </pre>
+        </section>
+        <section id="extending-bot">
+            <h3>Extending BOT</h3>
+
+            <p>BOT may be extended either by specifying subclasses, or subproperties, of BOT elements. </p>
+            <p>The following snippet extends <code>bot:Element</code> with <code>h:SpaceHeater</code>.</p>
+            <pre class="example">
+@prefix bot:  &lt;https://w3id.org/bot#> .
+@prefix h:  &lt;https://example.org/heatingSystem#> .
+@prefix rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  &lt;http://www.w3.org/2002/07/owl#> .
+
+h:SpaceHeater a owl:Class ;
+    rdfs:subClassOf bot:Element .
+            </pre>
+            <p>The following snippet defines <code>h:heatedBy</code> as a subproperty of <code>bot:containsElement</code>.</p>
+            <pre class="example">
+@prefix bot:  &lt;https://w3id.org/bot#> .
+@prefix h:  &lt;https://example.org/heatingSystem#> .
+@prefix rdfs:  &lt;http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  &lt;http://www.w3.org/2002/07/owl#> .
+
+h:SpaceHeater a owl:Class .
+h:heatedBy a owl:ObjectProperty ;
+             rdfs:subPropertyOf bot:containsElement ;
+             rdfs:range h:SpaceHeater .
+            </pre>
+        </section>
+        <section id="osh">
+            <h3>Flat from Open Smart Home Data Set</h3>
+
+            <p>The following example describes a flat in a multi family dwelling modeled in the Open Smart Home data set (OSH) the data set is <a href="https://github.com/TechnicalBuildingSystems/OpenSmartHomeData">available here</a>. </p>
+            <pre class="example">
+                @prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+                @prefix rdf:  &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
+                @prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;.
+                @prefix dog: &lt;http://elite.polito.it/ontologies/dogont.owl#&gt; .
+                @prefix bot: &lt;https://w3id.org/bot#&gt; .
+                @prefix sosa: &lt;http://www.w3.org/ns/sosa/&gt; .
+                @prefix geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt; .
+                @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+                @prefix osh: &lt;https://w3id.org/ibp/osh/OpenSmartHomeDataSet#&gt; .
+                @prefix : &lt;https://w3id.org/ibp/osh/OpenSmartHomeDataSet#&gt; .
+
+                [] rdf:type owl:Ontology ;
+                    dcterms:title &quot;Excerpt of the Open Smart Home Data set ontology.&quot;@en ;
+                    rdfs:seeAlso &lt;https://github.com/TechnicalBuildingSystems/OpenSmartHomeData&gt; 
+                    dcterms:license &lt;http://creativecommons.org/licenses/by-sa/4.0&gt; .
+
+                :Site1  rdf:type owl:NamedIndividual ,
+                                bot:Site ;
+                        rdfs:label &quot;Site of the building&quot;@en ;       
+                        bot:hasBuilding :Building1 .
+                        
+                :Level1 rdf:type owl:NamedIndividual ,
+                                    bot:Storey ;
+                        rdfs:label &quot;Ground floor of the building&quot;@en .
+
+                :Level2 rdf:type owl:NamedIndividual ,
+                                    bot:Storey ;
+                        rdfs:label &quot;First floor of the building&quot;@en .
+                        
+                :Building1 rdf:type owl:NamedIndividual ,
+                                        bot:Building ;
+                        rdfs:label &quot;Real building with smart home system.&quot;@en ;
+                           bot:hasStorey :Level1 ,
+                                         :Level2 ;
+                           bot:hasSpace  :Kitchen ,
+                                         :Lobby ,
+                                         :Room1 ,
+                                         :Room2 ,
+                                         :Room3 ,
+                                         :Toilet ,
+                                         :RoomBeforeToilet ,
+                                         :Staircase ,
+                                         :Bathroom ;
+                        geo:lat &quot;49.460899&quot; ;
+                        geo:long &quot;11.069208&quot; ;
+                        geo:alt &quot;300&quot; .
+
+                # Rooms without sensors
+                :Lobby rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Lobby ;
+                        rdfs:label &quot;Lobby in flat with no sensors&quot;@en .
+                :RoomBeforeToilet rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Room .
+
+                :Staircase rdf:type owl:NamedIndividual ,
+                                  bot:Space .
+                                         
+                # Kitchen
+                :Kitchen rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Kitchen ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Kitchen-temp-Sensor ,
+                                            :Kitchen-tempT-Sensor ,
+                                            :Kitchen-humid-Sensor ,
+                                            :Kitchen-brigh-Sensor ,
+                                            :Kitchen-tempS-Actuator ,
+                                            :Kitchen-heater .
+
+                # Room1
+                :Room1 rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Bedroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Room1-temp-Sensor ,
+                                            :Room1-tempT-Sensor ,
+                                            :Room1-humid-Sensor ,
+                                            :Room1-brigh-Sensor ,
+                                            :Room1-tempS-Actuator ,
+                                            :Room1-heater .
+                # Room2
+                :Room2 rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Livingroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Room2-temp-Sensor ,
+                                            :Room2-tempT-Sensor ,
+                                            :Room2-humid-Sensor ,
+                                            :Room2-brigh-Sensor ,
+                                            :Room2-tempS-Actuator ,
+                                            :Room2-heater .
+
+                # Room3
+                :Room3 rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Livingroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Room3-temp-Sensor ,
+                                            :Room3-outTemp-OutSensor ,
+                                            :Room3-tempTli-Sensor ,
+                                            :Room3-tempTre-Sensor ,
+                                            :Room3-humid-Sensor ,
+                                            :Room3-brigh-Sensor ,
+                                            :Room3-tempS-Actuator ,
+                                            :Room3-heater .
+
+                # Bathroom
+                :Bathroom rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Bathroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Bathroom-temp-Sensor ,
+                                            :Bathroom-tempT-Sensor ,
+                                            :Bathroom-humid-Sensor ,
+                                            :Bathroom-brigh-Sensor ,
+                                            :Bathroom-tempS-Actuator ,
+                                            :Bathroom-heater .
+
+                # Toilet
+                :Toilet rdf:type owl:NamedIndividual ,
+                                  bot:Space ,
+                                  dog:Bathroom ,
+                                  sosa:FeatureOfInterest ;
+                        bot:containsElement :Toilet-temp-Sensor ,
+                                            :Toilet-tempT-Sensor ,
+                                            :Toilet-humid-Sensor ,
+                                            :Toilet-brigh-Sensor ,
+                                            :Toilet-tempS-Actuator ,
+                                            :Toilet-heater .
+
+
+            </pre>
+        </section>
+    </section>
+    <section class="appendix" id="acknowledgments">
+        <h2>Acknowledgments</h2> The editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.</section>
+    <section class="appendix" id="changes">
+        <h2>Change History</h2>
+        <p><em>List not complete</em></p>
+		
+		<h3>Revisions of BOT to version v0.3.1</h3>
+        <p>These changes are documented via a <a href="https://github.com/w3c-lbd-cg/bot/pull/49">Pull Request (PR)</a> in the groups Github repository.</p>
+        <p>Changes applied based on <a href="http://www.semantic-web-journal.net/comment/321#comment-321">comments</a> receives by Antoine Zimmermann</p>
+		<ol>
+            <li> Removal of cardinality restriction on <a href="#Interface"><code>bot:Interface</code></a> to ensure BOT stays in OWL RL.</li>
+            <li>Removal of TODO language tags</li>
+			<li>Removal of commented axioms</li>
+        </ol>
+		<p>In addition the following changes are applied:</p>
+        <ol>
+            <li>Revision of labels and comments in German language</li>
+            <li>Addition of W3C Linked Building Data Community Group members as contributors</li>
+        </ol>
+		
+		<h3>Changes decided during LDAC2018</h3>
+        <ol>
+            <li>Added <a href="#intersectingElement">bot:intersectingElement</a> and <a href="#intersectsZone">bot:intersectsZone</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/30">GitHub issue #30</a></li>
+            <li>Added <a href="#hasZeroPoint">bot:hasZeroPoint</a>, <a href="#has3DModel">bot:has3DModel</a>, <a href="#hasSimple3DModel">bot:hasSimple3DModel</a> following resolution reported in <a href="https://github.com/w3c-lbd-cg/bot/issues/37">GitHub issue #37</a></li>
+        </ol>
+        <h3>Changes since <a href="https://doi.org/10.13140/RG.2.2.32365.28647">Recent changes in the Building Topology Ontology</a> presented at LDAC2017</h3>
+        <ol>
+            <li>Renamed <a href="#hostsElement">bot:hostsElement</a> to <a href="#hasSubElement">bot:hasSubElement</a>.</li>
+            <li>Define <a href="#hasElement">hasElement</a> as super property of <a href="#adjacentElement">bot:adjacentElement</a> and <a href="#containsElement">bot:containsElement</a></li>
+        </ol>
+        <h3>Changes since Original <a href="http://www.student.dtu.dk/~mhoras/bot/index-en.html">
+            (http://www.student.dtu.dk/~mhoras/bot/index-en.html)</a> presented at LC3</h3>
+        <p>These changes are documented in <a href="https://doi.org/10.13140/RG.2.2.32365.28647">Recent changes in the Building Topology Ontology</a></p>
+        <ol>
+            <li><a href="#Site"><code>bot:Site</code></a> added.</li>
+            <li>
+                <a href="#Zone"><code>bot:Zone</code></a> added as a super-class of <a href="#Site"><code>bot:Site</code></a>,
+                <a href="#Building"><code>bot:Building</code></a>, <a href="#Storey"><code>bot:Storey</code></a> and 
+                <a href="#Space"><code>bot:Space</code></a>.
+            </li>
+        </ol>
+    </section>
+</body>
+
+</html>

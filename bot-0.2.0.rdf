@@ -1,0 +1,358 @@
+<rdf:RDF
+    xmlns:dce="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dbo="http://dbpedia.org/ontology/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:bot="https://w3id.org/bot#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:members rdf:nodeID="A3"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <foaf:name>Maxime Lefrançois</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <owl:members rdf:nodeID="A7"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Element">
+    <rdfs:label xml:lang="nl">Gebouwelement</rdfs:label>
+    <rdfs:label xml:lang="de">Bauteil (Bauwesen)</rdfs:label>
+    <rdfs:comment xml:lang="en">Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Building element</rdfs:label>
+    <rdfs:comment xml:lang="da">Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]</rdfs:comment>
+    <rdfs:label xml:lang="it">Elemento architettonico</rdfs:label>
+    <rdfs:label xml:lang="da">Bygningsdel</rdfs:label>
+    <rdfs:comment xml:lang="de">Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasStorey">
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:label xml:lang="en">has storey</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
+    <rdfs:range rdf:resource="https://w3id.org/bot#Storey"/>
+    <rdfs:label xml:lang="de">hat geschoss</rdfs:label>
+    <rdfs:label xml:lang="nl">heeft verdieping</rdfs:label>
+    <rdfs:label xml:lang="da">har etage</rdfs:label>
+    <rdfs:comment xml:lang="da">Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Site">
+    <rdfs:comment xml:lang="en">Area containing one or more buildings.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:comment xml:lang="da">Område som indeholder en eller flere bygninger.</rdfs:comment>
+    <rdfs:label xml:lang="de">Grundstück</rdfs:label>
+    <rdfs:label xml:lang="da">Grund</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="nl">Site</rdfs:label>
+    <rdfs:label xml:lang="en">Site</rdfs:label>
+    <rdfs:comment xml:lang="nl">Omgeving die één of meerdere gebouwen bevat.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/bot#interfaceOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#aggregates">
+    <rdfs:comment xml:lang="da">Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
+        
+Eksempel på brug af bot:aggregates i en produkt-ontologi:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```</rdfs:comment>
+    <rdfs:comment xml:lang="en">Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.
+        
+Example of how to use bot:aggregates in a product ontology:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```</rdfs:comment>
+    <rdfs:label xml:lang="da">aggregerer</rdfs:label>
+    <rdfs:label xml:lang="en">aggregates</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Interface">
+    <rdfs:subClassOf rdf:nodeID="A10"/>
+    <rdfs:comment xml:lang="da">En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones.</rdfs:comment>
+    <rdfs:label xml:lang="da">Grænseflade</rdfs:label>
+    <rdfs:label xml:lang="en">Interface</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A0"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#">
+    <dcterms:creator rdf:nodeID="A13"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
+    <dce:Language>en</dce:Language>
+    <owl:versionInfo>0.2.0</owl:versionInfo>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-27</dcterms:issued>
+    <vann:preferredNamespaceUri rdf:resource="https://w3id.org/bot#"/>
+    <rdfs:seeAlso rdf:resource="https://doi.org/10.24928/JC3-2017/0153"/>
+    <vann:preferredNamespacePrefix>bot</vann:preferredNamespacePrefix>
+    <rdfs:seeAlso rdf:resource="https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-10-27</dcterms:modified>
+    <dcterms:creator rdf:nodeID="A9"/>
+    <dcterms:title xml:lang="en">BOT: Building Topology Ontology</dcterms:title>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/0.1.1"/>
+    <dce:description>A simple ontology describing the topology of a building</dce:description>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/0.2.0"/>
+    <dcterms:contributor rdf:nodeID="A5"/>
+    <dcterms:contributor rdf:nodeID="A11"/>
+    <dcterms:description xml:lang="en">The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
+It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
+
+Version 0.2.0 of the ontology is documented in:
+
+Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology
+
+The initial version of the ontology was documented in:
+
+Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153</dcterms:description>
+    <dce:title>BOT</dce:title>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Storey">
+    <rdfs:comment xml:lang="de">Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind</rdfs:comment>
+    <rdfs:label xml:lang="nl">Verdieping</rdfs:label>
+    <rdfs:label xml:lang="it">Piano di edificio</rdfs:label>
+    <rdfs:label xml:lang="en">Storey</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:label xml:lang="da">Etage</rdfs:label>
+    <rdfs:comment xml:lang="nl">Een horizontaal gedeelte van een gebouw</rdfs:comment>
+    <rdfs:comment xml:lang="en">A level part of a building</rdfs:comment>
+    <rdfs:comment xml:lang="da">Et plan i en bygning</rdfs:comment>
+    <rdfs:label xml:lang="de">Geschoss (Architektur)</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A12"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Zone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasSpace">
+    <rdfs:label xml:lang="en">has space</rdfs:label>
+    <rdfs:comment xml:lang="da">Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="nl">heeft ruimte</rdfs:label>
+    <rdfs:label xml:lang="de">hat raum</rdfs:label>
+    <rdfs:label xml:lang="da">har rum</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:comment xml:lang="en">Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
+    <rdfs:range rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Zone">
+    <rdfs:comment xml:lang="da">Et areal eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An area or stretch of land having a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone.</rdfs:comment>
+    <rdfs:label xml:lang="da">Zone</rdfs:label>
+    <rdfs:label xml:lang="en">Zone</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Building">
+    <rdfs:label xml:lang="en">Building</rdfs:label>
+    <rdfs:label xml:lang="it">Edificio</rdfs:label>
+    <rdfs:comment xml:lang="en">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="da">En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet</rdfs:comment>
+    <rdfs:label xml:lang="da">Bygning</rdfs:label>
+    <rdfs:comment xml:lang="de">Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:label xml:lang="nl">Gebouw</rdfs:label>
+    <rdfs:label xml:lang="de">Gebäude</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#containsElement">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <rdfs:label xml:lang="en">contains element</rdfs:label>
+    <rdfs:comment xml:lang="da">Relation til en bygningsdel, som er indeholdt i en zone.</rdfs:comment>
+    <rdfs:label xml:lang="nl">bevat element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <owl:propertyChainAxiom rdf:nodeID="A14"/>
+    <rdfs:label xml:lang="de">enthält</rdfs:label>
+    <rdfs:label xml:lang="da">indeholder bygningsdel</rdfs:label>
+    <rdfs:comment xml:lang="en">Relation to a building element contained in a zone.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#containsZone">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:comment xml:lang="en">Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a builidng zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone.</rdfs:comment>
+    <rdfs:label xml:lang="da">indeholder zone</rdfs:label>
+    <rdfs:label xml:lang="en">contains zone</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hostsElement">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="nl">heeft element</rdfs:label>
+    <rdfs:label xml:lang="en">hosts element</rdfs:label>
+    <rdfs:comment xml:lang="da">Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window</rdfs:comment>
+    <rdfs:label xml:lang="da">hoster element</rdfs:label>
+    <rdfs:label xml:lang="nl">hoster element</rdfs:label>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Element"/>
+    <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <rdfs:comment xml:lang="en">Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Space">
+    <rdfs:label xml:lang="da">Rum</rdfs:label>
+    <rdfs:label xml:lang="nl">Ruimte</rdfs:label>
+    <rdfs:comment xml:lang="en">A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
+    <rdfs:comment xml:lang="nl">Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
+    <rdfs:comment xml:lang="da">En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt</rdfs:comment>
+    <rdfs:label xml:lang="it">Spazio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:comment xml:lang="de">Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]</rdfs:comment>
+    <rdfs:label xml:lang="de">Raum</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Space</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#interfaceOf">
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Interface"/>
+    <rdfs:comment xml:lang="da">Relation mellem en grænseflade og en tilstødende zone eller bygningsdel.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relationship between an interface and an adjacent zone or element.</rdfs:comment>
+    <rdfs:label xml:lang="da">grænseflade for</rdfs:label>
+    <rdfs:label xml:lang="en">interface of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#adjacentElement">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:comment xml:lang="da">Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation between a zone and its adjacent building elements, bounding the physical space.</rdfs:comment>
+    <rdfs:label xml:lang="da">tilstødende element</rdfs:label>
+    <rdfs:label xml:lang="de">benachbartes bauteil</rdfs:label>
+    <rdfs:label xml:lang="nl">aangrenzend element</rdfs:label>
+    <rdfs:label xml:lang="en">adjacent element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A15">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <rdf:rest rdf:nodeID="A15"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#adjacentZone">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:comment xml:lang="da">Relation mellem to zoner, der deler en fælles grænseflade.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relationship between two zones sharing a common interface.</rdfs:comment>
+    <rdfs:label xml:lang="da">tilstødende zone</rdfs:label>
+    <rdfs:label xml:lang="en">adjacent zone</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasBuilding">
+    <rdfs:comment xml:lang="nl">Relatie tot gebouwen die zich op een site bevinden</rdfs:comment>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+    <rdfs:label xml:lang="da">har bygning</rdfs:label>
+    <rdfs:range rdf:resource="https://w3id.org/bot#Building"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="en">has building</rdfs:label>
+    <rdfs:comment xml:lang="da">Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site.</rdfs:comment>
+    <rdfs:label xml:lang="nl">heeft gebouw</rdfs:label>
+    <rdfs:comment xml:lang="en">Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site.</rdfs:comment>
+  </rdf:Description>
+</rdf:RDF>

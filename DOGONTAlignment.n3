@@ -1,0 +1,96 @@
+@prefix :      <https://w3id.org/bot/DOGONTAlignment#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix dogont: <http://elite.polito.it/ontologies/dogont.owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dogont:TechnicalSystem
+        rdfs:subClassOf  bot:Element .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+dogont:Vertical  rdfs:subClassOf  bot:Element .
+
+bot:Zone  rdfs:subClassOf  dogont:Environment .
+
+dogont:Room  rdfs:subClassOf  bot:Space .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+dogont:contains  rdfs:subPropertyOf  bot:containsElement .
+
+dogont:ceilingOf  rdfs:subPropertyOf  bot:interfaceOf .
+
+dogont:BuildingEnvironment
+        rdfs:subClassOf  bot:Zone .
+
+dogont:Storey  rdfs:subClassOf  bot:Storey .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+dogont:Building  rdfs:subClassOf  bot:Building .
+
+foaf:name  a    owl:DatatypeProperty .
+
+dogont:belongsTo  rdfs:subPropertyOf  [ owl:inverseOf
+                          bot:hasSubElement ] .
+
+foaf:Person  a  owl:Class .
+
+dogont:Furniture  rdfs:subClassOf  bot:Element .
+
+dogont:hasWall  rdfs:subPropertyOf  bot:adjacentElement .
+
+dogont:Device  rdfs:subClassOf  bot:Element .
+
+dogont:Ceiling  rdfs:subClassOf  bot:Interface .
+
+dogont:floorOf  rdfs:subPropertyOf  bot:interfaceOf .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+dogont:Terrace  rdfs:subClassOf  bot:Zone .
+
+dogont:hasWallOpening
+        rdfs:subPropertyOf  bot:hasSubElement .
+
+dogont:Controllable  rdfs:subClassOf  bot:Element .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+<https://w3id.org/bot/DOGONTAlignment>
+        a                    owl:Ontology , voaf:Vocabulary ;
+        rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
+        dcterms:creator      [ a          foaf:Person ;
+                               foaf:name  "Georg Ferdinand Schneider"
+                             ] ;
+        dcterms:description  "This ontology defines proposed alignments with the DogOnt ontology."@en ;
+        dcterms:issued       "2017-09-12"^^xsd:date ;
+        dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dcterms:modified     "2019-03-02"^^xsd:date ;
+        dcterms:title        "DogOnt to BOT alignment."@en ;
+        owl:imports          <http://elite.polito.it/ontologies/dogont.owl> , <https://w3id.org/bot> ;
+        owl:priorVersion     <https://w3id.org/bot/DOGONTAlignment/0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/DOGONTAlignment/1.0.0> ;
+        owl:versionInfo      "v1.0.0" .
+
+dogont:Floor  rdfs:subClassOf  bot:Interface .
+
+dogont:Balcony  rdfs:subClassOf  bot:Zone .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

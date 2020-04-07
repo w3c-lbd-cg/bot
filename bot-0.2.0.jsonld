@@ -1,0 +1,647 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Pieter Pauwels"
+  }, {
+    "@id" : "_:b10",
+    "@type" : "owl:AllDisjointClasses",
+    "members" : {
+      "@list" : [ "bot:Zone", "bot:Element" ]
+    }
+  }, {
+    "@id" : "_:b11",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Maxime Lefrançois"
+  }, {
+    "@id" : "_:b12",
+    "@type" : "owl:Restriction",
+    "owl:cardinality" : 2,
+    "onProperty" : "bot:interfaceOf"
+  }, {
+    "@id" : "_:b13",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "_:b14",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "_:b15",
+    "@type" : "owl:AllDisjointClasses",
+    "members" : {
+      "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
+    }
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "voaf:Vocabulary",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "vs:term_status",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "https://w3id.org/bot#",
+    "@type" : "owl:Ontology",
+    "Language" : "en",
+    "description" : "A simple ontology describing the topology of a building",
+    "dce:title" : "BOT",
+    "contributor" : [ "_:b11", "_:b14" ],
+    "creator" : [ "_:b13", "_:b0" ],
+    "dcterms:description" : {
+      "@language" : "en",
+      "@value" : "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nVersion 0.2.0 of the ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology\n\nThe initial version of the ontology was documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"
+    },
+    "issued" : "2017-10-27",
+    "license" : "https://creativecommons.org/licenses/by/1.0/",
+    "modified" : "2017-10-27",
+    "title" : {
+      "@language" : "en",
+      "@value" : "BOT: Building Topology Ontology"
+    },
+    "preferredNamespacePrefix" : "bot",
+    "preferredNamespaceUri" : "https://w3id.org/bot#",
+    "rdf:type" : {
+      "@id" : "voaf:Vocabulary"
+    },
+    "seeAlso" : [ "https://doi.org/10.24928/JC3-2017/0153", "https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology" ],
+    "priorVersion" : "https://w3id.org/bot/0.1.1",
+    "versionIRI" : "https://w3id.org/bot/0.2.0",
+    "versionInfo" : "0.2.0"
+  }, {
+    "@id" : "bot:Building",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"
+    }, {
+      "@language" : "da",
+      "@value" : "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"
+    }, {
+      "@language" : "de",
+      "@value" : "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"
+    } ],
+    "label" : [ {
+      "@language" : "en",
+      "@value" : "Building"
+    }, {
+      "@language" : "it",
+      "@value" : "Edificio"
+    }, {
+      "@language" : "da",
+      "@value" : "Bygning"
+    }, {
+      "@language" : "nl",
+      "@value" : "Gebouw"
+    }, {
+      "@language" : "de",
+      "@value" : "Gebäude"
+    } ],
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "bot:Element",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"
+    }, {
+      "@language" : "nl",
+      "@value" : "Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"
+    }, {
+      "@language" : "da",
+      "@value" : "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"
+    }, {
+      "@language" : "de",
+      "@value" : "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"
+    } ],
+    "label" : [ {
+      "@language" : "nl",
+      "@value" : "Gebouwelement"
+    }, {
+      "@language" : "de",
+      "@value" : "Bauteil (Bauwesen)"
+    }, {
+      "@language" : "en",
+      "@value" : "Building element"
+    }, {
+      "@language" : "it",
+      "@value" : "Elemento architettonico"
+    }, {
+      "@language" : "da",
+      "@value" : "Bygningsdel"
+    } ]
+  }, {
+    "@id" : "bot:Interface",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."
+    }, {
+      "@language" : "en",
+      "@value" : "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."
+    } ],
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "Grænseflade"
+    }, {
+      "@language" : "en",
+      "@value" : "Interface"
+    } ],
+    "subClassOf" : "_:b12"
+  }, {
+    "@id" : "bot:Site",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "Area containing one or more buildings."
+    }, {
+      "@language" : "da",
+      "@value" : "Område som indeholder en eller flere bygninger."
+    }, {
+      "@language" : "nl",
+      "@value" : "Omgeving die één of meerdere gebouwen bevat."
+    }, {
+      "@language" : "de",
+      "@value" : "Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."
+    } ],
+    "label" : [ {
+      "@language" : "de",
+      "@value" : "Grundstück"
+    }, {
+      "@language" : "da",
+      "@value" : "Grund"
+    }, {
+      "@language" : "nl",
+      "@value" : "Site"
+    }, {
+      "@language" : "en",
+      "@value" : "Site"
+    } ],
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "bot:Space",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"
+    }, {
+      "@language" : "nl",
+      "@value" : "Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"
+    }, {
+      "@language" : "da",
+      "@value" : "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"
+    }, {
+      "@language" : "de",
+      "@value" : "Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"
+    } ],
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "Rum"
+    }, {
+      "@language" : "nl",
+      "@value" : "Ruimte"
+    }, {
+      "@language" : "it",
+      "@value" : "Spazio"
+    }, {
+      "@language" : "de",
+      "@value" : "Raum"
+    }, {
+      "@language" : "en",
+      "@value" : "Space"
+    } ],
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "bot:Storey",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "de",
+      "@value" : "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"
+    }, {
+      "@language" : "nl",
+      "@value" : "Een horizontaal gedeelte van een gebouw"
+    }, {
+      "@language" : "en",
+      "@value" : "A level part of a building"
+    }, {
+      "@language" : "da",
+      "@value" : "Et plan i en bygning"
+    } ],
+    "label" : [ {
+      "@language" : "nl",
+      "@value" : "Verdieping"
+    }, {
+      "@language" : "it",
+      "@value" : "Piano di edificio"
+    }, {
+      "@language" : "en",
+      "@value" : "Storey"
+    }, {
+      "@language" : "da",
+      "@value" : "Etage"
+    }, {
+      "@language" : "de",
+      "@value" : "Geschoss (Architektur)"
+    } ],
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "bot:Zone",
+    "@type" : "owl:Class",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Et areal eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone."
+    }, {
+      "@language" : "en",
+      "@value" : "An area or stretch of land having a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone."
+    } ],
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "Zone"
+    }, {
+      "@language" : "en",
+      "@value" : "Zone"
+    } ]
+  }, {
+    "@id" : "bot:adjacentElement",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."
+    }, {
+      "@language" : "en",
+      "@value" : "Relation between a zone and its adjacent building elements, bounding the physical space."
+    } ],
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "tilstødende element"
+    }, {
+      "@language" : "de",
+      "@value" : "benachbartes bauteil"
+    }, {
+      "@language" : "nl",
+      "@value" : "aangrenzend element"
+    }, {
+      "@language" : "en",
+      "@value" : "adjacent element"
+    } ],
+    "range" : "bot:Element"
+  }, {
+    "@id" : "bot:adjacentZone",
+    "@type" : [ "owl:SymmetricProperty", "owl:ObjectProperty" ],
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation mellem to zoner, der deler en fælles grænseflade."
+    }, {
+      "@language" : "en",
+      "@value" : "Relationship between two zones sharing a common interface."
+    } ],
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "tilstødende zone"
+    }, {
+      "@language" : "en",
+      "@value" : "adjacent zone"
+    } ],
+    "range" : "bot:Zone"
+  }, {
+    "@id" : "bot:aggregates",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.\n        \nEksempel på brug af bot:aggregates i en produkt-ontologi:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"
+    }, {
+      "@language" : "en",
+      "@value" : "Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.\n        \nExample of how to use bot:aggregates in a product ontology:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"
+    } ],
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "aggregerer"
+    }, {
+      "@language" : "en",
+      "@value" : "aggregates"
+    } ]
+  }, {
+    "@id" : "bot:containsElement",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation til en bygningsdel, som er indeholdt i en zone."
+    }, {
+      "@language" : "en",
+      "@value" : "Relation to a building element contained in a zone."
+    } ],
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "en",
+      "@value" : "contains element"
+    }, {
+      "@language" : "nl",
+      "@value" : "bevat element"
+    }, {
+      "@language" : "de",
+      "@value" : "enthält"
+    }, {
+      "@language" : "da",
+      "@value" : "indeholder bygningsdel"
+    } ],
+    "range" : "bot:Element",
+    "propertyChainAxiom" : {
+      "@list" : [ "bot:containsZone", "bot:containsElement" ]
+    }
+  }, {
+    "@id" : "bot:containsZone",
+    "@type" : [ "owl:TransitiveProperty", "owl:ObjectProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a builidng zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone."
+    },
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "indeholder zone"
+    }, {
+      "@language" : "en",
+      "@value" : "contains zone"
+    } ],
+    "range" : "bot:Zone"
+  }, {
+    "@id" : "bot:hasBuilding",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "nl",
+      "@value" : "Relatie tot gebouwen die zich op een site bevinden"
+    }, {
+      "@language" : "da",
+      "@value" : "Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site."
+    }, {
+      "@language" : "en",
+      "@value" : "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."
+    } ],
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "har bygning"
+    }, {
+      "@language" : "en",
+      "@value" : "has building"
+    }, {
+      "@language" : "nl",
+      "@value" : "heeft gebouw"
+    } ],
+    "range" : "bot:Building",
+    "subPropertyOf" : "bot:containsZone"
+  }, {
+    "@id" : "bot:hasSpace",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."
+    }, {
+      "@language" : "en",
+      "@value" : "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."
+    } ],
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "en",
+      "@value" : "has space"
+    }, {
+      "@language" : "nl",
+      "@value" : "heeft ruimte"
+    }, {
+      "@language" : "de",
+      "@value" : "hat raum"
+    }, {
+      "@language" : "da",
+      "@value" : "har rum"
+    } ],
+    "range" : "bot:Space",
+    "subPropertyOf" : "bot:containsZone"
+  }, {
+    "@id" : "bot:hasStorey",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."
+    }, {
+      "@language" : "en",
+      "@value" : "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."
+    } ],
+    "domain" : "bot:Zone",
+    "label" : [ {
+      "@language" : "en",
+      "@value" : "has storey"
+    }, {
+      "@language" : "de",
+      "@value" : "hat geschoss"
+    }, {
+      "@language" : "nl",
+      "@value" : "heeft verdieping"
+    }, {
+      "@language" : "da",
+      "@value" : "har etage"
+    } ],
+    "range" : "bot:Storey",
+    "subPropertyOf" : "bot:containsZone"
+  }, {
+    "@id" : "bot:hostsElement",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"
+    }, {
+      "@language" : "en",
+      "@value" : "Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"
+    }, {
+      "@language" : "nl",
+      "@value" : "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"
+    } ],
+    "domain" : "bot:Element",
+    "label" : [ {
+      "@language" : "nl",
+      "@value" : "heeft element"
+    }, {
+      "@language" : "en",
+      "@value" : "hosts element"
+    }, {
+      "@language" : "da",
+      "@value" : "hoster element"
+    }, {
+      "@language" : "nl",
+      "@value" : "hoster element"
+    } ],
+    "range" : "bot:Element"
+  }, {
+    "@id" : "bot:interfaceOf",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."
+    }, {
+      "@language" : "en",
+      "@value" : "Relationship between an interface and an adjacent zone or element."
+    } ],
+    "domain" : "bot:Interface",
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "grænseflade for"
+    }, {
+      "@language" : "en",
+      "@value" : "interface of"
+    } ]
+  } ],
+  "@context" : {
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "propertyChainAxiom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
+      "@type" : "@id"
+    },
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "Language" : {
+      "@id" : "http://purl.org/dc/elements/1.1/Language"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "dbo" : "http://dbpedia.org/ontology/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bot" : "https://w3id.org/bot#",
+    "dce" : "http://purl.org/dc/elements/1.1/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

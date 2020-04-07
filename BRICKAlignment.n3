@@ -1,0 +1,80 @@
+@prefix :      <https://w3id.org/bot/BRICKAlignment#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix brick: <https://brickschema.org/schema/1.0.2/Brick#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+brick:Outside  rdfs:subClassOf  bot:Space .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+brick:Zone  rdfs:subClassOf  bot:Space .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+brick:hasPoint  rdfs:subPropertyOf  bot:containsElement , bot:containsZone .
+
+brick:hasPart  rdfs:subPropertyOf  bot:hasSubElement , bot:containsElement , bot:containsZone .
+
+brick:Room  rdfs:subClassOf  bot:Space .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+brick:Floor  rdfs:subClassOf  bot:Storey .
+
+brick:contains  rdfs:subPropertyOf  bot:containsElement .
+
+foaf:name  a    owl:DatatypeProperty .
+
+brick:Equipment  rdfs:subClassOf  bot:Element .
+
+brick:Location  rdfs:subClassOf  bot:Zone .
+
+foaf:Person  a  owl:Class .
+
+brick:Wing  rdfs:subClassOf  bot:Space .
+
+brick:Point  rdfs:subClassOf  bot:Element .
+
+<https://w3id.org/bot/BRICKAlignment>
+        a                    owl:Ontology , voaf:Vocabulary ;
+        rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
+        dcterms:creator      [ a          foaf:Person ;
+                               foaf:name  "Georg Ferdinand Schneider"
+                             ] ;
+        dcterms:description  "This ontology defines proposed alignments with the BRICK ontology."@en ;
+        dcterms:issued       "2017-09-12"^^xsd:date ;
+        dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dcterms:modified     "2019-03-01"^^xsd:date ;
+        dcterms:title        "BRICK to BOT alignment."@en ;
+        owl:imports          brick: , <https://w3id.org/bot> ;
+        owl:priorVersion     <https://w3id.org/bot/BRICKAlignment/0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/BRICKAlignment/1.0.0> ;
+        owl:versionInfo      "v1.0.0" .
+
+brick:Building  rdfs:subClassOf  bot:Building .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+brick:Basement  rdfs:subClassOf  bot:Space .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+brick:Space  rdfs:subClassOf  bot:Space .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

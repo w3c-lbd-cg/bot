@@ -1,0 +1,44 @@
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/title> "SAREF4BLDG Alignment."@en .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."@en .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/issued> "2017-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/elements/1.1/modified> "2019-03-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
+_:Bbbb7d40290fc0a4e92192389f75de13f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bbbb7d40290fc0a4e92192389f75de13f <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> _:Bbbb7d40290fc0a4e92192389f75de13f .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
+_:Bce19fb915ed15dff67d8bbca70590a73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bce19fb915ed15dff67d8bbca70590a73 <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:Bce19fb915ed15dff67d8bbca70590a73 .
+_:Bb1691ef8ace17f33de731637d8fade77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bb1691ef8ace17f33de731637d8fade77 <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:Bb1691ef8ace17f33de731637d8fade77 .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> <http://www.maxime-lefrancois.info/me#> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/def/saref4bldg> .
+<https://w3id.org/def/saref4bldg#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Building> .
+<https://w3id.org/def/saref4bldg#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
+<https://w3id.org/def/saref4bldg#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
+<https://w3id.org/def/saref4bldg#Actuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
+<https://w3id.org/def/saref4bldg#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Space> .
+<https://w3id.org/def/saref4bldg#hasSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsZone> .
+<https://w3id.org/def/saref4bldg#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsElement> .

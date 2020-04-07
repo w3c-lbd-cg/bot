@@ -1,0 +1,82 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:ifc="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/bot/IFC4_ADD2Alignment#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:bot="https://w3id.org/bot#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuilding">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot/IFC4_ADD2Alignment">
+    <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <owl:imports rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:creator rdf:nodeID="A0"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="https://w3id.org/bot"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <owl:versionInfo>v1.0.0</owl:versionInfo>
+    <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0"/>
+    <dcterms:title xml:lang="en">ifcOWL4_Add2 to BOT alignment.</dcterms:title>
+    <dcterms:description xml:lang="en">This ontology defines proposed alignments with the ifcOWL4_Add2 ontology.</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-02</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuildingStorey">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSpace">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcSite">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcElement">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>

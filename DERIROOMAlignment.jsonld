@@ -1,0 +1,148 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "rooms:Building",
+    "subClassOf" : "bot:Building"
+  }, {
+    "@id" : "rooms:Desk",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "rooms:Floor",
+    "subClassOf" : "bot:Storey"
+  }, {
+    "@id" : "rooms:FloorSection",
+    "subClassOf" : "bot:Storey"
+  }, {
+    "@id" : "rooms:Room",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "rooms:Site",
+    "subClassOf" : "bot:Site"
+  }, {
+    "@id" : "rooms:contains",
+    "subPropertyOf" : "bot:containsZone"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "https://w3id.org/bot/DERIROOMSAlignment",
+    "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
+    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments with the DERI Rooms ontology."
+    },
+    "issued" : "2017-09-12",
+    "license" : "http://creativecommons.org/licenses/by/3.0/",
+    "modified" : "2019-03-01",
+    "title" : {
+      "@language" : "en",
+      "@value" : "DERIROOMS to BOT alignment."
+    },
+    "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
+    "imports" : [ "http://vocab.deri.ie/rooms#", "https://w3id.org/bot" ],
+    "priorVersion" : "https://w3id.org/bot/DERIROOMSAlignment/0.1.0",
+    "versionIRI" : "https://w3id.org/bot/DERIROOMSAlignment/1.0.0",
+    "versionInfo" : "v1.0.0"
+  } ],
+  "@context" : {
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "@vocab" : "https://w3id.org/bot/DERIROOMSAlignment#",
+    "rooms" : "http://vocab.deri.ie/rooms#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bot" : "https://w3id.org/bot#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

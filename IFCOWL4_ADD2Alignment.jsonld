@@ -1,0 +1,138 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "ifc:IfcBuilding",
+    "subClassOf" : "bot:Building"
+  }, {
+    "@id" : "ifc:IfcBuildingStorey",
+    "subClassOf" : "bot:Storey"
+  }, {
+    "@id" : "ifc:IfcElement",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "ifc:IfcSite",
+    "subClassOf" : "bot:Site"
+  }, {
+    "@id" : "ifc:IfcSpace",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "https://w3id.org/bot/IFC4_ADD2Alignment",
+    "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
+    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."
+    },
+    "issued" : "2017-09-12",
+    "license" : "http://creativecommons.org/licenses/by/3.0/",
+    "modified" : "2019-03-02",
+    "title" : {
+      "@language" : "en",
+      "@value" : "ifcOWL4_Add2 to BOT alignment."
+    },
+    "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
+    "imports" : [ "http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2", "https://w3id.org/bot" ],
+    "priorVersion" : "https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0",
+    "versionIRI" : "https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0",
+    "versionInfo" : "v1.0.0"
+  } ],
+  "@context" : {
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "@vocab" : "https://w3id.org/bot/IFC4_ADD2Alignment#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bot" : "https://w3id.org/bot#",
+    "ifc" : "http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "_:b1",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Maxime Lefrançois"
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "bot:Building",
+    "subClassOf" : "dul:DesignedArtifact"
+  }, {
+    "@id" : "bot:Element",
+    "subClassOf" : "dul:DesignedArtifact"
+  }, {
+    "@id" : "bot:Interface",
+    "subClassOf" : "dul:DesignedArtifact"
+  }, {
+    "@id" : "bot:Site",
+    "subClassOf" : "dul:PhysicalPlace"
+  }, {
+    "@id" : "bot:Space",
+    "subClassOf" : "dul:DesignedArtifact"
+  }, {
+    "@id" : "bot:Storey",
+    "subClassOf" : "dul:DesignedArtifact"
+  }, {
+    "@id" : "bot:Zone",
+    "subClassOf" : "dul:PhysicalObject"
+  }, {
+    "@id" : "bot:adjacentElement",
+    "subPropertyOf" : "dul:hasCommonBoundary"
+  }, {
+    "@id" : "bot:adjacentZone",
+    "subPropertyOf" : "dul:hasCommonBoundary"
+  }, {
+    "@id" : "bot:containsElement",
+    "subPropertyOf" : "dul:hasPart"
+  }, {
+    "@id" : "bot:containsZone",
+    "subPropertyOf" : "dul:hasPart"
+  }, {
+    "@id" : "bot:has3DModel",
+    "range" : "dul:SpaceRegion",
+    "subPropertyOf" : "dul:hasRegion"
+  }, {
+    "@id" : "bot:interfaceOf",
+    "subPropertyOf" : "dul:hasCommonBoundary"
+  }, {
+    "@id" : "bot:intersectingElement",
+    "subPropertyOf" : "dul:overlaps"
+  }, {
+    "@id" : "bot:intersectsZone",
+    "subPropertyOf" : "dul:overlaps"
+  }, {
+    "@id" : "https://w3id.org/bot/DUL2Alignment",
+    "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
+    "contributor" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "creator" : [ "http://maxime-lefrancois.info/me#", "_:b1" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments with the DUL ontology."
+    },
+    "issued" : "2019-05-08",
+    "license" : "http://creativecommons.org/licenses/by/3.0/",
+    "modified" : "2019-05-08",
+    "title" : {
+      "@language" : "en",
+      "@value" : "DUL to BOT alignment."
+    },
+    "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
+    "imports" : [ "https://w3id.org/bot", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" ],
+    "versionIRI" : "https://w3id.org/bot/DULAlignment/0.1.0",
+    "versionInfo" : "v0.1.0"
+  } ],
+  "@context" : {
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "@vocab" : "https://w3id.org/bot/DULAlignment#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bot" : "https://w3id.org/bot#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "dul" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

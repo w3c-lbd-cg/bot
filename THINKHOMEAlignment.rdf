@@ -1,0 +1,140 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns="https://w3id.org/bot/THINKHOMEAlignment#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:th="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#"
+    xmlns:thsv="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:bot="https://w3id.org/bot#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Opening">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#BuildingStorey">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Zone">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#adjacentZone"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Construction">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Space">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsSpace">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Material">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Building">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsBuildingStorey">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasStorey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace">
+    <rdfs:subPropertyOf rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot/THINKHOMEAlignment">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/THINKHOMEAlignment/1.0.0"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/THINKHOMEAlignment/0.1.0"/>
+    <dcterms:creator rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="https://w3id.org/bot"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
+    <owl:imports rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#"/>
+    <dcterms:title xml:lang="en">ThinkHome to BOT alignment.</dcterms:title>
+    <owl:versionInfo>v1.0.0</owl:versionInfo>
+    <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
+    <dcterms:description xml:lang="en">This ontology defines proposed alignments with the ThinkHome ontologies.</dcterms:description>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Campus">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Site"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsSpaceBoundary">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Layer">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#isDefinedAdjacentSurfaceOf">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf">
+    <rdfs:subPropertyOf rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsAirLoopEquipment">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Surface">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsBuilding">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasBuilding"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsHydronicLoopEquipment">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#SpaceBoundary">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Equipment">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsLighting">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,177 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Pieter Pauwels"
+  }, {
+    "@id" : "_:b1",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "_:b2",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "voaf:Vocabulary",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "vs:term_status",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "https://w3id.org/bot/SAREFG4BLDGAlignment",
+    "@type" : "owl:Ontology",
+    "modified" : "2019-03-02",
+    "contributor" : [ "http://www.maxime-lefrancois.info/me#", "_:b2", "_:b0" ],
+    "creator" : [ "_:b1", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."
+    },
+    "issued" : "2017-07-13",
+    "license" : "https://creativecommons.org/licenses/by/1.0/",
+    "title" : {
+      "@language" : "en",
+      "@value" : "SAREF4BLDG Alignment."
+    },
+    "rdf:type" : {
+      "@id" : "voaf:Vocabulary"
+    },
+    "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
+    "imports" : [ "https://w3id.org/bot", "https://w3id.org/def/saref4bldg" ],
+    "priorVersion" : "https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0",
+    "versionIRI" : "https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0",
+    "versionInfo" : "v1.0.0"
+  }, {
+    "@id" : "saref4bldg:Actuator",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "saref4bldg:Building",
+    "subClassOf" : "bot:Building"
+  }, {
+    "@id" : "saref4bldg:BuildingSpace",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "saref4bldg:PhysicalObject",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "saref4bldg:Sensor",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "saref4bldg:contains",
+    "subPropertyOf" : "bot:containsElement"
+  }, {
+    "@id" : "saref4bldg:hasSpace",
+    "subPropertyOf" : "bot:containsZone"
+  } ],
+  "@context" : {
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/elements/1.1/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "@vocab" : "https://w3id.org/bot/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "bot" : "https://w3id.org/bot#",
+    "dce" : "http://purl.org/dc/elements/1.1/",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "dbo" : "http://dbpedia.org/ontology/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "vann" : "http://purl.org/vocab/vann/",
+    "saref4bldg" : "https://w3id.org/def/saref4bldg#",
+    "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

@@ -1,0 +1,113 @@
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix bot_test: <http://example.org/bot_test#> .
+
+<http://example.org/bot_test> rdf:type owl:Ontology ;
+                   owl:imports <https://w3id.org/bot> ;
+                   dce:description """Example showing how the BOT ontology can be used to describe the topology of a building.
+The building has four external walls and consists of 2 storeys. In the first storey there are rooms 101 and 102. In the second storey there is room 201.
+Room 101 has an entrance door, one window and a table.
+Room 102 has a window and a sofa.
+A door connects room 101 and room 102.
+A trapdoor connects room 102 and room 201.""" ;
+                   dc:creator <http://www.terkaj.com#walter> ;
+                   cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+                   dc:issued "2017-04-05"^^xsd:date ;
+                   dc:modified "2017-04-05"^^xsd:date .
+
+#################################################################
+#    Individuals
+#################################################################
+
+bot_test:BuildingTest rdf:type owl:NamedIndividual ,
+                               bot:Building ;
+                      bot:hasStorey bot_test:Storey1 ,
+                                    bot_test:Storey2 .
+
+bot_test:Room101 rdf:type owl:NamedIndividual ,
+                          bot:Space ;
+                 bot:adjacentElement bot_test:door_101_102 ,
+                                     bot_test:door_entrance ,
+                                     bot_test:wall_101_102 ,
+                                     bot_test:wall_external_N ,
+                                     bot_test:wall_external_S ,
+                                     bot_test:wall_external_W ,
+                                     bot_test:window101 ;
+                 bot:containsElement bot_test:table_101 .
+
+bot_test:Room102 rdf:type owl:NamedIndividual ,
+                          bot:Space ;
+                 bot:adjacentElement bot_test:door_101_102 ,
+                                     bot_test:trapdoor_102_201 ,
+                                     bot_test:wall_101_102 ,
+                                     bot_test:wall_external_E ,
+                                     bot_test:wall_external_N ,
+                                     bot_test:wall_external_S ,
+                                     bot_test:window102 ;
+                 bot:containsElement bot_test:sofa_102 .
+
+bot_test:Room201 rdf:type owl:NamedIndividual ,
+                          bot:Space ;
+                 bot:adjacentElement bot_test:trapdoor_102_201 ,
+                                     bot_test:wall_external_E ,
+                                     bot_test:wall_external_N ,
+                                     bot_test:wall_external_S ,
+                                     bot_test:wall_external_W ,
+                                     bot_test:window201 .
+
+bot_test:Storey1 rdf:type owl:NamedIndividual ,
+                          bot:Storey ;
+                 bot:hasSpace bot_test:Room101 ,
+                              bot_test:Room102 .
+
+bot_test:Storey2 rdf:type owl:NamedIndividual ,
+                          bot:Storey ;
+                 bot:hasSpace bot_test:Room201 .
+
+bot_test:door_101_102 rdf:type owl:NamedIndividual ,
+                               bot:Element .
+
+bot_test:door_entrance rdf:type owl:NamedIndividual ,
+                                bot:Element .
+
+bot_test:sofa_102 rdf:type owl:NamedIndividual ,
+                           bot:Element .
+
+bot_test:table_101 rdf:type owl:NamedIndividual ,
+                            bot:Element .
+
+bot_test:trapdoor_102_201 rdf:type owl:NamedIndividual ,
+                                   bot:Element .
+
+bot_test:wall_101_102 rdf:type owl:NamedIndividual ,
+                               bot:Element .
+
+bot_test:wall_external_E rdf:type owl:NamedIndividual ,
+                                  bot:Element .
+
+bot_test:wall_external_N rdf:type owl:NamedIndividual ,
+                                  bot:Element .
+
+bot_test:wall_external_S rdf:type owl:NamedIndividual ,
+                                  bot:Element .
+
+bot_test:wall_external_W rdf:type owl:NamedIndividual ,
+                                  bot:Element .
+
+bot_test:window101 rdf:type owl:NamedIndividual ,
+                            bot:Element .
+
+bot_test:window102 rdf:type owl:NamedIndividual ,
+                            bot:Element .
+
+bot_test:window201 rdf:type owl:NamedIndividual ,
+                            bot:Element .

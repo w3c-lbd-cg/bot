@@ -1,0 +1,194 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "inverseOf" : "bot:hasSubElement"
+  }, {
+    "@id" : "_:b1",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "dogont:Balcony",
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "dogont:Building",
+    "subClassOf" : "bot:Building"
+  }, {
+    "@id" : "dogont:BuildingEnvironment",
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "dogont:Ceiling",
+    "subClassOf" : "bot:Interface"
+  }, {
+    "@id" : "dogont:Controllable",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "dogont:Device",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "dogont:Floor",
+    "subClassOf" : "bot:Interface"
+  }, {
+    "@id" : "dogont:Furniture",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "dogont:Room",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "dogont:Storey",
+    "subClassOf" : "bot:Storey"
+  }, {
+    "@id" : "dogont:TechnicalSystem",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "dogont:Terrace",
+    "subClassOf" : "bot:Zone"
+  }, {
+    "@id" : "dogont:Vertical",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "dogont:belongsTo",
+    "subPropertyOf" : "_:b0"
+  }, {
+    "@id" : "dogont:ceilingOf",
+    "subPropertyOf" : "bot:interfaceOf"
+  }, {
+    "@id" : "dogont:contains",
+    "subPropertyOf" : "bot:containsElement"
+  }, {
+    "@id" : "dogont:floorOf",
+    "subPropertyOf" : "bot:interfaceOf"
+  }, {
+    "@id" : "dogont:hasWall",
+    "subPropertyOf" : "bot:adjacentElement"
+  }, {
+    "@id" : "dogont:hasWallOpening",
+    "subPropertyOf" : "bot:hasSubElement"
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "bot:Zone",
+    "subClassOf" : "dogont:Environment"
+  }, {
+    "@id" : "https://w3id.org/bot/DOGONTAlignment",
+    "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
+    "creator" : [ "_:b1", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments with the DogOnt ontology."
+    },
+    "issued" : "2017-09-12",
+    "license" : "http://creativecommons.org/licenses/by/3.0/",
+    "modified" : "2019-03-02",
+    "title" : {
+      "@language" : "en",
+      "@value" : "DogOnt to BOT alignment."
+    },
+    "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
+    "imports" : [ "http://elite.polito.it/ontologies/dogont.owl", "https://w3id.org/bot" ],
+    "priorVersion" : "https://w3id.org/bot/DOGONTAlignment/0.1.0",
+    "versionIRI" : "https://w3id.org/bot/DOGONTAlignment/1.0.0",
+    "versionInfo" : "v1.0.0"
+  } ],
+  "@context" : {
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "@vocab" : "https://w3id.org/bot/DOGONTAlignment#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bot" : "https://w3id.org/bot#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dogont" : "http://elite.polito.it/ontologies/dogont.owl#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

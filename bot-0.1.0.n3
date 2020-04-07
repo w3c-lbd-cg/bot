@@ -1,0 +1,115 @@
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix dce:   <http://purl.org/dc/elements/1.1/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+bot:    a                              voaf:Vocabulary , owl:Ontology ;
+        dce:Language                   "en" ;
+        dce:description                "A simple ontology describing the topology of a building" ;
+        dcterms:contributor            [ a          foaf:Person ;
+                                         foaf:name  "Georg Ferdinand Schneider"
+                                       ] ;
+        dcterms:creator                [ a          foaf:Person ;
+                                         foaf:name  "Pieter Pauwels"
+                                       ] ;
+        dcterms:creator                [ a          foaf:Person ;
+                                         foaf:name  "Mads Holten Rasmussen"
+                                       ] ;
+        dcterms:description            "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"@en ;
+        dcterms:issued                 "2016-05-25"^^xsd:date ;
+        dcterms:license                <https://creativecommons.org/licenses/by/1.0/> ;
+        dcterms:modified               "2017-07-11"^^xsd:date ;
+        dcterms:title                  "BOT: Building Topology Ontology"@en ;
+        vann:preferredNamespacePrefix  "bot" ;
+        vann:preferredNamespaceUri     bot: ;
+        owl:versionIRI                 <https://w3id.org/bot/0.1.0> ;
+        owl:versionInfo                "v0.1.0" .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+voaf:Vocabulary  a  owl:Class .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+bot:Element  a        owl:Class ;
+        rdfs:comment  "Bestanddel af et bygværk med en karakteristisk funktion, form eller position"@da , "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird"@de , "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ;
+        rdfs:label    "Bygningsdel"@da , "Bauteil (Bauwesen)"@de , "Building element"@en .
+
+bot:Space  a          owl:Class ;
+        rdfs:comment  "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da , "Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de , "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en ;
+        rdfs:label    "Rum"@da , "Raum"@de , "Space"@en .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+foaf:name  a    owl:DatatypeProperty .
+
+vs:term_status  a  owl:AnnotationProperty .
+
+foaf:Person  a  owl:Class .
+
+bot:hasElement  a               owl:ObjectProperty ;
+        rdfs:comment            "Relation til elementer, hørende til en en bygning eller en etage."@da , "Relation to elements belonging to a building or a storey."@en , "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ;
+        rdfs:domain             owl:Thing ;
+        rdfs:label              "hat bauteil"@de , "har bygningsdel"@da , "has element"@en ;
+        rdfs:range              bot:Element ;
+        owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) .
+
+bot:adjacentElement  a  owl:ObjectProperty ;
+        rdfs:comment  "Relation til bygningsdele, som afgrænser et fysisk rum"@da , "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de , "Relation of a space to its bounding building elements"@en ;
+        rdfs:domain   bot:Space ;
+        rdfs:label    "tilstødende element"@da , "benachbartes bauteil"@de , "adjacent element"@en ;
+        rdfs:range    bot:Element .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+bot:Storey  a         owl:Class ;
+        rdfs:comment  "Et plan i en bygning"@da , "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de , "A level part of a building"@en ;
+        rdfs:label    "Etage"@da , "Geschoss (Architektur)"@de , "Storey"@en .
+
+bot:hasSpace  a       owl:ObjectProperty ;
+        rdfs:comment  "Relation til rum, hvis plan er placeret på etagen."@da , "Beziehung zu Räumen, die sich in einem Geschoss befinden"@de , "Relation to spaces whose plan is located at the storey."@en ;
+        rdfs:domain   bot:Storey ;
+        rdfs:label    "har rum"@da , "hat raum"@de , "has space"@en ;
+        rdfs:range    bot:Space .
+
+bot:Building  a       owl:Class ;
+        rdfs:comment  "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da , "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de , "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ;
+        rdfs:label    "Bygning"@da , "Gebäude"@de , "Building"@en .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
+] .
+
+bot:hasStorey  a      owl:ObjectProperty ;
+        rdfs:comment  "Relation til etager indeholdt i bygningen."@da , "Beziehung zu in Gebäude enthaltenden Geschossen"@de , "Relation to storeys contained in the building."@en ;
+        rdfs:domain   bot:Building ;
+        rdfs:label    "har etage"@da , "hat geschoss"@de , "has storey"@en ;
+        rdfs:range    bot:Storey .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+bot:containsElement  a  owl:ObjectProperty ;
+        rdfs:comment  "Relation til en bygningsdel, som er indeholdt i et rum"@da , "Beziehung eines Raums zu einem Bauteil"@de , "Relation of a space to a building element"@en ;
+        rdfs:domain   bot:Space ;
+        rdfs:label    "indeholder bygningsdel"@da , "enthält"@de , "contains element"@en ;
+        rdfs:range    bot:Element .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

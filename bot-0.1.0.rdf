@@ -1,0 +1,226 @@
+<rdf:RDF
+    xmlns:dce="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:dbo="http://dbpedia.org/ontology/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:bot="https://w3id.org/bot#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="https://w3id.org/bot#Element">
+    <rdfs:comment xml:lang="da">Bestanddel af et bygværk med en karakteristisk funktion, form eller position</rdfs:comment>
+    <rdfs:comment xml:lang="de">Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird</rdfs:comment>
+    <rdfs:comment xml:lang="en">Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]</rdfs:comment>
+    <rdfs:label xml:lang="da">Bygningsdel</rdfs:label>
+    <rdfs:label xml:lang="de">Bauteil (Bauwesen)</rdfs:label>
+    <rdfs:label xml:lang="en">Building element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasStorey">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Storey"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Building"/>
+    <rdfs:comment xml:lang="da">Relation til etager indeholdt i bygningen.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Beziehung zu in Gebäude enthaltenden Geschossen</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation to storeys contained in the building.</rdfs:comment>
+    <rdfs:label xml:lang="da">har etage</rdfs:label>
+    <rdfs:label xml:lang="de">hat geschoss</rdfs:label>
+    <rdfs:label xml:lang="en">has storey</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasStorey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasElement">
+    <rdfs:comment xml:lang="da">Relation til elementer, hørende til en en bygning eller en etage.</rdfs:comment>
+    <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="en">Relation to elements belonging to a building or a storey.</rdfs:comment>
+    <rdfs:label xml:lang="de">hat bauteil</rdfs:label>
+    <owl:propertyChainAxiom rdf:nodeID="A4"/>
+    <owl:propertyChainAxiom rdf:nodeID="A2"/>
+    <owl:propertyChainAxiom rdf:nodeID="A5"/>
+    <rdfs:comment xml:lang="de">Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört</rdfs:comment>
+    <rdfs:label xml:lang="da">har bygningsdel</rdfs:label>
+    <rdfs:label xml:lang="en">has element</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:nodeID="A0"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#">
+    <dcterms:contributor rdf:nodeID="A8"/>
+    <dcterms:creator rdf:nodeID="A9"/>
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
+    <dce:Language>en</dce:Language>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-25</dcterms:issued>
+    <vann:preferredNamespaceUri rdf:resource="https://w3id.org/bot#"/>
+    <vann:preferredNamespacePrefix>bot</vann:preferredNamespacePrefix>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-11</dcterms:modified>
+    <owl:versionInfo>v0.1.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/0.1.0"/>
+    <dcterms:description xml:lang="en">The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
+It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
+
+The ontology is documented in:
+
+Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153</dcterms:description>
+    <dcterms:title xml:lang="en">BOT: Building Topology Ontology</dcterms:title>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dce:description>A simple ontology describing the topology of a building</dce:description>
+    <dcterms:creator rdf:nodeID="A10"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A7"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Storey">
+    <rdfs:comment xml:lang="da">Et plan i en bygning</rdfs:comment>
+    <rdfs:comment xml:lang="de">Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind</rdfs:comment>
+    <rdfs:comment xml:lang="en">A level part of a building</rdfs:comment>
+    <rdfs:label xml:lang="da">Etage</rdfs:label>
+    <rdfs:label xml:lang="de">Geschoss (Architektur)</rdfs:label>
+    <rdfs:label xml:lang="en">Storey</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasSpace">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Space"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Storey"/>
+    <rdfs:comment xml:lang="da">Relation til rum, hvis plan er placeret på etagen.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Beziehung zu Räumen, die sich in einem Geschoss befinden</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation to spaces whose plan is located at the storey.</rdfs:comment>
+    <rdfs:label xml:lang="da">har rum</rdfs:label>
+    <rdfs:label xml:lang="de">hat raum</rdfs:label>
+    <rdfs:label xml:lang="en">has space</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Building">
+    <rdfs:comment xml:lang="da">En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet</rdfs:comment>
+    <rdfs:comment xml:lang="de">Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]</rdfs:comment>
+    <rdfs:comment xml:lang="en">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]</rdfs:comment>
+    <rdfs:label xml:lang="da">Bygning</rdfs:label>
+    <rdfs:label xml:lang="de">Gebäude</rdfs:label>
+    <rdfs:label xml:lang="en">Building</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <owl:members rdf:nodeID="A12"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#containsElement">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Space"/>
+    <rdfs:comment xml:lang="da">Relation til en bygningsdel, som er indeholdt i et rum</rdfs:comment>
+    <rdfs:comment xml:lang="de">Beziehung eines Raums zu einem Bauteil</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation of a space to a building element</rdfs:comment>
+    <rdfs:label xml:lang="da">indeholder bygningsdel</rdfs:label>
+    <rdfs:label xml:lang="de">enthält</rdfs:label>
+    <rdfs:label xml:lang="en">contains element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A13"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#adjacentElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Space">
+    <rdfs:comment xml:lang="da">En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt</rdfs:comment>
+    <rdfs:comment xml:lang="de">Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]</rdfs:comment>
+    <rdfs:comment xml:lang="en">A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
+    <rdfs:label xml:lang="da">Rum</rdfs:label>
+    <rdfs:label xml:lang="de">Raum</rdfs:label>
+    <rdfs:label xml:lang="en">Space</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#adjacentElement">
+    <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <rdfs:domain rdf:resource="https://w3id.org/bot#Space"/>
+    <rdfs:comment xml:lang="da">Relation til bygningsdele, som afgrænser et fysisk rum</rdfs:comment>
+    <rdfs:comment xml:lang="de">Beziehung eines Raumes zu Bauteilen die in begrenzen</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation of a space to its bounding building elements</rdfs:comment>
+    <rdfs:label xml:lang="da">tilstødende element</rdfs:label>
+    <rdfs:label xml:lang="de">benachbartes bauteil</rdfs:label>
+    <rdfs:label xml:lang="en">adjacent element</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,63 @@
+@prefix :      <https://w3id.org/bot/IFC4_ADD2Alignment#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix ifc:   <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+ifc:IfcSpace  rdfs:subClassOf  bot:Space .
+
+foaf:name  a    owl:DatatypeProperty .
+
+ifc:IfcElement  rdfs:subClassOf  bot:Element .
+
+foaf:Person  a  owl:Class .
+
+ifc:IfcSite  rdfs:subClassOf  bot:Site .
+
+ifc:IfcBuilding  rdfs:subClassOf  bot:Building .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+<https://w3id.org/bot/IFC4_ADD2Alignment>
+        a                    owl:Ontology , voaf:Vocabulary ;
+        rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
+        dcterms:creator      [ a          foaf:Person ;
+                               foaf:name  "Georg Ferdinand Schneider"
+                             ] ;
+        dcterms:description  "This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."@en ;
+        dcterms:issued       "2017-09-12"^^xsd:date ;
+        dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dcterms:modified     "2019-03-02"^^xsd:date ;
+        dcterms:title        "ifcOWL4_Add2 to BOT alignment."@en ;
+        owl:imports          <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2> , <https://w3id.org/bot> ;
+        owl:priorVersion     <https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0> ;
+        owl:versionInfo      "v1.0.0" .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+ifc:IfcBuildingStorey
+        rdfs:subClassOf  bot:Storey .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

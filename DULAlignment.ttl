@@ -1,0 +1,76 @@
+# Copyright 2017-2019 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix : <https://w3id.org/bot/DULAlignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix bot: <https://w3id.org/bot#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@base <https://w3id.org/bot/DULAlignment> .
+
+<https://w3id.org/bot/DUL2Alignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "DUL to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the DUL ontology."""@en ;
+	dcterms:issued "2019-05-08"^^xsd:date ;
+	dcterms:modified "2019-05-08"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+    owl:versionInfo "v0.1.0" ;
+    owl:versionIRI <https://w3id.org/bot/DULAlignment/0.1.0> ;
+	dcterms:creator <http://maxime-lefrancois.info/me#> ;
+	dcterms:contributor <https://www.researchgate.net/profile/Georg_Schneider3> ;
+    rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+	dcterms:contributor [ a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+	dcterms:creator [ a foaf:Person ; foaf:name "Maxime Lefrançois" ] ;
+	owl:imports 	<https://w3id.org/bot> ,
+					<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+#################################################################
+#    Classes
+#################################################################
+
+bot:Site rdfs:subClassOf dul:PhysicalPlace .
+
+bot:Zone rdfs:subClassOf dul:PhysicalObject .
+
+bot:Building rdfs:subClassOf dul:DesignedArtifact .
+bot:Storey rdfs:subClassOf dul:DesignedArtifact .
+bot:Space rdfs:subClassOf dul:DesignedArtifact .
+bot:Element rdfs:subClassOf dul:DesignedArtifact .
+bot:Interface rdfs:subClassOf dul:DesignedArtifact .
+
+bot:has3DModel rdfs:subPropertyOf dul:hasRegion .
+bot:has3DModel rdfs:range dul:SpaceRegion .
+
+bot:containsZone rdfs:subPropertyOf dul:hasPart .
+bot:containsElement rdfs:subPropertyOf dul:hasPart .
+
+bot:adjacentZone rdfs:subPropertyOf dul:hasCommonBoundary .
+bot:adjacentElement rdfs:subPropertyOf dul:hasCommonBoundary .
+bot:interfaceOf rdfs:subPropertyOf dul:hasCommonBoundary .
+
+bot:intersectsZone rdfs:subPropertyOf dul:overlaps .
+bot:intersectingElement rdfs:subPropertyOf dul:overlaps .
+
