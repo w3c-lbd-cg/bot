@@ -199,7 +199,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Zone</em> -
-                <span property="rdfs:comment skos:definition">A spatial 3D division. Sub-classes of <a href="#Zone">bot:Zone</a> include <a href="#Site">bot:Site</a>, <a href="#Building">bot:Building</a>, <a href="#Storey">bot:Storey</a>, or <a href="#Space">bot:Space</a>. An instance of <a href="#Zone">bot:Zone</a> can contain other <a href="#Zone">bot:Zone</a> instances, making it possible to group or subdivide zones. An instance of <a href="#Zone">bot:Zone</a> can be adjacent to other <a href="#Zone">bot:Zone</a> instances. Finally, a <a href="#Zone">bot:Zone</a> can instantiate two relations to <a href="#Element">bot:Element</a>, which are either contained in (<a href="#containsElement">bot:containsElement</a>), or adjacent to it (<a href="#adjacentElement">bot:adjacentElement</a>).</span>
+                <span property="rdfs:comment skos:definition">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent; Sub-classes of <a href="#Zone">bot:Zone</a> include <a href="#Site">bot:Site</a>, <a href="#Building">bot:Building</a>, <a href="#Storey">bot:Storey</a>, or <a href="#Space">bot:Space</a>. An instance of <a href="#Zone">bot:Zone</a> can contain other <a href="#Zone">bot:Zone</a> instances, making it possible to group or subdivide zones. An instance of <a href="#Zone">bot:Zone</a> can be adjacent to other <a href="#Zone">bot:Zone</a> instances. Finally, a <a href="#Zone">bot:Zone</a> can instantiate two relations to <a href="#Element">bot:Element</a>, which are either contained in (<a href="#containsElement">bot:containsElement</a>), or adjacent to it (<a href="#adjacentElement">bot:adjacentElement</a>).</span>
                 <br>
                 <table>
                     <tbody>
@@ -324,7 +324,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Space</em> -
-                <span property="rdfs:comment skos:definition">A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3].</span>
+                <span property="rdfs:comment skos:definition">A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in.</span>
                 <br>
                 <table>
                     <tbody>
@@ -886,17 +886,13 @@
                     <p><strong>a OWL Object Property</strong></p>
 
                     <em property="rdfs:label">has Zero Point</em> -
-                    <span property="rdfs:comment skos:definition">Links a bot:Site to a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><code>wgs84:Point</code></a> that encodes the latitude and longitude of the Zero Point of the building site.</span>
+                    <span property="rdfs:comment skos:definition">Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><code>wgs84:Point</code></a>. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology.</span>
                     <br>
                     <table>
                         <tbody>
                             <tr>
                                 <th>Domain</th>
                                 <td><span rel="rdfs:domain" resource="bot:Site"><a href="#Site">bot:Site</a></span></td>
-                            </tr>
-                            <tr>
-                                <th>Range</th>
-                                <td><span rel="rdfs:range" resource="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point">http://www.w3.org/2003/01/geo/wgs84_pos#Point</a></span></td>
                             </tr>
                         </tbody>
                     </table>

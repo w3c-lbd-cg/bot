@@ -1,13 +1,13 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "inverseOf" : "bot:hasSubElement"
-  }, {
-    "@id" : "_:b1",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
     "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "_:b1",
+    "inverseOf" : "bot:hasSubElement"
   }, {
     "@id" : "dogont:Balcony",
     "subClassOf" : "bot:Zone"
@@ -49,7 +49,7 @@
     "subClassOf" : "bot:Element"
   }, {
     "@id" : "dogont:belongsTo",
-    "subPropertyOf" : "_:b0"
+    "subPropertyOf" : "_:b1"
   }, {
     "@id" : "dogont:ceilingOf",
     "subPropertyOf" : "bot:interfaceOf"
@@ -104,7 +104,7 @@
   }, {
     "@id" : "https://w3id.org/bot/DOGONTAlignment",
     "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "creator" : [ "_:b1", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the DogOnt ontology."
@@ -127,16 +127,16 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
-    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
     },
     "name" : {
       "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
     },
     "issued" : {
       "@id" : "http://purl.org/dc/terms/issued",
@@ -146,16 +146,16 @@
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
     "imports" : {
       "@id" : "http://www.w3.org/2002/07/owl#imports",
       "@type" : "@id"
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "title" : {

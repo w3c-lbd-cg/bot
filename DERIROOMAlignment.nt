@@ -10,9 +10,9 @@
 <https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/DERIROOMSAlignment/0.1.0> .
 <https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
 <https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
-_:B87f806c3c9ee7f523fb55bdea3c593a2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B87f806c3c9ee7f523fb55bdea3c593a2 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/creator> _:B87f806c3c9ee7f523fb55bdea3c593a2 .
+_:B922d8953e5c3fc76aa13795dbb372962 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B922d8953e5c3fc76aa13795dbb372962 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/creator> _:B922d8953e5c3fc76aa13795dbb372962 .
 <https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#imports> <http://vocab.deri.ie/rooms#> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

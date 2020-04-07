@@ -12,6 +12,10 @@
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:nodeID="A1"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Element">
     <rdfs:label xml:lang="nl">Gebouwelement</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
@@ -36,6 +40,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasStorey">
     <rdfs:label xml:lang="sv">har våning</rdfs:label>
@@ -81,10 +89,6 @@
     <rdfs:label xml:lang="sv">Plats</rdfs:label>
     <rdfs:label xml:lang="nl">Terrein</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#intersectsZone">
     <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
     <schema:domainIncludes rdf:resource="https://w3id.org/bot#Building"/>
@@ -121,7 +125,6 @@
     <rdfs:label xml:lang="nl">heeft element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="de">Beziehung zwischen einer Zone und einem Bauteil, dass entweder in der Zone enthalten ist, oder sich mit ihr schneidet. Diese Beziehung sollte nicht explizit benutzt werden, sondern ergibt sich implizit aus den Unterbeziehungen. Es ermöglicht, zum Beispiel, dass mit einer Abfrage alle Türen eines Gebäudes, die sich mit einer Zone schneiden ermittelt werden können.</rdfs:comment>
-    <owl:propertyChainAxiom rdf:nodeID="A1"/>
     <rdfs:comment xml:lang="en">Links a Zone to an Element that is either contained in or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
     <rdfs:comment xml:lang="da">Forbinder en Zone til en bygningsdel der enten er indeholdt i eller tilstødende til zonen. Det er ikke hensigten at denne relation angives eksplicit, men at den udledes af dennes underegneskaber. Det vil for eksempel tillade en forespørgsel på alle døre i en bygning givet at disse er enten tilstødende eller indeholdt i rum i bygningen.</rdfs:comment>
@@ -130,6 +133,7 @@
     <rdfs:label xml:lang="fr">a élément</rdfs:label>
     <rdfs:label xml:lang="de">hat Bauteil</rdfs:label>
     <rdfs:label xml:lang="da">har element</rdfs:label>
+    <owl:propertyChainAxiom rdf:nodeID="A0"/>
     <rdfs:label xml:lang="sv">värd för element</rdfs:label>
     <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">has element</rdfs:label>
@@ -192,23 +196,19 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasZeroPoint">
     <rdfs:label xml:lang="de">hat Nullpunkt</rdfs:label>
-    <rdfs:comment xml:lang="de">Verbindet eine Instanz von bot:Site mit einem wgs84:Point, der den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert.</rdfs:comment>
+    <rdfs:comment xml:lang="de">Verbindet eine Instanz von bot:Site mit einer Instanz, die den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert. Dies kann eine Instanz eines wgs84:Point sein. Die Definition von GIS und Geometrie ist nicht Bestandteil von BOT. Die Nutzung dieses Properties ist potenziell zweideutig und es besteht die Möglichkeit das es in Zukunft überarbeitet oder entfernt wird.</rdfs:comment>
     <rdfs:label xml:lang="da">har nulpunkt</rdfs:label>
-    <rdfs:comment xml:lang="da">Forbinder et bot:Site med et wgs84:Point som beskriver længde- og breddegrad for projektets nulpunkt</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://github.com/w3c-lbd-cg/bot/issues/41"/>
     <rdfs:domain rdf:resource="https://w3id.org/bot#Site"/>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:label xml:lang="en">has zero point</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
-    <rdfs:comment xml:lang="en">Links a bot:Site to a wgs84:Point that encodes the latitude and longitude of the Zero Point of the building site.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:nodeID="A0"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#">
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-21T12:00:00</dcterms:issued>
@@ -302,22 +302,22 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Zone">
-    <rdfs:comment xml:lang="fr">Une zone ou une étendue de terrain avec des caractéristiques et usages spécifiques, ou pouvant être sujette à des restrictions spécifiques. Un élément bot:Zone peut contenir d'autres éléments bot:Zone comme défini par la relation bot:containsZone. La connection entre plusieurs éléments bot:Zone est définie en utilisant la propriété bot:adjacentZone.</rdfs:comment>
-    <rdfs:comment xml:lang="de">Ein abstraktes Konzept für eine räumliche, dreidimensionale Einteilung eines Raums. Spezialisierungen von bot:Zone sind bot:Site, bot:Building, bot:Storey oder bot:Space. Eine Instanz von bot:Zone kannn andere Instanzen von bot:Zone enthalten. So ist es möglich Instanzen von bot:Zone zu gruppieren, oder zu unterteilen. Eine Instanz einer bot:Zone kann an eine andere Instanz von bot:Zone angrenzen. Es bestehen zwei Möglichkeiten Instanzen von bot:Zone und bot:Element in Beziehung zu setzen. Entweder ein Element ist in einer Zone enthalten (bot:containsElement) oder es grenzt an eine andere Zone an (bot:adjacentElement).</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone.</rdfs:comment>
-    <rdfs:comment xml:lang="en">A spatial 3D division. Sub-classes of bot:Zones include bot:Site, bot:Building, bot:Storey, or bot:Space. An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to other bot:Zone instances. Finally, a bot:Zone can instantiate two relations to bot:Element, which are either contained in (bot:containsElement), or adjacent to it (bot:adjacentElement).</rdfs:comment>
-    <rdfs:comment xml:lang="sv">En area eller ett stycke land som har en specifik karaktäristik, syfte, användning eller är förmål för specifika restriktioner. En bot:Zone kan innehålla andra bot:Zoner genom relationen bot:containsZone, och den kan kopplas till andra bot:Zoner genom relationen bot:adjacentZone.</rdfs:comment>
+    <rdfs:comment xml:lang="nl">PLEASE UPDATE Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent; Sub-classes of bot:Zone include bot:Site, bot:Building, bot:Storey, or bot:Space. An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to other bot:Zone instances. Finally, a bot:Zone can instantiate two relations to bot:Element, which are either contained in (bot:containsElement), or adjacent to it (bot:adjacentElement).</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une partie du monde physique ou virtuel qui est inhéremment à la fois localisé dans ce monde et a une étendue spatiale 3D; les sous-classes de bot:Zone incluent bot:Site, bot:Building, bot:Storey, ou bot:Space. Une instance de bot:Zone peut contenir d'autres instances de bot:Zone, ce qui permet de grouper ou sub-diviser les zones. Une instance de bot:Zone peut être adjacente à d'autres bot:Zone. Enfin, une bot:Zone peut contenir (bot:containsElement) our être adjacent (bot:adjacentElement) à une instance de bot:Element.</rdfs:comment>
+    <rdfs:comment xml:lang="sv">PLEASE UPDATE En area eller ett stycke land som har en specifik karaktäristik, syfte, användning eller är förmål för specifika restriktioner. En bot:Zone kan innehålla andra bot:Zoner genom relationen bot:containsZone, och den kan kopplas till andra bot:Zoner genom relationen bot:adjacentZone.</rdfs:comment>
     <rdfs:label xml:lang="sv">Zon</rdfs:label>
-    <rdfs:comment xml:lang="da">En rummelig 3D-inddeling. Underklasser af bot:Zone inkluderer bot:Site, bot:Building, bot:Storey eller bot:Space. En bot:Zone forekomst kan indeholde andre bot:Zone forekomster, hvilket gør det muligt at gruppere eller underinddele zoner. En forekomst af bot:Zone kan være tilstødende til andre bot:Zone forekomster. Endelig kan en bot:Zone instantiere to relationer til et bot:Element, hvilke er enten indeholdt i (bot:containsElement) eller tilstødende dertil (bot:adjacentElement).</rdfs:comment>
+    <rdfs:comment xml:lang="da">PLEASE UPDATE En rummelig 3D-inddeling. Underklasser af bot:Zone inkluderer bot:Site, bot:Building, bot:Storey eller bot:Space. En bot:Zone forekomst kan indeholde andre bot:Zone forekomster, hvilket gør det muligt at gruppere eller underinddele zoner. En forekomst af bot:Zone kan være tilstødende til andre bot:Zone forekomster. Endelig kan en bot:Zone instantiere to relationer til et bot:Element, hvilke er enten indeholdt i (bot:containsElement) eller tilstødende dertil (bot:adjacentElement).</rdfs:comment>
     <rdfs:label xml:lang="fr">Zone</rdfs:label>
     <rdfs:label xml:lang="de">Zone</rdfs:label>
     <rdfs:label xml:lang="da">Zone</rdfs:label>
     <rdfs:label xml:lang="es">Zona</rdfs:label>
+    <rdfs:comment xml:lang="de">PLEASE UPDATE Ein abstraktes Konzept für eine räumliche, dreidimensionale Einteilung eines Raums. Spezialisierungen von bot:Zone sind bot:Site, bot:Building, bot:Storey oder bot:Space. Eine Instanz von bot:Zone kannn andere Instanzen von bot:Zone enthalten. So ist es möglich Instanzen von bot:Zone zu gruppieren, oder zu unterteilen. Eine Instanz einer bot:Zone kann an eine andere Instanz von bot:Zone angrenzen. Es bestehen zwei Möglichkeiten Instanzen von bot:Zone und bot:Element in Beziehung zu setzen. Entweder ein Element ist in einer Zone enthalten (bot:containsElement) oder es grenzt an eine andere Zone an (bot:adjacentElement).</rdfs:comment>
     <rdfs:label xml:lang="nl">Zone</rdfs:label>
     <rdfs:label xml:lang="en">Zone</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <vs:term_status>stable</vs:term_status>
-    <rdfs:comment xml:lang="es">Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone.</rdfs:comment>
+    <rdfs:comment xml:lang="es">PLEASE UPDATE Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Element"/>
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Interface"/>
@@ -358,10 +358,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:comment xml:lang="de">Beziehung einer Zone zu einem Bauteil, dass es enthält.</rdfs:comment>
     <rdfs:label xml:lang="fr">contient élément</rdfs:label>
     <rdfs:label xml:lang="es">contiene elemento</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A3"/>
     <rdfs:comment xml:lang="nl">Relatie tussen zone en een gebouwelement in die zone</rdfs:comment>
     <rdfs:label xml:lang="en">contains element</rdfs:label>
     <rdfs:comment xml:lang="da">Relation til en bygningsdel, som er indeholdt i en zone.</rdfs:comment>
+    <owl:propertyChainAxiom rdf:nodeID="A2"/>
     <rdfs:label xml:lang="nl">bevat element</rdfs:label>
     <rdfs:comment xml:lang="fr">Relation à définir entre un élément de bâti et la zone le contenant</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -382,6 +382,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/domainIncludes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#containsZone">
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
@@ -415,10 +419,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:nodeID="A2"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -426,24 +426,24 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="sv">Utrymme</rdfs:label>
     <rdfs:label xml:lang="da">Rum</rdfs:label>
     <rdfs:label xml:lang="nl">Ruimte</rdfs:label>
-    <rdfs:comment xml:lang="en">A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
-    <rdfs:comment xml:lang="nl">Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
-    <rdfs:comment xml:lang="da">En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une partie du monde physique ou virtuel dont l'extension 3D est limitée réellement ou théoriquement, et apporte des fonctions aux zones dans laquelle elle est contenue.</rdfs:comment>
     <rdfs:label xml:lang="es">Espacio</rdfs:label>
     <rdfs:label xml:lang="fr">Pièce</rdfs:label>
+    <rdfs:comment xml:lang="sv">PLEASE UPDATE En avgränsad tredimensionell utsträckning som definierats fysiskt eller fiktivt [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Building"/>
     <rdfs:label xml:lang="it">Spazio</rdfs:label>
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Site"/>
-    <rdfs:comment xml:lang="fr">Une extension 3D bornée, définie d'un point de vue physique ou théorique [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
-    <rdfs:comment xml:lang="de">Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]</rdfs:comment>
-    <rdfs:comment xml:lang="sv">En avgränsad tredimensionell utsträckning som definierats fysiskt eller fiktivt [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
-    <rdfs:comment xml:lang="es">Una extensión tridimensional limitada y definida fisica o teóricamente</rdfs:comment>
+    <rdfs:comment xml:lang="da">PLEASE UPDATE En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt</rdfs:comment>
     <rdfs:label xml:lang="de">Raum</rdfs:label>
     <vs:term_status>stable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="de">PLEASE UPDATE Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]</rdfs:comment>
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Storey"/>
+    <rdfs:comment xml:lang="nl">PLEASE UPDATE Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]</rdfs:comment>
+    <rdfs:comment xml:lang="en">A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in.</rdfs:comment>
+    <rdfs:comment xml:lang="es">PLEASE UPDATE Una extensión tridimensional limitada y definida fisica o teóricamente</rdfs:comment>
     <rdfs:label xml:lang="en">Space</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#interfaceOf">

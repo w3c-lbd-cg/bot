@@ -10,9 +10,9 @@
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/THINKHOMEAlignment/0.1.0> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:B60b14fc4e80a85214fe11873c30d72e1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B60b14fc4e80a85214fe11873c30d72e1 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> _:B60b14fc4e80a85214fe11873c30d72e1 .
+_:Bacd47d78854e9870ad67f6ba90d52e65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bacd47d78854e9870ad67f6ba90d52e65 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> _:Bacd47d78854e9870ad67f6ba90d52e65 .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#imports> <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -45,8 +45,8 @@ _:B60b14fc4e80a85214fe11873c30d72e1 <http://xmlns.com/foaf/0.1/name> "Georg Ferd
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsLighting> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsElement> .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsHydronicLoopEquipment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsAirLoopEquipment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
-_:Bad18aceade8306207a3a70a68019eece <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#adjacentZone> .
-<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bad18aceade8306207a3a70a68019eece .
+_:B65302bf5421161fba48c9ddbf55f7301 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#adjacentZone> .
+<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B65302bf5421161fba48c9ddbf55f7301 .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#isDefinedAdjacentSurfaceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
-_:B7a27b6c05f9c802eb006f3c7ef2b9318 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasElement> .
-<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B7a27b6c05f9c802eb006f3c7ef2b9318 .
+_:B894f09085afa6b834594d46ba5e291e8 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasElement> .
+<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B894f09085afa6b834594d46ba5e291e8 .

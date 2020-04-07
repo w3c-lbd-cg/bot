@@ -13,6 +13,10 @@
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Floor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Zone">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
@@ -42,8 +46,8 @@
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the BRICK ontology.</dcterms:description>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/BRICKAlignment/1.0.0"/>
     <dcterms:title xml:lang="en">BRICK to BOT alignment.</dcterms:title>
-    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <dcterms:creator rdf:nodeID="A0"/>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
@@ -62,10 +66,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Point">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Room">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>

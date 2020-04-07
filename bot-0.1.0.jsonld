@@ -1,6 +1,12 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "_:b11",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
@@ -17,12 +23,6 @@
       "@id" : "foaf:Person"
     },
     "name" : "Pieter Pauwels"
-  }, {
-    "@id" : "_:b4",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Mads Holten Rasmussen"
   }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"
@@ -68,7 +68,7 @@
     "Language" : "en",
     "dce:description" : "A simple ontology describing the topology of a building",
     "contributor" : "_:b2",
-    "creator" : [ "_:b3", "_:b4" ],
+    "creator" : [ "_:b0", "_:b3" ],
     "description" : {
       "@language" : "en",
       "@value" : "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"
@@ -255,9 +255,9 @@
     } ],
     "range" : "bot:Element",
     "propertyChainAxiom" : [ {
-      "@list" : [ "bot:hasStorey", "bot:hasElement" ]
-    }, {
       "@list" : [ "bot:hasSpace", "bot:containsElement" ]
+    }, {
+      "@list" : [ "bot:hasStorey", "bot:hasElement" ]
     }, {
       "@list" : [ "bot:hasSpace", "bot:adjacentElement" ]
     } ]
@@ -313,24 +313,27 @@
     "range" : "bot:Storey"
   } ],
   "@context" : {
-    "members" : {
-      "@id" : "http://www.w3.org/2002/07/owl#members",
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
       "@type" : "@id"
     },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
     },
-    "Language" : {
-      "@id" : "http://purl.org/dc/elements/1.1/Language"
-    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
+    },
+    "Language" : {
+      "@id" : "http://purl.org/dc/elements/1.1/Language"
     },
     "issued" : {
       "@id" : "http://purl.org/dc/terms/issued",
@@ -338,6 +341,10 @@
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
       "@type" : "@id"
     },
     "preferredNamespacePrefix" : {
@@ -366,28 +373,21 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
-    },
-    "propertyChainAxiom" : {
-      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
       "@type" : "@id"
     },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
     },
+    "propertyChainAxiom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
+      "@type" : "@id"
+    },
     "domain" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "dbo" : "http://dbpedia.org/ontology/",
     "owl" : "http://www.w3.org/2002/07/owl#",

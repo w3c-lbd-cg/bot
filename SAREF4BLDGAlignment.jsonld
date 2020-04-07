@@ -60,8 +60,8 @@
     "@id" : "https://w3id.org/bot/SAREFG4BLDGAlignment",
     "@type" : "owl:Ontology",
     "modified" : "2019-03-02",
-    "contributor" : [ "http://www.maxime-lefrancois.info/me#", "_:b2", "_:b0" ],
-    "creator" : [ "_:b1", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "contributor" : [ "_:b0", "http://www.maxime-lefrancois.info/me#", "_:b2" ],
+    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b1" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."
@@ -103,23 +103,19 @@
     "subPropertyOf" : "bot:containsZone"
   } ],
   "@context" : {
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
       "@type" : "@id"
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
-    },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
-      "@type" : "@id"
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
@@ -131,6 +127,10 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",

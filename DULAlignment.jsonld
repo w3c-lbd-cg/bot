@@ -112,6 +112,9 @@
     "versionInfo" : "v0.1.0"
   } ],
   "@context" : {
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
@@ -126,10 +129,6 @@
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
-      "@type" : "@id"
-    },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
       "@type" : "@id"
     },
     "versionInfo" : {
@@ -157,6 +156,10 @@
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
       "@type" : "@id"
     },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
@@ -164,9 +167,6 @@
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/DULAlignment#",
     "owl" : "http://www.w3.org/2002/07/owl#",

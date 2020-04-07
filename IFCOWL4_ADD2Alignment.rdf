@@ -10,6 +10,10 @@
     xmlns:bot="https://w3id.org/bot#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcBuilding">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
@@ -25,20 +29,16 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/IFC4_ADD2Alignment">
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <owl:imports rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2"/>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-    <dcterms:creator rdf:nodeID="A0"/>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
+    <dcterms:creator rdf:nodeID="A0"/>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0"/>
     <dcterms:title xml:lang="en">ifcOWL4_Add2 to BOT alignment.</dcterms:title>

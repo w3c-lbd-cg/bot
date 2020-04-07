@@ -26,6 +26,7 @@
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the DERI Rooms ontology.</dcterms:description>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/DERIROOMSAlignment/0.1.0"/>
+    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
@@ -33,7 +34,6 @@
     <owl:imports rdf:resource="https://w3id.org/bot"/>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/DERIROOMSAlignment/1.0.0"/>
     <dcterms:title xml:lang="en">DERIROOMS to BOT alignment.</dcterms:title>
-    <dcterms:creator rdf:nodeID="A0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
@@ -66,12 +66,12 @@
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#contains">
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A0">
     <foaf:name>Georg Ferdinand Schneider</foaf:name>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.deri.ie/rooms#contains">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Site">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Site"/>

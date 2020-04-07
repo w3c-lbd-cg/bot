@@ -20,7 +20,7 @@
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#PhysicalPlace"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Maxime Lefrançois</foaf:name>
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#intersectsZone">
@@ -44,10 +44,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Storey">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -79,6 +75,10 @@
   <rdf:Description rdf:about="https://w3id.org/bot#Space">
     <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#DesignedArtifact"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <foaf:name>Maxime Lefrançois</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#adjacentElement">
     <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary"/>
   </rdf:Description>
@@ -87,6 +87,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/DUL2Alignment">
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:contributor rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <owl:versionInfo>v0.1.0</owl:versionInfo>
@@ -98,10 +99,9 @@
     <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl"/>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/DULAlignment/0.1.0"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-08</dcterms:modified>
-    <dcterms:creator rdf:nodeID="A0"/>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
-    <dcterms:contributor rdf:nodeID="A1"/>
     <dcterms:contributor rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <dcterms:creator rdf:nodeID="A1"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#adjacentZone">
     <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary"/>
