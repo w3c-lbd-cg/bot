@@ -39,11 +39,11 @@ foaf:name a owl:DatatypeProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
-    dcterms:modified    "2019-07-23T12:00:00"^^xsd:dateTime ;
+    dcterms:modified    "2020-04-21T09:00:00"^^xsd:dateTime ;
     dcterms:issued    "2018-06-21T12:00:00"^^xsd:dateTime ;
-    owl:versionInfo    "0.3.1" ;
-    owl:versionIRI <https://w3id.org/bot/0.3.1> ;
-    owl:priorVersion <https://w3id.org/bot/0.3.0> ;
+    owl:versionInfo    "0.3.2" ;
+    owl:versionIRI <https://w3id.org/bot/0.3.2> ;
+    owl:priorVersion <https://w3id.org/bot/0.3.1> ;
   rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
     dcterms:title    "The Building Topology Ontology (BOT)"@en ;
     dcterms:description    """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
@@ -62,11 +62,15 @@ The initial version 0.1.0 of the ontology was documented in:
 Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"""@en ;
   dcterms:creator "Mads Holten Rasmussen" ;
   dcterms:creator "Pieter Pauwels" ;
-	dcterms:creator "Maxime Lefrançois" ;
-	dcterms:creator "Georg Ferdinand Schneider" ;
+  dcterms:creator "Maxime Lefrançois" ;
+  dcterms:creator "Georg Ferdinand Schneider" ;
   dcterms:creator <http://maxime-lefrancois.info/me#> ;
-	dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
+  dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
+  dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
   dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
+  dcterms:contributor "Mathias Bonduel" , "Ville Kukkonen" , "Lars Wikström" , "Hervé" , "Ana Roxin" , 
+		"Gonçal Costa", "Walter Terkaj", "Rui de Klerk", "Rui Ma", "Richard Pinka", "Jyrki Oraskari" , 
+		"Edison Chung", "Maria Poveda", "Ali Kücükavci" , "Sjoerd Rongen" ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix    "bot" ;
     vann:preferredNamespaceUri <https://w3id.org/bot#> .
@@ -77,27 +81,13 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 <https://orcid.org/0000-0002-2033-859X> a foaf:Person ; 
   foaf:name    "Georg Ferdinand Schneider" .
 
+<https://orcid.org/0000-0002-6519-7057> a foaf:Person ; 
+  foaf:name    "Mads Holten Rasmussen" .
 
 ## Zones
 
 
 bot:Zone a owl:Class ;
-  rdfs:label
-    "Zone"@en ,
-    "Zona"@es ,
-    "Zone"@nl ,
-    "Zone"@da ,
-    "Zon"@sv ,
-	"Zone"@de ,
-    "Zone"@fr ;
-  rdfs:comment
-    "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent; Sub-classes of bot:Zone include bot:Site, bot:Building, bot:Storey, or bot:Space. An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to other bot:Zone instances. Finally, a bot:Zone can instantiate two relations to bot:Element, which are either contained in (bot:containsElement), or adjacent to it (bot:adjacentElement)."@en ,
-	"PLEASE UPDATE Ein abstraktes Konzept für eine räumliche, dreidimensionale Einteilung eines Raums. Spezialisierungen von bot:Zone sind bot:Site, bot:Building, bot:Storey oder bot:Space. Eine Instanz von bot:Zone kannn andere Instanzen von bot:Zone enthalten. So ist es möglich Instanzen von bot:Zone zu gruppieren, oder zu unterteilen. Eine Instanz einer bot:Zone kann an eine andere Instanz von bot:Zone angrenzen. Es bestehen zwei Möglichkeiten Instanzen von bot:Zone und bot:Element in Beziehung zu setzen. Entweder ein Element ist in einer Zone enthalten (bot:containsElement) oder es grenzt an eine andere Zone an (bot:adjacentElement)."@de ,
-    "PLEASE UPDATE Una área o espacio de tierra que tiene una característica, propósito o uso particular, o que está sujeto a restricciones particulares. Un bot:Zone puede contener otros bot:Zones definidos mediante la relación bot:containsZone, y puede estar conectado con otros bot:Zones mediante la relación bot:adjacentZone."@es ,
-    "PLEASE UPDATE En rummelig 3D-inddeling. Underklasser af bot:Zone inkluderer bot:Site, bot:Building, bot:Storey eller bot:Space. En bot:Zone forekomst kan indeholde andre bot:Zone forekomster, hvilket gør det muligt at gruppere eller underinddele zoner. En forekomst af bot:Zone kan være tilstødende til andre bot:Zone forekomster. Endelig kan en bot:Zone instantiere to relationer til et bot:Element, hvilke er enten indeholdt i (bot:containsElement) eller tilstødende dertil (bot:adjacentElement)."@da ,
-    "PLEASE UPDATE En area eller ett stycke land som har en specifik karaktäristik, syfte, användning eller är förmål för specifika restriktioner. En bot:Zone kan innehålla andra bot:Zoner genom relationen bot:containsZone, och den kan kopplas till andra bot:Zoner genom relationen bot:adjacentZone."@sv ,
-    "PLEASE UPDATE Een gebied of stuk land dat een dat een bepaalde karakteristiek of bestemming heeft, ergens voor gebruikt wordt of waar bepaalde restricties gelden. Een bot:Zone kan andere bot:Zones bevatten gedefinieerd door de relatie bot:containsZone, en kan verbonden zijn met andere bot:Zones gedefinieerd door de relatie bot:adjacentZone."@nl ,
-    "Une partie du monde physique ou virtuel qui est inhéremment à la fois localisé dans ce monde et a une étendue spatiale 3D; les sous-classes de bot:Zone incluent bot:Site, bot:Building, bot:Storey, ou bot:Space. Une instance de bot:Zone peut contenir d'autres instances de bot:Zone, ce qui permet de grouper ou sub-diviser les zones. Une instance de bot:Zone peut être adjacente à d'autres bot:Zone. Enfin, une bot:Zone peut contenir (bot:containsElement) our être adjacent (bot:adjacentElement) à une instance de bot:Element."@fr ;
   owl:disjointWith
     bot:Element ,
     bot:Interface ;
@@ -105,22 +95,6 @@ bot:Zone a owl:Class ;
   rdfs:isDefinedBy bot: .
 
   bot:Site a owl:Class ;
-    rdfs:label
-      "Site"@en ,
-      "Sitio"@es ,
-      "Grund"@da ,
-      "Plats"@sv ,
-      "Terrein"@nl ,
-      "Grundstück"@de ,
-      "Site"@fr ;
-    rdfs:comment
-      "Area containing one or more buildings."@en ,
-      "Área que contiene uno o más edificios."@es ,
-      "Område som indeholder en eller flere bygninger."@da ,
-      "En plats som rymmer en eller flera byggnader."@sv ,
-      "Omgeving die één of meerdere gebouwen bevat."@nl ,
-      "Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ,
-      "Un site comprend un ou plusieurs bâtiments"@fr ;
     rdfs:subClassOf bot:Zone ;
     owl:disjointWith
       bot:Building ,
@@ -131,23 +105,6 @@ bot:Zone a owl:Class ;
 
 
   bot:Building a owl:Class ;
-    rdfs:label
-      "Building"@en ,
-      "Edificio"@es ,
-      "Gebäude"@de ,
-      "Edificio"@it ,
-      "Bygning"@da ,
-      "Byggnad"@sv ,
-      "Gebouw"@nl ,
-      "Bâtiment"@fr ;
-    rdfs:comment
-      "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
-      "Una unidad de entorno construido intependiente con una estructura espacial característica, para proporcionar al menos una función o actividad de usuario"@es ,
-      "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
-      "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ,
-      "En oberoende enhet i den byggda miljön med en karaktäristisk rumslig struktur som stödjer minst en funktion eller användaraktivitet.  [ISO 12006-2:2013]"@sv ,
-      "Een onafhankelijke entiteit met een ruimtelijke structuur die onderdeel is van de gebouwde omgeving, en bedoeld is om minimaal één functie of gebruikersactiviteit te bedienen [ISO 12006-2:2013]."@nl ,
-      "Une unité indépendante de l'environnement bâti avec une structure spatiale caractéristique, conçue pour répondre à une fonction ou une activité de l'utilisateur [ISO 12006-2:2013]"@fr ;
     rdfs:subClassOf bot:Zone ;
     owl:disjointWith
       bot:Site ,
@@ -157,24 +114,6 @@ bot:Zone a owl:Class ;
 	rdfs:isDefinedBy bot: .
 
   bot:Storey a owl:Class ;
-    rdfs:label
-      "Storey"@en ,
-      "Piso"@es ,
-      "Geschoss (Architektur)"@de ,
-      "Piano di edificio"@it ,
-      "Verdieping"@nl,
-      "Etage"@da ,
-      "Våning"@sv ,
-      "Etage"@fr ;
-    rdfs:comment
-      "A level part of a building"@en ,
-      "Un nivel de un edificio"@es ,
-      "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
-      "Een vlak gedeelte van een gebouw"@nl,
-      "Et plan i en bygning"@da ,
-      "Ett plan i en byggnad"@sv ,
-      "Een horizontaal gedeelte van een gebouw"@nl ,
-      "Correspond à un niveau du bâtiment"@fr ;
     rdfs:subClassOf bot:Zone ;
     owl:disjointWith
       bot:Site ,
@@ -184,24 +123,7 @@ bot:Zone a owl:Class ;
 	rdfs:isDefinedBy bot: .
 
   bot:Space a owl:Class ;
-    rdfs:label
-      "Space"@en ,
-      "Espacio"@es ,
-      "Raum"@de ,
-      "Spazio"@it ,
-      "Ruimte"@nl,
-      "Utrymme"@sv ,
-      "Rum"@da ,
-      "Pièce"@fr ;
-    rdfs:comment
-      "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in."@en ,
-      "PLEASE UPDATE Una extensión tridimensional limitada y definida fisica o teóricamente"@es ,
-      "PLEASE UPDATE Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ,
-      "PLEASE UPDATE En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da ,
-      "PLEASE UPDATE En avgränsad tredimensionell utsträckning som definierats fysiskt eller fiktivt [ISO 12006-2 (DIS 2013), 3.4.3]"@sv ,
-      "PLEASE UPDATE Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl ,
-      "Une partie du monde physique ou virtuel dont l'extension 3D est limitée réellement ou théoriquement, et apporte des fonctions aux zones dans laquelle elle est contenue."@fr ;
-      rdfs:subClassOf bot:Zone ;
+    rdfs:subClassOf bot:Zone ;
       owl:disjointWith
         bot:Site ,
         bot:Building ,
@@ -211,21 +133,6 @@ bot:Zone a owl:Class ;
 
 
 bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
-  rdfs:label
-    "adjacent zone"@en ,
-    "zona adyacente"@es ,
-    "aangrenzende zone"@nl ,
-    "tilstødende zone"@da ,
-    "angränsande zon"@sv ,
-	"angrenzende Zone"@de ,
-    "zone adjacente"@fr ;
-  rdfs:comment
-    "Relationship between two zones that share a common interface, but do not intersect."@en ,
-    "Relatie tussen twee zones die een interface delen"@nl ,
-    "Relation mellem to zoner, der deler en fælles grænseflade."@da ,
-    "Relation mellan två zoner som delar ett gemensamt gränssnitt."@sv ,
-	"Beziehung zwischen zwei Zonen die eine gemeinsame Grenzfläche haben, aber sich nicht schneiden."@de ,
-    "Relation entre deux zones partageant une interface commune, sans intersection"@fr ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone ;
   schema:domainIncludes
@@ -245,12 +152,6 @@ bot:adjacentZone a owl:ObjectProperty , owl:SymmetricProperty ;
 
 
 bot:intersectsZone a owl:ObjectProperty , owl:SymmetricProperty ;
-  rdfs:label
-    "intersects zone"@en ,
-    "sich schneidende Zone"@de ;
-  rdfs:comment
-    "Relationship between two zones whose 3D extent intersect. For example, a stairwell intersects different storeys."@en ,
-    "Beziehung zwischen zwei Zonen, die sich schneiden. Zum Beispiel schneidet eine Treppe verschiedene Geschosse."@de ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone ;
   schema:domainIncludes
@@ -270,21 +171,6 @@ bot:intersectsZone a owl:ObjectProperty , owl:SymmetricProperty ;
 
 
 bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
-  rdfs:label
-    "contains zone"@en ,
-    "contiene zona"@es ,
-    "bevat zone"@nl ,
-    "indeholder zone"@da ,
-    "innehåller zon"@sv ,
-	"enthält Zone"@de ,
-    "contient zone"@fr ;
-  rdfs:comment
-    "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property. This implies that in the previous example a bot:containsZone relationship holds between the space zone and the building zone."@en ,
-	"Beziehung zwischen Zonen, wobei eine die andere enthält. Zum Beispiel kann eine Raumzone in einer Geschossszone enthalten sein, die wiederrum in einer Gebäudezone enthalten ist. bot:containsZone is eine transitive Beziehung, dass heisst zwischen der Raumzone im vorherigen Beispiel und der Gebäudezone besteht auch die Beziehung bot:containsZone."@de ,
-    "Relation til underzoner i en større zone. En rum-zone kan for eksempel være indeholdt i en etage-zone som ydermere er indeholdt i en bygnings-zone. bot:containsZone er en transitiv egenskab, hvilket betyder at rum-zonen i det forrige eksempel også er indeholdt i bygnings-zonen."@da ,
-    "Relation till delzoner i en huvudzon. En rumszon kan till exempel inrymmas i en våningszon som i sin tur inryms i en byggnadszon. bot:containsZone är en transitiv relation vilket i exemplet betyder att rumszonen också inryms i byggnadszonen."@sv ,
-    "Relatie tussen subzones van een hoofd zone. Een ruimtezone kan bijvoorbeeld worden bevat door een verdiepingszone, die wederom bevat wordt door een gebouwzone. bot:containsZone is een transitieve eigenschap, wat betekent dat in het vorige voorbeeld de ruimtezone ook bevat wordt door de gebouwzone."@nl ,
-    "Relation entre les sous-zones composant une zone plus grande. Cette propriété est transitive."@fr ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Zone ;
   schema:domainIncludes
@@ -301,21 +187,6 @@ bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
   rdfs:isDefinedBy bot: .
 
   bot:hasBuilding a owl:ObjectProperty ;
-    rdfs:label
-      "has building"@en ,
-      "tiene edificio"@es ,
-      "heeft gebouw"@nl ,
-      "har bygning"@da ,
-      "har byggnad"@sv ,
-	  "hat Gebäude"@de ,
-      "contient bâtiment"@fr ;
-    rdfs:comment
-      "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ,
-	  "Beziehung zwischen Gebäuden, die in einer Zone enthalten sind. Oft ist hier die rdfs:domain eine Instanz von bot:Site."@de ,
-      "Relatie tot gebouwen die zich op een terrein bevinden"@nl ,
-      "Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site."@da ,
-      "Relation till byggnader som inryms i en zon. Typiska domäner för bot:hasBuilding är förekomster av bot:Site."@sv ,
-      "Relation à définir entre les bâtiments d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Site."@fr ;
     rdfs:subPropertyOf bot:containsZone ;
     rdfs:domain bot:Zone ;
     schema:domainIncludes bot:Site ;
@@ -324,20 +195,6 @@ bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
 	rdfs:isDefinedBy bot: .
 
   bot:hasStorey a owl:ObjectProperty ;
-    rdfs:label
-      "has storey"@en ,
-      "tiene piso"@es ,
-      "heeft verdieping"@nl ,
-      "har etage"@da ,
-      "har våning"@sv ,
-	  "hat Geschoss"@de ,
-      "a étage"@fr ;
-    rdfs:comment
-      "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ,
-	  "Beziehung zwischen Geschossen, die in einer Zone enthalten sind. Oft ist die rdfs:domain eine Instanz von bot:Building."@de ,
-      "Relatie tot de verdiepingen die zich in een zone bevinden. De typische domeinen van bot:hasStorey zijn instanties van bot:Building"@nl ,
-      "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da ,
-      "Relation à définir entre les étages d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Building."@fr ;
     rdfs:subPropertyOf bot:containsZone ;
     rdfs:domain bot:Zone ;
     schema:domainIncludes bot:Building ;
@@ -346,22 +203,6 @@ bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
     rdfs:isDefinedBy bot: .
     
   bot:hasSpace a owl:ObjectProperty ;
-    rdfs:label
-      "has space"@en ,
-      "tiene espacio"@es ,
-      "hat Raum"@de ,
-      "heeft ruimte"@nl ,
-      "har rum"@da ,
-      "har rum"@sv ,
-      "contient pièce"@fr ;
-    rdfs:comment
-      "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ,
-      "Relación a espacios contenidos en una zona. Los dominios típicos de bot:hasSPace son instancias de bot:Storey y bot:Building."@es ,
-      "Relatie tot ruimtes die zich in een zone bevinden. De typische domeinen van bot:hasSpace zijn instanties van bot:Storey en bot:Building."@nl ,
-      "Beziehung von Räumen, die sich in einer Zone befinden. Oft ist die rdfs:domain eine Instanz von bot:Storey oder bot:Building."@de ,
-      "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da ,
-      "Relation till rum som inryms i en zon. Typiska domäner för bot:hasSpace är förekomster av bot:Storey och bot:Building."@sv ,
-      "Relation à définir entre les pièces d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Building."@fr ;
     rdfs:subPropertyOf bot:containsZone ;
     rdfs:domain bot:Zone ;
     schema:domainIncludes bot:Storey ;
@@ -375,44 +216,11 @@ bot:containsZone a owl:ObjectProperty , owl:TransitiveProperty ;
 
 
 bot:Element a owl:Class ;
-  rdfs:label
-    "Building element"@en ,
-    "Elemento arquitectónico"@es ,
-    "Bauteil (Bauwesen)"@de ,
-    "Elemento architettonico"@it ,
-    "Bygningsdel"@da ,
-    "Byggdel"@sv ,
-    "Gebouwelement"@nl ,
-    "Elément d'un bâtiment"@fr ;
-  rdfs:comment
-    "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ,
-    "Componente de una construcción con una función técnica, forma o posición característica"@es ,
-    "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ,
-    "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da ,
-    "Beståndsdel av ett byggnadsverk med en karaktäristisk teknisk funktion, form eller position [12006-2, 3.4.7]"@sv ,
-    "Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl ,
-    "Constituant d'un bâtiment remplissant une fonction technique spécifique ou ayant une forme ou une position spécifiques"@fr ;
   owl:disjointWith bot:Zone , bot:Interface ; 
   vs:term_status "stable" ;
   rdfs:isDefinedBy bot: .
     
 bot:hasSubElement a owl:ObjectProperty ;
-  rdfs:label
-    "has sub-element"@en ,
-    "alberga sub elemento"@es ,
-    "hoster sub element"@nl ,
-    "hoster sub element"@da ,
-    "värd för sub element"@sv ,
-    "heeft sub element"@nl ,
-	"hat Unterbauteil"@de ,
-    "a sous-élément"@fr ;        
-  rdfs:comment
-    "Relation between an element a) and another element b) hosted by element a)"@en ,
-    "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hasSubElement inst:window"@nl ,
-	"Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de ,
-    "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da ,
-    "Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv ,
-    "Relation entre un élément du bâti A et un autre élément du bâti, B, contenu ou abrité dans A"@fr ;
   rdfs:domain bot:Element ;
   rdfs:range bot:Element ;
   vs:term_status "stable" ;
@@ -420,19 +228,6 @@ bot:hasSubElement a owl:ObjectProperty ;
 
  
 bot:hasElement a owl:ObjectProperty ;
-  rdfs:label
-    "has element"@en ,
-    "alberga elemento"@es ,
-    "hoster element"@nl ,
-    "har element"@da ,
-    "värd för element"@sv ,
-    "heeft element"@nl ,
-	"hat Bauteil"@de ,
-    "a élément"@fr ;        
-  rdfs:comment
-    "Links a Zone to an Element that is either contained in or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en ,
-    "Forbinder en Zone til en bygningsdel der enten er indeholdt i eller tilstødende til zonen. Det er ikke hensigten at denne relation angives eksplicit, men at den udledes af dennes underegneskaber. Det vil for eksempel tillade en forespørgsel på alle døre i en bygning givet at disse er enten tilstødende eller indeholdt i rum i bygningen."@da ,
-    "Beziehung zwischen einer Zone und einem Bauteil, dass entweder in der Zone enthalten ist, oder sich mit ihr schneidet. Diese Beziehung sollte nicht explizit benutzt werden, sondern ergibt sich implizit aus den Unterbeziehungen. Es ermöglicht, zum Beispiel, dass mit einer Abfrage alle Türen eines Gebäudes, die sich mit einer Zone schneiden ermittelt werden können."@de ;
   rdfs:domain bot:Zone ;
   rdfs:range bot:Element ;
   owl:propertyChainAxiom ( bot:containsZone bot:hasElement ) ;
@@ -440,22 +235,6 @@ bot:hasElement a owl:ObjectProperty ;
   rdfs:isDefinedBy bot: .
 
   bot:adjacentElement a owl:ObjectProperty ;
-    rdfs:label
-      "adjacent element"@en ,
-      "elemento adyacente"@es ,
-      "aangrenzend element"@nl ,
-      "benachbartes Bauteil"@de ,
-      "tilstødende element"@da ,
-      "angränsande element"@sv ,
-      "élément adjacent"@fr ;
-    rdfs:comment
-      "Relation between a zone and its adjacent building elements, bounding the zone."@en ,
-      "Relación entre una zona y sus elementos arquitectónicos adyacentes, que limitan el espacio físico."@es ,
-      "Beziehung zwischen einer Zone und dessen angrenzenden Bauteilen. Die Bauteile begrenzen die Zone."@de ,
-      "Relatie tussen een zone en zijn aangrenzende gebouwelementen, begrensd door fysieke ruimte."@nl ,
-      "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."@da ,
-      "Relation mellan en zon och dess angränsande byggdelar, som avgränsar det fysiska utrymmet."@sv ,
-      "Relation entre une zone et ses éléments adjacents, délimitant l'espace physique"@fr ;
     rdfs:subPropertyOf bot:hasElement ;
     owl:propertyDisjointWith
       bot:intersectingElement ;
@@ -463,35 +242,12 @@ bot:hasElement a owl:ObjectProperty ;
     rdfs:isDefinedBy bot: .
     
   bot:containsElement a owl:ObjectProperty ;
-    rdfs:label
-      "contains element"@en ,
-      "contiene elemento"@es ,
-      "bevat element"@nl ,
-      "enthält Bauteil"@de ,
-      "indeholder bygningsdel"@da ,
-      "innehåller byggdel"@sv ,
-      "contient élément"@fr ;        
-    rdfs:comment
-      "Relation to a building element contained in a zone."@en ,
-      "Relación a un elemento arquitectónico contenido en una zona."@es ,
-      "Beziehung einer Zone zu einem Bauteil, dass es enthält."@de ,
-      "Relatie tussen zone en een gebouwelement in die zone"@nl ,
-      "Relation til en bygningsdel, som er indeholdt i en zone."@da ,
-      "Relation till en byggdel som inryms i en zon."@sv ,
-      "Relation à définir entre un élément de bâti et la zone le contenant"@fr ;
     rdfs:subPropertyOf bot:hasElement ;
     owl:propertyChainAxiom  ( bot:containsZone bot:containsElement ) ;
     vs:term_status "stable" ;
 	rdfs:isDefinedBy bot: .
 
   bot:intersectingElement a owl:ObjectProperty ;
-    rdfs:label
-      "intersecting element"@en ,
-      "schneidendes Bauteil"@de ,
-      "élément intersectant"@fr ;
-    rdfs:comment
-      "Relation between a Zone and a building Element that intersects it. "@en ,
-      "Beziehung zwischen einer Zone und einem Bauteil, das die Zone schneidet."@de ;
     rdfs:subPropertyOf bot:hasElement ;
     owl:propertyDisjointWith
       bot:adjacentElement ;
@@ -503,40 +259,12 @@ bot:hasElement a owl:ObjectProperty ;
 
 
 bot:Interface a owl:Class ;
-  rdfs:label
-    "Interface"@en ,
-    "Interface"@nl ,
-	"Grenzfläche"@de ,
-    "Grænseflade"@da ,
-    "Gränssnitt"@sv ,
-    "Interface"@fr ;        
-  rdfs:comment
-    "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
-	"Eine Grenzfläche ist die Fläche, an der sich zwei Bauteile, zwei Zonen oder ein Bauteil und eine Zone treffen. Das Konzept kann verwendet werden, um die Beziehung zwischen den Beteiligten zu qualifizieren. Ein Beispiel ist die Qualifizierung der Wärmeaustauschfläche zwischen eine Zone und einer Wand, die mehrere Zonen überdeckt."@de ,
-    "Een interface is een vlak waar twee gebouwelementen, twee zones of een gebouw elementen en een zone elkaar raken. Het kan worden gebruikt om de verbinding tussen de twee te kwalificeren. Een use case kan de kwalificatie van het warmteoverbrengingsoppervlak tussen een zone en een muur over meerdere zones zijn."@nl ,
-    "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da ,
-    "Ett gränssnitt är den yta där två byggdelar, två zoner eller en b yggdel och en zon möts. Det kan användas för att beskriva kopplingen mellan de två. Ett användningsfall kan vara att kvalificera värmetransmissionsarean mellan en zon och en vägg som täcker flera zoner."@sv ,
-    "Une interface correspond à la surface où se rencontrent a) deux éléments d'un bâtiment, b) deux zones ou  encore c) un élément d'un bâtiment avec une zone. Un cas d'utilisation type est constituée par la qualification de la zone de transmission de chaleur entre une zone et un mur couvrant plusieurs zones."@fr ;
   owl:disjointWith bot:Zone, bot:Element ;
   vs:term_status "stable" ;
   rdfs:isDefinedBy bot: .
 
 
 bot:interfaceOf a owl:ObjectProperty ;
-  rdfs:label
-    "interface of"@en ,
-	"Grenzfläche von"@de ,
-    "interface van"@nl ,
-    "grænseflade for"@da ,
-    "gränssnitt för"@sv ,
-    "interface de"@fr ;
-  rdfs:comment
-    "Relationship between an interface and an adjacent zone or element."@en ,
-	"Beziehung zwischen einer Grenzfläche und einer angrenzenden Zone oder einem Bauteil."@de ,
-    "Relatie tussen een interface en een aanliggende zone of element."@nl ,
-    "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."@da ,
-    "Relation mellan ett gränssnitt och en angränsande zon eller byggdel."@sv ,
-    "Relation à définir entre une interface et une zone ou un élément adjacents."@fr ;
   rdfs:domain bot:Interface ;
   vs:term_status "stable" ;
   rdfs:isDefinedBy bot: .
@@ -546,27 +274,12 @@ bot:interfaceOf a owl:ObjectProperty ;
 ## 3DModel
 
 bot:hasZeroPoint a owl:ObjectProperty ;
-  rdfs:label
-    "has zero point"@en ,
-	"hat Nullpunkt"@de ,
-    "har nulpunkt"@da ;
-  rdfs:comment
-  "Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology."@en ,
-    "Verbindet eine Instanz von bot:Site mit einer Instanz, die den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert. Dies kann eine Instanz eines wgs84:Point sein. Die Definition von GIS und Geometrie ist nicht Bestandteil von BOT. Die Nutzung dieses Properties ist potenziell zweideutig und es besteht die Möglichkeit das es in Zukunft überarbeitet oder entfernt wird."@de ;
   rdfs:domain bot:Site ;
   vs:term_status "unstable" ;
   rdfs:seeAlso <https://github.com/w3c-lbd-cg/bot/issues/41> ;
   rdfs:isDefinedBy bot: .
 
 bot:hasSimple3DModel a owl:DatatypeProperty ;
-  rdfs:label
-    "has Simple 3D Model"@en ,
-	"hat einfaches 3D Modell"@de ,
-	"har simpel 3D-model"@da ;
-  rdfs:comment
-    "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ,
-    "Verbindet jede bot:Zone oder bot:Element zu einem 3D Model, dass als Literal codiert ist."@de ,
-	"Forbinder enhver instans af bot:Zone eller bot:Element med en 3D-model beskrevet som en literal."@da ;
   schema:domainIncludes
     bot:Element,
     bot:Zone ;
@@ -574,17 +287,805 @@ bot:hasSimple3DModel a owl:DatatypeProperty ;
   rdfs:isDefinedBy bot: .
 
 bot:has3DModel a owl:ObjectProperty ;
-  rdfs:label
-    "has 3D Model"@en ,
-    "hat 3D Modell"@de ,
-	"har 3D-model"@da ;
-  rdfs:comment
-    "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ,
-    "Verbindet eine Instanz von bot:Zone oder bot:Element zu einer IRI, die das zugehörige 3D Modell identifiziert. Das Modell kann in einem spezifischen RDF Vokabular kodiert sein. Andernfalls kann die IRI auch dereferenzierbar sein."@de ,
-	"Forbinder enhver instans af bot:Zone eller bot:Element med en IRI som identificerer dennes 3D-model. Denne 3D-model kan så beskrives ved brug af et dedikeret RDF-vokabular. Alternativt kan 3D-modellens IRI være dereferencerbar, sådan at der modtages en repræsentation af 3D-modellen i et eksisterende dataformat for 3D-modeller når IRIen slås op."@da ;
   schema:domainIncludes
     bot:Element,
     bot:Zone ;
   vs:term_status "unstable" ;
   rdfs:isDefinedBy bot: .
 
+
+# LABELS (Copied from https://docs.google.com/spreadsheets/d/1J5mEyblGU0M57XNpwQWxHbGlilRMzmCEqoU5FmOHILE/edit#gid=444808794 2020-04-21)
+
+bot:Zone rdfs:label
+        "Zone"@en ,
+        "Zone"@nl ,
+        "Zone"@de ,
+        "Zona"@es ,
+        "Vyöhyke"@fi ,
+        "Zon"@sv ,
+        "Zone"@da ,
+        "PLEASE ADD"@ca ,
+        "Zone"@fr ,
+        "PLEASE ADD"@no ,
+        "Bölge"@tr ,
+        "Zona"@it ,
+        "Zona"@pt ,
+        "区域"@cn ,
+        "Zóna"@cz ,
+        "Zóna"@sk .
+
+bot:Site rdfs:label
+        "Site"@en ,
+        "Terrein"@nl ,
+        "Grundstück"@de ,
+        "Sitio"@es ,
+        "Tontti"@fi ,
+        "Plats"@sv ,
+        "Grund"@da ,
+        "PLEASE ADD"@ca ,
+        "Site"@fr ,
+        "PLEASE ADD"@no ,
+        "Arsa"@tr ,
+        "Sito"@it ,
+        "地点"@cn ,
+        "Staveniště, stavební pozemek, stavební plocha, zastavěná plocha."@cz ,
+        "Stavenisko, stavebný pozemok, stavebná plocha, zastavaná plocha."@sk .
+
+bot:Building rdfs:label
+        "Building"@en ,
+        "Gebouw"@nl ,
+        "Gebäude"@de ,
+        "Edificio"@es ,
+        "Rakennus"@fi ,
+        "Byggnad"@sv ,
+        "Bygning"@da ,
+        "PLEASE ADD"@ca ,
+        "Bâtiment"@fr ,
+        "PLEASE ADD"@no ,
+        "Bina"@tr ,
+        "Edificio"@it ,
+        "Edifício"@pt ,
+        "建筑"@cn ,
+        "Budova"@cz ,
+        "Budova"@sk .
+
+bot:Storey rdfs:label
+        "Storey"@en ,
+        "Verdieping"@nl ,
+        "Geschoss (Architektur)"@de ,
+        "Piso"@es ,
+        "Kerros"@fi ,
+        "Våning"@sv ,
+        "Etage"@da ,
+        "PLEASE ADD"@ca ,
+        "Étage"@fr ,
+        "PLEASE ADD"@no ,
+        "Kat"@tr ,
+        "Piano di edificio"@it ,
+        "Piso"@pt ,
+        "楼层"@cn ,
+        "Podlaží"@cz ,
+        "Podlažie"@sk .
+
+bot:Space rdfs:label
+        "Space"@en ,
+        "Ruimte"@nl ,
+        "Raum"@de ,
+        "Espacio"@es ,
+        "Tila"@fi ,
+        "Utrymme"@sv ,
+        "Rum"@da ,
+        "PLEASE ADD"@ca ,
+        "Pièce"@fr ,
+        "PLEASE ADD"@no ,
+        "Oda"@tr ,
+        "Spazio"@it ,
+        "Espaço"@pt ,
+        "空间"@cn ,
+        "Prostor"@cz ,
+        "Priestor"@sk .
+
+bot:Element rdfs:label
+        "Building element"@en ,
+        "Gebouwelement"@nl ,
+        "Bauteil (Bauwesen)"@de ,
+        "Elemento arquitectónico"@es ,
+        "Elementti"@fi ,
+        "Byggdel"@sv ,
+        "Bygningsdel"@da ,
+        "PLEASE ADD"@ca ,
+        "Élément d'un bâtiment"@fr ,
+        "PLEASE ADD"@no ,
+        "Bina elemanı"@tr ,
+        "Elemento architettonico"@it ,
+        "构件"@cn ,
+        "Stavební prvek"@cz ,
+        "Stavebný prvok"@sk .
+
+bot:Interface rdfs:label
+        "Interface"@en ,
+        "Interface"@nl ,
+        "Grenzfläche"@de ,
+        "PLEASE ADD"@es ,
+        "Rajapinta"@fi ,
+        "Gränssnitt"@sv ,
+        "Grænseflade"@da ,
+        "PLEASE ADD"@ca ,
+        "Interface"@fr ,
+        "PLEASE ADD"@no ,
+        "Arayüzey"@tr ,
+        "Interfaccia"@it ,
+        "Interface"@pt ,
+        "界面"@cn ,
+        "Rozhraní"@cz ,
+        "Rozhranie\n"@sk .
+
+bot:intersectsZone rdfs:label
+        "intersects zone"@en ,
+        "doorsnijdende zone"@nl ,
+        "sich schneidende Zone"@de ,
+        "PLEASE ADD"@es ,
+        "leikkaa vyöhykettä"@fi ,
+        "PLEASE ADD"@sv ,
+        "PLEASE ADD"@da ,
+        "PLEASE ADD"@ca ,
+        "intersecte zone"@fr ,
+        "PLEASE ADD"@no ,
+        "Bölge ile temas"@tr ,
+        "interseca zona"@it ,
+        "intersecta zona"@pt ,
+        "相交区域"@cn ,
+        "protíná zónu"@cz ,
+        "pretína zónu"@sk .
+
+bot:adjacentZone rdfs:label
+        "adjacent zone"@en ,
+        "aangrenzende zone"@nl ,
+        "angrenzende Zone"@de ,
+        "zona adyacente"@es ,
+        "viereinen vyöhyke"@fi ,
+        "angränsande zon"@sv ,
+        "tilstødende zone"@da ,
+        "PLEASE ADD"@ca ,
+        "zone adjacente"@fr ,
+        "PLEASE ADD"@no ,
+        "Bitisik bölge"@tr ,
+        "zona adiacente"@it ,
+        "zona adjacente"@pt ,
+        "相邻区域"@cn ,
+        "přilehlá zóna"@cz ,
+        "priľahlá zóna"@sk .
+
+bot:containsZone rdfs:label
+        "contains zone"@en ,
+        "bevat zone"@nl ,
+        "enthält Zone"@de ,
+        "contiene zona"@es ,
+        "sisältää vyöhykkeen"@fi ,
+        "innehåller zon"@sv ,
+        "indeholder zone"@da ,
+        "PLEASE ADD"@ca ,
+        "contient zone"@fr ,
+        "PLEASE ADD"@no ,
+        "Bölge icerir"@tr ,
+        "contiene zona"@it ,
+        "contém zona"@pt ,
+        "包含区域"@cn ,
+        "obsahuje zónu"@cz ,
+        "obsahuje zónu"@sk .
+
+bot:hasBuilding rdfs:label
+        "has building"@en ,
+        "heeft gebouw"@nl ,
+        "hat Gebäude"@de ,
+        "tiene edificio"@es ,
+        "omaa rakennuksen"@fi ,
+        "har byggnad"@sv ,
+        "har bygning"@da ,
+        "PLEASE ADD"@ca ,
+        "contient bâtiment"@fr ,
+        "PLEASE ADD"@no ,
+        "Binası var"@tr ,
+        "ha edificio"@it ,
+        "tem edifício"@pt ,
+        "包含建筑"@cn ,
+        "má budovu"@cz ,
+        "má budovu"@sk .
+
+bot:hasStorey rdfs:label
+        "has storey"@en ,
+        "heeft verdieping"@nl ,
+        "hat Geschoss"@de ,
+        "tiene piso"@es ,
+        "omaa kerroksen"@fi ,
+        "har våning"@sv ,
+        "har etage"@da ,
+        "PLEASE ADD"@ca ,
+        "a étage"@fr ,
+        "PLEASE ADD"@no ,
+        "Katı var"@tr ,
+        "ha piano"@it ,
+        "tem piso"@pt ,
+        "包含楼层"@cn ,
+        "má podlaží"@cz ,
+        "má podlažie"@sk .
+
+bot:hasSpace rdfs:label
+        "has space"@en ,
+        "heeft ruimte"@nl ,
+        "hat Raum"@de ,
+        "tiene espacio"@es ,
+        "omaa tilan"@fi ,
+        "har rum"@sv ,
+        "har rum"@da ,
+        "PLEASE ADD"@ca ,
+        "contient pièce"@fr ,
+        "PLEASE ADD"@no ,
+        "Odası var"@tr ,
+        "ha spazio"@it ,
+        "tem espaço"@pt ,
+        "包含空间"@cn ,
+        "má prostor"@cz ,
+        "má priestor"@sk .
+
+bot:hasSubElement rdfs:label
+        "has sub-element"@en ,
+        "heeft subelement"@nl ,
+        "hat Unterbauteil"@de ,
+        "alberga sub elemento"@es ,
+        "omaa osaelementin"@fi ,
+        "värd för sub element"@sv ,
+        "har underbygningsdel"@da ,
+        "PLEASE ADD"@ca ,
+        "a sous-élément"@fr ,
+        "PLEASE ADD"@no ,
+        "Alt elmanı var"@tr ,
+        "ha sotto-elemento"@it ,
+        "tem sub elemento"@pt ,
+        "包含子构件"@cn ,
+        "má součást"@cz ,
+        "má súčasť"@sk .
+
+bot:hasElement rdfs:label
+        "has element"@en ,
+        "heeft element"@nl ,
+        "hat Bauteil"@de ,
+        "alberga elemento"@es ,
+        "omaa elementin"@fi ,
+        "värd för element"@sv ,
+        "har element"@da ,
+        "PLEASE ADD"@ca ,
+        "a élément"@fr ,
+        "PLEASE ADD"@no ,
+        "Elemanı var"@tr ,
+        "ha elemento"@it ,
+        "tem elemento"@pt ,
+        "含构件"@cn ,
+        "má element"@cz ,
+        "má element"@sk .
+
+bot:adjacentElement rdfs:label
+        "adjacent element"@en ,
+        "aangrenzend element"@nl ,
+        "benachbartes Bauteil"@de ,
+        "elemento adyacente"@es ,
+        "viereinen elementti"@fi ,
+        "angränsande element"@sv ,
+        "tilstødende element"@da ,
+        "PLEASE ADD"@ca ,
+        "élément adjacent"@fr ,
+        "PLEASE ADD"@no ,
+        "Bitisik eleman"@tr ,
+        "elemento adiacente"@it ,
+        "elemento adjacente"@pt ,
+        "相邻构件"@cn ,
+        "přilehlý element-prvek"@cz ,
+        "priľahlý element-prvok"@sk .
+
+bot:containsElement rdfs:label
+        "contains element"@en ,
+        "bevat element"@nl ,
+        "enthält Bauteil"@de ,
+        "contiene elemento"@es ,
+        "sisältää elementin"@fi ,
+        "innehåller byggdel"@sv ,
+        "indeholder bygningsdel"@da ,
+        "PLEASE ADD"@ca ,
+        "contient élément"@fr ,
+        "PLEASE ADD"@no ,
+        "Eleman icerir"@tr ,
+        "contiene elemento"@it ,
+        "comtém elemento"@pt ,
+        "包含构件"@cn ,
+        "obsahuje element-prvek"@cz ,
+        "obsahuje element-prvok"@sk .
+
+bot:intersectingElement rdfs:label
+        "intersecting element"@en ,
+        "doorsnijdend element"@nl ,
+        "schneidendes Bauteil"@de ,
+        "PLEASE ADD"@es ,
+        "leikkaava elementti"@fi ,
+        "PLEASE ADD"@sv ,
+        "PLEASE ADD"@da ,
+        "PLEASE ADD"@ca ,
+        "élément intersectant"@fr ,
+        "PLEASE ADD"@no ,
+        "Eleman ile temas"@tr ,
+        "elemento intersecante"@it ,
+        "elemento intersectante"@pt ,
+        "相交构件"@cn ,
+        "protíná element-prvek"@cz ,
+        "pretína element-prvok"@sk .
+
+bot:interfaceOf rdfs:label
+        "interface of"@en ,
+        "interface van"@nl ,
+        "Grenzfläche von"@de ,
+        "PLEASE ADD"@es ,
+        "rajapintana"@fi ,
+        "gränssnitt för"@sv ,
+        "grænseflade for"@da ,
+        "PLEASE ADD"@ca ,
+        "interface de"@fr ,
+        "PLEASE ADD"@no ,
+        "Arayüzü"@tr ,
+        "interfaccia di"@it ,
+        "interface de"@pt ,
+        "交界面于"@cn ,
+        "je rozhraní/je rozhraním"@cz ,
+        "je rozhranie/rozhraním"@sk .
+
+bot:hasZeroPoint rdfs:label
+        "has zero point"@en ,
+        "heeft nulpunt"@nl ,
+        "hat Nullpunkt"@de ,
+        "PLEASE ADD"@es ,
+        "omaa nollapisteen"@fi ,
+        "PLEASE ADD"@sv ,
+        "har nulpunkt"@da ,
+        "PLEASE ADD"@ca ,
+        "a point origine"@fr ,
+        "PLEASE ADD"@no ,
+        "Sıfır noktasi var"@tr ,
+        "ha punto zero"@it ,
+        "tem ponto zero"@pt ,
+        "含有原点"@cn ,
+        "má nulový bod"@cz ,
+        "má nulový bod"@sk .
+
+bot:hasSimple3DModel rdfs:label
+        "has simple 3D model"@en ,
+        "heeft eenvoudig 3D model"@nl ,
+        "hat einfaches 3D Modell"@de ,
+        "PLEASE ADD"@es ,
+        "omaa yksinkertaisen 3D-mallin"@fi ,
+        "PLEASE ADD"@sv ,
+        "har simpel 3D-model"@da ,
+        "PLEASE ADD"@ca ,
+        "a modèle 3D simple"@fr ,
+        "PLEASE ADD"@no ,
+        "Basit bir 3D modeli var"@tr ,
+        "ha modello 3D semplice"@it ,
+        "tem modelo 3D simples"@pt ,
+        "含有简单的3D模型"@cn ,
+        "má jednoduchý 3D model"@cz ,
+        "má jednoduchý 3D model"@sk .
+
+bot:has3DModel rdfs:label
+        "has 3D model"@en ,
+        "heeft 3D model"@nl ,
+        "hat 3D Modell"@de ,
+        "PLEASE ADD"@es ,
+        "omaa 3D-mallin"@fi ,
+        "PLEASE ADD"@sv ,
+        "har 3D-model"@da ,
+        "PLEASE ADD"@ca ,
+        "a modèle 3D"@fr ,
+        "PLEASE ADD"@no ,
+        "3D modeli var"@tr ,
+        "ha modello 3D"@it ,
+        "tem modelo 3D"@pt ,
+        "含有3D模型"@cn ,
+        "má 3D model"@cz ,
+        "má 3D model"@sk .
+
+
+# COMMENTS (Copied from https://docs.google.com/spreadsheets/d/1J5mEyblGU0M57XNpwQWxHbGlilRMzmCEqoU5FmOHILE/edit#gid=444808794 2020-04-21)
+
+bot:Zone rdfs:comment
+        "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent; Sub-classes of bot:Zone include bot:Site, bot:Building, bot:Storey, or bot:Space. An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to other bot:Zone instances. Finally, a bot:Zone can instantiate two relations to bot:Element, which are either contained in (bot:containsElement), or adjacent to it (bot:adjacentElement)."@en ,
+        "Een deel van de fysieke wereld of een virtuele wereld dat zowel gelokaliseerd kan worden in deze wereld als een ruimtelijke omvang heeft; subklasses van bot:Zone zijn bot:Site, bot:Building, bot:Storey of bot:Space. Een instantie van bot:Zone kan een ander bot:Zone instantie bevatten, wat gebruikt kan worden om zones te groeperen of op te delen. Een instantie van bot:Zone kan aangrenzend zijn aan een andere bot:Zone instantie. Ten slotte kan een bot:Zone individu twee relaties hebben met een bot:Element individu dat het ofwel bevat (bot:containsElement) of waar het aangrenzend aan is (bot:adjacentElement)."@nl ,
+        "Ein Teil der realen oder virtuellen Welt die beide Teil dieser Welt sind und eine räumliche Ausdehnung hat; Unterklassen von bot:Zone sind bot:Site, bot:Building, bot:Storey oder bot:Space. Eine Instanz von bot:Zone kann andere Instanzen von bot:Zone enthalten. So ist es möglich Instanzen von bot:Zone zu gruppieren, oder zu unterteilen. Eine Instanz einer bot:Zone kann an eine andere Instanz von bot:Zone angrenzen. Es bestehen zwei Möglichkeiten Instanzen von bot:Zone und bot:Element in Beziehung zu setzen. Entweder ein Element ist in einer Zone enthalten (bot:containsElement) oder es grenzt an eine andere Zone an (bot:adjacentElement)."@de ,
+        "Una parte del mundo físico o de un mundo virtual que está inherentemente ubicado en este mundo y que tiene una extensión espacial tridimensional; las subclases de bot:Zone incluyen bot:Site, bot:Building, bot:Storey, o bot:Space. Una instancia de bot:Zone puede contener otras instancias de bot:Zone, lo que permite agrupar o subdividir zonas. Una instancia de bot:Zone puede ser adyacente a otras instancias de bot:Zone. Finalmente, una bot:Zone puede instanciar dos relaciones con bot:Element, que están contenidas en ella (bot:containsElement) o adyacentes a ella (bot:adjacentElement)."@es ,
+        "Fyysisen tai virtuaalimaailman osa, joka luonnostaan sijaitsee sekä tässä maailmassa että jolla on 3D-ulottuvuus; bot:Zone:n alaluokkia ovat: bot:Zone bot:Site, bot:Building, bot:Storey ja bot:Space. bot:Zone -luokan instanssi voi sisältää muita bot:Zone-instansseja, mikä mahdollistaa vyöhykkeiden ryhmittelyn ja jaon osiin. bot:Zone voi olla muiden bot:Zone:n vieressä. Lopuksi bot:Zone voi instantioida kahta relaatiota bot:Element:iin., jotka joko sisältyvät (bot:containsElement):n tai sen viereen (bot:adjacentElement)."@fi ,
+        "PLEASE UPDATE En area eller ett stycke land som har en specifik karaktäristik, syfte, användning eller är förmål för specifika restriktioner. En bot:Zone kan innehålla andra bot:Zoner genom relationen bot:containsZone, och den kan kopplas till andra bot:Zoner genom relationen bot:adjacentZone."@sv ,
+        "En del af den fysiske verden eller en virtuel verden, der i sagens natur både er lokaliseret i denne verden og har en 3D rumlig afgrænsning; Underklasser af bot:Zone inkluderer bot:Site, bot:Building, bot:Storey eller bot:Space. En forekomst af bot:Zone kan indeholde andre bot:Zone-forekomster, hvilket gør det muligt at gruppere eller opdele zoner. En forekomst af bot:Zone kan støde op til andre bot:Zone-forekomster. Endelig kan en bot:Zone-forekomst instantiere to forbindelser til bot:Element, der enten er indeholdt i (bot:containsElement) eller tilstødende dertil (bot:adjacentElement)."@da ,
+        "Una part de el món físic o d'un món virtual que està inherentment ubicat en aquest món i que té una extensió espacial tridimensional; les subclasses de bot:Zone inclouen bot:Site, bot:Building, bot:Storey, o bot:Space. Una instància de bot:Zone pot contenir altres instàncies de bot:Zone, el que permet agrupar o subdividir zones. Una instància de bot:Zone pot ser adjacent a altres instàncies de bot:Zone. Finalment, un bot:Zone pot instanciar dues relacions amb bot:Element, que estan contingudes en ell (bot:containsElement) o adjacents a ell (bot:adjacentElement)."@ca ,
+        "Une partie du monde physique ou virtuel qui est inhéremment à la fois localisé dans ce monde et a une étendue spatiale 3D; les sous-classes de bot:Zone incluent bot:Site, bot:Building, bot:Storey, ou bot:Space. Une instance de bot:Zone peut contenir d'autres instances de bot:Zone, ce qui permet de grouper ou sub-diviser les zones. Une instance de bot:Zone peut être adjacente à d'autres bot:Zone. Enfin, une bot:Zone peut contenir (bot:containsElement) our être adjacent (bot:adjacentElement) à une instance de bot:Element."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Una parte del mondo fisico o virtuale che è intrinsecamente ubicato in questo mondo e che ha un'estensione spaziale tridimensionale; sottoclassi di bot:Zone includono bot:Site, bot:Building, bot:Storey, o bot:Space. Un'istanza di bot:Zone può contenere altre istanze di bot:Zone, rendendo possibile il raggruppamento o la suddivisione di zone. Un'istanza di bot:Zone può essere adiacente ad altre istanze di bot:Zone. Infine, una bot:Zone può istanziare due relazioni con bot:Element, il quale può essere contenuto (bot:containsElement) o essere adiacente (bot:adjacentElement)."@it ,
+        "Uma parte do mundo físico ou de um mundo virtual que está inerentemente localizado em simultâneo neste mundo e que possui uma extensão espacial 3D; As Sub-classes de bot:Zone incluem bot:Site, bot:Building, bot:Storey ou bot:Space. Uma instância de bot:Zone pode ser adjacente a outras instâncias de bot:Zone. Por fm, uma bot:Zone pode instanciar duas relações com bot:Element, que ou estão contidas em (bot:containsElement) ou lhe são adjacentes (bot:adjacentElement)."@pt ,
+        "区域是物理世界或虚拟世界的一部分，既位于现实空间中又可在3D空间中拓展。bot:Zone的子集包括bot:Site, bot:Building, bot:Storey, or bot:Space。bot:Zone实例可包含其他bot:Zone实例，从而可以对区域进行分组或细分。 同时，bot：Zone的实例也可以与其他bot：Zone实例相邻。最后，bot：Zone可以实例化为bot：Element的两个关系，它们可以包含在（bot：containsElement）中，或者与其相邻（bot：adjacentElement）。"@cn ,
+        "Část fyzického nebo virtuálního světa, který je dědičně v tomto světe umístěn a má charakter-rozměr prostoru který závisí na lokalizaci jak v reálnem světě, tak ve virtuálním světě. Podtřídy bot:Zone zahrňují bot:Site, bot:Building, bot:Storey, nebo bot:Space. Instance zóny bot:Zone jsou schopny obsahovat další bot:Zone instance se schopností je seskupovat nebo dělit na nižší zóny. Instance bot:Zone může být přiřazena-dotčena k další bot:Zone instanci. Nakonec bot:Zone může definovat dva vztahy elemetntu bot:Element, které jsou buďto obsaženy v zóně (bot:containsElement), nebo se jí dotýkají (bot:adjacentElement)"@cz ,
+        "Časť fyzického alebo virtuálneho sveta, ktorý je dedične v tomto svete umiestnený a má charakter-rozmer priestoru, ktorý závisí na lokalizácii ako v tomto svete tak vo virtuálnomn svete. Podtriedy bot:Zone zahŕňajú bot:Site, bot:Building, bot:Storey, alebo bot:Space. Inštancia bot:Zone je schopná obsahovať iné bot:Zone inštancie, so schopnosťou zoskupovať alebo pod-rozdeľovať zóny. Inštancia bot:Zone môže byť dotýkajúca sa ďalšej bot:Zone inštancie. Finálne, bot:Zone môže definovať vzťahy k bot:Element, ktoré môžu byť typu zóna obsahuje prvok (bot:containsElement), alebo sa prvok môže zóny dotýkať (bot:adjacentElement)."@sk .
+
+bot:Element rdfs:comment
+        "Constituent of a construction entity with a characteristic technical function, form or position [ISO 12006-2:2015, 3.4.7]"@en ,
+        "Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [ISO 12006-2:2015, 3.4.7]"@nl ,
+        "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [ISO 12006-2:2015, 3.4.7]"@de ,
+        "Constituyente de una entidad de construcción con una función técnica característica, forma o posición [ISO 12006-2:2015, 3.4.7]"@es ,
+        "Rakennetun kokonaisuuden osa, jolla on ominainen tekninen funktio, muoto tai sijainti [ISO 12006-2:2015, 3.4.7]"@fi ,
+        "Beståndsdel av ett byggnadsverk med en karaktäristisk teknisk funktion, form eller position [ISO 12006-2:2015, 3.4.7]"@sv ,
+        "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [ISO 12006-2:2015, 3.4.7]"@da ,
+        "Constituent d'una entitat de construcció amb una funció tècnica característica, forma o posició [ISO 12006-2:2015, 3.4.7]"@ca ,
+        "Constituant d'un bâtiment remplissant une fonction technique spécifique ou ayant une forme ou une position spécifiques [ISO 12006-2:2015, 3.4.7]"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Costituente di una entità edilizia con una funzione tecnica caratteristica, forma o posizione [ISO 12006-2:2015, 3.4.7]"@it ,
+        "Constituinte de uma entidade de construção com uma função técnica característica, forma ou posição [ISO 12006-2:2015, 3.4.7]"@pt ,
+        "具有特定技术功能，形式或位置的建筑实体组成部分"@cn ,
+        "Součást stavební entity s charakteristickou technickou funkcí, formou, nebo umístěním [ISO 12006-2, 3.4.7]"@cz ,
+        "Súčasť stavebnej entity s charakteristickou funkciou, formou, alebo umestením [ISO 12006-2, 3.4.7]"@sk .
+
+bot:Interface rdfs:comment
+        "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be the qualification of the heat transmission area between a zone and a wall covering several zones."@en ,
+        "Een interface is een vlak waar twee gebouwelementen, twee zones of een gebouw elementen en een zone elkaar raken. Het kan worden gebruikt om de verbinding tussen de twee te kwalificeren. Een use case kan de kwalificatie van het warmteoverbrengingsoppervlak tussen een zone en een muur over meerdere zones zijn."@nl ,
+        "Eine Grenzfläche ist die Fläche, an der sich zwei Bauteile, zwei Zonen oder ein Bauteil und eine Zone treffen. Das Konzept kann verwendet werden, um die Beziehung zwischen den Beteiligten zu qualifizieren. Ein Beispiel ist die Qualifizierung der Wärmeaustauschfläche zwischen eine Zone und einer Wand, die mehrere Zonen überdeckt."@de ,
+        "Una interfaz es la superficie donde se encuentran dos elementos de construcción, dos zonas o un elemento de construcción y una zona. Se puede utilizar para calificar la conexión entre los dos. Un caso de uso podría ser la calificación del área de transmisión de calor entre una zona y una pared que cubre varias zonas."@es ,
+        "Rajapinta on pinta, jossa kaksi rakennuselementtiä, kaksi vyöhykettä, tai rakennuselementti ja vyöhyke kohtaavat. Sitä voidaan käyttää täsmentämään kohtaavien osien yhteyttä. Esimerkki käyttötapauksesta on lämmönsiirtoon liittyvän alueen määrittely vyöhykkeen ja useaan vyöhykkeeseen koskevan seinän välillä. "@fi ,
+        "Ett gränssnitt är den yta där två byggdelar, två zoner eller en b yggdel och en zon möts. Det kan användas för att beskriva kopplingen mellan de två. Ett användningsfall kan vara att kvalificera värmetransmissionsarean mellan en zon och en vägg som täcker flera zoner."@sv ,
+        "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da ,
+        "Una interfície és la superfície on es troben dos elements de construcció, dues zones o un element de construcció i una zona. Es pot utilitzar per qualificar la connexió entre els dos. Un cas d'ús podria ser la qualificació de l'àrea de transmissió de calor entre una zona i una paret que cobreix diverses zones."@ca ,
+        "Une interface correspond à la surface où se rencontrent a) deux éléments d'un bâtiment, b) deux zones ou  encore c) un élément d'un bâtiment avec une zone. Un cas d'utilisation type est constituée par la qualification de la zone de transmission de chaleur entre une zone et un mur couvrant plusieurs zones."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Un'interfaccia è la superficie dove si incontrano due elementi architettonici, due zone oppure un elemento architettonico e una zona. Un caso d'uso potrebbe essere l'identificazione dell'area di trasmissione del calore tra una zona e un muro che copre varie zone."@it ,
+        "Uma interface é a superfície onde dois elementos da construção, duas zonas ou um elemento da construção e uma zona se encontram. Pode ser usado para qualificar a conexão entre os dois. Um exemplo da sua utilização é a qualificação da área de transmissão de calor entre uma zona e uma parede que delimita várias zonas."@pt ,
+        "界面是两个建筑元素，两个区域，或者一个建筑元素与一个区域相遇的表面，其可用于验证两个对象之间的连接，可视为是区域和覆盖多个区域的墙之间的热传递区域限定。"@cn ,
+        "Rozhraní je společný povrch dvou dotýkajících se entit, kde se dva stavební prvky, dvě zóny, nebo stavební prvek a zóna setkávají a dotýkají. Může být použitý pro ověření dotyku dvou přináležících blízkých objektů-entit. Příklad uživatelského scénáře využívající rozhraní je definice plochy přestupu tepla mezi zónou,(zónami) a stěnou dotýkající se vícero zón."@cz ,
+        "Rozhranie je spoločný povrch dvoch dotýkajúcich sa entít, kde sa dva stavebné prvky, dve zóny, alebo stavebný prvok a zóna stretávajú a priamo dotýkajú. Môže byť použité pre overenie dotyku dvoch prináležiacich či blízkych objektov. Uživateľský scenár popisujúci jeho využitie môže byť definícia plochy prestupu tepla medzi konkrétnou zónou a stenou, ktorá sa dotýka viacero stien."@sk .
+
+bot:Site rdfs:comment
+        "Area containing one or more buildings."@en ,
+        "Omgeving die één of meerdere gebouwen bevat."@nl ,
+        "Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ,
+        "Área que contiene uno o más edificios."@es ,
+        "Alue, jolla sijaitsee yksi tai useampia rakennuksia."@fi ,
+        "En plats som rymmer en eller flera byggnader."@sv ,
+        "Område som indeholder en eller flere bygninger."@da ,
+        "Àrea que conté un o més edificis."@ca ,
+        "Un site comprend un ou plusieurs bâtiments"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Area che contiene uno o più edifici."@it ,
+        "Área contendo um ou mais edifícios."@pt ,
+        "用于建筑物的区域可能包含一栋或多栋建筑物"@cn ,
+        "Oblast obsahující jednu nebo víc budov"@cz ,
+        "Oblasť obsahujúca jednu, alebo viac budov."@sk .
+
+bot:Building rdfs:comment
+        "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ,
+        "Een onafhankelijke entiteit met een ruimtelijke structuur die onderdeel is van de gebouwde omgeving, en bedoeld is om minimaal één functie of gebruikersactiviteit te bedienen [ISO 12006-2:2013]."@nl ,
+        "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de ,
+        "Una unidad independiente del entorno construido con una estructura espacial característica, destinada a servir al menos una función o actividad del usuario [ISO 12006-2: 2013]"@es ,
+        "Rakennetun ympäristön itsenäinen osa, jolla on ominainen avaruudellinen rakenne, ja joka on tarkoitettu palvelemaan ainakin yhtä funktiota tai käyttäjäaktiviteettia [ISO 12006-2:2013]"@fi ,
+        "En oberoende enhet i den byggda miljön med en karaktäristisk rumslig struktur som stödjer minst en funktion eller användaraktivitet.  [ISO 12006-2:2013]"@sv ,
+        "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da ,
+        "Una unitat independent de l'entorn construït amb una estructura espacial característica, destinada a servir com a mínim una funció o activitat de l'usuari [ISO 12.006-2: 2013]."@ca ,
+        "Une unité indépendante de l'environnement bâti avec une structure spatiale caractéristique, conçue pour répondre à une fonction ou une activité de l'utilisateur [ISO 12006-2:2013]"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Un'unità indipendente dell'ambiente costruito con una struttura spaziale caratteristica, destinato a servire almeno una funzione o attività degli utenti [ISO 12006-2:2013]"@it ,
+        "Uma unidade independente do ambiente construído com uma estrutura espacial característica, destinada a servir pelo menos uma função do utilizador [ISO 12006-2:2013]"@pt ,
+        "具有特定空间结构的建筑环境独立单元可服务至少一项功能或用户活动[ISO 12006-2:2013]"@cn ,
+        "Nezávislá stavební jednotka s charakteristickou prostorovou strukturou, určená pro využití alespoň pro jeden účel nebo činnost uživatele [ISO 12006-2:2013]"@cz ,
+        "Nezávislá stavebná jednotka s charakteristickou priestorovou štruktúrou, určená pre využitie alespoň pre jeden účel alebo činnosť užívateľa [ISO 12006-2:2013]"@sk .
+
+bot:Storey rdfs:comment
+        "A level part of a building"@en ,
+        "Een horizontaal gedeelte van een gebouw"@nl ,
+        "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de ,
+        "Un nivel de un edificio."@es ,
+        "Rakennuksen kerros"@fi ,
+        "Ett plan i en byggnad"@sv ,
+        "Et plan i en bygning"@da ,
+        "Un nivell d'un edifici"@ca ,
+        "Correspond à un niveau du bâtiment"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Livello di un edificio."@it ,
+        "Nível de um edifício."@pt ,
+        "建筑的一层"@cn ,
+        "Část budovy dělená dle výškového rozdílu"@cz ,
+        "Časť budovy delená podľa výškového rozdielu"@sk .
+
+bot:Space rdfs:comment
+        "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in."@en ,
+        "Een deel van de fysieke wereld of een virtuele wereld waarvan de driedimensionale omvang feitelijk of theoretisch begrensd is, en dat bepaalde activiteiten faciliteert in de zone die de ruimte bevat."@nl ,
+        "Ein Teil der realen oder virtuellen Welt, dessen räumliche Ausdehnung tatsächlich oder virtuell begrenzt ist. In der Zone in der es enthalten ist stellt es bestimmte Funktionen bereit."@de ,
+        "Una parte del mundo físico o de un mundo virtual cuya extensión espacial tridimensional está limitada física o teóricamente, y provee ciertas funciones dentro de la zona donde está contenida."@es ,
+        "Osa fyysisestä -tai virtuaalista maailmasta, jonka 3D-tila on rajattu oikeasti tai teoreettisesti ja tarjoaa tiettyjä toimintoja vyöhykkeellä, johon se sisältyy."@fi ,
+        "PLEASE UPDATE En avgränsad tredimensionell utsträckning som definierats fysiskt eller fiktivt [ISO 12006-2 (DIS 2013), 3.4.3]"@sv ,
+        "En del af den fysiske verden eller en virtuel verden hvis 3D-rummelige udstrækning er faktisk eller teoretisk afgrænset, og varetager visse funktioner inden for den zone, den er indeholdt i."@da ,
+        "Una part de el món físic o d'un món virtual l'extensió espacial tridimensional està limitada física o teòricament, i proveeix certes funcions dins de la zona on està continguda."@ca ,
+        "Une partie du monde physique ou virtuel dont l'extension 3D est limitée réellement ou théoriquement, et apporte des fonctions aux zones dans laquelle elle est contenue."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Una parte del mondo fisico o virtuale il cui spazio 3D è delimitato effettivamente o virtualmente, e fornisce determinate funzioni all'interno della zona in cui è contenuta."@it ,
+        "Uma parte do mundo físico ou de um mundo virtual cuja extensão espacial 3D esteja delimitada de forma efectiva ou teórica, que fornece certas funções dentro da zona em que está contido."@pt ,
+        "是物理世界或虚拟世界的一部分，其3D空间范围实际上或在理论上受到限制，可在其所包含的区域内提供某些功能。"@cn ,
+        "Ohraničený troj-rozměrný rozsah definovaný fyzicky nebo pojmově [ISO 12006-2 (DIS 2013), 3.4.3]"@cz ,
+        "Ohraničený troj-rozmerný rozsah definovaný fyzicky nebo pojmovo [ISO 12006-2 (DIS 2013), 3.4.3]"@sk .
+
+bot:adjacentZone rdfs:comment
+        "Relationship between two zones that share a common interface, but do not intersect."@en ,
+        "Relatie tussen twee zones die een interface delen, maar niet doorsnijdend zijn"@nl ,
+        "Beziehung zwischen zwei Zonen die eine gemeinsame Grenzfläche haben, aber sich nicht schneiden."@de ,
+        "Relación entre dos zonas que comparten una interfaz común, pero que no intersecan."@es ,
+        "Suhde kahden vyöhykkeen välillä, jotka jakavat yhteisen rajapinnan mutta eivät leikkaa toisiaan."@fi ,
+        "Relation mellan två zoner som delar ett gemensamt gränssnitt."@sv ,
+        "Relation mellem to zoner, der deler en fælles grænseflade."@da ,
+        "Relació entre dues zones que comparteixen una interfície comuna, però que no interseccionen"@ca ,
+        "Relation entre deux zones partageant une interface commune, sans intersection"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra due zone che condividono un'interfaccia senza però intersecarsi."@it ,
+        "PLEASE ADD"@pt ,
+        "两个区域之间共享公共界面但不相交的关系"@cn ,
+        "Vztah mezi dvěmi zónami, které se dotýkají, ale neprotínají se."@cz ,
+        "Vzťah medzi dvomi zónami, ktoré sa dotýkajú, ale nepretínajú sa."@sk .
+
+bot:intersectsZone rdfs:comment
+        "Relationship between two zones whose 3D extent intersect. For example, a stairwell intersects different storeys."@en ,
+        "Een relatie tussen twee zones waarvan de driedimensionale omvang doorsnijdend is. Bijvoorbeeld een traphal die verschillende verdiepingen doorsnijdt."@nl ,
+        "Beziehung zwischen zwei Zonen, die sich schneiden. Zum Beispiel schneidet eine Treppe verschiedene Geschosse."@de ,
+        "Relación entre dos zonas cuya extensión hace que una interseccione con la otra. Por ejemplo, una escalera cruza diferentes pisos."@es ,
+        "Suhde kahden vyöhykkeen välillä, jotka leikkaavat toisiaan. Esimerkiksi rappuset leikkaavat useita kerroksia."@fi ,
+        "PLEASE ADD"@sv ,
+        "PLEASE ADD"@da ,
+        "Relació entre dues zones l'extensió fa que una interseccione amb l'altra. Per exemple, una escala creua diferents pisos."@ca ,
+        "Relation entre deux zones dont l'étendue 3D se croise. Par exemple, une cage d'escalier croise différents étages."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra due zone le cui estensioni 3D si intersecano. Per esempio, una tromba delle scale interseca vari piani."@it ,
+        "PLEASE ADD"@pt ,
+        "两个区域之间三维空间相交的关系。 例如，楼梯间与不同楼层相交"@cn ,
+        "Vztah dvou zón, které se protínají svým prostorovým ohraničením. Na příklad, eskalátor protíná vícero podlažních zón."@cz ,
+        "Vzťach dvoch zón, ktoré sa pretínajú svojim priestorovým rozhraním. Príkladom môže byť eskalátor prestupujúci cez vac zón-podlaží."@sk .
+
+bot:containsZone rdfs:comment
+        "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property. This implies that in the previous example a bot:containsZone relationship holds between the space zone and the building zone."@en ,
+        "Relatie tussen subzones van een hoofd zone. Een ruimtezone kan bijvoorbeeld worden bevat door een verdiepingszone, die wederom bevat wordt door een gebouwzone. bot:containsZone is een transitieve eigenschap, wat betekent dat in het vorige voorbeeld de ruimtezone ook bevat wordt door de gebouwzone."@nl ,
+        "Beziehung zwischen Zonen, wobei eine die andere enthält. Zum Beispiel kann eine Raumzone in einer Geschossszone enthalten sein, die wiederrum in einer Gebäudezone enthalten ist. bot:containsZone is eine transitive Beziehung, dass heisst zwischen der Raumzone im vorherigen Beispiel und der Gebäudezone besteht auch die Beziehung bot:containsZone."@de ,
+        "Relación entre subzonas con una una zona principal. Por ejemplo, una zona espacial podría estar contenida en una zona de piso que a su vez está contenida en una zona de edificio. bot:containsZone es una propiedad transitiva. Esto implica que en el ejemplo anterior se mantiene una relación entre la zona espacial y la zona de edificio a través de bot:containsZone."@es ,
+        "Suhde päävyöhykkeen osavyöhykkeisiin. Tila voi esimerkiksi sisältyä kerrokseen, joka puolestaan voi sisältyä rakennukseen. bot:containsZone on transitiivinen ominaisuus. Tästä seuraa, että edellisessä esimerkissä myös rakennuksen ja tilan välillä pätee bot:containsZone."@fi ,
+        "Relation till delzoner i en huvudzon. En rumszon kan till exempel inrymmas i en våningszon som i sin tur inryms i en byggnadszon. bot:containsZone är en transitiv relation vilket i exemplet betyder att rumszonen också inryms i byggnadszonen."@sv ,
+        "Relation til underzoner i en større zone. En rum-zone kan for eksempel være indeholdt i en etage-zone som ydermere er indeholdt i en bygnings-zone. bot:containsZone er en transitiv egenskab, hvilket betyder at rum-zonen i det forrige eksempel også er indeholdt i bygnings-zonen."@da ,
+        "Relació entre subzones amb una zona principal. Per exemple, una zona espacial podria estar continguda en una zona de pis que al seu torn està continguda en una zona d'edifici. bot:containsZone és una propietat transitiva. Això implica que en l'exemple anterior es manté una relació entre la zona espacial i la zona de edifici a través de bot:containsZone."@ca ,
+        "Relation entre les sous-zones composant une zone plus grande. Cette propriété est transitive."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra una zona e una sotto-zona. Per esempio, una zona spaziale può essere contenuta nella zona di un piano che a sua volta è contenuto nella zona di un edificio. bot:containsZone è una proprietà transitiva. Ciò implica che nel precedente esempio la relazione bot:containsZone si verifica anche tra la zona spaziale e la zona dell'edificio."@it ,
+        "PLEASE ADD"@pt ,
+        "主要区域和其子区域的从属关系。 空间区域实例可以包含在楼层区域中，该楼层区域进一步包含在建筑物区域中。 bot：containsZone是传递属性。 这意味着在前面的示例中，空间区域和建筑物区域之间也保持着bot：containsZone关系。"@cn ,
+        "Vztah hlavní zóny k pod-zónám. Prostorová zóna může být napříklat umístěna v zóně podlaží, která jako zóna je umístěna v zóně budova. bot:containsZone je přenositelná vlastnost, co znamená, že daná vlastnost vyšší zóny v dané hierarchii se promítá i do zón které jsou součástí vyšší zóny."@cz ,
+        "Vzťah hlavnej zóny k pod-zónam. Priestorová zóna môže napríklad byť umiestnená v zóne podlažia, ktoré ako zóna môže byť ďalej umiestnené v zóne budovy. bot:containsZone je prenositeľná vlastnost, ktorá znamená, že pokiaľ väčšia zóna A je v zóne budova, aj menšie zóny, ktorú zóna A obsahuje, sú v budove."@sk .
+
+bot:hasBuilding rdfs:comment
+        "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ,
+        "Relatie tot gebouwen die zich in een zone bevinden. De typische domeinen van bot:hasBuilding zijn instanties van bot:Site"@nl ,
+        "Beziehung zwischen Gebäuden, die in einer Zone enthalten sind. Oft ist hier die rdfs:domain eine Instanz von bot:Site."@de ,
+        "Relación con los edificios contenidos en una zona. Los dominios típicos de bot:hasBuilding son instancias de bot:Site."@es ,
+        "Suhde vyöhykkeeseen kuuluviin rakennuksiin. Tyypillinen lähtöjoukko on luokan bot:Site instanssit."@fi ,
+        "Relation till byggnader som inryms i en zon. Typiska domäner för bot:hasBuilding är förekomster av bot:Site."@sv ,
+        "Relation til bygninger indeholdt i en zone. De typiske domæner for bot:hasBuilding er forekomster af bot:Site."@da ,
+        "Relació amb els edificis continguts en una zona. Els dominis típics de bot:hasBuilding son instàncies de bot:Site"@ca ,
+        "Relation à définir entre les bâtiments d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Site."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione con gli edifici contenuti in una zona. Il tipico dominio di bot:hasBuilding è bot:Site."@it ,
+        "Relação com edifícios contidos numa zona. Os domínios típicos de bot:hasBuilding são instâncias de bot:Site."@pt ,
+        "区域中含有建筑的关系。 bot：hasBuilding的典型使用范围是bot：Site中的实例。"@cn ,
+        "Vztah budov které jsou přilehlé k zóně. Typickým příkladem je bot:hasBuilding která je instancí bot:Site tzn. staveniště (stav. pozemeek) má budovu, budova stojí na pozemku."@cz ,
+        "Vzťah budovy a pozemku, na ktorom stojí. Typická doména bot:hasBuilding je inštanciou bot:Site. Tzn. stavenisko(stavebný pozemok) má budovu."@sk .
+
+bot:hasStorey rdfs:comment
+        "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ,
+        "Relatie tot de verdiepingen die zich in een zone bevinden. De typische domeinen van bot:hasStorey zijn instanties van bot:Building."@nl ,
+        "Beziehung zwischen Geschossen, die in einer Zone enthalten sind. Oft ist die rdfs:domain eine Instanz von bot:Building."@de ,
+        "Relación con los pisos contenidos en una zona. Los dominios típicos de bot:hasStorey son instancias de bot:Building."@es ,
+        "Suhde vyöhykkeeseen kuuluviin kerroksiin. Tyypillinen lähtöjoukko on luokan bot:Building instanssit."@fi ,
+        "PLEASE ADD"@sv ,
+        "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da ,
+        "Relació amb els pisos continguts en una zona. Els dominis típics de bot: hasStorey son instàncies de bot:Building."@ca ,
+        "Relation à définir entre les étages d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Building."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione con i piani contenuti in una zona. Il tipico dominio di bot:hasStorey è bot:Building."@it ,
+        "Relação com os pisos contidos numa zona. Os domínios típicos de bot:hasStorey são instâncias de bot:Building."@pt ,
+        "区域中含有楼层的关系。 bot：hasStorey的典型使用范围是bot：Building中的实例。"@cn ,
+        "Vztah zóny-podlaží a zóny, ve které se nachází. Typická doména bot:hasStorey jsou instance bot:Building."@cz ,
+        "Vzťah zóny-podlažia a zóny, v ktorej sa nachádza. Typická doména bot:hasStorey sú inštancie bot:Building."@sk .
+
+bot:hasSpace rdfs:comment
+        "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ,
+        "Relatie tot ruimtes die zich in een zone bevinden. De typische domeinen van bot:hasSpace zijn instanties van bot:Storey en bot:Building."@nl ,
+        "Beziehung von Räumen, die sich in einer Zone befinden. Oft ist die rdfs:domain eine Instanz von bot:Storey oder bot:Building."@de ,
+        "Relación a espacios contenidos en una zona. Los dominios típicos de bot:hasSpace son instancias de bot:Storey y bot:Building."@es ,
+        "Suhde vyöhykkeeseen kuuluviin tiloihin. Tyypillinen lähtöjoukko on luokkien bot:Storey ja bot:Building instanssit."@fi ,
+        "Relation till rum som inryms i en zon. Typiska domäner för bot:hasSpace är förekomster av bot:Storey och bot:Building."@sv ,
+        "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da ,
+        "Relació a espais continguts en una zona. Els dominis típics de bot:hasSpace són instàncies de bot:Storey i bot:Building."@ca ,
+        "Relation à définir entre les pièces d'une même zone. Cette propriété s'applique typiquement sur des instances de bot:Building."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione con gli spazi contenuti in una zona. Il tipico dominio di bot:hasSpace è l'unione di bot:Storey e bot:Building."@it ,
+        "Relação com espaços contidos numa zona. Os domínios típicos de bot:hasSpace são instâncias de bot:Storey e de bot:Building."@pt ,
+        "区域含有空间的关系。 bot：hasSpace的典型使用范围是bot：Storey和bot：Building中的实例。"@cn ,
+        "Vztah prostorů nacházejících se v zóně a dané zóny. Typická doména bot:hasSpace jsou instance bot:Storey a bot:Building."@cz ,
+        "Vzťah priestorov nachádzajúcich sa v zóne a danej zóny. Typická doména bot:hasSpace sú inštancie bot:Storey a bot:Buuilding."@sk .
+
+bot:hasSubElement rdfs:comment
+        "Relation between an element a) and another element b) hosted by element a)"@en ,
+        "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hasSubElement inst:window"@nl ,
+        "Beziehung zwischen einem Bauteil und a) einem anderen Bauteil oder b) einem Bauteil, dass ein anderes Bauteil enthält."@de ,
+        "Relación entre un elemento a) y otro elemento b) en donde el elemento a) hace de anfitrion."@es ,
+        "Suhde elementin a) ja sen sisältämän elementin b) välillä."@fi ,
+        "Relation mellan en byggdel a) och en annan byggdel b) som utgör värd a). Exempel: inst:wall bot:hasSubElement inst:window"@sv ,
+        "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hasSubElement inst:window"@da ,
+        "Relació entre un element a) i un altre element b) en on l'element a) fa d'amfitrió."@ca ,
+        "Relation entre un élément du bâti A et un autre élément du bâti, B, contenu ou abrité dans A"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra un elemento a) e un altro elemento b) ospitato dall'elemento a)"@it ,
+        "PLEASE ADD"@pt ,
+        "构件a）和构件a）组分中构件b）之间的关系"@cn ,
+        "Vztah mezi prvkem a) a dalším prvkem b), který je součástí prvku a)"@cz ,
+        "Vzťah medzi prvkom a) a ďalším prvkom b), ktorý je súčasťou prvku a)"@sk .
+
+bot:hasElement rdfs:comment
+        "Links a Zone to an Element that is either contained in or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en ,
+        "Verbindt een bot:Zone instantie met een bot:Element instantie die er ofwel door bevat wordt of aangrenzend aan is. Het is aangeraden om deze relatie niet expliciet te maken, maar af te leiden uit het gebruik van zijn sub relaties. Deze relatie maakt het bijvoorbeeld mogelijk om alle deuren van een gebouw op te vragen als die aangrenzend gedefinieerd zijn aan de ruimtes van het gebouw."@nl ,
+        "Beziehung zwischen einer Zone und einem Bauteil, dass entweder in der Zone enthalten ist, oder sich mit ihr schneidet. Diese Beziehung sollte nicht explizit benutzt werden, sondern ergibt sich implizit aus den Unterbeziehungen. Es ermöglicht, zum Beispiel, dass mit einer Abfrage alle Türen eines Gebäudes, die sich mit einer Zone schneiden ermittelt werden können."@de ,
+        "Vincula una zona a un elemento que está contenido o es adyacente a la zona. El uso previsto de esta relación no debe establecerse explícitamente, sino inferirse de sus subpropiedades. Permitirá, por ejemplo, consultar todas las puertas de un edificio dado que tienen una adyacencia a los espacios del edificio."@es ,
+        "Liittää vyöhykkeen (bot:Zone) elementtiin (bot:Element) joka on joko vyöhykkeen sisällä tai vierellä. Tätä suhdetta ei ole tarkoitus käyttää eksplisiittisesti, vaan se on pääteltävissä sen alaominaisuuksista. Mahdollistaa esimerkiksi kaikkien rakennuksen ovien hakemisen, kunhan ovet on merkitty rakennuksen tilojen viereisiksi elementeiksi (bot:adjacentElement)."@fi ,
+        "PLEASE ADD"@sv ,
+        "Forbinder en Zone til en bygningsdel der enten er indeholdt i eller tilstødende til zonen. Det er ikke hensigten at denne relation angives eksplicit, men at den udledes af dennes underegneskaber. Det vil for eksempel tillade en forespørgsel på alle døre i en bygning givet at disse er enten tilstødende eller indeholdt i rum i bygningen."@da ,
+        "Vincula una zona a un element que està contingut o és adjacent a la zona. L'ús previst d'aquesta relació no s'ha d'establir explícitament, sinó inferir-se de les seves subpropietats. Permetrà, per exemple, consultar totes les portes d'un edifici donat que tenen una adjacència als espais de l'edifici."@ca ,
+        "Relie une zone à un élément qui est soit contenu dans la zone, soit adjacent à celle-ci. L'utilisation prévue de cette relation ne doit pas être indiquée explicitement, mais doit être déduite de ses sous-propriétés. Elle permettra, par exemple, d'interroger toutes les portes d'un bâtiment si elles sont adjacentes à certains des espaces du bâtiment."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Collega una zona ad un elemento che è ivi contenuto o adiacente alla zona. Non si prevede l'uso esplicito di questa relazione che deve essere inferita dalle sue sotto-proprietà. Per esempio, permette di cercare tutte le porte di un edificio dato che sono adiacenti agli spazi di un edificio."@it ,
+        "PLEASE ADD"@pt ,
+        "将区域链接到包含在区域中或附近的构件。 该关系的预期用途不是明确说明的，而是要从其子属性中推断出来。例如，如果构件与建筑物的空间相邻，可以借此查询建筑物的所有门。"@cn ,
+        "Napojuje zónu na stavební prvek, který se buďto nachází v dané zóně, nebo je na její rozhraní. Využitelnost tohoto vztahu není daná explicitně, ale je vyvozená z vlastností zúčastněných prvků. Například to umožní vyhledat všechny dveře, které se dotýkají konkrétních zón."@cz ,
+        "Napojuje zónu na stavebný prvok, ktorý sa buď nachádza v danej zóne alebo je na jej rozhraní. Využitie tohto vzťahu nie je definované explicitne, ale je vyvodené z vlastností zúčastnených prvkov. Napríklad to umožní vyhľadať všetky dvere v budove, ktoré sa dotýkajú nejakých zón."@sk .
+
+bot:adjacentElement rdfs:comment
+        "Relation between a zone and its adjacent building elements, bounding the zone."@en ,
+        "Relatie tussen een zone en zijn aangrenzende gebouwelementen, begrensd door fysieke ruimte."@nl ,
+        "Beziehung zwischen einer Zone und dessen angrenzenden Bauteilen. Die Bauteile begrenzen die Zone."@de ,
+        "Relación entre una zona y sus elementos arquitectónicos adyacentes, que limitan el espacio físico."@es ,
+        "Suhde vyöhykkeen ja sen viereisten, sitä rajaavien rakennuselementtien välillä."@fi ,
+        "Relation mellan en zon och dess angränsande byggdelar, som avgränsar det fysiska utrymmet."@sv ,
+        "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."@da ,
+        "Relació entre una zona i els seus elements arquitectònics adjacents, que limiten l'espai físic."@ca ,
+        "Relation entre une zone et ses éléments adjacents, délimitant l'espace physique"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra una zona e i suoi elementi architettonici adiacenti che delimitano la zona stessa."@it ,
+        "Relação entre uma zona e os elementos da construção que lhe são adjacentes, delimitando a zona."@pt ,
+        "区域中相邻建筑构件之间的关系，以该区域为界。"@cn ,
+        "Vztah mezi zónou a její přilehlými stavebními prvky, obklopujícími danou zónu."@cz ,
+        "Vzťah medzi zónou a stavebnými prvkami obklopujúcimi túto zónu."@sk .
+
+bot:intersectingElement rdfs:comment
+        "Relation between a Zone and a building Element that intersects it."@en ,
+        "Relatie tussen een zone en een gebouwelement die de zone doorsnijdt."@nl ,
+        "Beziehung zwischen einer Zone und einem Bauteil, das die Zone schneidet."@de ,
+        "Relación entre una zona y un elemento constructivo que la intersecta."@es ,
+        "Suhde vyöhykkeen ja sitä leikkaavan rakennuselementin välillä."@fi ,
+        "PLEASE ADD"@sv ,
+        "PLEASE ADD"@da ,
+        "Relació entre una zona i un element constructiu que la intersecta."@ca ,
+        "Relation entre une zone et un élément du bâtiment qui la traverse."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra una zona e un elemento architettonico che la interseca."@it ,
+        "Relação entre uma Zona e um Elemento construtivo que a intersecta."@pt ,
+        "区域中相交建筑构件之间的关系。"@cn ,
+        "Vztah mezi zónou a stavebním prvkem, který ji protíná."@cz ,
+        "Vzťah medzi zónou a stavebným prvkom, ktorý ju pretína."@sk .
+
+bot:containsElement rdfs:comment
+        "Relation to a building element contained in a zone."@en ,
+        "Relatie tussen zone en een gebouwelement in die zone"@nl ,
+        "Beziehung einer Zone zu einem Bauteil, dass es enthält."@de ,
+        "Relación a un elemento arquitectónico contenido en una zona."@es ,
+        "Suhde vyöhykkeen sisältämään rakennuselementtiin."@fi ,
+        "Relation till en byggdel som inryms i en zon."@sv ,
+        "Relation til en bygningsdel, som er indeholdt i en zone."@da ,
+        "Relació a un element arquitectònic contingut en una zona."@ca ,
+        "Relation à définir entre un élément de bâti et la zone le contenant"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione con elementi architettonici contenuti in una zona."@it ,
+        "Relação com um elemento da construção contido numa zona."@pt ,
+        "区域中包含的建筑构件的关系"@cn ,
+	"Vztah k stavebnímu prvku obsaženém v zóně."@cz ,
+        "Vzťah k stavebnému prvku, obsiahnutom v zóne."@sk .
+
+bot:interfaceOf rdfs:comment
+        "Relationship between an interface and an adjacent zone or element."@en ,
+        "Relatie tussen een interface en een aanliggende zone of element."@nl ,
+        "Beziehung zwischen einer Grenzfläche und einer angrenzenden Zone oder einem Bauteil."@de ,
+        "Relación entre una interfaz y una zona o elemento adyacente."@es ,
+        "Suhde rajapinnan ja viereisen vyöhykkeen tai elementin välillä."@fi ,
+        "Relation mellan ett gränssnitt och en angränsande zon eller byggdel."@sv ,
+        "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."@da ,
+        "Relació entre una interfície i una zona o element adjacent."@ca ,
+        "Relation à définir entre une interface et une zone ou un élément adjacents."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Relazione tra un'interfaccia e una zona o elemento adiacente."@it ,
+        "Relação entre um interface e uma zona ou elemento adjacentes."@pt ,
+        "界面与相邻区域或建筑构件之间的关系。"@cn ,
+        "Vztah mezi rozhraním a přilehlou zónou nebo prvkem."@cz ,
+        "Vzťah medzi rozhraním a priľahlou zónou alebo prvkom."@sk .
+
+bot:hasZeroPoint rdfs:comment
+        "Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology."@en ,
+        "Verbindt een bot:Zone instantie met een instantie die de lengtegraad en breedtegraad definieert van het nulpunt van een bot:Site instantie. Dit kan een instantie zijn van wgs84:Point. De definitie van GIS en geometrie valt niet in de scope van BOT en de gebruiker moet een gepaste ontology hiervoor selecteren. Het gebruik van deze eigenschap is potentieel ambigu en kan verwijderd of herzien worden in toekomstige versies van deze ontology."@nl ,
+        "Verbindet eine Instanz von bot:Site mit einer Instanz, die den Längen- und Breitengrad des Nullpunkts des Grundstücks definiert. Dies kann eine Instanz eines wgs84:Point sein. Die Definition von GIS und Geometrie ist nicht Bestandteil von BOT. Die Nutzung dieses Properties ist potenziell zweideutig und es besteht die Möglichkeit das es in Zukunft überarbeitet oder entfernt wird."@de ,
+        "Vincula un bot:Site a una instancia que codifica la latitud y longitud del punto cero del sitio del edificio. Esta puede ser una instancia de un wgs84:Point. La definición de SIG y de la geometría no está dentro del alcance de BOT por lo que el usuario deberá utilizar para ello una ontología apropiada en combinación con BOT. El uso de esta propiedad es potencialmente ambigua y podría ser eliminada o revisada en ediciones futuras de la ontología."@es ,
+        "Liittää bot:Site:n instanssiin, jolla merkitään rakennustyömaan nollakohdan leveys- ja pituuspiirit. Tämä voi olla esimerkki wgs84:Point-luokan instanssi. BOT ei kata GIS:ä tai geometriaa, joten käyttäjän tulee valita sopiva ontologia.Tämän propertyn käyttö on mahdollisesti moniselitteistä, ja se voidaan poistaa tai tarkistaa ontologian tulevissa versioissa."@fi ,
+        "PLEASE ADD"@sv ,
+        "Forbinder et bot:Site med en forekomst, der beskriver en længde- og breddegrad for byggegrundens nulpunkt. Dette kunne være en forekomst af et wgs84:Point. Definitionen af GIS og geometri er ikke omfattet af BOT og en passende ontologi må her vælges af brugeren. Brugen af denne egenskab er potentielt tvetydig, og den kan fjernes eller revideres i fremtidige udgaver af ontologien."@da ,
+        "Vincula un bot:Site a una instància que codifica la latitud i longitud de el punt zero del lloc de l'edifici. Aquesta pot ser una instància d'un wgs84:Point. La definició de SIG i de la geometria no està dins de l'abast de la BOT, per tant, l'usuari haurà de seleccionar una ontologia apropiada. L'ús d'aquesta propietat és potencialment ambigua i podria ser eliminada o revisada en edicions futures de l'ontologia."@ca ,
+        "Lie un bot:Site à un individu qui encode la latitude et la longitude du point zéro du site du bâtiment. Ceci peut être une instance de wgs84:Point. La définition du système de coordonnée géographique et de la géométrie n'est pas défini par BOT et l'utilisateur doit choisir l'ontologie appropriée. L'utilisation de cette propriété est potentiellement ambigue et elle pourrait être supprimée ou modifiée dans les prochaines versions de l'ontologie."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Collega un bot:Site ad un'istanza che codifica la latitudine e longitudine del punto zero di un sito. Questa può essere l'istanza di wgs84:Point. La definizioen di GIS e geometrie non rientra nell'ambito di BOT ed è pertanto necessario che l'utente selezioni una ontologia adeguata. L'uso di questa proprietà è potenzialmente ambiguo e potrebbe essere rimossa o revisionata in successive edizioni dell'ontologia."@it ,
+        "PLEASE ADD"@pt ,
+        "将bot：Site链接到一个实例，对该实例建筑位置原点的纬度和经度进行编码。 这可以是wgs84：Point的一个实例。 GIS和几何的定义不在BOT的范围内，用户需要在此处选择适当的本体。该属性的使用可能是模棱两可的，并且在以后的本体版本中可能会删除或修改它。"@cn ,
+        "Napojuje bot:Site na instanci, který definuje zeměpisnou šířku a délku nulového bodu budovy. To může být instancí wgs84:Point. Definice GIS a geometrie není v rozsahu BOT a je potřebné použít jinou adekvátní ontologii. Využití této vlastnosti je potenciálně nepřesné a nejasné a může být odstraněno nebo revidováno v budoucích úpravách této ontologie."@cz ,
+        "Napojuje bot:Site na inštanciu ktorá definuje zemepisnú šírku a dĺžku nulového bodu budovy. To môže byť inštanciou wgs84:Pint. Definícia GIS a geometrie nie je v rozsahu BOT a je potrebné použiť inú adekvátnu ontológiu. Využitie tejto vlastnosti je potenciálne nepresné a nejasné a môže byť odstránené alebo revidované v budúcich úpravách tejto ontológie."@sk .
+
+bot:has3DModel rdfs:comment
+        "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ,
+        "Verbindt gelijk welke bot:Zone of bot:Element instantie met een IRI die een 3D model identificeert. Dit 3D model kan beschreven worden d.m.v. een gespecialiseerde RDF vocabularium. Anderzijds kan de IRI, indien opgevraagd, ook doorverwijzen naar een 3D model in een bestaand data formaat."@nl ,
+        "Verbindet eine Instanz von bot:Zone oder bot:Element zu einer IRI, die das zugehörige 3D Modell identifiziert. Das Modell kann in einem spezifischen RDF Vokabular kodiert sein. Andernfalls kann die IRI auch dereferenzierbar sein."@de ,
+        "Vincula cualquier bot:Zone o bot:Element a un IRI que identifica su modelo 3D. Este modelo 3D se puede describir utilizando un vocabulario RDF dedicado. De lo contrario, el IRI del modelo 3D podría ser dereferenciable, y al buscar el IRI se podría recuperar una representación del modelo 3D con algún formato de datos existente para los modelos 3D."@es ,
+        "Liittää vyöhykkeen (bot:Zone) tai elementin (bot:Element) sen 3D-mallin yksilöivään IRI:in. Tämä 3D-malli voi olla kuvattu jollakin siihen tarkoitetulla RDF-sanastolla. 3D-mallin IRI voi myös osoittaa johonkin olemassa olevalla dataformaatilla kuvattuun 3D-malliin, joka on ladattavissa IRI:n kautta."@fi ,
+        "PLEASE ADD"@sv ,
+        "Forbinder enhver instans af bot:Zone eller bot:Element med en IRI som identificerer dennes 3D-model. Denne 3D-model kan så beskrives ved brug af et dedikeret RDF-vokabular. Alternativt kan 3D-modellens IRI være dereferencerbar, sådan at der modtages en repræsentation af 3D-modellen i et eksisterende dataformat for 3D-modeller når IRIen slås op."@da ,
+        "Vincula qualsevol bot:Zone o bot:Element a un IRI que identifica el seu model 3D. Aquest model 3D es pot descriure utilitzant un vocabulari RDF dedicat. En cas contrari, l'IRI de el model 3D podria ser desreferenciable, i al buscar la IRI es podria recuperar una representació de el model 3D amb algun format de dades existent pels models 3D."@ca ,
+        "Relie tout bot:Zone ou bot:Element à un IRI qui identifie son modèle 3D. Ce modèle 3D peut ensuite être décrit à l'aide d'un vocabulaire RDF spécifique. Sinon, le modèle 3D de l'IRI pourrait être déréférencé, et en recherchant l'IRI, on pourrait obtenir une représentation du modèle 3D basée sur un format de données existant pour modèles 3D."@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Collega una istanza di bot:Zone o bot:Element ad un IRI che identifica il suo modello 3D. Questo modello 3D può essere descritto usando dei vocabolari RDF dedicati. Altrimenti, lo IRI del modello 3D potrebbe essere dereferenziabile, permettendo tramite esso di raggiungere la rappresentazione del modello 3D codificata secondo un formato esistente per modelli 3D."@it ,
+        "PLEASE UPDATE"@pt ,
+        "将任何bot：Zone或bot：Element链接到标识其3D模型的IRI，然后可以使用一些专用的RDF词汇表来描述3D模型。 否则，3D模型IRI可能会被取消引用的，在此情况下，当查找IRI时，可以使用3D模型的某些现有数据格式检索3D模型。"@cn ,
+        "Prepojuje akúkoľvek bot:Zone alebo bot:Element ku konkrétnemu IRI, ktoré identifikuje jej/jeho 3D model. Tento 3D model môže byť potom popísaný použitím konkrétnych RDF slovníkov. Alebo, konkrétne IRI konkrétneho 3D modelu môže byť dereferencovateľné a pokiaľ sa bude vyhľadávať podla IRI, vyhľadávajúci môže získať reprezentáciu 3D modelu pomocou/s existujúceho/cím datového/vým formátu/formátem pre reprezentáciu 3D modely. (complicated, needs revision in future)"@cz ,
+        "Propojuje jakoukoliv bot:Zone nebo bot:Element ke konkrétnímu IRI, které identifikuje její/jeho 3D model. Tento 3D model potom může být popsán využitím konkrétních RDF slovníků. Nebo, konkrétní IRI konkrétního 3D modelu může být dereferencovatelné, pokud se bude vyhledávat dle IRI, vyhledávající může získat reprezentaci 3D modelu pomocí/s existujícího/jícím datového/vým formátu/formátem pro reprezentaci 3D modelu. (complicated, needs revision in future)"@sk .
+
+bot:hasSimple3DModel rdfs:comment
+        "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ,
+        "Verbindt gelijk welke bot:Zone of bot:Element instantie met een 3D model geëncodeerd in een literal."@nl ,
+        "Verbindet jede bot:Zone oder bot:Element zu einem 3D Model, dass als Literal codiert ist."@de ,
+        "Vincula cualquier bot:Zone o bot:Element a un modelo 3D codificado como literal."@es ,
+        "Liittää vyöhykkeen (bot:Zone) tai elementin (bot:Element) sen yksinkertaiseksi arvoksi enkoodattuun 3D-malliin."@fi ,
+        "PLEASE ADD"@sv ,
+        "Forbinder enhver instans af bot:Zone eller bot:Element med en 3D-model beskrevet som en literal."@da ,
+        "Vincula qualsevol bot:Zone o bot:Element a un model 3D codificat com literal."@ca ,
+        "Relie tout bot:Zone ou bot:Element à un modèle 3D encodé comme"@fr ,
+        "PLEASE ADD"@no ,
+        "PLEASE ADD"@tr ,
+        "Collega una istanza di bot:Zone o bot:Element ad un modello 3D codificato come un literal."@it ,
+        "Vincula qualquer bot:Zone ou bot:Element a um Modelo 3D codificado como um literal."@pt ,
+        "将任何bot：Zone或bot：Element链接到编码为文本的3D模型。"@cn ,
+        "Propojuje jakýkoliv bot:Zone nebo bot:Element na 3D model definovaný jako literál."@cz ,
+        "Prepojuje akýkoľvek bot:Zone alebo bot:Element na 3D model definovaný ako literál."@sk .
+        
