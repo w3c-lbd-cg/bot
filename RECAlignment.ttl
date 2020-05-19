@@ -72,4 +72,4 @@ bot:Element   rdfs:subClassOf       rec:BuildingComponent .
 bot:Zone      rdfs:subClassOf       rec:BuildingComponent .
 
 bot:Storey    owl:equivalentClass   rec:Storey .
-bot:Room      owl:equivalentClass   rec:Space .
+bot:Space     owl:equivalentClass   rec:Space .
