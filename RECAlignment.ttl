@@ -6,7 +6,7 @@
 # the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
 # used by anyone.
 
-@prefix : <https://w3id.org/bot/BRICKAlignment#> .
+@prefix : <https://w3id.org/bot/RECAlignment#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,9 +18,9 @@
 @prefix schema:   <http://schema.org/>.
 @prefix bot: <https://w3id.org/bot#> .
 @prefix rec: <https://w3id.org/rec/core/> .
-@base <https://w3id.org/bot/BRICKAlignment> .
+@base <https://w3id.org/bot/RECAlignment> .
 
-<https://w3id.org/bot/BRICKAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+<https://w3id.org/bot/RECAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
 	dcterms:title "REC to BOT alignment."@en ;
 	dcterms:description """This ontology defines proposed alignments with the RealEstateCore ontology."""@en ;
 	dcterms:issued "2020-05-19"^^xsd:date ;
@@ -61,8 +61,8 @@ schema:name a owl:DatatypeProperty .
 
 bot:containsZone          rdfs:subPropertyOf    rec:hasSubBuildingComponent .
 bot:hasElement            rdfs:subPropertyOf    rec:hasSubBuildingComponent .
-bot:hasSubElement		      rdfs:subPropertyOf		rec:hasSubBuildingComponent .
-rec:containsMountedDevice	rdfs:subPropertyOf		bot:containsElement .
+bot:hasSubElement	  rdfs:subPropertyOf	rec:hasSubBuildingComponent .
+rec:containsMountedDevice rdfs:subPropertyOf	bot:containsElement .
 
 #################################################################
 #    Classes
