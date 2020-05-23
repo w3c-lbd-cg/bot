@@ -23,7 +23,7 @@
 	dcterms:title "ifcOWL4_Add2 to BOT alignment."@en ;
 	dcterms:description """This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."""@en ;
 	dcterms:issued "2017-09-12"^^xsd:date ;
-	dcterms:modified "2019-03-02"^^xsd:date ;
+	dcterms:modified "2020-05-23"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v1.0.0" ;
     owl:versionIRI <https://w3id.org/bot/IFCOWL4_ADD2Alignment/1.0.0> ;
