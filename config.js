@@ -94,6 +94,13 @@ var respecConfig = {
         title:"Automated Ontology Matching in the Architecture, Engineering and Construction Domain-A Case Study",
         authors: ["Georg Ferdinand Schneider"],
         date: "Proceedings of the Workshop on Linked Data in Architecture and Construction, June 2019, Lisbon, Portugal"
+       },
+	   "ISO-12006":{
+        href:"https://www.iso.org/standard/61753.html",
+        type: "ISO Standard",
+        title:"ISO 12006-2 Building construction - Organization of information about construction works - Part 2: Framework for classification",
+        authors: ["International Standards Organisation (ISO)"],
+        date: "2015, Geneva, Switzerland"
        }
     },
     issueBase: ""
