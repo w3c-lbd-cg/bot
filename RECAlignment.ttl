@@ -17,7 +17,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema:   <http://schema.org/>.
 @prefix bot: <https://w3id.org/bot#> .
-@prefix rec: <https://w3id.org/rec/core/> .
+@prefix recCore: <https://w3id.org/rec/core/> .
+@prefix recBuilding: <https://w3id.org/rec/building/> .
 @base <https://w3id.org/bot/RECAlignment> .
 
 <https://w3id.org/bot/RECAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
@@ -31,7 +32,7 @@
     owl:priorVersion <https://w3id.org/bot/RECAlignment/0.1.0> ;
 	dcterms:creator <https://orcid.org/0000-0002-6519-7057> , <https://orcid.org/0000-0001-8767-4136> ;
 	owl:imports <https://w3id.org/bot> ,
-					<https://w3id.org/rec/full/> .
+					<https://w3id.org/rec/full/3.1.3/> .
           
 <https://orcid.org/0000-0002-6519-7057> a foaf:Person , schema:Person ; 
   foaf:name    "Mads Holten Rasmussen" ;
@@ -59,17 +60,17 @@ schema:name a owl:DatatypeProperty .
 #    Object Properties
 #################################################################
 
-bot:containsZone          rdfs:subPropertyOf    rec:hasSubBuildingComponent .
-bot:hasElement            rdfs:subPropertyOf    rec:hasSubBuildingComponent .
-bot:hasSubElement	  rdfs:subPropertyOf	rec:hasSubBuildingComponent .
-rec:containsMountedDevice rdfs:subPropertyOf	bot:containsElement .
+bot:containsZone          rdfs:subPropertyOf    recCore:hasSubBuildingComponent .
+bot:hasElement            rdfs:subPropertyOf    recCore:hasSubBuildingComponent .
+bot:hasSubElement	  rdfs:subPropertyOf	recCore:hasSubBuildingComponent .
+recCore:containsMountedDevice rdfs:subPropertyOf	bot:containsElement .
 
 #################################################################
 #    Classes
 #################################################################
 
-bot:Element   rdfs:subClassOf       rec:BuildingComponent .
-bot:Zone      rdfs:subClassOf       rec:BuildingComponent .
+bot:Element   rdfs:subClassOf       recCore:BuildingComponent .
+bot:Zone      rdfs:subClassOf       recCore:BuildingComponent .
 
-bot:Storey    owl:equivalentClass   rec:Storey .
-bot:Space     owl:equivalentClass   rec:Room .
+bot:Storey    owl:equivalentClass   recBuilding:Storey .
+bot:Space     owl:equivalentClass   recCore:Room .
