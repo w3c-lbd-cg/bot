@@ -74,6 +74,20 @@ var respecConfig = {
         authors: ["Georg Ferdinand Schneider"],
         date: "Proceedings of the Workshop on Linked Data in Architecture and Construction, November 2017, Dijon, France"
        },
+	   "Rasmussen2020":{
+        href:"http://www.semantic-web-journal.net/system/files/swj2279.pdf",
+        type: "Journal",
+        title:"http://www.semantic-web-journal.net/system/files/swj2279.pdf",
+        authors: [ "Mads Holten Rasmussen" , "Maxime Lefrançois" , "Georg Ferdinand Schneider" , "Pieter Pauwels"],
+        date: "Semantic Web Journal, IOS Press, 2020, Accepted"
+       },
+	 "Randell":{
+        href:"http://ceur-ws.org/Vol-2389/03paper.pdf",
+        type: "Proceedings of the Workshop on Linked Data in Architecture and Construction",
+        title:"A spatial logic based on regions and connection",
+        authors: ["David A. Randell" , "Zhan Cui" , "Anthony G. Cohn"],
+        date: "1992, 3rd International Conference on Knowledge Representation and Reasoning, pp. 165-176."
+       },
 	   "Schneider-2019":{
         href:"http://ceur-ws.org/Vol-2389/03paper.pdf",
         type: "Proceedings of the Workshop on Linked Data in Architecture and Construction",
