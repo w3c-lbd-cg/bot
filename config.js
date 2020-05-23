@@ -77,7 +77,7 @@ var respecConfig = {
 	   "Rasmussen2020":{
         href:"http://www.semantic-web-journal.net/system/files/swj2279.pdf",
         type: "Journal",
-        title:"http://www.semantic-web-journal.net/system/files/swj2279.pdf",
+        title:"BOT: the Building Topology Ontology of the W3C Linked Building Data Group",
         authors: [ "Mads Holten Rasmussen" , "Maxime Lefrançois" , "Georg Ferdinand Schneider" , "Pieter Pauwels"],
         date: "Semantic Web Journal, IOS Press, 2020, Accepted"
        },
