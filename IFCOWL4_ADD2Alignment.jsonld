@@ -54,76 +54,76 @@
     "@id" : "foaf:name",
     "@type" : "owl:DatatypeProperty"
   }, {
-    "@id" : "https://w3id.org/bot/IFC4_ADD2Alignment",
-    "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "@id" : "https://w3id.org/bot/IFCOWL4_ADD2Alignment",
+    "@type" : [ "voaf:Vocabulary", "owl:Ontology" ],
+    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."
     },
     "issued" : "2017-09-12",
     "license" : "http://creativecommons.org/licenses/by/3.0/",
-    "modified" : "2019-03-02",
+    "modified" : "2020-05-23",
     "title" : {
       "@language" : "en",
       "@value" : "ifcOWL4_Add2 to BOT alignment."
     },
     "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
-    "imports" : [ "http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2", "https://w3id.org/bot" ],
-    "priorVersion" : "https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0",
-    "versionIRI" : "https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0",
+    "imports" : [ "https://w3id.org/bot", "http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2" ],
+    "priorVersion" : "https://w3id.org/bot/IFCOWL4_ADD2Alignment/0.1.0",
+    "versionIRI" : "https://w3id.org/bot/IFCOWL4_ADD2Alignment/1.0.0",
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
-    "subClassOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
-    "imports" : {
-      "@id" : "http://www.w3.org/2002/07/owl#imports",
       "@type" : "@id"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
     },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
-    },
-    "versionInfo" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
-    },
-    "seeAlso" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-      "@type" : "@id"
-    },
     "priorVersion" : {
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
       "@type" : "@id"
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
-    "description" : {
-      "@id" : "http://purl.org/dc/terms/description"
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
     },
-    "issued" : {
-      "@id" : "http://purl.org/dc/terms/issued",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
     },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "@vocab" : "https://w3id.org/bot/IFC4_ADD2Alignment#",
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "@vocab" : "https://w3id.org/bot/IFCOWL4_ADD2Alignment#",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bot" : "https://w3id.org/bot#",

@@ -203,10 +203,10 @@ bot:    a                              voaf:Vocabulary , owl:Ontology ;
                                          foaf:name  "Georg Ferdinand Schneider"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Mads Holten Rasmussen"
+                                         foaf:name  "Pieter Pauwels"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Pieter Pauwels"
+                                         foaf:name  "Mads Holten Rasmussen"
                                        ] ;
         dcterms:description            "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nChanges since version 0.2.0 of the ontology are documented in:\n\nhttps://w3id.org/bot/bot.html#changes\n\nThe version 0.2.0 of the ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology\n\nThe initial version of the ontology was documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"@en ;
         dcterms:issued                 "2018-06-21"^^xsd:date ;

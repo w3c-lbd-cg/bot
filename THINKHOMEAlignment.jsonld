@@ -144,15 +144,16 @@
       "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
       "@type" : "@id"
     },
     "priorVersion" : {
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "imports" : {
@@ -170,10 +171,6 @@
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
@@ -187,6 +184,9 @@
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/THINKHOMEAlignment#",
     "thsv" : "https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#",

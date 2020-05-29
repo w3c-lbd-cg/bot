@@ -74,12 +74,33 @@ var respecConfig = {
         authors: ["Georg Ferdinand Schneider"],
         date: "Proceedings of the Workshop on Linked Data in Architecture and Construction, November 2017, Dijon, France"
        },
+	   "Rasmussen2020":{
+        href:"http://www.semantic-web-journal.net/system/files/swj2279.pdf",
+        type: "Journal",
+        title:"BOT: the Building Topology Ontology of the W3C Linked Building Data Group",
+        authors: [ "Mads Holten Rasmussen" , "Maxime Lefrançois" , "Georg Ferdinand Schneider" , "Pieter Pauwels"],
+        date: "Semantic Web Journal, IOS Press, 2020, Accepted"
+       },
+	 "Randell":{
+        href:"https://www.researchgate.net/profile/Anthony_Cohn/publication/221393453_A_Spatial_Logic_based_on_Regions_and_Connection/links/0912f50cbb29aa483d000000/A-Spatial-Logic-based-on-Regions-and-Connection.pdf",
+        type: "Journal",
+        title:"A spatial logic based on regions and connection",
+        authors: ["David A. Randell" , "Zhan Cui" , "Anthony G. Cohn"],
+        date: "1992, 3rd International Conference on Knowledge Representation and Reasoning, pp. 165-176."
+       },
 	   "Schneider-2019":{
         href:"http://ceur-ws.org/Vol-2389/03paper.pdf",
         type: "Proceedings of the Workshop on Linked Data in Architecture and Construction",
         title:"Automated Ontology Matching in the Architecture, Engineering and Construction Domain-A Case Study",
         authors: ["Georg Ferdinand Schneider"],
         date: "Proceedings of the Workshop on Linked Data in Architecture and Construction, June 2019, Lisbon, Portugal"
+       },
+	   "ISO-12006":{
+        href:"https://www.iso.org/standard/61753.html",
+        type: "ISO Standard",
+        title:"ISO 12006-2 Building construction - Organization of information about construction works - Part 2: Framework for classification",
+        authors: ["International Standards Organisation (ISO)"],
+        date: "2015, Geneva, Switzerland"
        }
     },
     issueBase: ""

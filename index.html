@@ -43,7 +43,12 @@
         <p>
             Several industries have interfaces to the construction industry and buildings in particular without this being their main industry. As there is often a need to describe some sensor, product, device in the context of the building in which it sits and as the building is itself also a feature of interest in the context of a smart city, there is a demand for a minimal, extendable ontology that describes anything in its context of a building. 
         </p>
-        <p>The Building Topology Ontology (BOT) is a minimal OWL DL [[owl2-primer]] ontology for defining relationships between the sub-components of a building. It was suggested as an extensible baseline for use along with more domain specific ontologies following general W3C principles of encouraging reuse and keeping the schema no more complex than necessary. 
+        <p>
+		The Building Topology Ontology (BOT) is a minimal OWL DL [[owl2-primer]] ontology for defining relationships between the sub-components of a building. It was suggested as an extensible baseline for use along with more domain specific ontologies following general W3C principles of encouraging reuse and keeping the schema no more complex than necessary. 
+	</p>
+	<p>
+		BOT is from design scoped to describe topology specific to the buildings domain. It does not provide a generic description of topological relationships as, for instance, the Regional Connection Calculus (RCC) [[Randell]]. See also in this regard the discussion in the accompanying publication [[[Rasmussen2020]], Sec. 3.3] .
+	</p>
     </section>
 
 
@@ -258,7 +263,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Building</em> -
-                <span property="rdfs:comment skos:definition">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013].</span>
+                <span property="rdfs:comment skos:definition">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [[ISO-12006]].</span>
                 <br>
                 <table>
                     <tbody>
@@ -608,7 +613,7 @@
                     <p><strong>a OWL Class</strong></p>
     
                     <em property="rdfs:label">Element</em> -
-                    <span property="rdfs:comment skos:definition">Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7].</span>
+                    <span property="rdfs:comment skos:definition">Constituent of a construction entity with a characteristic technical function, form or position [[[ISO-12006]], 3.4.7].</span>
                     <br>
                     <table>
                         <tbody>

@@ -64,6 +64,10 @@ bot:aggregates  a     owl:ObjectProperty ;
         rdfs:comment  "Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.\n        \nEksempel på brug af bot:aggregates i en produkt-ontologi:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"@da , "Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.\n        \nExample of how to use bot:aggregates in a product ontology:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"@en ;
         rdfs:label    "aggregerer"@da , "aggregates"@en .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:comment  "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da , "Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en , "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"@nl ;
         rdfs:domain   bot:Element ;
@@ -71,14 +75,6 @@ bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:range    bot:Element .
 
 vs:term_status  a  owl:AnnotationProperty .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
-] .
 
 bot:Site  a              owl:Class ;
         rdfs:comment     "Area containing one or more buildings."@en , "Område som indeholder en eller flere bygninger."@da , "Omgeving die één of meerdere gebouwen bevat."@nl , "Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ;
@@ -94,6 +90,10 @@ bot:Interface  a         owl:Class ;
                          ] .
 
 foaf:name  a    owl:DatatypeProperty .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .
 
 dcterms:modified  a  owl:AnnotationProperty .
 

@@ -14,7 +14,7 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#Actuator">
@@ -23,18 +23,23 @@
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#PhysicalObject">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/SAREFG4BLDGAlignment">
-    <dcterms:creator rdf:nodeID="A0"/>
-    <dcterms:contributor rdf:nodeID="A1"/>
+    <dcterms:creator rdf:nodeID="A2"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dcterms:title xml:lang="en">SAREF4BLDG Alignment.</dcterms:title>
     <dcterms:contributor rdf:resource="http://www.maxime-lefrancois.info/me#"/>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0"/>
-    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dcterms:contributor rdf:nodeID="A1"/>
     <dce:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-02</dce:modified>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dcterms:contributor rdf:nodeID="A0"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology.</dcterms:description>
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
@@ -44,7 +49,6 @@
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
-    <dcterms:contributor rdf:nodeID="A2"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -79,19 +83,15 @@
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <foaf:name>Pieter Pauwels</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#contains">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <foaf:name>Mads Holten Rasmussen</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#Building">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#Sensor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>

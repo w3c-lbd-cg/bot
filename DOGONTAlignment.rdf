@@ -28,6 +28,13 @@
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#ceilingOf">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#BuildingEnvironment">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
   </rdf:Description>
@@ -64,16 +71,13 @@
     <owl:versionIRI rdf:resource="https://w3id.org/bot/DOGONTAlignment/1.0.0"/>
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <dcterms:title xml:lang="en">DogOnt to BOT alignment.</dcterms:title>
-    <dcterms:creator rdf:nodeID="A0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the DogOnt ontology.</dcterms:description>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
+    <dcterms:creator rdf:nodeID="A0"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/DOGONTAlignment/0.1.0"/>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Ceiling">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
@@ -113,10 +117,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#TechnicalSystem">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#belongsTo">
     <rdfs:subPropertyOf rdf:nodeID="A1"/>

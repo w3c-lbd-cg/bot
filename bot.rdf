@@ -16,6 +16,10 @@
     <rdf:rest rdf:nodeID="A1"/>
     <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Element">
     <rdfs:label xml:lang="nl">Gebouwelement</rdfs:label>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
@@ -40,10 +44,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasStorey">
     <rdfs:label xml:lang="sv">har våning</rdfs:label>
@@ -119,11 +119,16 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasElement">
     <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
     <rdfs:label xml:lang="nl">hoster element</rdfs:label>
     <rdfs:label xml:lang="nl">heeft element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:propertyChainAxiom rdf:nodeID="A2"/>
     <rdfs:comment xml:lang="de">Beziehung zwischen einer Zone und einem Bauteil, dass entweder in der Zone enthalten ist, oder sich mit ihr schneidet. Diese Beziehung sollte nicht explizit benutzt werden, sondern ergibt sich implizit aus den Unterbeziehungen. Es ermöglicht, zum Beispiel, dass mit einer Abfrage alle Türen eines Gebäudes, die sich mit einer Zone schneiden ermittelt werden können.</rdfs:comment>
     <rdfs:comment xml:lang="en">Links a Zone to an Element that is either contained in or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
@@ -133,7 +138,6 @@
     <rdfs:label xml:lang="fr">a élément</rdfs:label>
     <rdfs:label xml:lang="de">hat Bauteil</rdfs:label>
     <rdfs:label xml:lang="da">har element</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A0"/>
     <rdfs:label xml:lang="sv">värd för element</rdfs:label>
     <vs:term_status>stable</vs:term_status>
     <rdfs:label xml:lang="en">has element</rdfs:label>
@@ -205,10 +209,6 @@
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
     <rdfs:comment xml:lang="en">Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#">
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-06-21T12:00:00</dcterms:issued>
@@ -361,12 +361,12 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:comment xml:lang="nl">Relatie tussen zone en een gebouwelement in die zone</rdfs:comment>
     <rdfs:label xml:lang="en">contains element</rdfs:label>
     <rdfs:comment xml:lang="da">Relation til en bygningsdel, som er indeholdt i en zone.</rdfs:comment>
-    <owl:propertyChainAxiom rdf:nodeID="A2"/>
     <rdfs:label xml:lang="nl">bevat element</rdfs:label>
     <rdfs:comment xml:lang="fr">Relation à définir entre un élément de bâti et la zone le contenant</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <vs:term_status>stable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
+    <owl:propertyChainAxiom rdf:nodeID="A0"/>
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasElement"/>
     <rdfs:label xml:lang="de">enthält Bauteil</rdfs:label>
     <rdfs:label xml:lang="sv">innehåller byggdel</rdfs:label>
@@ -382,10 +382,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   </rdf:Description>
   <rdf:Description rdf:about="http://schema.org/domainIncludes">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#containsZone">
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
@@ -418,6 +414,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

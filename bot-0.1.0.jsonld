@@ -1,24 +1,24 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Mads Holten Rasmussen"
-  }, {
-    "@id" : "_:b11",
+    "@id" : "_:b2",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
     }
   }, {
-    "@id" : "_:b2",
+    "@id" : "_:b4",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
     "name" : "Georg Ferdinand Schneider"
   }, {
-    "@id" : "_:b3",
+    "@id" : "_:b5",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "_:b6",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
@@ -67,8 +67,8 @@
     "@type" : "owl:Ontology",
     "Language" : "en",
     "dce:description" : "A simple ontology describing the topology of a building",
-    "contributor" : "_:b2",
-    "creator" : [ "_:b0", "_:b3" ],
+    "contributor" : "_:b4",
+    "creator" : [ "_:b5", "_:b6" ],
     "description" : {
       "@language" : "en",
       "@value" : "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"
@@ -313,9 +313,6 @@
     "range" : "bot:Storey"
   } ],
   "@context" : {
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "rest" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
       "@type" : "@id"
@@ -324,12 +321,16 @@
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
+      "@type" : "@id"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
       "@type" : "@id"
     },
     "Language" : {
@@ -343,8 +344,8 @@
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
       "@type" : "@id"
     },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "preferredNamespacePrefix" : {
@@ -373,16 +374,15 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
-    "members" : {
-      "@id" : "http://www.w3.org/2002/07/owl#members",
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "propertyChainAxiom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
     },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
-      "@type" : "@id"
-    },
-    "propertyChainAxiom" : {
-      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
     },
     "domain" : {

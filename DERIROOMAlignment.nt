@@ -1,20 +1,20 @@
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/title> "DERIROOMS to BOT alignment."@en .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments with the DERI Rooms ontology."@en .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/issued> "2017-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/modified> "2019-03-01"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/DERIROOMSAlignment/1.0.0> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/DERIROOMSAlignment/0.1.0> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
-_:B922d8953e5c3fc76aa13795dbb372962 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B922d8953e5c3fc76aa13795dbb372962 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://purl.org/dc/terms/creator> _:B922d8953e5c3fc76aa13795dbb372962 .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
-<https://w3id.org/bot/DERIROOMSAlignment> <http://www.w3.org/2002/07/owl#imports> <http://vocab.deri.ie/rooms#> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/title> "DERIROOMS to BOT alignment."@en .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments with the DERI Rooms ontology."@en .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/issued> "2017-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/modified> "2020-05-23"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/DERIROOMAlignment/1.0.0> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/DERIROOMAlignment/0.1.0> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
+_:Bf198fc2ba8b21306926c2a5886c2362a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bf198fc2ba8b21306926c2a5886c2362a <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/DERIROOMAlignment> <http://purl.org/dc/terms/creator> _:Bf198fc2ba8b21306926c2a5886c2362a .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<https://w3id.org/bot/DERIROOMAlignment> <http://www.w3.org/2002/07/owl#imports> <http://vocab.deri.ie/rooms#> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

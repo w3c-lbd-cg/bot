@@ -6,7 +6,7 @@
 # the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
 # used by anyone.
 
-@prefix : <https://w3id.org/bot/IFC4_ADD2Alignment#> .
+@prefix : <https://w3id.org/bot/IFCOWL4_ADD2Alignment#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,17 +17,17 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix bot: <https://w3id.org/bot#> .
 @prefix ifc: <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#> .
-@base <https://w3id.org/bot/IFC4_ADD2Alignment> .
+@base <https://w3id.org/bot/IFCOWL4_ADD2Alignment> .
 
-<https://w3id.org/bot/IFC4_ADD2Alignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+<https://w3id.org/bot/IFCOWL4_ADD2Alignment> rdf:type owl:Ontology , voaf:Vocabulary ;
 	dcterms:title "ifcOWL4_Add2 to BOT alignment."@en ;
 	dcterms:description """This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."""@en ;
 	dcterms:issued "2017-09-12"^^xsd:date ;
-	dcterms:modified "2019-03-02"^^xsd:date ;
+	dcterms:modified "2020-05-23"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v1.0.0" ;
-    owl:versionIRI <https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0> ;
-    owl:priorVersion <https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0> ;
+    owl:versionIRI <https://w3id.org/bot/IFCOWL4_ADD2Alignment/1.0.0> ;
+    owl:priorVersion <https://w3id.org/bot/IFCOWL4_ADD2Alignment/0.1.0> ;
 	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator [ a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;

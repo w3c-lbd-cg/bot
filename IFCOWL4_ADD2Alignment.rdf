@@ -2,10 +2,10 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:dcterms="http://purl.org/dc/terms/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="https://w3id.org/bot/IFCOWL4_ADD2Alignment#"
     xmlns:ifc="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#"
     xmlns:voaf="http://purl.org/vocommons/voaf#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns="https://w3id.org/bot/IFC4_ADD2Alignment#"
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:bot="https://w3id.org/bot#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
@@ -29,22 +29,22 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/bot/IFC4_ADD2Alignment">
-    <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
-    <owl:imports rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2"/>
+  <rdf:Description rdf:about="https://w3id.org/bot/IFCOWL4_ADD2Alignment">
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
-    <owl:versionIRI rdf:resource="https://w3id.org/bot/IFC4_ADD2Alignment/1.0.0"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <owl:imports rdf:resource="https://w3id.org/bot"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-    <owl:versionInfo>v1.0.0</owl:versionInfo>
-    <dcterms:creator rdf:nodeID="A0"/>
-    <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
-    <owl:priorVersion rdf:resource="https://w3id.org/bot/IFC4_ADD2Alignment/0.1.0"/>
-    <dcterms:title xml:lang="en">ifcOWL4_Add2 to BOT alignment.</dcterms:title>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/IFCOWL4_ADD2Alignment/0.1.0"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the ifcOWL4_Add2 ontology.</dcterms:description>
+    <owl:imports rdf:resource="https://w3id.org/bot"/>
+    <owl:imports rdf:resource="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2"/>
+    <dcterms:title xml:lang="en">ifcOWL4_Add2 to BOT alignment.</dcterms:title>
+    <dcterms:creator rdf:nodeID="A0"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/IFCOWL4_ADD2Alignment/1.0.0"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-05-23</dcterms:modified>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-02</dcterms:modified>
+    <owl:versionInfo>v1.0.0</owl:versionInfo>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

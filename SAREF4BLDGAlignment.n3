@@ -30,10 +30,10 @@ dcterms:contributor  a  owl:AnnotationProperty .
 
 dcterms:issued  a  owl:AnnotationProperty .
 
-saref4bldg:Actuator  rdfs:subClassOf  bot:Element .
-
 saref4bldg:PhysicalObject
         rdfs:subClassOf  bot:Element .
+
+saref4bldg:Actuator  rdfs:subClassOf  bot:Element .
 
 foaf:name  a    owl:DatatypeProperty .
 
