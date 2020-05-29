@@ -16,24 +16,23 @@
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix bot: <https://w3id.org/bot#> .
-@prefix brick: <https://brickschema.org/schema/1.1/Brick#> .
+@prefix brick: <https://brickschema.org/schema/1.0.2/Brick#> .
 @base <https://w3id.org/bot/BRICKAlignment> .
 
 <https://w3id.org/bot/BRICKAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
 	dcterms:title "BRICK to BOT alignment."@en ;
-	dcterms:description """This ontology defines correspondences with the BRICK ontology."""@en ;
+	dcterms:description """This ontology defines proposed alignments with the BRICK ontology."""@en ;
 	dcterms:issued "2017-09-12"^^xsd:date ;
-	dcterms:modified "2019-05-29"^^xsd:date ;
+	dcterms:modified "2019-03-01"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
-    owl:versionInfo "v2.0.0" ;
-    owl:versionIRI <https://w3id.org/bot/BRICKAlignment/2.0.0> ;
-    owl:priorVersion <https://w3id.org/bot/BRICKAlignment/1.0.0> ;
+    owl:versionInfo "v1.0.0" ;
+    owl:versionIRI <https://w3id.org/bot/BRICKAlignment/1.0.0> ;
+    owl:priorVersion <https://w3id.org/bot/BRICKAlignment/0.1.0> ;
 	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
-	dcterms:creator [a foaf:Person ; foaf:name "Jason Koh" ] ;
-	owl:imports <https://w3id.org/bot#> ,
-				<https://brickschema.org/schema/1.1/Brick#> .
+	owl:imports 	<https://w3id.org/bot> ,
+					<https://brickschema.org/schema/1.0.2/Brick#> .
 
 dcterms:title a owl:AnnotationProperty .
 dcterms:description a owl:AnnotationProperty .
@@ -47,29 +46,34 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 foaf:Person a owl:Class .
 foaf:name a owl:DatatypeProperty .
 
+											   
 #################################################################
 #    Object Properties
 #################################################################
 
-bot:containsZone rdfs:subPropertyOf brick:hasPart .
-bot:containsElement rdfs:subPropertyOf brick:hasPart .
-bot:hasSubElement rdfs:subPropertyOf brick:hasPart .
+brick:contains rdfs:subPropertyOf bot:containsElement .
 
+brick:hasPart rdfs:subPropertyOf bot:containsZone .
+brick:hasPart rdfs:subPropertyOf bot:containsElement .
+brick:hasPart rdfs:subPropertyOf bot:hasSubElement .
+brick:hasPoint rdfs:subPropertyOf bot:containsZone .
 brick:hasPoint rdfs:subPropertyOf bot:containsElement .
 
 #################################################################
 #    Classes
 #################################################################
 
-bot:Site rdfs:subClassOf brick:Location . # Brick's site is modelled as a named inidiviual allow not having buildings
-brick:Site rdf:type bot:Site . 
-bot:Storey owl:equivalentClass brick:Floor. # Brick equate both Storey and Floor.
-brick:Location rdfs:subClassOf bot:Zone. # Maybe equivalent.
-brick:Building owl:equivalentClass bot:Building.
-brick:Space rdfs:subClassOf bot:Space. 
+brick:Location rdfs:subClassOf bot:Zone .
 
-brick:Point rdfs:subClassOf bot:Element . # In BOT, anything other than bot:Zone is bot:Element
-brick:Equipment rdfs:subClassOf bot:Element . # In BOT, anything other than bot:Zone is bot:Element
+brick:Building rdfs:subClassOf bot:Building .
+brick:Floor rdfs:subClassOf bot:Storey .
 
+brick:Basement rdfs:subClassOf bot:Space .
+brick:Outside rdfs:subClassOf bot:Space .
+brick:Room rdfs:subClassOf bot:Space .
+brick:Space rdfs:subClassOf bot:Space .
+brick:Wing rdfs:subClassOf bot:Space .
+brick:Zone rdfs:subClassOf bot:Space .
 
-
+brick:Equipment rdfs:subClassOf bot:Element .
+brick:Point rdfs:subClassOf bot:Element .
