@@ -25,6 +25,10 @@ bot:interfaceOf  a    owl:ObjectProperty ;
 
 dcterms:license  a  owl:AnnotationProperty .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 bot:containsElement  a          owl:ObjectProperty ;
         rdfs:comment            "Relation til en bygningsdel, som er indeholdt i en zone."@da , "Relation to a building element contained in a zone."@en ;
         rdfs:domain             bot:Zone ;
@@ -64,10 +68,6 @@ bot:aggregates  a     owl:ObjectProperty ;
         rdfs:comment  "Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.\n        \nEksempel på brug af bot:aggregates i en produkt-ontologi:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"@da , "Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.\n        \nExample of how to use bot:aggregates in a product ontology:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"@en ;
         rdfs:label    "aggregerer"@da , "aggregates"@en .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:comment  "Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da , "Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en , "Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"@nl ;
         rdfs:domain   bot:Element ;
@@ -89,11 +89,11 @@ bot:Interface  a         owl:Class ;
                            owl:onProperty   bot:interfaceOf
                          ] .
 
-foaf:name  a    owl:DatatypeProperty .
-
 [ a            owl:AllDisjointClasses ;
   owl:members  ( bot:Zone bot:Element )
 ] .
+
+foaf:name  a    owl:DatatypeProperty .
 
 dcterms:modified  a  owl:AnnotationProperty .
 
@@ -145,10 +145,10 @@ bot:    a                              voaf:Vocabulary , owl:Ontology ;
                                          foaf:name  "Maxime Lefrançois"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Pieter Pauwels"
+                                         foaf:name  "Mads Holten Rasmussen"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Mads Holten Rasmussen"
+                                         foaf:name  "Pieter Pauwels"
                                        ] ;
         dcterms:description            "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nVersion 0.2.0 of the ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology\n\nThe initial version of the ontology was documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"@en ;
         dcterms:issued                 "2017-10-27"^^xsd:date ;

@@ -1,10 +1,10 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "inverseOf" : "bot:adjacentZone"
+    "inverseOf" : "bot:hasElement"
   }, {
     "@id" : "_:b1",
-    "inverseOf" : "bot:hasElement"
+    "inverseOf" : "bot:adjacentZone"
   }, {
     "@id" : "_:b2",
     "rdf:type" : {
@@ -123,26 +123,29 @@
     "subPropertyOf" : "bot:interfaceOf"
   }, {
     "@id" : "th:hasDefinedAdjacentSpace",
-    "subPropertyOf" : "_:b0"
+    "subPropertyOf" : "_:b1"
   }, {
     "@id" : "th:isDefinedAdjacentSurfaceOf",
     "subPropertyOf" : "bot:interfaceOf"
   }, {
     "@id" : "thsv:isEquipmentOf",
-    "subPropertyOf" : "_:b1"
+    "subPropertyOf" : "_:b0"
   } ],
   "@context" : {
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
     },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
@@ -184,9 +187,6 @@
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/THINKHOMEAlignment#",
     "thsv" : "https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#",

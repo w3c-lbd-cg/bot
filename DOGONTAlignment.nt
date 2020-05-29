@@ -10,9 +10,9 @@
 <https://w3id.org/bot/DOGONTAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/DOGONTAlignment/0.1.0> .
 <https://w3id.org/bot/DOGONTAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
 <https://w3id.org/bot/DOGONTAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:B2707117c76ddec9d3b26d0787d3d9a14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B2707117c76ddec9d3b26d0787d3d9a14 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/DOGONTAlignment> <http://purl.org/dc/terms/creator> _:B2707117c76ddec9d3b26d0787d3d9a14 .
+_:B11451fdce66711c6c1ec7f2dc960d890 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B11451fdce66711c6c1ec7f2dc960d890 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/DOGONTAlignment> <http://purl.org/dc/terms/creator> _:B11451fdce66711c6c1ec7f2dc960d890 .
 <https://w3id.org/bot/DOGONTAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/DOGONTAlignment> <http://www.w3.org/2002/07/owl#imports> <http://elite.polito.it/ontologies/dogont.owl> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -27,8 +27,8 @@ _:B2707117c76ddec9d3b26d0787d3d9a14 <http://xmlns.com/foaf/0.1/name> "Georg Ferd
 <http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://elite.polito.it/ontologies/dogont.owl#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsElement> .
-_:B2626f2db885d91e9e4015e94b3276c72 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasSubElement> .
-<http://elite.polito.it/ontologies/dogont.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B2626f2db885d91e9e4015e94b3276c72 .
+_:Bc829609a5fd2eaa0fe242fd1d7449995 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasSubElement> .
+<http://elite.polito.it/ontologies/dogont.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bc829609a5fd2eaa0fe242fd1d7449995 .
 <http://elite.polito.it/ontologies/dogont.owl#floorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
 <http://elite.polito.it/ontologies/dogont.owl#ceilingOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
 <http://elite.polito.it/ontologies/dogont.owl#hasWall> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#adjacentElement> .

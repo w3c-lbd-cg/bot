@@ -1,4 +1,5 @@
 # BOT: Building Topology Ontology 
+![](https://github.com/w3c-lbd-cg/bot/workflows/CI/badge.svg)
 
 ## BOT in the literature
 

@@ -17,9 +17,9 @@ dcterms:description  a  owl:AnnotationProperty .
 
 dcterms:creator  a  owl:AnnotationProperty .
 
-dogont:Vertical  rdfs:subClassOf  bot:Element .
-
 bot:Zone  rdfs:subClassOf  dogont:Environment .
+
+dogont:Vertical  rdfs:subClassOf  bot:Element .
 
 dogont:Room  rdfs:subClassOf  bot:Space .
 

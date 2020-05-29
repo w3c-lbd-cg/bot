@@ -10,9 +10,9 @@
 <https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/IFCOWL4_ADD2Alignment/0.1.0> .
 <https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
 <https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:Bbe8134d8896768ac713c39b0aadf1901 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:Bbe8134d8896768ac713c39b0aadf1901 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://purl.org/dc/terms/creator> _:Bbe8134d8896768ac713c39b0aadf1901 .
+_:Be036618efe89de3b42bb7d5f9ddccb0e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Be036618efe89de3b42bb7d5f9ddccb0e <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://purl.org/dc/terms/creator> _:Be036618efe89de3b42bb7d5f9ddccb0e .
 <https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/IFCOWL4_ADD2Alignment> <http://www.w3.org/2002/07/owl#imports> <http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

@@ -45,9 +45,9 @@ ifc:IfcElement  rdfs:subClassOf  bot:Element .
 
 foaf:Person  a  owl:Class .
 
-ifc:IfcSite  rdfs:subClassOf  bot:Site .
-
 ifc:IfcBuilding  rdfs:subClassOf  bot:Building .
+
+ifc:IfcSite  rdfs:subClassOf  bot:Site .
 
 dcterms:license  a  owl:AnnotationProperty .
 

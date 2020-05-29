@@ -59,18 +59,14 @@ vs:term_status  a  owl:AnnotationProperty .
 
 foaf:Person  a  owl:Class .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 bot:hasElement  a               owl:ObjectProperty ;
         rdfs:comment            "Relation til elementer, hørende til en en bygning eller en etage."@da , "Relation to elements belonging to a building or a storey."@en , "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ;
         rdfs:domain             owl:Thing ;
         rdfs:label              "hat bauteil"@de , "har bygningsdel"@da , "has element"@en ;
         rdfs:range              bot:Element ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ;
         owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) .
+        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) .
 
 bot:adjacentElement  a  owl:ObjectProperty ;
         rdfs:comment  "Relation til bygningsdele, som afgrænser et fysisk rum"@da , "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de , "Relation of a space to its bounding building elements"@en ;
@@ -95,6 +91,10 @@ bot:hasSpace  a       owl:ObjectProperty ;
 bot:Building  a       owl:Class ;
         rdfs:comment  "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da , "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de , "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ;
         rdfs:label    "Bygning"@da , "Gebäude"@de , "Building"@en .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
+] .
 
 bot:hasStorey  a      owl:ObjectProperty ;
         rdfs:comment  "Relation til etager indeholdt i bygningen."@da , "Beziehung zu in Gebäude enthaltenden Geschossen"@de , "Relation to storeys contained in the building."@en ;

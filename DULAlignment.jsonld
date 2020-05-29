@@ -4,13 +4,13 @@
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
-    "name" : "Maxime Lefrançois"
+    "name" : "Georg Ferdinand Schneider"
   }, {
     "@id" : "_:b1",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
-    "name" : "Georg Ferdinand Schneider"
+    "name" : "Maxime Lefrançois"
   }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"
@@ -93,8 +93,8 @@
   }, {
     "@id" : "https://w3id.org/bot/DUL2Alignment",
     "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "contributor" : [ "_:b1", "https://www.researchgate.net/profile/Georg_Schneider3" ],
-    "creator" : [ "http://maxime-lefrancois.info/me#", "_:b0" ],
+    "contributor" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "creator" : [ "_:b1", "http://maxime-lefrancois.info/me#" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the DUL ontology."
@@ -112,6 +112,9 @@
     "versionInfo" : "v0.1.0"
   } ],
   "@context" : {
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
@@ -128,6 +131,14 @@
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
     },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
@@ -139,10 +150,6 @@
     },
     "imports" : {
       "@id" : "http://www.w3.org/2002/07/owl#imports",
-      "@type" : "@id"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "issued" : {
@@ -157,16 +164,9 @@
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
-      "@type" : "@id"
-    },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/DULAlignment#",
     "owl" : "http://www.w3.org/2002/07/owl#",

@@ -75,10 +75,6 @@
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
@@ -96,6 +92,10 @@
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",

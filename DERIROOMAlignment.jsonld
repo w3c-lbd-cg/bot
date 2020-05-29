@@ -81,6 +81,9 @@
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
@@ -129,9 +132,6 @@
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/DERIROOMAlignment#",
     "rooms" : "http://vocab.deri.ie/rooms#",
