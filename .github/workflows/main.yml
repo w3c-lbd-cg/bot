@@ -27,7 +27,7 @@ jobs:
     - name: Download/check/unpack/move Jena in one go
       run: |
         wget -O jena.tar.gz $MIRROR/jena/binaries/apache-jena-$JENA_VERSION.tar.gz || \
-        wget -O jena.tar.gz $ARCHIVE/jena/binaries/apache-jena-jena-$JENA_VERSION.tar.gz && \
+        wget -O jena.tar.gz $ARCHIVE/jena/binaries/apache-jena-$JENA_VERSION.tar.gz && \
         sha512sum -c jena.tar.gz.sha512 && \
         tar zxf jena.tar.gz && \
         rm jena.tar.gz*
