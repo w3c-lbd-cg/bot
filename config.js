@@ -82,8 +82,8 @@ var respecConfig = {
         date: "Semantic Web Journal, IOS Press, 2020, Accepted"
        },
 	 "Randell":{
-        href:"http://ceur-ws.org/Vol-2389/03paper.pdf",
-        type: "Proceedings of the Workshop on Linked Data in Architecture and Construction",
+        href:"https://www.researchgate.net/profile/Anthony_Cohn/publication/221393453_A_Spatial_Logic_based_on_Regions_and_Connection/links/0912f50cbb29aa483d000000/A-Spatial-Logic-based-on-Regions-and-Connection.pdf",
+        type: "Journal",
         title:"A spatial logic based on regions and connection",
         authors: ["David A. Randell" , "Zhan Cui" , "Anthony G. Cohn"],
         date: "1992, 3rd International Conference on Knowledge Representation and Reasoning, pp. 165-176."
