@@ -23,7 +23,7 @@
 
 <https://w3id.org/bot/RECAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
 	dcterms:title "REC to BOT alignment."@en ;
-	dcterms:description """This ontology defines proposed alignments with the RealEstateCore ontology."""@en ;
+	dcterms:description """This ontology defines proposed alignments with the RealEstateCore ontology. The alignments are based on BOT version 0.3.1 and REC version 3.3.3."""@en ;
 	dcterms:issued "2020-05-19"^^xsd:date ;
 	dcterms:modified "2020-05-19"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
