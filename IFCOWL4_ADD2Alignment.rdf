@@ -16,10 +16,6 @@
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
@@ -72,6 +68,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#IfcElement">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

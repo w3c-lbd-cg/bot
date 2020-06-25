@@ -12,12 +12,24 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:nodeID="A0">
-    <rdf:rest rdf:nodeID="A1"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasStorey"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A8"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Element">
     <rdfs:comment xml:lang="da">Bestanddel af et bygværk med en karakteristisk funktion, form eller position</rdfs:comment>
@@ -42,25 +54,17 @@
     <rdfs:label xml:lang="en">has storey</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:nodeID="A5"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:members rdf:nodeID="A0"/>
+  <rdf:Description rdf:nodeID="A9">
+    <owl:members rdf:nodeID="A10"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:rest rdf:nodeID="A8"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasStorey"/>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
+  <rdf:Description rdf:nodeID="A12">
     <foaf:name>Georg Ferdinand Schneider</foaf:name>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -71,35 +75,46 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A11"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasElement">
     <rdfs:comment xml:lang="da">Relation til elementer, hørende til en en bygning eller en etage.</rdfs:comment>
     <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <owl:propertyChainAxiom rdf:nodeID="A3"/>
+    <owl:propertyChainAxiom rdf:nodeID="A5"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relation to elements belonging to a building or a storey.</rdfs:comment>
     <rdfs:label xml:lang="de">hat bauteil</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A4"/>
+    <owl:propertyChainAxiom rdf:nodeID="A1"/>
     <rdfs:comment xml:lang="de">Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört</rdfs:comment>
     <rdfs:label xml:lang="da">har bygningsdel</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A10"/>
     <rdfs:label xml:lang="en">has element</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <owl:propertyChainAxiom rdf:nodeID="A7"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:nodeID="A7"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#">
+    <dcterms:contributor rdf:nodeID="A12"/>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
     <dce:Language>en</dce:Language>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-05-25</dcterms:issued>
-    <dcterms:creator rdf:nodeID="A11"/>
     <vann:preferredNamespaceUri rdf:resource="https://w3id.org/bot#"/>
     <vann:preferredNamespacePrefix>bot</vann:preferredNamespacePrefix>
+    <dcterms:creator rdf:nodeID="A13"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-11</dcterms:modified>
     <owl:versionInfo>v0.1.0</owl:versionInfo>
-    <dcterms:contributor rdf:nodeID="A9"/>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/0.1.0"/>
-    <dcterms:creator rdf:nodeID="A12"/>
     <dcterms:description xml:lang="en">The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
 
@@ -109,6 +124,7 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <dcterms:title xml:lang="en">BOT: Building Topology Ontology</dcterms:title>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <dce:description>A simple ontology describing the topology of a building</dce:description>
+    <dcterms:creator rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Storey">
@@ -119,14 +135,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="de">Geschoss (Architektur)</rdfs:label>
     <rdfs:label xml:lang="en">Storey</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A13">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#adjacentElement"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:nodeID="A2"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -151,6 +159,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">Building</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -171,16 +183,16 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">contains element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
+  <rdf:Description rdf:nodeID="A4">
     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:rest rdf:nodeID="A13"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#adjacentElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -205,20 +217,8 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">adjacent element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A12">
-    <foaf:name>Mads Holten Rasmussen</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <foaf:name>Pieter Pauwels</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

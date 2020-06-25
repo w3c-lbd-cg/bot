@@ -123,16 +123,16 @@
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
-      "@type" : "@id"
-    },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
     "name" : {

@@ -18,10 +18,10 @@ bot:    a                              voaf:Vocabulary , owl:Ontology ;
                                          foaf:name  "Georg Ferdinand Schneider"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Mads Holten Rasmussen"
+                                         foaf:name  "Pieter Pauwels"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Pieter Pauwels"
+                                         foaf:name  "Mads Holten Rasmussen"
                                        ] ;
         dcterms:description            "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"@en ;
         dcterms:issued                 "2016-05-25"^^xsd:date ;
@@ -59,14 +59,18 @@ vs:term_status  a  owl:AnnotationProperty .
 
 foaf:Person  a  owl:Class .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 bot:hasElement  a               owl:ObjectProperty ;
         rdfs:comment            "Relation til elementer, hørende til en en bygning eller en etage."@da , "Relation to elements belonging to a building or a storey."@en , "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ;
         rdfs:domain             owl:Thing ;
         rdfs:label              "hat bauteil"@de , "har bygningsdel"@da , "has element"@en ;
         rdfs:range              bot:Element ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ;
         owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) .
+        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) .
 
 bot:adjacentElement  a  owl:ObjectProperty ;
         rdfs:comment  "Relation til bygningsdele, som afgrænser et fysisk rum"@da , "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de , "Relation of a space to its bounding building elements"@en ;
@@ -91,10 +95,6 @@ bot:hasSpace  a       owl:ObjectProperty ;
 bot:Building  a       owl:Class ;
         rdfs:comment  "En uafhængig del af det byggede miljø med en karakteristisk rumlig struktur, der understøtter mindst én funktion eller brugeraktivitet"@da , "Bauwerk hauptsächlich zum Zweck des Schutzes für seine Bewohner und die darin aufbewahrten Gegenstände; im Allgemeinen teilweise oder ganz geschlossen und ortsfest [ISO 6707-1:2014]"@de , "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]"@en ;
         rdfs:label    "Bygning"@da , "Gebäude"@de , "Building"@en .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
-] .
 
 bot:hasStorey  a      owl:ObjectProperty ;
         rdfs:comment  "Relation til etager indeholdt i bygningen."@da , "Beziehung zu in Gebäude enthaltenden Geschossen"@de , "Relation to storeys contained in the building."@en ;

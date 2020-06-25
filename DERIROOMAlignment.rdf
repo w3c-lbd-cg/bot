@@ -60,6 +60,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/DERIROOMAlignment">
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the DERI Rooms ontology.</dcterms:description>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
@@ -69,7 +70,6 @@
     <owl:priorVersion rdf:resource="https://w3id.org/bot/DERIROOMAlignment/0.1.0"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-05-23</dcterms:modified>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
-    <dcterms:creator rdf:nodeID="A0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/DERIROOMAlignment/1.0.0"/>
     <dcterms:title xml:lang="en">DERIROOMS to BOT alignment.</dcterms:title>

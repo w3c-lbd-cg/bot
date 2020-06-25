@@ -66,9 +66,9 @@ bot:Interface  rdfs:subClassOf  dul:DesignedArtifact .
 bot:adjacentElement  rdfs:subPropertyOf
                 dul:hasCommonBoundary .
 
-dcterms:license  a  owl:AnnotationProperty .
-
 dcterms:title  a  owl:AnnotationProperty .
+
+dcterms:license  a  owl:AnnotationProperty .
 
 bot:Storey  rdfs:subClassOf  dul:DesignedArtifact .
 

@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b4",
+    "@id" : "_:b0",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
@@ -70,7 +70,7 @@
   }, {
     "@id" : "https://w3id.org/bot#",
     "@type" : "owl:Ontology",
-    "contributor" : [ "http://maxime-lefrancois.info/me#", "_:b4" ],
+    "contributor" : [ "http://maxime-lefrancois.info/me#", "_:b0" ],
     "creator" : [ "_:b6", "_:b7" ],
     "description" : {
       "@language" : "en",
@@ -1059,16 +1059,11 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
     },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
     "propertyDisjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
-      "@type" : "@id"
-    },
-    "rangeIncludes" : {
-      "@id" : "http://schema.org/rangeIncludes",
-      "@type" : "@id"
-    },
-    "propertyChainAxiom" : {
-      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
     },
     "rest" : {
@@ -1079,15 +1074,12 @@
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
-    "disjointWith" : {
-      "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+    "rangeIncludes" : {
+      "@id" : "http://schema.org/rangeIncludes",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
-    "subClassOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+    "propertyChainAxiom" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
     },
     "minCardinality" : {
@@ -1098,8 +1090,20 @@
       "@id" : "http://www.w3.org/2002/07/owl#onProperty",
       "@type" : "@id"
     },
+    "disjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
     "contributor" : {
       "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "versionInfo" : {
@@ -1115,10 +1119,6 @@
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
-      "@type" : "@id"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "preferredNamespaceUri" : {

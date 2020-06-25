@@ -4,13 +4,13 @@
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
-    "name" : "Georg Ferdinand Schneider"
+    "name" : "Mads Holten Rasmussen"
   }, {
     "@id" : "_:b1",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
-    "name" : "Mads Holten Rasmussen"
+    "name" : "Georg Ferdinand Schneider"
   }, {
     "@id" : "_:b2",
     "rdf:type" : {
@@ -60,8 +60,8 @@
     "@id" : "https://w3id.org/bot/SAREFG4BLDGAlignment",
     "@type" : "owl:Ontology",
     "modified" : "2019-03-02",
-    "contributor" : [ "http://www.maxime-lefrancois.info/me#", "_:b1", "_:b2" ],
-    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "contributor" : [ "http://www.maxime-lefrancois.info/me#", "_:b2", "_:b0" ],
+    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b1" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."

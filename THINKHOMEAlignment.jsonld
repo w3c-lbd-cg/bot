@@ -1,16 +1,16 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "inverseOf" : "bot:hasElement"
-  }, {
-    "@id" : "_:b1",
     "inverseOf" : "bot:adjacentZone"
   }, {
-    "@id" : "_:b2",
+    "@id" : "_:b1",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
     "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "_:b2",
+    "inverseOf" : "bot:hasElement"
   }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"
@@ -47,7 +47,7 @@
   }, {
     "@id" : "https://w3id.org/bot/THINKHOMEAlignment",
     "@type" : [ "voaf:Vocabulary", "owl:Ontology" ],
-    "creator" : [ "_:b2", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "creator" : [ "_:b1", "https://www.researchgate.net/profile/Georg_Schneider3" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the ThinkHome ontologies."
@@ -123,21 +123,17 @@
     "subPropertyOf" : "bot:interfaceOf"
   }, {
     "@id" : "th:hasDefinedAdjacentSpace",
-    "subPropertyOf" : "_:b1"
+    "subPropertyOf" : "_:b0"
   }, {
     "@id" : "th:isDefinedAdjacentSurfaceOf",
     "subPropertyOf" : "bot:interfaceOf"
   }, {
     "@id" : "thsv:isEquipmentOf",
-    "subPropertyOf" : "_:b0"
+    "subPropertyOf" : "_:b2"
   } ],
   "@context" : {
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
     "subPropertyOf" : {
@@ -187,6 +183,10 @@
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
     },
     "@vocab" : "https://w3id.org/bot/THINKHOMEAlignment#",
     "thsv" : "https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#",

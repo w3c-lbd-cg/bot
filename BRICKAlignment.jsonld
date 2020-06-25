@@ -110,6 +110,10 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
@@ -120,10 +124,6 @@
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
     },
     "priorVersion" : {
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
