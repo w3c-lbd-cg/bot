@@ -18,10 +18,10 @@ bot:    a                              voaf:Vocabulary , owl:Ontology ;
                                          foaf:name  "Georg Ferdinand Schneider"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Pieter Pauwels"
+                                         foaf:name  "Mads Holten Rasmussen"
                                        ] ;
         dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Mads Holten Rasmussen"
+                                         foaf:name  "Pieter Pauwels"
                                        ] ;
         dcterms:description            "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"@en ;
         dcterms:issued                 "2016-05-25"^^xsd:date ;

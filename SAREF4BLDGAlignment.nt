@@ -18,16 +18,16 @@
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/issued> "2017-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/elements/1.1/modified> "2019-03-02"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
-_:Bd3936ae0e69dd5f250044cc6648c2169 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:Bd3936ae0e69dd5f250044cc6648c2169 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> _:Bd3936ae0e69dd5f250044cc6648c2169 .
+_:B772e3df3395f0c54bc5ec131a773d906 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B772e3df3395f0c54bc5ec131a773d906 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> _:B772e3df3395f0c54bc5ec131a773d906 .
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:Bda519fe8f52f4c1cbcccc10197d02880 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:Bda519fe8f52f4c1cbcccc10197d02880 <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:Bda519fe8f52f4c1cbcccc10197d02880 .
-_:B1c3079d099edb226acd1bbcc63a31fb3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B1c3079d099edb226acd1bbcc63a31fb3 <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:B1c3079d099edb226acd1bbcc63a31fb3 .
+_:Bc32fe9bf7e62e7819a745c358ae8156a <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bc32fe9bf7e62e7819a745c358ae8156a <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:Bc32fe9bf7e62e7819a745c358ae8156a .
+_:Bd8595d27ec788bf8dc2e39f6a730eb7e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bd8595d27ec788bf8dc2e39f6a730eb7e <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:Bd8595d27ec788bf8dc2e39f6a730eb7e .
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> <http://www.maxime-lefrancois.info/me#> .
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
 <https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .

@@ -1,0 +1,76 @@
+# Copyright 2017-2020 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix : <https://w3id.org/bot/RECAlignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix schema:   <http://schema.org/>.
+@prefix bot: <https://w3id.org/bot#> .
+@prefix recCore: <https://w3id.org/rec/core/> .
+@prefix recBuilding: <https://w3id.org/rec/building/> .
+@base <https://w3id.org/bot/RECAlignment> .
+
+<https://w3id.org/bot/RECAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "REC to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the RealEstateCore ontology. The alignments are based on BOT version [0.3.0](https://w3id.org/bot/bot-0.3.0.ttl)."""@en ;
+	dcterms:issued "2020-05-19"^^xsd:date ;
+	dcterms:modified "2020-05-19"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+    owl:versionInfo "v0.1.0" ;
+    owl:versionIRI <https://w3id.org/bot/RECAlignment/0.1.0> ;
+    owl:priorVersion <https://w3id.org/bot/RECAlignment/0.1.0> ;
+	dcterms:creator <https://orcid.org/0000-0002-6519-7057> , <https://orcid.org/0000-0001-8767-4136> ;
+	owl:imports <https://w3id.org/bot> ,
+					<https://w3id.org/rec/full/3.1.3/> .
+          
+<https://orcid.org/0000-0002-6519-7057> a foaf:Person , schema:Person ; 
+  foaf:name    "Mads Holten Rasmussen" ;
+  schema:name    "Mads Holten Rasmussen" .
+<https://orcid.org/0000-0001-8767-4136> a foaf:Person , schema:Person ; 
+  foaf:name    "Karl Hammar" ;
+  schema:name    "Karl Hammar" .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+schema:Person a owl:Class .
+schema:name a owl:DatatypeProperty .
+
+											   
+#################################################################
+#    Object Properties
+#################################################################
+
+bot:containsZone          rdfs:subPropertyOf    recCore:hasSubBuildingComponent .
+bot:hasElement            rdfs:subPropertyOf    recCore:hasSubBuildingComponent .
+bot:hasSubElement	  rdfs:subPropertyOf	recCore:hasSubBuildingComponent .
+recCore:containsMountedDevice rdfs:subPropertyOf	bot:containsElement .
+
+#################################################################
+#    Classes
+#################################################################
+
+bot:Element   rdfs:subClassOf       recCore:BuildingComponent .
+bot:Zone      rdfs:subClassOf       recCore:BuildingComponent .
+
+bot:Storey    owl:equivalentClass   recBuilding:Storey .
+bot:Space     owl:equivalentClass   recCore:Room .

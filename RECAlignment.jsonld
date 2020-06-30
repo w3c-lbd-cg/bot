@@ -1,0 +1,170 @@
+{
+  "@graph" : [ {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "schema:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "https://orcid.org/0000-0001-8767-4136",
+    "name" : "Karl Hammar",
+    "rdf:type" : [ {
+      "@id" : "schema:Person"
+    }, {
+      "@id" : "foaf:Person"
+    } ],
+    "foaf:name" : "Karl Hammar"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-6519-7057",
+    "name" : "Mads Holten Rasmussen",
+    "rdf:type" : [ {
+      "@id" : "schema:Person"
+    }, {
+      "@id" : "foaf:Person"
+    } ],
+    "foaf:name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "bot:Element",
+    "subClassOf" : "recCore:BuildingComponent"
+  }, {
+    "@id" : "bot:Space",
+    "equivalentClass" : "recCore:Room"
+  }, {
+    "@id" : "bot:Storey",
+    "equivalentClass" : "recBuilding:Storey"
+  }, {
+    "@id" : "bot:Zone",
+    "subClassOf" : "recCore:BuildingComponent"
+  }, {
+    "@id" : "bot:containsZone",
+    "subPropertyOf" : "recCore:hasSubBuildingComponent"
+  }, {
+    "@id" : "bot:hasElement",
+    "subPropertyOf" : "recCore:hasSubBuildingComponent"
+  }, {
+    "@id" : "bot:hasSubElement",
+    "subPropertyOf" : "recCore:hasSubBuildingComponent"
+  }, {
+    "@id" : "https://w3id.org/bot/RECAlignment",
+    "@type" : [ "voaf:Vocabulary", "owl:Ontology" ],
+    "creator" : [ "https://orcid.org/0000-0002-6519-7057", "https://orcid.org/0000-0001-8767-4136" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments with the RealEstateCore ontology. The alignments are based on BOT version [0.3.0](https://w3id.org/bot/bot-0.3.0.ttl)."
+    },
+    "issued" : "2020-05-19",
+    "license" : "http://creativecommons.org/licenses/by/3.0/",
+    "modified" : "2020-05-19",
+    "title" : {
+      "@language" : "en",
+      "@value" : "REC to BOT alignment."
+    },
+    "imports" : [ "https://w3id.org/rec/full/3.1.3/", "https://w3id.org/bot" ],
+    "priorVersion" : "https://w3id.org/bot/RECAlignment/0.1.0",
+    "versionIRI" : "https://w3id.org/bot/RECAlignment/0.1.0",
+    "versionInfo" : "v0.1.0"
+  }, {
+    "@id" : "recCore:containsMountedDevice",
+    "subPropertyOf" : "bot:containsElement"
+  } ],
+  "@context" : {
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://schema.org/name"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "@vocab" : "https://w3id.org/bot/RECAlignment#",
+    "schema" : "http://schema.org/",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "bot" : "https://w3id.org/bot#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "recBuilding" : "https://w3id.org/rec/building/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "vann" : "http://purl.org/vocab/vann/",
+    "recCore" : "https://w3id.org/rec/core/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

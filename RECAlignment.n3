@@ -1,0 +1,81 @@
+@prefix schema: <http://schema.org/> .
+@prefix :      <https://w3id.org/bot/RECAlignment#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix recBuilding: <https://w3id.org/rec/building/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix recCore: <https://w3id.org/rec/core/> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+bot:Zone  rdfs:subClassOf  recCore:BuildingComponent .
+
+schema:Person  a  owl:Class .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+bot:Element  rdfs:subClassOf  recCore:BuildingComponent .
+
+bot:Space  owl:equivalentClass  recCore:Room .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+bot:containsZone  rdfs:subPropertyOf  recCore:hasSubBuildingComponent .
+
+schema:name  a  owl:DatatypeProperty .
+
+foaf:name  a    owl:DatatypeProperty .
+
+bot:hasSubElement  rdfs:subPropertyOf  recCore:hasSubBuildingComponent .
+
+recCore:containsMountedDevice
+        rdfs:subPropertyOf  bot:containsElement .
+
+<https://orcid.org/0000-0002-6519-7057>
+        a            schema:Person , foaf:Person ;
+        schema:name  "Mads Holten Rasmussen" ;
+        foaf:name    "Mads Holten Rasmussen" .
+
+foaf:Person  a  owl:Class .
+
+<https://w3id.org/bot/RECAlignment>
+        a                    voaf:Vocabulary , owl:Ontology ;
+        dcterms:creator      <https://orcid.org/0000-0002-6519-7057> , <https://orcid.org/0000-0001-8767-4136> ;
+        dcterms:description  "This ontology defines proposed alignments with the RealEstateCore ontology. The alignments are based on BOT version [0.3.0](https://w3id.org/bot/bot-0.3.0.ttl)."@en ;
+        dcterms:issued       "2020-05-19"^^xsd:date ;
+        dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dcterms:modified     "2020-05-19"^^xsd:date ;
+        dcterms:title        "REC to BOT alignment."@en ;
+        owl:imports          <https://w3id.org/rec/full/3.1.3/> , <https://w3id.org/bot> ;
+        owl:priorVersion     <https://w3id.org/bot/RECAlignment/0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/RECAlignment/0.1.0> ;
+        owl:versionInfo      "v0.1.0" .
+
+bot:hasElement  rdfs:subPropertyOf  recCore:hasSubBuildingComponent .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+bot:Storey  owl:equivalentClass  recBuilding:Storey .
+
+<https://orcid.org/0000-0001-8767-4136>
+        a            schema:Person , foaf:Person ;
+        schema:name  "Karl Hammar" ;
+        foaf:name    "Karl Hammar" .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

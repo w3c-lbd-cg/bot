@@ -13,6 +13,10 @@
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Floor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Zone">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
@@ -21,10 +25,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Location">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -36,7 +36,6 @@
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/BRICKAlignment">
-    <dcterms:creator rdf:nodeID="A0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-01</dcterms:modified>
@@ -50,6 +49,7 @@
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <dcterms:creator rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">

@@ -83,6 +83,10 @@
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
       "@type" : "@id"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
@@ -95,10 +99,6 @@
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "seeAlso" : {
@@ -116,12 +116,12 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/IFCOWL4_ADD2Alignment#",
     "owl" : "http://www.w3.org/2002/07/owl#",

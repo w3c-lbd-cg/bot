@@ -10,15 +10,8 @@
     xmlns:bot="https://w3id.org/bot#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
-  <rdf:Description rdf:nodeID="A0">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Floor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -56,6 +49,10 @@
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Vertical">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Building">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
@@ -71,11 +68,11 @@
     <owl:versionIRI rdf:resource="https://w3id.org/bot/DOGONTAlignment/1.0.0"/>
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <dcterms:title xml:lang="en">DogOnt to BOT alignment.</dcterms:title>
+    <dcterms:creator rdf:nodeID="A0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the DogOnt ontology.</dcterms:description>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
-    <dcterms:creator rdf:nodeID="A1"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/DOGONTAlignment/0.1.0"/>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
   </rdf:Description>
@@ -118,8 +115,11 @@
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#TechnicalSystem">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#belongsTo">
-    <rdfs:subPropertyOf rdf:nodeID="A0"/>
+    <rdfs:subPropertyOf rdf:nodeID="A1"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

@@ -45,10 +45,10 @@ vs:term_status  a  owl:AnnotationProperty .
         dce:modified         "2019-03-02"^^xsd:date ;
         dcterms:contributor  <http://www.maxime-lefrancois.info/me#> ;
         dcterms:contributor  [ a          foaf:Person ;
-                               foaf:name  "Pieter Pauwels"
+                               foaf:name  "Mads Holten Rasmussen"
                              ] ;
         dcterms:contributor  [ a          foaf:Person ;
-                               foaf:name  "Mads Holten Rasmussen"
+                               foaf:name  "Pieter Pauwels"
                              ] ;
         dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
         dcterms:creator      [ a          foaf:Person ;

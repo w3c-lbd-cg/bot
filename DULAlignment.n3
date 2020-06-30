@@ -57,18 +57,18 @@ bot:containsZone  rdfs:subPropertyOf  dul:hasPart .
 
 foaf:name  a    owl:DatatypeProperty .
 
-bot:Site  rdfs:subClassOf  dul:PhysicalPlace .
-
 foaf:Person  a  owl:Class .
+
+bot:Site  rdfs:subClassOf  dul:PhysicalPlace .
 
 bot:Interface  rdfs:subClassOf  dul:DesignedArtifact .
 
 bot:adjacentElement  rdfs:subPropertyOf
                 dul:hasCommonBoundary .
 
-dcterms:title  a  owl:AnnotationProperty .
-
 dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
 
 bot:Storey  rdfs:subClassOf  dul:DesignedArtifact .
 

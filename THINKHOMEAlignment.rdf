@@ -20,9 +20,6 @@
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Zone">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
@@ -31,6 +28,13 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Space">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsSpace">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSpace"/>
@@ -53,11 +57,8 @@
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsBuildingStorey">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasStorey"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#adjacentZone"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace">
-    <rdfs:subPropertyOf rdf:nodeID="A1"/>
+    <rdfs:subPropertyOf rdf:nodeID="A2"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/THINKHOMEAlignment">
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
@@ -65,7 +66,6 @@
     <owl:priorVersion rdf:resource="https://w3id.org/bot/THINKHOMEAlignment/0.1.0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
-    <dcterms:creator rdf:nodeID="A2"/>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
     <owl:imports rdf:resource="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#"/>
@@ -74,6 +74,7 @@
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the ThinkHome ontologies.</dcterms:description>
+    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:modified>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Campus">
@@ -98,7 +99,10 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf">
-    <rdfs:subPropertyOf rdf:nodeID="A0"/>
+    <rdfs:subPropertyOf rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#adjacentZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsAirLoopEquipment">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
@@ -123,10 +127,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Equipment">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

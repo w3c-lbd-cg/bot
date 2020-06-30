@@ -19,14 +19,11 @@
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Pieter Pauwels</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#PhysicalObject">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/SAREFG4BLDGAlignment">
+    <dcterms:creator rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dcterms:title xml:lang="en">SAREF4BLDG Alignment.</dcterms:title>
     <dcterms:contributor rdf:resource="http://www.maxime-lefrancois.info/me#"/>
@@ -37,14 +34,17 @@
     <dcterms:description xml:lang="en">This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology.</dcterms:description>
     <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
+    <dcterms:contributor rdf:nodeID="A2"/>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
-    <dcterms:creator rdf:nodeID="A2"/>
     <owl:imports rdf:resource="https://w3id.org/def/saref4bldg"/>
-    <dcterms:contributor rdf:nodeID="A0"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-07-13</dcterms:issued>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0"/>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -54,6 +54,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -67,6 +71,10 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -76,10 +84,6 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -88,10 +92,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#Building">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <foaf:name>Mads Holten Rasmussen</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/def/saref4bldg#Sensor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>

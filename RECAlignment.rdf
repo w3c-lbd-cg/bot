@@ -1,0 +1,106 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:schema="http://schema.org/"
+    xmlns:recCore="https://w3id.org/rec/core/"
+    xmlns:voaf="http://purl.org/vocommons/voaf#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="https://w3id.org/bot/RECAlignment#"
+    xmlns:bot="https://w3id.org/bot#"
+    xmlns:recBuilding="https://w3id.org/rec/building/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://schema.org/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Storey">
+    <owl:equivalentClass rdf:resource="https://w3id.org/rec/building/Storey"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Element">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Zone">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/rec/core/BuildingComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot/RECAlignment">
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/RECAlignment/0.1.0"/>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-05-19</dcterms:issued>
+    <dcterms:creator rdf:resource="https://orcid.org/0000-0002-6519-7057"/>
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <owl:versionInfo>v0.1.0</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:imports rdf:resource="https://w3id.org/rec/full/3.1.3/"/>
+    <dcterms:creator rdf:resource="https://orcid.org/0000-0001-8767-4136"/>
+    <dcterms:description xml:lang="en">This ontology defines proposed alignments with the RealEstateCore ontology. The alignments are based on BOT version [0.3.0](https://w3id.org/bot/bot-0.3.0.ttl).</dcterms:description>
+    <dcterms:title xml:lang="en">REC to BOT alignment.</dcterms:title>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/RECAlignment/0.1.0"/>
+    <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+    <owl:imports rdf:resource="https://w3id.org/bot"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-05-19</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/rec/core/containsMountedDevice">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#containsZone">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasSubBuildingComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orcid.org/0000-0001-8767-4136">
+    <schema:name>Karl Hammar</schema:name>
+    <foaf:name>Karl Hammar</foaf:name>
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://schema.org/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#Space">
+    <owl:equivalentClass rdf:resource="https://w3id.org/rec/core/Room"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasElement">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasSubBuildingComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://w3id.org/bot#hasSubElement">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/rec/core/hasSubBuildingComponent"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orcid.org/0000-0002-6519-7057">
+    <schema:name>Mads Holten Rasmussen</schema:name>
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
+    <rdf:type rdf:resource="http://schema.org/Person"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/license">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+</rdf:RDF>
