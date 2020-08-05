@@ -8,7 +8,7 @@
 
 @prefix rdf:      <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:      <http://www.w3.org/2002/07/owl#> .
-@prefix  rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
 @prefix dcterms:  <http://purl.org/dc/terms/> .
 @prefix vann:     <http://purl.org/vocab/vann/> .
@@ -17,7 +17,8 @@
 @prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dce:      <http://purl.org/dc/elements/1.1/> .
 @prefix dbo:      <http://dbpedia.org/ontology/> .
-@prefix schema:   <http://schema.org/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <https://schema.org/> .
 
 @prefix bot: <https://w3id.org/bot#> .
 
@@ -32,8 +33,8 @@ dcterms:license a owl:AnnotationProperty .
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 vs:term_status a owl:AnnotationProperty .
-foaf:Person a owl:Class .
-foaf:name a owl:DatatypeProperty .
+vcard:fn a owl:AnnotationProperty .
+schema:name a owl:AnnotationProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
@@ -58,18 +59,34 @@ Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schne
 The initial version of the ontology was documented in:
 
 Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"""@en ;
-    dcterms:creator [a foaf:Person ; foaf:name    "Mads Holten Rasmussen" ] ;
-    dcterms:creator [a foaf:Person ; foaf:name    "Pieter Pauwels" ] ;
-    dcterms:contributor [a foaf:Person ; foaf:name    "Georg Ferdinand Schneider" ] ;
-    dcterms:contributor <http://maxime-lefrancois.info/me#> ;
+    dcterms:creator "Mads Holten Rasmussen" ;
+	dcterms:creator "Pieter Pauwels" ;
+	dcterms:contributor "Maxime Lefrançois" ;
+	dcterms:contributor "Georg Ferdinand Schneider" ;
+	dcterms:contributor <http://maxime-lefrancois.info/me#> ;
+	dcterms:contributor <https://orcid.org/0000-0002-2033-859X> ;
+	dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
+	dcterms:creator <https://orcid.org/0000-0001-8020-4609> ;	
+	dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix    "bot" ;
     vann:preferredNamespaceUri <https://w3id.org/bot#> .
     
-<http://maxime-lefrancois.info/me#> a foaf:Person ; 
-  foaf:name    "Maxime Lefrançois" .
+<http://maxime-lefrancois.info/me#> a vcard:Individual , schema:Person; 
+	vcard:fn   "Maxime Lefrançois" ;
+	schema:name "Maxime Lefrançois" .
+ 
+<https://orcid.org/0000-0002-2033-859X> a vcard:Individual , schema:Person; 
+	vcard:fn    "Georg Ferdinand Schneider" ;
+	schema:name "Georg Ferdinand Schneider" .
 
+<https://orcid.org/0000-0002-6519-7057> a vcard:Individual , schema:Person ; 
+  vcard:fn    "Mads Holten Rasmussen" ;
+	schema:name "Mads Holten Rasmussen" .
 
+<https://orcid.org/0000-0001-8020-4609> a vcard:Individual , schema:Person ; 
+	vcard:fn    "Pieter Pauwels" ;
+	schema:name "Pieter Pauwels" .
 
 ## Zones
 
