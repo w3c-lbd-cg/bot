@@ -14,10 +14,10 @@
 @prefix vann:     <http://purl.org/vocab/vann/> .
 @prefix voaf:     <http://purl.org/vocommons/voaf#> .
 @prefix vs:       <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
 @prefix dce:      <http://purl.org/dc/elements/1.1/> .
 @prefix dbo:      <http://dbpedia.org/ontology/> .
-@prefix schema:   <http://schema.org/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <https://schema.org/> .
 
 @prefix bot: <https://w3id.org/bot#> .
 
@@ -34,8 +34,8 @@ vann:preferredNamespaceUri a owl:AnnotationProperty .
 schema:domainIncludes a owl:AnnotationProperty .
 schema:rangeIncludes a owl:AnnotationProperty .
 vs:term_status a owl:AnnotationProperty .
-foaf:Person a owl:Class .
-foaf:name a owl:DatatypeProperty .
+vcard:fn a owl:AnnotationProperty .
+schema:name a owl:AnnotationProperty .
 
 
 <https://w3id.org/bot#> rdf:type owl:Ontology , voaf:Vocabulary ;
@@ -44,7 +44,7 @@ foaf:name a owl:DatatypeProperty .
     owl:versionInfo    "0.3.2" ;
     owl:versionIRI <https://w3id.org/bot/0.3.2> ;
     owl:priorVersion <https://w3id.org/bot/0.3.1> ;
-  rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
+  rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> , <http://www.semantic-web-journal.net/system/files/swj2279.pdf> ;
     dcterms:title    "The Building Topology Ontology (BOT)"@en ;
     dcterms:description    """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
@@ -61,20 +61,28 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   dcterms:creator <http://maxime-lefrancois.info/me#> ;
   dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
   dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
+  dcterms:creator <https://orcid.org/0000-0001-8020-4609> ;
   dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
   dcterms:contributor "Mathias Bonduel" , "Sjoerd Rongen" , "Katja Breitenfelder" , "Edison Chung" , "María Poveda-Villalón" , "Ville Kukkonen" , "Lars Wikström" , "Karl Hammar" , "Hervé Pruvost" , "Ana Roxin" , "Gonçal Costa", "Walter Terkaj", "Rui de Klerk", "Rui Ma", "Richard Pinka", "Jyrki Oraskari" , "Edison Chung", "Ali Kücükavci" , "Sjoerd Rongen" , "Pouya Zangeneh" ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix    "bot" ;
     vann:preferredNamespaceUri <https://w3id.org/bot#> .
-    
-<http://maxime-lefrancois.info/me#> a foaf:Person ; 
-  foaf:name    "Maxime Lefrançois" .
-  
-<https://orcid.org/0000-0002-2033-859X> a foaf:Person ; 
-  foaf:name    "Georg Ferdinand Schneider" .
 
-<https://orcid.org/0000-0002-6519-7057> a foaf:Person ; 
-  foaf:name    "Mads Holten Rasmussen" .
+<http://maxime-lefrancois.info/me#> a vcard:Individual , schema:Person; 
+	vcard:fn   "Maxime Lefrançois" ;
+	schema:name "Maxime Lefrançois" .
+ 
+<https://orcid.org/0000-0002-2033-859X> a vcard:Individual , schema:Person; 
+	vcard:fn    "Georg Ferdinand Schneider" ;
+	schema:name "Georg Ferdinand Schneider" .
+
+<https://orcid.org/0000-0002-6519-7057> a vcard:Individual , schema:Person ; 
+  vcard:fn    "Mads Holten Rasmussen" ;
+	schema:name "Mads Holten Rasmussen" .
+
+<https://orcid.org/0000-0001-8020-4609> a vcard:Individual , schema:Person ; 
+	vcard:fn    "Pieter Pauwels" ;
+	schema:name "Pieter Pauwels" .
 
 ## Zones
 
