@@ -42,8 +42,8 @@ schema:name a owl:AnnotationProperty .
     dcterms:modified    "2020-07-31T08:51:00"^^xsd:dateTime ;
     dcterms:issued    "2018-06-21T12:00:00"^^xsd:dateTime ;
     owl:versionInfo    "0.3.2" ;
-    owl:versionIRI <https://w3id.org/bot/0.3.2> ;
-    owl:priorVersion <https://w3id.org/bot/0.3.1> ;
+    owl:versionIRI <https://w3id.org/bot-0.3.2> ;
+    owl:priorVersion <https://w3id.org/bot-0.3.1> ;
   rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> , <http://www.semantic-web-journal.net/system/files/swj2279.pdf> ;
     dcterms:title    "The Building Topology Ontology (BOT)"@en ;
     dcterms:description    """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.

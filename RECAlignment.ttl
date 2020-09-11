@@ -28,8 +28,8 @@
 	dcterms:modified "2020-08-05"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v0.1.0" ;
-    owl:versionIRI <https://w3id.org/bot/RECAlignment/0.1.0> ;
-    owl:priorVersion <https://w3id.org/bot/RECAlignment/0.1.0> ;
+    owl:versionIRI <https://w3id.org/bot/RECAlignment-0.1.0> ;
+    owl:priorVersion <https://w3id.org/bot/RECAlignment-0.1.0> ;
 	dcterms:creator <https://orcid.org/0000-0002-6519-7057> , <https://orcid.org/0000-0001-8767-4136> ;
 	dcterms:creator "Karl Hammar" , "Mads Holten Rasmussen" ;
 	owl:imports <https://w3id.org/bot> ,
