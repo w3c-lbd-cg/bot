@@ -43,7 +43,7 @@ schema:name a owl:AnnotationProperty .
 #################################
 <https://w3id.org/bot#> rdf:type voaf:Vocabulary , 
                                  owl:Ontology ;
-    owl:versionIRI <https://w3id.org/bot/0.1.0> ;
+    owl:versionIRI <https://w3id.org/bot-0.1.0> ;
     owl:versionInfo "v0.1.0" ;
     dcterms:title "BOT: Building Topology Ontology"@en ;
     dcterms:description """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.

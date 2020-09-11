@@ -27,8 +27,8 @@
 	dcterms:modified "2020-05-23"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v1.0.0" ;
-    owl:versionIRI <https://w3id.org/bot/DERIROOMAlignment/1.0.0> ;
-    owl:priorVersion <https://w3id.org/bot/DERIROOMAlignment/0.1.0> ;
+    owl:versionIRI <https://w3id.org/bot/DERIROOMAlignment-1.0.0> ;
+    owl:priorVersion <https://w3id.org/bot/DERIROOMAlignment-0.1.0> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
 	dcterms:creator "Georg Ferdinand Schneider" ;

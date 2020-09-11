@@ -40,8 +40,8 @@
   rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
   dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
   owl:versionInfo "v1.0.0" ;
-  owl:versionIRI <https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0> ;
-  owl:priorVersion <https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0> ;
+  owl:versionIRI <https://w3id.org/bot/SAREF4BLDGAlignment-1.0.0> ;
+  owl:priorVersion <https://w3id.org/bot/SAREF4BLDGAlignment-0.2.0> ;
   owl:imports <https://w3id.org/bot> ;
   owl:imports <https://w3id.org/def/saref4bldg> .
 
