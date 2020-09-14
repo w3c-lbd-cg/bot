@@ -22,7 +22,7 @@
 Latest versions of BOT: 
 
 - URI: [https://w3id.org/bot#](https://w3id.org/bot#).
-- Canonical URI for the HTML Representation [https://w3id.org/bot/bot.html](https://w3id.org/bot/bot.html).
+- Canonical URI for the HTML Representation [https://w3id.org/bot](https://w3id.org/bot).
 - Canonical URI for the Turtle Representation [https://w3id.org/bot/bot.ttl](https://w3id.org/bot/bot.ttl).
 
 
