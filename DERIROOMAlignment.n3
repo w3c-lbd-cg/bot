@@ -47,9 +47,9 @@ rooms:contains  rdfs:subPropertyOf  bot:containsZone .
 
 foaf:Person  a  owl:Class .
 
-rooms:FloorSection  rdfs:subClassOf  bot:Storey .
-
 rooms:Site  rdfs:subClassOf  bot:Site .
+
+rooms:FloorSection  rdfs:subClassOf  bot:Storey .
 
 dcterms:license  a  owl:AnnotationProperty .
 

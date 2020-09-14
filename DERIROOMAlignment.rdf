@@ -19,10 +19,6 @@
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -59,6 +55,10 @@
   <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Site">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Site"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://vocab.deri.ie/rooms#Desk">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
@@ -71,11 +71,11 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:imports rdf:resource="http://vocab.deri.ie/rooms#"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/DERIROOMAlignment/0.1.0"/>
-    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-05-23</dcterms:modified>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/DERIROOMAlignment/1.0.0"/>
+    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:title xml:lang="en">DERIROOMS to BOT alignment.</dcterms:title>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
   </rdf:Description>

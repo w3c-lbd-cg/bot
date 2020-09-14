@@ -13,12 +13,13 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/bot#interfaceOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Element">
     <rdfs:label xml:lang="nl">Gebouwelement</rdfs:label>
@@ -86,8 +87,8 @@
     <rdfs:label xml:lang="nl">Terrein</rdfs:label>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#intersectsZone">
     <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
@@ -115,6 +116,10 @@
     <rdfs:comment xml:lang="sv">TODO</rdfs:comment>
     <rdfs:comment xml:lang="da">TODO</rdfs:comment>
     <rdfs:comment xml:lang="nl">TODO</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <foaf:name>Mads Holten Rasmussen</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -152,7 +157,7 @@
     <rdfs:comment xml:lang="fr">Une interface correspond à la surface où se rencontrent a) deux éléments d'un bâtiment, b) deux zones ou  encore c) un élément d'un bâtiment avec une zone. Un cas d'utilisation type est constituée par la qualification de la zone de transmission de chaleur entre une zone et un mur couvrant plusieurs zones.</rdfs:comment>
     <rdfs:label xml:lang="da">Grænseflade</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:subClassOf rdf:nodeID="A5"/>
+    <rdfs:subClassOf rdf:nodeID="A0"/>
     <rdfs:label xml:lang="sv">Gränssnitt</rdfs:label>
     <rdfs:comment xml:lang="sv">Ett gränssnitt är den yta där två byggdelar, två zoner eller en b yggdel och en zon möts. Det kan användas för att beskriva kopplingen mellan de två. Ett användningsfall kan vara att kvalificera värmetransmissionsarean mellan en zon och en vägg som täcker flera zoner.</rdfs:comment>
     <rdfs:comment xml:lang="en">An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones.</rdfs:comment>
@@ -179,10 +184,6 @@
     <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
     <rdfs:label xml:lang="sv">värd för sub element</rdfs:label>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:nodeID="A1"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#has3DModel">
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
     <schema:domainIncludes rdf:resource="https://w3id.org/bot#Zone"/>
@@ -192,6 +193,10 @@
     <rdfs:label xml:lang="da">har 3D-model</rdfs:label>
     <rdfs:label xml:lang="en">has 3D Model</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -205,25 +210,21 @@
     <rdfs:label xml:lang="en">has zero point</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#">
     <dcterms:contributor rdf:resource="http://maxime-lefrancois.info/me#"/>
     <owl:versionInfo>0.3.0</owl:versionInfo>
-    <dcterms:contributor rdf:nodeID="A0"/>
     <owl:priorVersion rdf:resource="https://w3id.org/bot/0.2.0"/>
-    <dcterms:creator rdf:nodeID="A6"/>
+    <dcterms:contributor rdf:nodeID="A6"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-21</dcterms:issued>
     <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/1.0/"/>
     <vann:preferredNamespaceUri rdf:resource="https://w3id.org/bot#"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-21</dcterms:modified>
+    <dcterms:creator rdf:nodeID="A1"/>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.24928/JC3-2017/0153"/>
     <vann:preferredNamespacePrefix>bot</vann:preferredNamespacePrefix>
     <rdfs:seeAlso rdf:resource="https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology"/>
+    <dcterms:creator rdf:nodeID="A3"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-    <dcterms:creator rdf:nodeID="A7"/>
     <dcterms:title xml:lang="en">The Building Topology Ontology (BOT)</dcterms:title>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/0.3.0"/>
     <dcterms:description xml:lang="en">The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
@@ -308,6 +309,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Element"/>
     <owl:disjointWith rdf:resource="https://w3id.org/bot#Interface"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Building">
     <rdfs:label xml:lang="it">Edificio</rdfs:label>
     <rdfs:label xml:lang="en">Building</rdfs:label>
@@ -344,6 +349,7 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="es">contiene elemento</rdfs:label>
     <rdfs:comment xml:lang="nl">Relatie tussen zone en een gebouwelement in die zone</rdfs:comment>
     <rdfs:label xml:lang="en">contains element</rdfs:label>
+    <owl:propertyChainAxiom rdf:nodeID="A7"/>
     <rdfs:comment xml:lang="da">Relation til en bygningsdel, som er indeholdt i en zone.</rdfs:comment>
     <rdfs:label xml:lang="nl">bevat element</rdfs:label>
     <rdfs:comment xml:lang="fr">Relation à définir entre un élément de bâti et la zone le contenant</rdfs:comment>
@@ -352,21 +358,23 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasElement"/>
     <rdfs:label xml:lang="de">enthält</rdfs:label>
     <rdfs:label xml:lang="sv">innehåller byggdel</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A2"/>
     <rdfs:comment xml:lang="sv">Relation till en byggdel som inryms i en zon.</rdfs:comment>
     <rdfs:label xml:lang="da">indeholder bygningsdel</rdfs:label>
     <rdfs:comment xml:lang="en">Relation to a building element contained in a zone.</rdfs:comment>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#term_status">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owl:minCardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/bot#interfaceOf"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#containsZone">
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/bot#"/>
@@ -494,10 +502,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:comment xml:lang="nl">TODO: Relatie tussen twee zones die een interface delen</rdfs:comment>
     <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <foaf:name>Mads Holten Rasmussen</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#intersectingElement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relation between a Zone and a building Element that intersects it. </rdfs:comment>
@@ -519,10 +523,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <foaf:name>Pieter Pauwels</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

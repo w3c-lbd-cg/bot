@@ -155,10 +155,6 @@
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
       "@type" : "@id"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
     "imports" : {
       "@id" : "http://www.w3.org/2002/07/owl#imports",
       "@type" : "@id"
@@ -173,6 +169,10 @@
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"

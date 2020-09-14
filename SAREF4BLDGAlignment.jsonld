@@ -10,13 +10,13 @@
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
-    "name" : "Pieter Pauwels"
+    "name" : "Mads Holten Rasmussen"
   }, {
     "@id" : "_:b2",
     "rdf:type" : {
       "@id" : "foaf:Person"
     },
-    "name" : "Mads Holten Rasmussen"
+    "name" : "Pieter Pauwels"
   }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"

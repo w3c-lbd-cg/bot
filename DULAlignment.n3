@@ -57,9 +57,9 @@ bot:containsZone  rdfs:subPropertyOf  dul:hasPart .
 
 foaf:name  a    owl:DatatypeProperty .
 
-foaf:Person  a  owl:Class .
-
 bot:Site  rdfs:subClassOf  dul:PhysicalPlace .
+
+foaf:Person  a  owl:Class .
 
 bot:Interface  rdfs:subClassOf  dul:DesignedArtifact .
 

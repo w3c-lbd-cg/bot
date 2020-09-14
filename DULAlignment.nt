@@ -10,12 +10,12 @@
 <https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info/me#> .
 <https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/contributor> <https://www.researchgate.net/profile/Georg_Schneider3> .
 <https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:B1009a097841850ba0fe1c81c64d10b1d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B1009a097841850ba0fe1c81c64d10b1d <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/contributor> _:B1009a097841850ba0fe1c81c64d10b1d .
-_:B91519e2d198e3945c5425a8674540d55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B91519e2d198e3945c5425a8674540d55 <http://xmlns.com/foaf/0.1/name> "Maxime Lefrançois" .
-<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/creator> _:B91519e2d198e3945c5425a8674540d55 .
+_:B781e1eccb5ee30cae665e83924fa579f <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B781e1eccb5ee30cae665e83924fa579f <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/contributor> _:B781e1eccb5ee30cae665e83924fa579f .
+_:B735b76b700e8e590e1623eadf782b7ba <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B735b76b700e8e590e1623eadf782b7ba <http://xmlns.com/foaf/0.1/name> "Maxime Lefrançois" .
+<https://w3id.org/bot/DUL2Alignment> <http://purl.org/dc/terms/creator> _:B735b76b700e8e590e1623eadf782b7ba .
 <https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/DUL2Alignment> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

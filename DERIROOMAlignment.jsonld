@@ -62,7 +62,7 @@
   }, {
     "@id" : "https://w3id.org/bot/DERIROOMAlignment",
     "@type" : [ "voaf:Vocabulary", "owl:Ontology" ],
-    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the DERI Rooms ontology."
@@ -81,9 +81,6 @@
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
@@ -128,6 +125,9 @@
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",

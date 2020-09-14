@@ -56,7 +56,7 @@
   }, {
     "@id" : "https://w3id.org/bot/IFCOWL4_ADD2Alignment",
     "@type" : [ "voaf:Vocabulary", "owl:Ontology" ],
-    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the ifcOWL4_Add2 ontology."
@@ -83,10 +83,6 @@
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
       "@type" : "@id"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
@@ -99,6 +95,10 @@
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
     },
     "seeAlso" : {

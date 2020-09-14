@@ -22,9 +22,9 @@ dcterms:creator  a  owl:AnnotationProperty .
 
 saref4bldg:Sensor  rdfs:subClassOf  bot:Element .
 
-voaf:Vocabulary  a  owl:Class .
-
 dcterms:modified  a  owl:AnnotationProperty .
+
+voaf:Vocabulary  a  owl:Class .
 
 dcterms:contributor  a  owl:AnnotationProperty .
 
