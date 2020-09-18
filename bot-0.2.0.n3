@@ -48,10 +48,6 @@ voaf:Vocabulary  a  owl:Class .
 
 dcterms:title  a  owl:AnnotationProperty .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
-] .
-
 bot:adjacentElement  a  owl:ObjectProperty ;
         rdfs:comment  "Relation mellem en zone og dens tilstødende bygningsdele, som afgrænser det fysiske rum."@da , "Relation between a zone and its adjacent building elements, bounding the physical space."@en ;
         rdfs:domain   bot:Zone ;
@@ -126,10 +122,6 @@ bot:Space  a             owl:Class ;
         rdfs:label       "Rum"@da , "Ruimte"@nl , "Spazio"@it , "Raum"@de , "Space"@en ;
         rdfs:subClassOf  bot:Zone .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 vann:preferredNamespacePrefix
         a       owl:AnnotationProperty .
 
@@ -181,7 +173,15 @@ bot:Element  a        owl:Class ;
         rdfs:comment  "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en , "Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl , "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da , "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ;
         rdfs:label    "Gebouwelement"@nl , "Bauteil (Bauwesen)"@de , "Building element"@en , "Elemento architettonico"@it , "Bygningsdel"@da .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 bot:Storey  a            owl:Class ;
         rdfs:comment     "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de , "Een horizontaal gedeelte van een gebouw"@nl , "A level part of a building"@en , "Et plan i en bygning"@da ;
         rdfs:label       "Verdieping"@nl , "Piano di edificio"@it , "Storey"@en , "Etage"@da , "Geschoss (Architektur)"@de ;
         rdfs:subClassOf  bot:Zone .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .

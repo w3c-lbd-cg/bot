@@ -11,8 +11,6 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
 
-dogont:Vertical  rdfs:subClassOf  bot:Element .
-
 dogont:TechnicalSystem
         rdfs:subClassOf  bot:Element .
 
@@ -20,11 +18,13 @@ dcterms:description  a  owl:AnnotationProperty .
 
 dcterms:creator  a  owl:AnnotationProperty .
 
+dogont:Vertical  rdfs:subClassOf  bot:Element .
+
 bot:Zone  rdfs:subClassOf  dogont:Environment .
 
-dogont:Room  rdfs:subClassOf  bot:Space .
-
 vcard:fn  a     owl:AnnotationProperty .
+
+dogont:Room  rdfs:subClassOf  bot:Space .
 
 dogont:ceilingOf  rdfs:subPropertyOf  bot:interfaceOf .
 

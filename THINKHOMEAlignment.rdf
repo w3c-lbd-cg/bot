@@ -18,9 +18,6 @@
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#BuildingStorey">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Zone">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
   </rdf:Description>
@@ -45,6 +42,9 @@
   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#adjacentZone"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Building">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
@@ -52,7 +52,7 @@
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasStorey"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace">
-    <rdfs:subPropertyOf rdf:nodeID="A1"/>
+    <rdfs:subPropertyOf rdf:nodeID="A0"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/THINKHOMEAlignment">
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
@@ -96,7 +96,10 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf">
-    <rdfs:subPropertyOf rdf:nodeID="A0"/>
+    <rdfs:subPropertyOf rdf:nodeID="A1"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsAirLoopEquipment">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
@@ -106,9 +109,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Surface">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#adjacentZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

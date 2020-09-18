@@ -64,6 +64,10 @@ dcterms:issued  a  owl:AnnotationProperty .
 
 vs:term_status  a  owl:AnnotationProperty .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 <https://orcid.org/0000-0002-6519-7057>
         a            schema:Person , vcard:Individual ;
         vcard:fn     "Mads Holten Rasmussen" ;
@@ -71,18 +75,14 @@ vs:term_status  a  owl:AnnotationProperty .
 
 schema:name  a  owl:AnnotationProperty .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 bot:hasElement  a               owl:ObjectProperty ;
         rdfs:comment            "Relation til elementer, hørende til en en bygning eller en etage."@da , "Relation to elements belonging to a building or a storey."@en , "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ;
         rdfs:domain             owl:Thing ;
         rdfs:label              "hat bauteil"@de , "har bygningsdel"@da , "has element"@en ;
         rdfs:range              bot:Element ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ;
+        owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) ;
         owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) ;
-        owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) .
+        owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) .
 
 bot:adjacentElement  a  owl:ObjectProperty ;
         rdfs:comment  "Relation til bygningsdele, som afgrænser et fysisk rum"@da , "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de , "Relation of a space to its bounding building elements"@en ;

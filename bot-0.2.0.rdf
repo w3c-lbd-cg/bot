@@ -14,8 +14,12 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:nodeID="A0">
-    <rdf:rest rdf:nodeID="A1"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Site"/>
+    <owl:members rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Element">
     <rdfs:label xml:lang="nl">Gebouwelement</rdfs:label>
@@ -28,6 +32,10 @@
     <rdfs:label xml:lang="it">Elemento architettonico</rdfs:label>
     <rdfs:label xml:lang="da">Bygningsdel</rdfs:label>
     <rdfs:comment xml:lang="de">Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasStorey">
     <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
@@ -52,10 +60,6 @@
     <rdfs:label xml:lang="en">Site</rdfs:label>
     <rdfs:comment xml:lang="nl">Omgeving die één of meerdere gebouwen bevat.</rdfs:comment>
     <rdfs:comment xml:lang="de">Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:nodeID="A3"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Zone"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#aggregates">
     <rdfs:comment xml:lang="da">Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
@@ -90,6 +94,10 @@ product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
     <rdfs:label xml:lang="en">aggregates</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
@@ -102,20 +110,25 @@ product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
   <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Interface">
-    <rdfs:subClassOf rdf:nodeID="A4"/>
+    <rdfs:subClassOf rdf:nodeID="A7"/>
     <rdfs:comment xml:lang="da">En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner.</rdfs:comment>
     <rdfs:comment xml:lang="en">An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones.</rdfs:comment>
     <rdfs:label xml:lang="da">Grænseflade</rdfs:label>
     <rdfs:label xml:lang="en">Interface</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:cardinality>
+    <owl:onProperty rdf:resource="https://w3id.org/bot#interfaceOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:members rdf:nodeID="A0"/>
+  <rdf:Description rdf:nodeID="A8">
+    <owl:members rdf:nodeID="A9"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://orcid.org/0000-0002-6519-7057">
@@ -194,17 +207,16 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
     <rdfs:range rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Zone">
     <rdfs:comment xml:lang="da">Et areal eller stykke land som har en særlig karakteristik, et særligt formål eller brug, eller som er underlagt særlige restriktioner. En bot:Zone kan indeholde andre bot:Zoner defineret ved relationen bot:containsZone, og den kan være forbundet til andre bot:Zoner defineret ved relationen bot:adjacentZone.</rdfs:comment>
     <rdfs:comment xml:lang="en">An area or stretch of land having a particular characteristic, purpose, or use, or subject to particular restrictions. A bot:Zone can contain other bot:Zones defined by the relation bot:containsZone, and it can be connected to other bot:Zones defined by the relation bot:adjacentZone.</rdfs:comment>
     <rdfs:label xml:lang="da">Zone</rdfs:label>
     <rdfs:label xml:lang="en">Zone</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owl:cardinality>
-    <owl:onProperty rdf:resource="https://w3id.org/bot#interfaceOf"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Building">
     <rdfs:label xml:lang="en">Building</rdfs:label>
@@ -224,10 +236,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdf:type rdf:resource="https://schema.org/Person"/>
     <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://maxime-lefrancois.info/me#">
     <schema:name>Maxime Lefrançois</schema:name>
     <vcard:fn>Maxime Lefrançois</vcard:fn>
@@ -243,9 +251,9 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:comment xml:lang="da">Relation til en bygningsdel, som er indeholdt i en zone.</rdfs:comment>
     <rdfs:label xml:lang="nl">bevat element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:propertyChainAxiom rdf:nodeID="A11"/>
     <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
     <rdfs:label xml:lang="de">enthält</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A7"/>
     <rdfs:label xml:lang="da">indeholder bygningsdel</rdfs:label>
     <rdfs:comment xml:lang="en">Relation to a building element contained in a zone.</rdfs:comment>
   </rdf:Description>
@@ -254,10 +262,6 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/description">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:rest rdf:nodeID="A5"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#containsZone">
     <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
@@ -286,6 +290,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:comment xml:lang="en">Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window</rdfs:comment>
     <rdfs:comment xml:lang="nl">Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window</rdfs:comment>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Zone"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Space">
     <rdfs:label xml:lang="da">Rum</rdfs:label>
     <rdfs:label xml:lang="nl">Ruimte</rdfs:label>
@@ -307,6 +315,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">interface of</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:nodeID="A2"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#adjacentElement">
     <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
     <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
@@ -318,21 +330,9 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">adjacent element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <owl:members rdf:nodeID="A2"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-  </rdf:Description>
   <rdf:Description rdf:nodeID="A1">
     <rdf:rest rdf:nodeID="A10"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A10">
-    <rdf:rest rdf:nodeID="A8"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A11">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Site"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#adjacentZone">
     <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
@@ -344,15 +344,15 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:rest rdf:nodeID="A11"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsZone"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

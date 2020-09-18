@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
+    "@id" : "_:b4",
     "@type" : "owl:Restriction",
     "owl:minCardinality" : 1,
     "onProperty" : "bot:interfaceOf"
@@ -234,7 +234,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b0",
+    "subClassOf" : "_:b4",
     "disjointWith" : [ "bot:Zone", "bot:Element" ]
   }, {
     "@id" : "bot:Site",
@@ -1064,12 +1064,12 @@
       "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
       "@type" : "@id"
     },
-    "minCardinality" : {
-      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
     },
-    "onProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
     "rangeIncludes" : {
@@ -1086,16 +1086,16 @@
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
-    },
     "disjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
+      "@type" : "@id"
+    },
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
       "@type" : "@id"
     },
     "subClassOf" : {

@@ -327,11 +327,11 @@
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> " TODO "@fr .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
-_:B131b8eb9X2Dd69aX2D4b32X2Db251X2Df9e049f9a4c0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
-_:B131b8eb9X2Dd69aX2D4b32X2Db251X2Df9e049f9a4c0 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bda62d8eeX2D51a1X2D4fc4X2Db6eaX2D73c48f83ff7d .
-_:Bda62d8eeX2D51a1X2D4fc4X2Db6eaX2D73c48f83ff7d <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
-_:Bda62d8eeX2D51a1X2D4fc4X2Db6eaX2D73c48f83ff7d <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B131b8eb9X2Dd69aX2D4b32X2Db251X2Df9e049f9a4c0 .
+_:B8b12d69bX2De21aX2D4315X2Da691X2Dc4ee3f9d0ced <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:B8b12d69bX2De21aX2D4315X2Da691X2Dc4ee3f9d0ced <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B776b42afX2D28e9X2D4ac1X2Da478X2D2ec9733cb988 .
+_:B776b42afX2D28e9X2D4ac1X2Da478X2D2ec9733cb988 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
+_:B776b42afX2D28e9X2D4ac1X2Da478X2D2ec9733cb988 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B8b12d69bX2De21aX2D4315X2Da691X2Dc4ee3f9d0ced .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#label> "adjacent element"@en .
@@ -365,11 +365,11 @@ _:Bda62d8eeX2D51a1X2D4fc4X2Db6eaX2D73c48f83ff7d <http://www.w3.org/1999/02/22-rd
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation till en byggdel som inryms i en zon."@sv .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre un élément de bâti et la zone le contenant"@fr .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasElement> .
-_:B4c58c3e4X2D4509X2D4b4eX2Db782X2Daa15894c988a <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
-_:B4c58c3e4X2D4509X2D4b4eX2Db782X2Daa15894c988a <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B5449e16eX2Dcc46X2D4013X2Db7f8X2D042e163084d8 .
-_:B5449e16eX2Dcc46X2D4013X2Db7f8X2D042e163084d8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
-_:B5449e16eX2Dcc46X2D4013X2Db7f8X2D042e163084d8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B4c58c3e4X2D4509X2D4b4eX2Db782X2Daa15894c988a .
+_:B5d30aad0X2D3b50X2D448bX2D9b0eX2Dc26a895e08a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:B5d30aad0X2D3b50X2D448bX2D9b0eX2Dc26a895e08a6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B207a141eX2D9d9fX2D46f0X2D9faeX2Dcc82ede6fee6 .
+_:B207a141eX2D9d9fX2D46f0X2D9faeX2Dcc82ede6fee6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
+_:B207a141eX2D9d9fX2D46f0X2D9faeX2Dcc82ede6fee6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B5d30aad0X2D3b50X2D448bX2D9b0eX2Dc26a895e08a6 .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#intersectingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#intersectingElement> <http://www.w3.org/2000/01/rdf-schema#label> "intersecting element"@en .
@@ -401,10 +401,10 @@ _:B5449e16eX2Dcc46X2D4013X2Db7f8X2D042e163084d8 <http://www.w3.org/1999/02/22-rd
 <https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#comment> "Une interface correspond à la surface où se rencontrent a) deux éléments d'un bâtiment, b) deux zones ou  encore c) un élément d'un bâtiment avec une zone. Un cas d'utilisation type est constituée par la qualification de la zone de transmission de chaleur entre une zone et un mur couvrant plusieurs zones."@fr .
 <https://w3id.org/bot#Interface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Zone> .
 <https://w3id.org/bot#Interface> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/bot#Element> .
-_:B422fa7a1a9468f3ab37a0a81938963cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:B422fa7a1a9468f3ab37a0a81938963cf <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#interfaceOf> .
-_:B422fa7a1a9468f3ab37a0a81938963cf <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B422fa7a1a9468f3ab37a0a81938963cf .
+_:B6c5a01b6b5d45d105e2b0dd10255f4d8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:B6c5a01b6b5d45d105e2b0dd10255f4d8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#interfaceOf> .
+_:B6c5a01b6b5d45d105e2b0dd10255f4d8 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6c5a01b6b5d45d105e2b0dd10255f4d8 .
 <https://w3id.org/bot#Interface> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#interfaceOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#interfaceOf> <http://www.w3.org/2000/01/rdf-schema#label> "interface of"@en .

@@ -1,12 +1,12 @@
 {
   "@graph" : [ {
-    "@id" : "_:b10",
+    "@id" : "_:b11",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
-      "@list" : [ "bot:Zone", "bot:Element" ]
+      "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
     }
   }, {
-    "@id" : "_:b11",
+    "@id" : "_:b8",
     "@type" : "owl:Restriction",
     "owl:cardinality" : 2,
     "onProperty" : "bot:interfaceOf"
@@ -14,7 +14,7 @@
     "@id" : "_:b9",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
-      "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
+      "@list" : [ "bot:Zone", "bot:Element" ]
     }
   }, {
     "@id" : "http://maxime-lefrancois.info/me#",
@@ -187,7 +187,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b11"
+    "subClassOf" : "_:b8"
   }, {
     "@id" : "bot:Site",
     "@type" : "owl:Class",
@@ -568,12 +568,12 @@
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
-    "members" : {
-      "@id" : "http://www.w3.org/2002/07/owl#members",
-      "@type" : "@id"
-    },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
       "@type" : "@id"
     },
     "cardinality" : {

@@ -134,10 +134,6 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
-    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
@@ -147,6 +143,10 @@
     },
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",

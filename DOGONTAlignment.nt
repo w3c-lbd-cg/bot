@@ -29,8 +29,8 @@
 <https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/2006/vcard/ns#fn> "Georg Ferdinand Schneider" .
 <https://orcid.org/0000-0002-2033-859X> <https://schema.org/name> "Georg Ferdinand Schneider" .
 <http://elite.polito.it/ontologies/dogont.owl#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsElement> .
-_:Bc6c6ba7204fe9a20febe8d98f86c0a95 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasSubElement> .
-<http://elite.polito.it/ontologies/dogont.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bc6c6ba7204fe9a20febe8d98f86c0a95 .
+_:Bde15a11a19cb5f6e014bc01ba079c72a <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasSubElement> .
+<http://elite.polito.it/ontologies/dogont.owl#belongsTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bde15a11a19cb5f6e014bc01ba079c72a .
 <http://elite.polito.it/ontologies/dogont.owl#floorOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
 <http://elite.polito.it/ontologies/dogont.owl#ceilingOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
 <http://elite.polito.it/ontologies/dogont.owl#hasWall> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#adjacentElement> .
