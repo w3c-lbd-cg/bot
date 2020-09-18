@@ -14,7 +14,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .  
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <https://schema.org/> .
 @prefix bot: <https://w3id.org/bot#> .
 @prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @base <https://w3id.org/bot/DULAlignment> .
@@ -26,12 +27,12 @@
 	dcterms:modified "2019-05-08"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v0.1.0" ;
-    owl:versionIRI <https://w3id.org/bot/DULAlignment/0.1.0> ;
+    owl:versionIRI <https://w3id.org/bot/DULAlignment-0.1.0> ;
 	dcterms:creator <http://maxime-lefrancois.info/me#> ;
-	dcterms:contributor <https://www.researchgate.net/profile/Georg_Schneider3> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
-	dcterms:contributor [ a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
-	dcterms:creator [ a foaf:Person ; foaf:name "Maxime Lefrançois" ] ;
+	dcterms:contributor <https://orcid.org/0000-0002-2033-859X> ;
+	dcterms:contributor "Georg Ferdinand Schneider" ;
+	dcterms:creator "Maxime Lefrançois" ;
 	owl:imports 	<https://w3id.org/bot> ,
 					<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
 
@@ -44,8 +45,16 @@ dcterms:contributor a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
-foaf:Person a owl:Class .
-foaf:name a owl:DatatypeProperty .
+vcard:fn a owl:AnnotationProperty .
+schema:name a owl:AnnotationProperty .
+
+<http://maxime-lefrancois.info/me#> a vcard:Individual , schema:Person; 
+	vcard:fn   "Maxime Lefrançois" ;
+	schema:name "Maxime Lefrançois" .
+
+<https://orcid.org/0000-0002-2033-859X> a vcard:Individual , schema:Person; 
+	vcard:fn    "Georg Ferdinand Schneider" ;
+	schema:name "Georg Ferdinand Schneider" .
 
 #################################################################
 #    Classes

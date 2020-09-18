@@ -1,24 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Georg Ferdinand Schneider"
-  }, {
-    "@id" : "_:b1",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Pieter Pauwels"
-  }, {
-    "@id" : "_:b2",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Mads Holten Rasmussen"
-  }, {
-    "@id" : "_:b6",
+    "@id" : "_:b4",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
@@ -57,18 +39,35 @@
     "@id" : "vs:term_status",
     "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:Person",
-    "@type" : "owl:Class"
+    "@id" : "vcard:fn",
+    "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:name",
-    "@type" : "owl:DatatypeProperty"
+    "@id" : "https://orcid.org/0000-0001-8020-4609",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Pieter Pauwels",
+    "name" : "Pieter Pauwels"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-2033-859X",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Georg Ferdinand Schneider",
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-6519-7057",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Mads Holten Rasmussen",
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:AnnotationProperty"
   }, {
     "@id" : "https://w3id.org/bot#",
     "@type" : "owl:Ontology",
     "Language" : "en",
     "dce:description" : "A simple ontology describing the topology of a building",
-    "contributor" : "_:b0",
-    "creator" : [ "_:b1", "_:b2" ],
+    "contributor" : "https://orcid.org/0000-0001-8020-4609",
+    "dcterms:contributor" : "Georg Ferdinand Schneider",
+    "creator" : [ "https://orcid.org/0000-0002-2033-859X", "https://orcid.org/0000-0002-6519-7057" ],
+    "dcterms:creator" : [ "Pieter Pauwels", "Mads Holten Rasmussen" ],
     "description" : {
       "@language" : "en",
       "@value" : "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"
@@ -85,7 +84,7 @@
     "rdf:type" : {
       "@id" : "voaf:Vocabulary"
     },
-    "versionIRI" : "https://w3id.org/bot/0.1.0",
+    "versionIRI" : "https://w3id.org/bot-0.1.0",
     "versionInfo" : "v0.1.0"
   }, {
     "@id" : "bot:Building",
@@ -313,8 +312,12 @@
     "range" : "bot:Storey"
   } ],
   "@context" : {
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
     "creator" : {
@@ -332,6 +335,10 @@
       "@id" : "http://purl.org/dc/terms/issued",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
       "@type" : "@id"
@@ -346,36 +353,31 @@
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
     },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
-    },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
       "@type" : "@id"
     },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
       "@type" : "@id"
     },
     "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "members" : {
-      "@id" : "http://www.w3.org/2002/07/owl#members",
-      "@type" : "@id"
     },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
@@ -389,15 +391,17 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
-    "dbo" : "http://dbpedia.org/ontology/",
+    "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",
-    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bot" : "https://w3id.org/bot#",
     "dce" : "http://purl.org/dc/elements/1.1/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "voaf" : "http://purl.org/vocommons/voaf#",
-    "dcterms" : "http://purl.org/dc/terms/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
+    "dbo" : "http://dbpedia.org/ontology/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms" : "http://purl.org/dc/terms/",
     "vann" : "http://purl.org/vocab/vann/",
     "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
     "foaf" : "http://xmlns.com/foaf/0.1/"

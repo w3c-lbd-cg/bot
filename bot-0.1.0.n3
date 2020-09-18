@@ -1,12 +1,14 @@
-@prefix dbo:   <http://dbpedia.org/ontology/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <https://schema.org/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix bot:   <https://w3id.org/bot#> .
 @prefix dce:   <http://purl.org/dc/elements/1.1/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dbo:   <http://dbpedia.org/ontology/> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
@@ -14,15 +16,10 @@
 bot:    a                              voaf:Vocabulary , owl:Ontology ;
         dce:Language                   "en" ;
         dce:description                "A simple ontology describing the topology of a building" ;
-        dcterms:contributor            [ a          foaf:Person ;
-                                         foaf:name  "Georg Ferdinand Schneider"
-                                       ] ;
-        dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Pieter Pauwels"
-                                       ] ;
-        dcterms:creator                [ a          foaf:Person ;
-                                         foaf:name  "Mads Holten Rasmussen"
-                                       ] ;
+        dcterms:contributor            "Georg Ferdinand Schneider" ;
+        dcterms:contributor            <https://orcid.org/0000-0001-8020-4609> ;
+        dcterms:creator                "Pieter Pauwels" , "Mads Holten Rasmussen" ;
+        dcterms:creator                <https://orcid.org/0000-0002-2033-859X> , <https://orcid.org/0000-0002-6519-7057> ;
         dcterms:description            "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nThe ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 http://itc.scix.net/cgi-bin/works/Show?lc3-2017-153"@en ;
         dcterms:issued                 "2016-05-25"^^xsd:date ;
         dcterms:license                <https://creativecommons.org/licenses/by/1.0/> ;
@@ -30,18 +27,30 @@ bot:    a                              voaf:Vocabulary , owl:Ontology ;
         dcterms:title                  "BOT: Building Topology Ontology"@en ;
         vann:preferredNamespacePrefix  "bot" ;
         vann:preferredNamespaceUri     bot: ;
-        owl:versionIRI                 <https://w3id.org/bot/0.1.0> ;
+        owl:versionIRI                 <https://w3id.org/bot-0.1.0> ;
         owl:versionInfo                "v0.1.0" .
 
 dcterms:description  a  owl:AnnotationProperty .
 
 dcterms:creator  a  owl:AnnotationProperty .
 
+vcard:fn  a     owl:AnnotationProperty .
+
+<https://orcid.org/0000-0001-8020-4609>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Pieter Pauwels" ;
+        schema:name  "Pieter Pauwels" .
+
 voaf:Vocabulary  a  owl:Class .
 
 dcterms:modified  a  owl:AnnotationProperty .
 
 dcterms:contributor  a  owl:AnnotationProperty .
+
+<https://orcid.org/0000-0002-2033-859X>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Georg Ferdinand Schneider" ;
+        schema:name  "Georg Ferdinand Schneider" .
 
 bot:Element  a        owl:Class ;
         rdfs:comment  "Bestanddel af et bygværk med en karakteristisk funktion, form eller position"@da , "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird"@de , "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en ;
@@ -53,23 +62,26 @@ bot:Space  a          owl:Class ;
 
 dcterms:issued  a  owl:AnnotationProperty .
 
-foaf:name  a    owl:DatatypeProperty .
-
 vs:term_status  a  owl:AnnotationProperty .
+
+<https://orcid.org/0000-0002-6519-7057>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Mads Holten Rasmussen" ;
+        schema:name  "Mads Holten Rasmussen" .
+
+schema:name  a  owl:AnnotationProperty .
 
 [ a            owl:AllDisjointClasses ;
   owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
 ] .
-
-foaf:Person  a  owl:Class .
 
 bot:hasElement  a               owl:ObjectProperty ;
         rdfs:comment            "Relation til elementer, hørende til en en bygning eller en etage."@da , "Relation to elements belonging to a building or a storey."@en , "Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört"@de ;
         rdfs:domain             owl:Thing ;
         rdfs:label              "hat bauteil"@de , "har bygningsdel"@da , "has element"@en ;
         rdfs:range              bot:Element ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) ;
         owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ;
+        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) ;
         owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) .
 
 bot:adjacentElement  a  owl:ObjectProperty ;

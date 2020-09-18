@@ -1,14 +1,15 @@
+@prefix schema: <https://schema.org/> .
 @prefix :      <https://w3id.org/bot/BRICKAlignment#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix bot:   <https://w3id.org/bot#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix brick: <https://brickschema.org/schema/1.0.2/Brick#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 brick:Outside  rdfs:subClassOf  bot:Space .
 
@@ -16,11 +17,18 @@ dcterms:description  a  owl:AnnotationProperty .
 
 dcterms:creator  a  owl:AnnotationProperty .
 
+vcard:fn  a     owl:AnnotationProperty .
+
 brick:Zone  rdfs:subClassOf  bot:Space .
 
 dcterms:modified  a  owl:AnnotationProperty .
 
 dcterms:contributor  a  owl:AnnotationProperty .
+
+<https://orcid.org/0000-0002-2033-859X>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Georg Ferdinand Schneider" ;
+        schema:name  "Georg Ferdinand Schneider" .
 
 brick:hasPoint  rdfs:subPropertyOf  bot:containsElement , bot:containsZone .
 
@@ -34,34 +42,30 @@ brick:Floor  rdfs:subClassOf  bot:Storey .
 
 brick:contains  rdfs:subPropertyOf  bot:containsElement .
 
-foaf:name  a    owl:DatatypeProperty .
-
 brick:Equipment  rdfs:subClassOf  bot:Element .
 
 brick:Location  rdfs:subClassOf  bot:Zone .
 
-foaf:Person  a  owl:Class .
+brick:Point  rdfs:subClassOf  bot:Element .
 
 brick:Wing  rdfs:subClassOf  bot:Space .
-
-brick:Point  rdfs:subClassOf  bot:Element .
 
 <https://w3id.org/bot/BRICKAlignment>
         a                    owl:Ontology , voaf:Vocabulary ;
         rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
-        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
-        dcterms:creator      [ a          foaf:Person ;
-                               foaf:name  "Georg Ferdinand Schneider"
-                             ] ;
+        dcterms:creator      "Georg Ferdinand Schneider" ;
+        dcterms:creator      <https://orcid.org/0000-0002-2033-859X> ;
         dcterms:description  "This ontology defines proposed alignments with the BRICK ontology."@en ;
         dcterms:issued       "2017-09-12"^^xsd:date ;
         dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
-        dcterms:modified     "2019-03-01"^^xsd:date ;
+        dcterms:modified     "2020-08-05"^^xsd:date ;
         dcterms:title        "BRICK to BOT alignment."@en ;
         owl:imports          brick: , <https://w3id.org/bot> ;
-        owl:priorVersion     <https://w3id.org/bot/BRICKAlignment/0.1.0> ;
-        owl:versionIRI       <https://w3id.org/bot/BRICKAlignment/1.0.0> ;
+        owl:priorVersion     <https://w3id.org/bot/BRICKAlignment-0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/BRICKAlignment-1.0.0> ;
         owl:versionInfo      "v1.0.0" .
+
+schema:name  a  owl:AnnotationProperty .
 
 brick:Building  rdfs:subClassOf  bot:Building .
 

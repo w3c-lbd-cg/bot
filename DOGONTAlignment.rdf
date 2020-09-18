@@ -1,30 +1,21 @@
 <rdf:RDF
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:schema="https://schema.org/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:dogont="http://elite.polito.it/ontologies/dogont.owl#"
     xmlns:voaf="http://purl.org/vocommons/voaf#"
     xmlns="https://w3id.org/bot/DOGONTAlignment#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:bot="https://w3id.org/bot#"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Floor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Terrace">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Room">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
@@ -42,6 +33,9 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2006/vcard/ns#fn">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
@@ -63,30 +57,36 @@
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/DOGONTAlignment">
+    <dcterms:creator rdf:resource="https://orcid.org/0000-0002-2033-859X"/>
+    <owl:versionIRI rdf:resource="https://w3id.org/bot/DOGONTAlignment-1.0.0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-02</dcterms:modified>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
     <owl:imports rdf:resource="http://elite.polito.it/ontologies/dogont.owl"/>
-    <owl:versionIRI rdf:resource="https://w3id.org/bot/DOGONTAlignment/1.0.0"/>
-    <dcterms:creator rdf:nodeID="A0"/>
-    <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Georg_Schneider3"/>
+    <owl:priorVersion rdf:resource="https://w3id.org/bot/DOGONTAlignment-0.1.0"/>
     <dcterms:title xml:lang="en">DogOnt to BOT alignment.</dcterms:title>
     <owl:versionInfo>v1.0.0</owl:versionInfo>
     <dcterms:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the DogOnt ontology.</dcterms:description>
     <owl:imports rdf:resource="https://w3id.org/bot"/>
-    <owl:priorVersion rdf:resource="https://w3id.org/bot/DOGONTAlignment/0.1.0"/>
+    <dcterms:creator>Georg Ferdinand Schneider</dcterms:creator>
     <rdfs:seeAlso rdf:resource="https://doi.org/10.13140/RG.2.2.21802.52169"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Ceiling">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://orcid.org/0000-0002-2033-859X">
+    <schema:name>Georg Ferdinand Schneider</schema:name>
+    <vcard:fn>Georg Ferdinand Schneider</vcard:fn>
+    <rdf:type rdf:resource="https://schema.org/Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#floorOf">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Person">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Zone">
     <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Environment"/>
@@ -119,7 +119,10 @@
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#belongsTo">
-    <rdfs:subPropertyOf rdf:nodeID="A1"/>
+    <rdfs:subPropertyOf rdf:nodeID="A0"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://schema.org/name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

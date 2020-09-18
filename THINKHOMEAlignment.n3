@@ -1,3 +1,4 @@
+@prefix schema: <https://schema.org/> .
 @prefix :      <https://w3id.org/bot/THINKHOMEAlignment#> .
 @prefix thsv:  <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#> .
 @prefix th:    <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#> .
@@ -8,8 +9,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
 th:Material  rdfs:subClassOf  bot:Interface .
 
@@ -19,14 +20,19 @@ dcterms:creator  a  owl:AnnotationProperty .
 
 th:Zone  rdfs:subClassOf  bot:Zone .
 
-dcterms:modified  a  owl:AnnotationProperty .
-
-dcterms:contributor  a  owl:AnnotationProperty .
+vcard:fn  a     owl:AnnotationProperty .
 
 th:hasDefinedAdjacentSpace
         rdfs:subPropertyOf  [ owl:inverseOf  bot:adjacentZone ] .
 
+dcterms:modified  a  owl:AnnotationProperty .
+
 th:Surface  rdfs:subClassOf  bot:Interface .
+
+<https://orcid.org/0000-0002-2033-859X>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Georg Ferdinand Schneider" ;
+        schema:name  "Georg Ferdinand Schneider" .
 
 th:SpaceBoundary  rdfs:subClassOf  bot:Interface .
 
@@ -39,21 +45,19 @@ dcterms:issued  a  owl:AnnotationProperty .
 th:containsSpaceBoundary
         rdfs:subPropertyOf  bot:interfaceOf .
 
-foaf:name  a    owl:DatatypeProperty .
-
 thsv:isEquipmentOf  rdfs:subPropertyOf  [ owl:inverseOf
                           bot:hasElement ] .
-
-foaf:Person  a  owl:Class .
-
-th:containsBuilding  rdfs:subPropertyOf
-                bot:hasBuilding .
 
 th:isDefinedAdjacentSurfaceOf
         rdfs:subPropertyOf  bot:interfaceOf .
 
+th:containsBuilding  rdfs:subPropertyOf
+                bot:hasBuilding .
+
 th:containsAirLoopEquipment
         rdfs:subPropertyOf  bot:hasSubElement .
+
+schema:name  a  owl:AnnotationProperty .
 
 th:containsHydronicLoopEquipment
         rdfs:subPropertyOf  bot:hasSubElement .
@@ -83,18 +87,16 @@ th:Space  rdfs:subClassOf  bot:Space .
 <https://w3id.org/bot/THINKHOMEAlignment>
         a                    voaf:Vocabulary , owl:Ontology ;
         rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
-        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
-        dcterms:creator      [ a          foaf:Person ;
-                               foaf:name  "Georg Ferdinand Schneider"
-                             ] ;
+        dcterms:creator      "Georg Ferdinand Schneider" ;
+        dcterms:creator      <https://orcid.org/0000-0002-2033-859X> ;
         dcterms:description  "This ontology defines proposed alignments with the ThinkHome ontologies."@en ;
         dcterms:issued       "2017-09-12"^^xsd:date ;
         dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
         dcterms:modified     "2017-09-12"^^xsd:date ;
         dcterms:title        "ThinkHome to BOT alignment."@en ;
         owl:imports          <https://w3id.org/bot> , th: ;
-        owl:priorVersion     <https://w3id.org/bot/THINKHOMEAlignment/0.1.0> ;
-        owl:versionIRI       <https://w3id.org/bot/THINKHOMEAlignment/1.0.0> ;
+        owl:priorVersion     <https://w3id.org/bot/THINKHOMEAlignment-0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/THINKHOMEAlignment-1.0.0> ;
         owl:versionInfo      "v1.0.0" .
 
 th:Campus  rdfs:subClassOf  bot:Site .

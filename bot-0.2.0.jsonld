@@ -3,43 +3,24 @@
     "@id" : "_:b10",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
-      "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
-    }
-  }, {
-    "@id" : "_:b11",
-    "@type" : "owl:AllDisjointClasses",
-    "members" : {
       "@list" : [ "bot:Zone", "bot:Element" ]
     }
   }, {
-    "@id" : "_:b12",
+    "@id" : "_:b11",
     "@type" : "owl:Restriction",
     "owl:cardinality" : 2,
     "onProperty" : "bot:interfaceOf"
   }, {
-    "@id" : "_:b14",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
+    "@id" : "_:b9",
+    "@type" : "owl:AllDisjointClasses",
+    "members" : {
+      "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
+    }
+  }, {
+    "@id" : "http://maxime-lefrancois.info/me#",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Maxime Lefrançois",
     "name" : "Maxime Lefrançois"
-  }, {
-    "@id" : "_:b15",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Georg Ferdinand Schneider"
-  }, {
-    "@id" : "_:b2",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Mads Holten Rasmussen"
-  }, {
-    "@id" : "_:b5",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Pieter Pauwels"
   }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"
@@ -74,19 +55,39 @@
     "@id" : "vs:term_status",
     "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:Person",
-    "@type" : "owl:Class"
+    "@id" : "vcard:fn",
+    "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:name",
-    "@type" : "owl:DatatypeProperty"
+    "@id" : "https://orcid.org/0000-0001-8020-4609",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Pieter Pauwels",
+    "name" : "Pieter Pauwels"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-2033-859X",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Georg Ferdinand Schneider",
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-6519-7057",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Mads Holten Rasmussen",
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:AnnotationProperty"
   }, {
     "@id" : "https://w3id.org/bot#",
     "@type" : "owl:Ontology",
     "Language" : "en",
     "description" : "A simple ontology describing the topology of a building",
     "dce:title" : "BOT",
-    "contributor" : [ "_:b15", "_:b14" ],
-    "creator" : [ "_:b5", "_:b2" ],
+    "contributor" : [ "http://maxime-lefrancois.info/me#", "https://orcid.org/0000-0002-2033-859X" ],
+    "dcterms:contributor" : [ "Maxime Lefrançois", "Georg Ferdinand Schneider" ],
+    "creator" : [ "Pieter Pauwels", {
+      "@id" : "https://orcid.org/0000-0001-8020-4609"
+    }, {
+      "@id" : "https://orcid.org/0000-0002-6519-7057"
+    }, "Mads Holten Rasmussen" ],
     "dcterms:description" : {
       "@language" : "en",
       "@value" : "The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.\nIt is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.\n\nVersion 0.2.0 of the ontology is documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology\n\nThe initial version of the ontology was documented in:\n\nMads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"
@@ -104,8 +105,8 @@
       "@id" : "voaf:Vocabulary"
     },
     "seeAlso" : [ "https://doi.org/10.24928/JC3-2017/0153", "https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology" ],
-    "priorVersion" : "https://w3id.org/bot/0.1.1",
-    "versionIRI" : "https://w3id.org/bot/0.2.0",
+    "priorVersion" : "https://w3id.org/bot-0.1.0",
+    "versionIRI" : "https://w3id.org/bot-0.2.0",
     "versionInfo" : "0.2.0"
   }, {
     "@id" : "bot:Building",
@@ -186,7 +187,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b12"
+    "subClassOf" : "_:b11"
   }, {
     "@id" : "bot:Site",
     "@type" : "owl:Class",
@@ -531,14 +532,6 @@
     } ]
   } ],
   "@context" : {
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
-    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
@@ -557,12 +550,23 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
     },
     "propertyChainAxiom" : {
       "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
     "members" : {
       "@id" : "http://www.w3.org/2002/07/owl#members",
@@ -580,16 +584,16 @@
       "@id" : "http://www.w3.org/2002/07/owl#onProperty",
       "@type" : "@id"
     },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
+    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
     },
     "Language" : {
       "@id" : "http://purl.org/dc/elements/1.1/Language"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -606,40 +610,41 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
     },
-    "preferredNamespacePrefix" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
-    },
-    "modified" : {
-      "@id" : "http://purl.org/dc/terms/modified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
-      "@type" : "@id"
-    },
-    "title" : {
-      "@id" : "http://purl.org/dc/terms/title"
-    },
     "priorVersion" : {
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
       "@type" : "@id"
     },
-    "description" : {
-      "@id" : "http://purl.org/dc/elements/1.1/description"
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
     "versionIRI" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
       "@type" : "@id"
     },
-    "dbo" : "http://dbpedia.org/ontology/",
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",
-    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bot" : "https://w3id.org/bot#",
     "dce" : "http://purl.org/dc/elements/1.1/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "voaf" : "http://purl.org/vocommons/voaf#",
-    "dcterms" : "http://purl.org/dc/terms/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
+    "dbo" : "http://dbpedia.org/ontology/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms" : "http://purl.org/dc/terms/",
     "vann" : "http://purl.org/vocab/vann/",
     "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
     "foaf" : "http://xmlns.com/foaf/0.1/"

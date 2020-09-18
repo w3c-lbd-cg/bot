@@ -1,3 +1,24 @@
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/title> "SAREF4BLDG Alignment."@en .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."@en .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/issued> "2017-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/elements/1.1/modified> "2019-03-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-2033-859X> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> "Mads Holten Rasmussen" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> "Pieter Pauwels" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> "Maxime Lefrançois" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> <http://maxime-lefrancois.info/me#> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-6519-7057> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0001-8020-4609> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/SAREF4BLDGAlignment-1.0.0> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/SAREF4BLDGAlignment-0.2.0> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
+<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/def/saref4bldg> .
 <http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -9,32 +30,24 @@
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/title> "SAREF4BLDG Alignment."@en .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/description> "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."@en .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/issued> "2017-07-13"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/elements/1.1/modified> "2019-03-02"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
-_:B04fba9bfb990d4c2e1e1ead5c77a36e1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B04fba9bfb990d4c2e1e1ead5c77a36e1 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/creator> _:B04fba9bfb990d4c2e1e1ead5c77a36e1 .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:B2f9daf599ec278fea1d4a280942bd8e6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B2f9daf599ec278fea1d4a280942bd8e6 <http://xmlns.com/foaf/0.1/name> "Mads Holten Rasmussen" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:B2f9daf599ec278fea1d4a280942bd8e6 .
-_:B4043d2c7db26fab7397d7cf8027cc33c <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B4043d2c7db26fab7397d7cf8027cc33c <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> _:B4043d2c7db26fab7397d7cf8027cc33c .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/contributor> <http://www.maxime-lefrancois.info/me#> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
-<https://w3id.org/bot/SAREFG4BLDGAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/def/saref4bldg> .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://maxime-lefrancois.info/me#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<http://maxime-lefrancois.info/me#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<http://maxime-lefrancois.info/me#> <http://www.w3.org/2006/vcard/ns#fn> "Maxime Lefrançois" .
+<http://maxime-lefrancois.info/me#> <https://schema.org/name> "Maxime Lefrançois" .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/2006/vcard/ns#fn> "Georg Ferdinand Schneider" .
+<https://orcid.org/0000-0002-2033-859X> <https://schema.org/name> "Georg Ferdinand Schneider" .
+<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://orcid.org/0000-0002-6519-7057> <http://www.w3.org/2006/vcard/ns#fn> "Mads Holten Rasmussen" .
+<https://orcid.org/0000-0002-6519-7057> <https://schema.org/name> "Mads Holten Rasmussen" .
+<https://orcid.org/0000-0001-8020-4609> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://orcid.org/0000-0001-8020-4609> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://orcid.org/0000-0001-8020-4609> <http://www.w3.org/2006/vcard/ns#fn> "Pieter Pauwels" .
+<https://orcid.org/0000-0001-8020-4609> <https://schema.org/name> "Pieter Pauwels" .
 <https://w3id.org/def/saref4bldg#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Building> .
 <https://w3id.org/def/saref4bldg#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
 <https://w3id.org/def/saref4bldg#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .

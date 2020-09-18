@@ -6,13 +6,11 @@
 <https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/modified> "2017-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" .
-<https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/THINKHOMEAlignment/1.0.0> .
-<https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/THINKHOMEAlignment/0.1.0> .
-<https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
+<https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/THINKHOMEAlignment-1.0.0> .
+<https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/THINKHOMEAlignment-0.1.0> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:B529d9ee83d60fb33889d6b967260d0f1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B529d9ee83d60fb33889d6b967260d0f1 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> _:B529d9ee83d60fb33889d6b967260d0f1 .
+<https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-2033-859X> .
+<https://w3id.org/bot/THINKHOMEAlignment> <http://purl.org/dc/terms/creator> "Georg Ferdinand Schneider" .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/THINKHOMEAlignment> <http://www.w3.org/2002/07/owl#imports> <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -20,12 +18,15 @@ _:B529d9ee83d60fb33889d6b967260d0f1 <http://xmlns.com/foaf/0.1/name> "Georg Ferd
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#fn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://schema.org/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Individual> .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://schema.org/Person> .
+<https://orcid.org/0000-0002-2033-859X> <http://www.w3.org/2006/vcard/ns#fn> "Georg Ferdinand Schneider" .
+<https://orcid.org/0000-0002-2033-859X> <https://schema.org/name> "Georg Ferdinand Schneider" .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Campus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Site> .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Building> .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#BuildingStorey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Storey> .
@@ -45,8 +46,8 @@ _:B529d9ee83d60fb33889d6b967260d0f1 <http://xmlns.com/foaf/0.1/name> "Georg Ferd
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsLighting> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsElement> .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsHydronicLoopEquipment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#containsAirLoopEquipment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
-_:B225880c8e475dde2c84251394a227f0f <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#adjacentZone> .
-<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B225880c8e475dde2c84251394a227f0f .
+_:Bd17c6e60b23443a99ea03d9f333a7f43 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#adjacentZone> .
+<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#hasDefinedAdjacentSpace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bd17c6e60b23443a99ea03d9f333a7f43 .
 <https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntology.owl#isDefinedAdjacentSurfaceOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#interfaceOf> .
-_:B19c446bf32bf07d89303a6c9b8bdbb24 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasElement> .
-<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B19c446bf32bf07d89303a6c9b8bdbb24 .
+_:B981f68a99c91ad5ba4695bafad404b33 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/bot#hasElement> .
+<https://www.auto.tuwien.ac.at/downloads/thinkhome/ontology/BuildingOntologySharedVocabulary.owl#isEquipmentOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B981f68a99c91ad5ba4695bafad404b33 .

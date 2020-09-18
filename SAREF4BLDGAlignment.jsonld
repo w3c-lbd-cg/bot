@@ -1,22 +1,9 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Georg Ferdinand Schneider"
-  }, {
-    "@id" : "_:b1",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Mads Holten Rasmussen"
-  }, {
-    "@id" : "_:b2",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Pieter Pauwels"
+    "@id" : "http://maxime-lefrancois.info/me#",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Maxime Lefrançois",
+    "name" : "Maxime Lefrançois"
   }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"
@@ -51,17 +38,40 @@
     "@id" : "vs:term_status",
     "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:Person",
-    "@type" : "owl:Class"
+    "@id" : "vcard:fn",
+    "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:name",
-    "@type" : "owl:DatatypeProperty"
+    "@id" : "https://orcid.org/0000-0001-8020-4609",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Pieter Pauwels",
+    "name" : "Pieter Pauwels"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-2033-859X",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Georg Ferdinand Schneider",
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-6519-7057",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Mads Holten Rasmussen",
+    "name" : "Mads Holten Rasmussen"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:AnnotationProperty"
   }, {
     "@id" : "https://w3id.org/bot/SAREFG4BLDGAlignment",
     "@type" : "owl:Ontology",
     "modified" : "2019-03-02",
-    "contributor" : [ "http://www.maxime-lefrancois.info/me#", "_:b1", "_:b2" ],
-    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "contributor" : [ "Pieter Pauwels", {
+      "@id" : "http://maxime-lefrancois.info/me#"
+    }, {
+      "@id" : "https://orcid.org/0000-0001-8020-4609"
+    }, "Maxime Lefrançois", "Mads Holten Rasmussen", {
+      "@id" : "https://orcid.org/0000-0002-6519-7057"
+    } ],
+    "creator" : [ "Georg Ferdinand Schneider", {
+      "@id" : "https://orcid.org/0000-0002-2033-859X"
+    } ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."
@@ -77,8 +87,8 @@
     },
     "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
     "imports" : [ "https://w3id.org/bot", "https://w3id.org/def/saref4bldg" ],
-    "priorVersion" : "https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0",
-    "versionIRI" : "https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0",
+    "priorVersion" : "https://w3id.org/bot/SAREF4BLDGAlignment-0.2.0",
+    "versionIRI" : "https://w3id.org/bot/SAREF4BLDGAlignment-1.0.0",
     "versionInfo" : "v1.0.0"
   }, {
     "@id" : "saref4bldg:Actuator",
@@ -103,23 +113,24 @@
     "subPropertyOf" : "bot:containsZone"
   } ],
   "@context" : {
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
     },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
-    },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
-      "@type" : "@id"
-    },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
     },
     "modified" : {
       "@id" : "http://purl.org/dc/elements/1.1/modified",
@@ -127,10 +138,6 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
     },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
@@ -148,6 +155,10 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
     },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
     "priorVersion" : {
       "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
       "@type" : "@id"
@@ -159,6 +170,7 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
     },
+    "schema" : "https://schema.org/",
     "@vocab" : "https://w3id.org/bot/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "bot" : "https://w3id.org/bot#",
@@ -166,12 +178,12 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "voaf" : "http://purl.org/vocommons/voaf#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
     "dbo" : "http://dbpedia.org/ontology/",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "dcterms" : "http://purl.org/dc/terms/",
     "vann" : "http://purl.org/vocab/vann/",
     "saref4bldg" : "https://w3id.org/def/saref4bldg#",
-    "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#",
-    "foaf" : "http://xmlns.com/foaf/0.1/"
+    "vs" : "http://www.w3.org/2003/06/sw-vocab-status/ns#"
   }
 }

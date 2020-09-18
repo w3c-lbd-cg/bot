@@ -1,17 +1,23 @@
 @prefix :      <https://w3id.org/bot/> .
+@prefix schema: <https://schema.org/> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix bot:   <https://w3id.org/bot#> .
 @prefix dce:   <http://purl.org/dc/elements/1.1/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix dbo:   <http://dbpedia.org/ontology/> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix saref4bldg: <https://w3id.org/def/saref4bldg#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://maxime-lefrancois.info/me#>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Maxime Lefrançois" ;
+        schema:name  "Maxime Lefrançois" .
 
 saref4bldg:BuildingSpace
         rdfs:subClassOf  bot:Space .
@@ -22,11 +28,23 @@ dcterms:creator  a  owl:AnnotationProperty .
 
 saref4bldg:Sensor  rdfs:subClassOf  bot:Element .
 
-dcterms:modified  a  owl:AnnotationProperty .
+vcard:fn  a     owl:AnnotationProperty .
+
+<https://orcid.org/0000-0001-8020-4609>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Pieter Pauwels" ;
+        schema:name  "Pieter Pauwels" .
 
 voaf:Vocabulary  a  owl:Class .
 
+dcterms:modified  a  owl:AnnotationProperty .
+
 dcterms:contributor  a  owl:AnnotationProperty .
+
+<https://orcid.org/0000-0002-2033-859X>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Georg Ferdinand Schneider" ;
+        schema:name  "Georg Ferdinand Schneider" .
 
 dcterms:issued  a  owl:AnnotationProperty .
 
@@ -35,35 +53,31 @@ saref4bldg:PhysicalObject
 
 saref4bldg:Actuator  rdfs:subClassOf  bot:Element .
 
-foaf:name  a    owl:DatatypeProperty .
-
 vs:term_status  a  owl:AnnotationProperty .
 
 :SAREFG4BLDGAlignment
         a                    owl:Ontology , voaf:Vocabulary ;
         rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
         dce:modified         "2019-03-02"^^xsd:date ;
-        dcterms:contributor  <http://www.maxime-lefrancois.info/me#> ;
-        dcterms:contributor  [ a          foaf:Person ;
-                               foaf:name  "Mads Holten Rasmussen"
-                             ] ;
-        dcterms:contributor  [ a          foaf:Person ;
-                               foaf:name  "Pieter Pauwels"
-                             ] ;
-        dcterms:creator      <https://www.researchgate.net/profile/Georg_Schneider3> ;
-        dcterms:creator      [ a          foaf:Person ;
-                               foaf:name  "Georg Ferdinand Schneider"
-                             ] ;
+        dcterms:contributor  "Pieter Pauwels" , "Maxime Lefrançois" , "Mads Holten Rasmussen" ;
+        dcterms:contributor  <http://maxime-lefrancois.info/me#> , <https://orcid.org/0000-0001-8020-4609> , <https://orcid.org/0000-0002-6519-7057> ;
+        dcterms:creator      "Georg Ferdinand Schneider" ;
+        dcterms:creator      <https://orcid.org/0000-0002-2033-859X> ;
         dcterms:description  "This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."@en ;
         dcterms:issued       "2017-07-13"^^xsd:date ;
         dcterms:license      <https://creativecommons.org/licenses/by/1.0/> ;
         dcterms:title        "SAREF4BLDG Alignment."@en ;
         owl:imports          <https://w3id.org/bot> , <https://w3id.org/def/saref4bldg> ;
-        owl:priorVersion     <https://w3id.org/bot/SAREF4BLDGAlignment/0.2.0> ;
-        owl:versionIRI       <https://w3id.org/bot/SAREF4BLDGAlignment/1.0.0> ;
+        owl:priorVersion     :SAREF4BLDGAlignment-0.2.0 ;
+        owl:versionIRI       :SAREF4BLDGAlignment-1.0.0 ;
         owl:versionInfo      "v1.0.0" .
 
-foaf:Person  a  owl:Class .
+<https://orcid.org/0000-0002-6519-7057>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Mads Holten Rasmussen" ;
+        schema:name  "Mads Holten Rasmussen" .
+
+schema:name  a  owl:AnnotationProperty .
 
 dcterms:license  a  owl:AnnotationProperty .
 

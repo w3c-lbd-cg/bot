@@ -1,11 +1,5 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Georg Ferdinand Schneider"
-  }, {
     "@id" : "dcterms:contributor",
     "@type" : "owl:AnnotationProperty"
   }, {
@@ -33,11 +27,8 @@
     "@id" : "vann:preferredNamespaceUri",
     "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:Person",
-    "@type" : "owl:Class"
-  }, {
-    "@id" : "foaf:name",
-    "@type" : "owl:DatatypeProperty"
+    "@id" : "vcard:fn",
+    "@type" : "owl:AnnotationProperty"
   }, {
     "@id" : "brick:Basement",
     "subClassOf" : "bot:Space"
@@ -81,56 +72,72 @@
     "@id" : "brick:hasPoint",
     "subPropertyOf" : [ "bot:containsElement", "bot:containsZone" ]
   }, {
+    "@id" : "https://orcid.org/0000-0002-2033-859X",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Georg Ferdinand Schneider",
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:AnnotationProperty"
+  }, {
     "@id" : "https://w3id.org/bot/BRICKAlignment",
     "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "creator" : [ "Georg Ferdinand Schneider", {
+      "@id" : "https://orcid.org/0000-0002-2033-859X"
+    } ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the BRICK ontology."
     },
     "issued" : "2017-09-12",
     "license" : "http://creativecommons.org/licenses/by/3.0/",
-    "modified" : "2019-03-01",
+    "modified" : "2020-08-05",
     "title" : {
       "@language" : "en",
       "@value" : "BRICK to BOT alignment."
     },
     "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
     "imports" : [ "https://brickschema.org/schema/1.0.2/Brick#", "https://w3id.org/bot" ],
-    "priorVersion" : "https://w3id.org/bot/BRICKAlignment/0.1.0",
-    "versionIRI" : "https://w3id.org/bot/BRICKAlignment/1.0.0",
+    "priorVersion" : "https://w3id.org/bot/BRICKAlignment-0.1.0",
+    "versionIRI" : "https://w3id.org/bot/BRICKAlignment-1.0.0",
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
     },
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
+      "@type" : "@id"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
     },
     "issued" : {
       "@id" : "http://purl.org/dc/terms/issued",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
-    },
-    "priorVersion" : {
-      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
-      "@type" : "@id"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
@@ -143,10 +150,6 @@
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
-    },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
@@ -155,15 +158,16 @@
       "@type" : "@id"
     },
     "@vocab" : "https://w3id.org/bot/BRICKAlignment#",
+    "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bot" : "https://w3id.org/bot#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
-    "dcterms" : "http://purl.org/dc/terms/",
     "voaf" : "http://purl.org/vocommons/voaf#",
+    "dcterms" : "http://purl.org/dc/terms/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
     "brick" : "https://brickschema.org/schema/1.0.2/Brick#",
-    "vann" : "http://purl.org/vocab/vann/",
-    "foaf" : "http://xmlns.com/foaf/0.1/"
+    "vann" : "http://purl.org/vocab/vann/"
   }
 }

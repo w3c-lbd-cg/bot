@@ -1,15 +1,8 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Georg Ferdinand Schneider"
-  }, {
-    "@id" : "_:b1",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
+    "@id" : "http://maxime-lefrancois.info/me#",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Maxime Lefrançois",
     "name" : "Maxime Lefrançois"
   }, {
     "@id" : "dcterms:contributor",
@@ -39,11 +32,16 @@
     "@id" : "vann:preferredNamespaceUri",
     "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:Person",
-    "@type" : "owl:Class"
+    "@id" : "vcard:fn",
+    "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:name",
-    "@type" : "owl:DatatypeProperty"
+    "@id" : "https://orcid.org/0000-0002-2033-859X",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Georg Ferdinand Schneider",
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:AnnotationProperty"
   }, {
     "@id" : "bot:Building",
     "subClassOf" : "dul:DesignedArtifact"
@@ -93,8 +91,11 @@
   }, {
     "@id" : "https://w3id.org/bot/DUL2Alignment",
     "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "contributor" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
-    "creator" : [ "_:b1", "http://maxime-lefrancois.info/me#" ],
+    "contributor" : "https://orcid.org/0000-0002-2033-859X",
+    "dcterms:contributor" : "Georg Ferdinand Schneider",
+    "creator" : [ "Maxime Lefrançois", {
+      "@id" : "http://maxime-lefrancois.info/me#"
+    } ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the DUL ontology."
@@ -108,10 +109,16 @@
     },
     "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
     "imports" : [ "https://w3id.org/bot", "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl" ],
-    "versionIRI" : "https://w3id.org/bot/DULAlignment/0.1.0",
+    "versionIRI" : "https://w3id.org/bot/DULAlignment-0.1.0",
     "versionInfo" : "v0.1.0"
   } ],
   "@context" : {
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
@@ -124,20 +131,16 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
     },
-    "contributor" : {
-      "@id" : "http://purl.org/dc/terms/contributor",
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
       "@type" : "@id"
     },
     "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
-      "@type" : "@id"
+      "@id" : "http://purl.org/dc/terms/creator"
     },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
@@ -156,28 +159,29 @@
       "@id" : "http://purl.org/dc/terms/issued",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
-    },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor",
+      "@type" : "@id"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
     },
     "@vocab" : "https://w3id.org/bot/DULAlignment#",
+    "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bot" : "https://w3id.org/bot#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
-    "dcterms" : "http://purl.org/dc/terms/",
     "voaf" : "http://purl.org/vocommons/voaf#",
+    "dcterms" : "http://purl.org/dc/terms/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
     "dul" : "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#",
-    "vann" : "http://purl.org/vocab/vann/",
-    "foaf" : "http://xmlns.com/foaf/0.1/"
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
+    "vann" : "http://purl.org/vocab/vann/"
   }
 }

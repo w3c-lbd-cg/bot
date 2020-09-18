@@ -3,12 +3,6 @@
     "@id" : "_:b0",
     "inverseOf" : "bot:hasSubElement"
   }, {
-    "@id" : "_:b1",
-    "rdf:type" : {
-      "@id" : "foaf:Person"
-    },
-    "name" : "Georg Ferdinand Schneider"
-  }, {
     "@id" : "dogont:Balcony",
     "subClassOf" : "bot:Zone"
   }, {
@@ -93,18 +87,24 @@
     "@id" : "vann:preferredNamespaceUri",
     "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:Person",
-    "@type" : "owl:Class"
+    "@id" : "vcard:fn",
+    "@type" : "owl:AnnotationProperty"
   }, {
-    "@id" : "foaf:name",
-    "@type" : "owl:DatatypeProperty"
+    "@id" : "https://orcid.org/0000-0002-2033-859X",
+    "@type" : [ "schema:Person", "vcard:Individual" ],
+    "fn" : "Georg Ferdinand Schneider",
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "schema:name",
+    "@type" : "owl:AnnotationProperty"
   }, {
     "@id" : "bot:Zone",
     "subClassOf" : "dogont:Environment"
   }, {
     "@id" : "https://w3id.org/bot/DOGONTAlignment",
     "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b1" ],
+    "creator" : "https://orcid.org/0000-0002-2033-859X",
+    "dcterms:creator" : "Georg Ferdinand Schneider",
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the DogOnt ontology."
@@ -118,8 +118,8 @@
     },
     "seeAlso" : "https://doi.org/10.13140/RG.2.2.21802.52169",
     "imports" : [ "http://elite.polito.it/ontologies/dogont.owl", "https://w3id.org/bot" ],
-    "priorVersion" : "https://w3id.org/bot/DOGONTAlignment/0.1.0",
-    "versionIRI" : "https://w3id.org/bot/DOGONTAlignment/1.0.0",
+    "priorVersion" : "https://w3id.org/bot/DOGONTAlignment-0.1.0",
+    "versionIRI" : "https://w3id.org/bot/DOGONTAlignment-1.0.0",
     "versionInfo" : "v1.0.0"
   } ],
   "@context" : {
@@ -132,7 +132,22 @@
       "@type" : "@id"
     },
     "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
     },
     "issued" : {
       "@id" : "http://purl.org/dc/terms/issued",
@@ -146,12 +161,8 @@
       "@id" : "http://www.w3.org/2002/07/owl#imports",
       "@type" : "@id"
     },
-    "versionIRI" : {
-      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
-      "@type" : "@id"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/terms/creator",
+    "priorVersion" : {
+      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
       "@type" : "@id"
     },
     "title" : {
@@ -167,28 +178,21 @@
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"
     },
-    "priorVersion" : {
-      "@id" : "http://www.w3.org/2002/07/owl#priorVersion",
-      "@type" : "@id"
-    },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
     },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
-    },
     "@vocab" : "https://w3id.org/bot/DOGONTAlignment#",
+    "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "bot" : "https://w3id.org/bot#",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "dogont" : "http://elite.polito.it/ontologies/dogont.owl#",
-    "dcterms" : "http://purl.org/dc/terms/",
     "voaf" : "http://purl.org/vocommons/voaf#",
+    "dcterms" : "http://purl.org/dc/terms/",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-    "vann" : "http://purl.org/vocab/vann/",
-    "foaf" : "http://xmlns.com/foaf/0.1/"
+    "vcard" : "http://www.w3.org/2006/vcard/ns#",
+    "vann" : "http://purl.org/vocab/vann/"
   }
 }

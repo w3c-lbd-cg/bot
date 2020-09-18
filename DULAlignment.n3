@@ -1,20 +1,28 @@
+@prefix schema: <https://schema.org/> .
 @prefix :      <https://w3id.org/bot/DULAlignment#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix bot:   <https://w3id.org/bot#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
-@prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix dul:   <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
-@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+
+<http://maxime-lefrancois.info/me#>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Maxime Lefrançois" ;
+        schema:name  "Maxime Lefrançois" .
 
 bot:intersectsZone  rdfs:subPropertyOf  dul:overlaps .
 
 dcterms:description  a  owl:AnnotationProperty .
 
 dcterms:creator  a  owl:AnnotationProperty .
+
+vcard:fn  a     owl:AnnotationProperty .
 
 bot:Zone  rdfs:subClassOf  dul:PhysicalObject .
 
@@ -23,6 +31,11 @@ dcterms:modified  a  owl:AnnotationProperty .
 dcterms:contributor  a  owl:AnnotationProperty .
 
 bot:adjacentZone  rdfs:subPropertyOf  dul:hasCommonBoundary .
+
+<https://orcid.org/0000-0002-2033-859X>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Georg Ferdinand Schneider" ;
+        schema:name  "Georg Ferdinand Schneider" .
 
 bot:has3DModel  rdfs:range  dul:SpaceRegion ;
         rdfs:subPropertyOf  dul:hasRegion .
@@ -34,34 +47,28 @@ bot:Space  rdfs:subClassOf  dul:DesignedArtifact .
 <https://w3id.org/bot/DUL2Alignment>
         a                    owl:Ontology , voaf:Vocabulary ;
         rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
-        dcterms:contributor  <https://www.researchgate.net/profile/Georg_Schneider3> ;
-        dcterms:contributor  [ a          foaf:Person ;
-                               foaf:name  "Georg Ferdinand Schneider"
-                             ] ;
+        dcterms:contributor  "Georg Ferdinand Schneider" ;
+        dcterms:contributor  <https://orcid.org/0000-0002-2033-859X> ;
+        dcterms:creator      "Maxime Lefrançois" ;
         dcterms:creator      <http://maxime-lefrancois.info/me#> ;
-        dcterms:creator      [ a          foaf:Person ;
-                               foaf:name  "Maxime Lefrançois"
-                             ] ;
         dcterms:description  "This ontology defines proposed alignments with the DUL ontology."@en ;
         dcterms:issued       "2019-05-08"^^xsd:date ;
         dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
         dcterms:modified     "2019-05-08"^^xsd:date ;
         dcterms:title        "DUL to BOT alignment."@en ;
         owl:imports          <https://w3id.org/bot> , <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
-        owl:versionIRI       <https://w3id.org/bot/DULAlignment/0.1.0> ;
+        owl:versionIRI       <https://w3id.org/bot/DULAlignment-0.1.0> ;
         owl:versionInfo      "v0.1.0" .
 
 dcterms:issued  a  owl:AnnotationProperty .
 
 bot:containsZone  rdfs:subPropertyOf  dul:hasPart .
 
-foaf:name  a    owl:DatatypeProperty .
-
 bot:Site  rdfs:subClassOf  dul:PhysicalPlace .
 
-foaf:Person  a  owl:Class .
-
 bot:Interface  rdfs:subClassOf  dul:DesignedArtifact .
+
+schema:name  a  owl:AnnotationProperty .
 
 bot:adjacentElement  rdfs:subPropertyOf
                 dul:hasCommonBoundary .
