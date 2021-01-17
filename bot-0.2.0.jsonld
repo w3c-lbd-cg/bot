@@ -1,21 +1,21 @@
 {
   "@graph" : [ {
-    "@id" : "_:b11",
+    "@id" : "_:b10",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
     }
   }, {
-    "@id" : "_:b8",
-    "@type" : "owl:Restriction",
-    "owl:cardinality" : 2,
-    "onProperty" : "bot:interfaceOf"
-  }, {
-    "@id" : "_:b9",
+    "@id" : "_:b6",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Zone", "bot:Element" ]
     }
+  }, {
+    "@id" : "_:b9",
+    "@type" : "owl:Restriction",
+    "owl:cardinality" : 2,
+    "onProperty" : "bot:interfaceOf"
   }, {
     "@id" : "http://maxime-lefrancois.info/me#",
     "@type" : [ "schema:Person", "vcard:Individual" ],
@@ -187,7 +187,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b8"
+    "subClassOf" : "_:b9"
   }, {
     "@id" : "bot:Site",
     "@type" : "owl:Class",
@@ -532,6 +532,14 @@
     } ]
   } ],
   "@context" : {
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
@@ -550,14 +558,6 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
-    },
     "propertyChainAxiom" : {
       "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
@@ -567,10 +567,6 @@
     },
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
-    },
-    "subClassOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
     },
     "members" : {
       "@id" : "http://www.w3.org/2002/07/owl#members",
@@ -582,6 +578,10 @@
     },
     "onProperty" : {
       "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
       "@type" : "@id"
     },
     "contributor" : {

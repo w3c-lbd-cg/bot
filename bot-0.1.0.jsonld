@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
+    "@id" : "_:b6",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
@@ -256,9 +256,9 @@
     "propertyChainAxiom" : [ {
       "@list" : [ "bot:hasStorey", "bot:hasElement" ]
     }, {
-      "@list" : [ "bot:hasSpace", "bot:containsElement" ]
-    }, {
       "@list" : [ "bot:hasSpace", "bot:adjacentElement" ]
+    }, {
+      "@list" : [ "bot:hasSpace", "bot:containsElement" ]
     } ]
   }, {
     "@id" : "bot:hasSpace",
@@ -312,10 +312,6 @@
     "range" : "bot:Storey"
   } ],
   "@context" : {
-    "members" : {
-      "@id" : "http://www.w3.org/2002/07/owl#members",
-      "@type" : "@id"
-    },
     "rest" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
       "@type" : "@id"
@@ -378,6 +374,10 @@
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
+      "@type" : "@id"
     },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",

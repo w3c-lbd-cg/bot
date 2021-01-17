@@ -13,14 +13,6 @@
     xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
-  <rdf:Description rdf:nodeID="A0">
-    <rdf:rest rdf:nodeID="A1"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Element">
     <rdfs:comment xml:lang="da">Bestanddel af et bygværk med en karakteristisk funktion, form eller position</rdfs:comment>
     <rdfs:comment xml:lang="de">Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird</rdfs:comment>
@@ -29,10 +21,6 @@
     <rdfs:label xml:lang="de">Bauteil (Bauwesen)</rdfs:label>
     <rdfs:label xml:lang="en">Building element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <owl:members rdf:nodeID="A4"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasStorey">
     <rdfs:range rdf:resource="https://w3id.org/bot#Storey"/>
@@ -44,6 +32,22 @@
     <rdfs:label xml:lang="de">hat geschoss</rdfs:label>
     <rdfs:label xml:lang="en">has storey</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:members rdf:nodeID="A2"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:nodeID="A0"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <rdf:rest rdf:nodeID="A5"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
@@ -57,23 +61,27 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/contributor">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#adjacentElement"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#hasElement">
-    <owl:propertyChainAxiom rdf:nodeID="A5"/>
     <rdfs:comment xml:lang="da">Relation til elementer, hørende til en en bygning eller en etage.</rdfs:comment>
     <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+    <owl:propertyChainAxiom rdf:nodeID="A3"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relation to elements belonging to a building or a storey.</rdfs:comment>
-    <owl:propertyChainAxiom rdf:nodeID="A6"/>
     <rdfs:label xml:lang="de">hat bauteil</rdfs:label>
-    <owl:propertyChainAxiom rdf:nodeID="A0"/>
+    <owl:propertyChainAxiom rdf:nodeID="A7"/>
     <rdfs:comment xml:lang="de">Beziehung eines Bauteils das zu einem Gebäude oder Geschoss gehört</rdfs:comment>
     <rdfs:label xml:lang="da">har bygningsdel</rdfs:label>
+    <owl:propertyChainAxiom rdf:nodeID="A8"/>
     <rdfs:label xml:lang="en">has element</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#adjacentElement"/>
+  <rdf:Description rdf:nodeID="A8">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://orcid.org/0000-0002-6519-7057">
     <schema:name>Mads Holten Rasmussen</schema:name>
@@ -83,10 +91,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocommons/voaf#Vocabulary">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:nodeID="A7"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#">
     <dcterms:creator rdf:resource="https://orcid.org/0000-0002-2033-859X"/>
@@ -123,9 +127,9 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">Storey</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <rdf:rest rdf:nodeID="A2"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasStorey"/>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A9"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Element"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://orcid.org/0000-0002-2033-859X">
     <schema:name>Georg Ferdinand Schneider</schema:name>
@@ -143,6 +147,10 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="de">hat raum</rdfs:label>
     <rdfs:label xml:lang="en">has space</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <rdf:rest rdf:nodeID="A4"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://orcid.org/0000-0001-8020-4609">
     <schema:name>Pieter Pauwels</schema:name>
@@ -179,27 +187,19 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdfs:label xml:lang="en">contains element</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:nodeID="A8"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#hasSpace"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A9">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:rest rdf:nodeID="A10"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasStorey"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A8">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#containsElement"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <rdf:rest rdf:nodeID="A10"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Space"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Space">
     <rdfs:comment xml:lang="da">En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt</rdfs:comment>
@@ -211,8 +211,8 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A10">
-    <rdf:rest rdf:nodeID="A9"/>
-    <rdf:first rdf:resource="https://w3id.org/bot#Storey"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="https://w3id.org/bot#hasElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#adjacentElement">
     <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>

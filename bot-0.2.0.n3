@@ -79,6 +79,10 @@ bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:label    "heeft element"@nl , "hosts element"@en , "hoster element"@da , "hoster element"@nl ;
         rdfs:range    bot:Element .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 vs:term_status  a  owl:AnnotationProperty .
 
 bot:Site  a              owl:Class ;
@@ -121,6 +125,10 @@ bot:Space  a             owl:Class ;
         rdfs:comment     "A limited three-dimensional extent defined physically or notionally [ISO 12006-2 (DIS 2013), 3.4.3]"@en , "Een afgebakende driedimensionale omgeving die fysiek of indirect gedefinieerd wordt [ISO 12006-2 (DIS 2013), 3.4.3]"@nl , "En afgrænset tredimensionel udstrækning defineret fysisk eller fiktivt"@da , "Fläche oder Volumen mit tatsächlicher oder theoretischer Begrenzung [ISO 6707-1:2014]"@de ;
         rdfs:label       "Rum"@da , "Ruimte"@nl , "Spazio"@it , "Raum"@de , "Space"@en ;
         rdfs:subClassOf  bot:Zone .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .
 
 vann:preferredNamespacePrefix
         a       owl:AnnotationProperty .
@@ -173,15 +181,7 @@ bot:Element  a        owl:Class ;
         rdfs:comment  "Constituent of a construction entity with a characteristic technical function, form or position [12006-2, 3.4.7]"@en , "Bestanddeel van een gebouwde entiteit met een karakteristieke technische functie, vorm of positie [12006-2, 3.4.7]"@nl , "Bestanddel af et bygværk med en karakteristisk funktion, form eller position [12006-2, 3.4.7]"@da , "Das Bauteil ist im Bauwesen ein einzelnes Teil, ein Element oder eine Komponente, aus denen ein Bauwerk zusammengesetzt wird [12006-2, 3.4.7]"@de ;
         rdfs:label    "Gebouwelement"@nl , "Bauteil (Bauwesen)"@de , "Building element"@en , "Elemento architettonico"@it , "Bygningsdel"@da .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 bot:Storey  a            owl:Class ;
         rdfs:comment     "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de , "Een horizontaal gedeelte van een gebouw"@nl , "A level part of a building"@en , "Et plan i en bygning"@da ;
         rdfs:label       "Verdieping"@nl , "Piano di edificio"@it , "Storey"@en , "Etage"@da , "Geschoss (Architektur)"@de ;
         rdfs:subClassOf  bot:Zone .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
-] .
