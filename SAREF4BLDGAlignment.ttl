@@ -18,7 +18,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix dce:    	<http://purl.org/dc/elements/1.1/> .
 @prefix dbo:    	<http://dbpedia.org/ontology/> .
-@prefix saref4bldg:	<https://w3id.org/def/saref4bldg#> .
+@prefix saref4bldg:	<https://saref.etsi.org/saref4bldg/> .
 
 @prefix : <https://w3id.org/bot/> .
 @prefix bot: <https://w3id.org/bot#> .
@@ -43,7 +43,7 @@
   owl:versionIRI <https://w3id.org/bot/SAREF4BLDGAlignment-1.0.0> ;
   owl:priorVersion <https://w3id.org/bot/SAREF4BLDGAlignment-0.2.0> ;
   owl:imports <https://w3id.org/bot> ;
-  owl:imports <https://w3id.org/def/saref4bldg> .
+  owl:imports <https://saref.etsi.org/saref4bldg> .
 
 voaf:Vocabulary a owl:Class .
 dcterms:title a owl:AnnotationProperty .
