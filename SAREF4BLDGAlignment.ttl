@@ -76,7 +76,7 @@ schema:name a owl:AnnotationProperty .
 	vcard:fn    "Pieter Pauwels" ;
 	schema:name "Pieter Pauwels" .
 
-<http://purl.org/net/mpoveda> a vcard:Individual , schema:Person ; 
+<http://w3id.org/people/mpoveda> a vcard:Individual , schema:Person ; 
 	vcard:fn    "María Poveda-Villalón" ;
 	schema:name "María Poveda-Villalón" .
 
