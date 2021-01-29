@@ -1,4 +1,4 @@
-# Copyright 2017-2019 W3C Linked Building Data Community Group.
+# Copyright 2017-2020 W3C Linked Building Data Community Group.
 # 
 # This work is licensed under a Creative Commons Attribution License. 
 # This copyright applies to the Vocabulary Specification and
@@ -6,7 +6,7 @@
 # the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
 # used by anyone.
 
-@prefix : <https://w3id.org/bot/DERIROOMAlignment#> .
+@prefix : <https://w3id.org/bot/SCHEMAORGAlignment#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,23 +17,21 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix schema: <https://schema.org/> .
 @prefix bot: <https://w3id.org/bot#> .
-@prefix rooms: <http://vocab.deri.ie/rooms#> .
-@base <https://w3id.org/bot/DERIROOMAlignment> .
+@base <https://w3id.org/bot/SCHEMAORGAlignment> .
 
-<https://w3id.org/bot/DERIROOMAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
-	dcterms:title "DERIROOMS to BOT alignment."@en ;
-	dcterms:description """This ontology defines proposed alignments with the DERI Rooms ontology."""@en ;
-	dcterms:issued "2017-09-12"^^xsd:date ;
-	dcterms:modified "2020-05-23"^^xsd:date ;
+<https://w3id.org/bot/SCHEMAORGAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "Schema.org to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the schema.org schema."""@en ;
+	dcterms:issued "2020-11-11"^^xsd:date ;
+	dcterms:modified "2020-11-13"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
-    owl:versionInfo "v1.0.0" ;
-    owl:versionIRI <https://w3id.org/bot/DERIROOMAlignment-1.0.0> ;
-    owl:priorVersion <https://w3id.org/bot/DERIROOMAlignment-0.1.0> ;
+    owl:versionInfo "v0.1.0" ;
+    owl:versionIRI <https://w3id.org/bot/SCHEMAORGAlignment-1.0.0> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
 	dcterms:creator "Georg Ferdinand Schneider" ;
 	owl:imports 	<https://w3id.org/bot> ,
-					<http://vocab.deri.ie/rooms#> .
+					<https://schema.org/> .
 
 dcterms:title a owl:AnnotationProperty .
 dcterms:description a owl:AnnotationProperty .
@@ -55,11 +53,27 @@ schema:name a owl:AnnotationProperty .
 #    Alignments
 #################################################################
 
-rooms:Site rdfs:subClassOf bot:Site .
-rooms:Building rdfs:subClassOf bot:Building .
-rooms:Floor rdfs:subClassOf bot:Storey .
-rooms:FloorSection rdfs:subClassOf bot:Storey .
-rooms:Desk rdfs:subClassOf bot:Element .
-rooms:Room rdfs:subClassOf bot:Space .
+schema:House rdfs:subClassOf bot:Building .
 
-rooms:contains rdfs:subPropertyOf bot:containsZone .
+bot:Zone rdfs:subClassOf schema:CivicStructure .
+
+schema:FireStation rdfs:subClassOf bot:Building .
+schema:GovernmentBuilding rdfs:subClassOf bot:Building .
+schema:Hospital rdfs:subClassOf bot:Building .
+schema:MovieTheater rdfs:subClassOf bot:Building .
+schema:Museum rdfs:subClassOf bot:Building .
+schema:MusicVenue rdfs:subClassOf bot:Building .
+schema:PerformingArtsTheater rdfs:subClassOf bot:Building .
+schema:PlaceOfWorship rdfs:subClassOf bot:Building .
+schema:PoliceStation rdfs:subClassOf bot:Building .
+schema:StadiumOrArena rdfs:subClassOf bot:Building .
+schema:TrainStation rdfs:subClassOf bot:Building .
+
+schema:Residence rdfs:subClassOf bot:Building .
+
+schema:Accomodation rdfs:subClassOf bot:Zone .
+schema:PublicToilet rdfs:subClassOf bot:Zone .
+schema:LocalBusiness rdfs:subClassOf bot:Zone .
+
+bot:containsZone rdfs:subPropertyOf schema:containsPlace .
+

@@ -14,7 +14,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .  
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix schema: <https://schema.org/> .
 @prefix bot: <https://w3id.org/bot#> .
 @prefix brick: <https://brickschema.org/schema/1.1/Brick#> .
 @base <https://w3id.org/bot/BRICKAlignment> .
@@ -23,17 +24,18 @@
 	dcterms:title "BRICK to BOT alignment."@en ;
 	dcterms:description """This ontology defines correspondences with the BRICK ontology. Alignment holds for BOT v0.3.2 and BRICK v.1.1.1"""@en ;
 	dcterms:issued "2017-09-12"^^xsd:date ;
-	dcterms:modified "2019-05-29"^^xsd:date ;
+	dcterms:modified "2021-01-29"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v2.0.0" ;
     owl:versionIRI <https://w3id.org/bot/BRICKAlignment/2.0.0> ;
     owl:priorVersion <https://w3id.org/bot/BRICKAlignment/1.0.0> ;
-	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
-    rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
-	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
-	dcterms:creator [a foaf:Person ; foaf:name "Jason Koh" ; vcard:hasEmail mailto:jbkoh@eng.ucsd.edu ; ] ;
-	owl:imports <https://w3id.org/bot#> ,
-				<https://brickschema.org/schema/1.1/Brick#> .
+		dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
+	dcterms:creator "Georg Ferdinand Schneider" ;
+  dcterms:creator "Jason Koh" ;
+  dcterms:creator <https://github.com/jbkoh> ;
+	rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+	owl:imports 	<https://w3id.org/bot-0.3.2> ,
+					<https://brickschema.org/schema/1.1/Brick> .
 
 dcterms:title a owl:AnnotationProperty .
 dcterms:description a owl:AnnotationProperty .
@@ -44,9 +46,16 @@ dcterms:contributor a owl:AnnotationProperty .
 dcterms:license a owl:AnnotationProperty .
 vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
-foaf:Person a owl:Class .
-foaf:name a owl:DatatypeProperty .
-vcard:hasName a owl:DatatypeProperty .
+vcard:fn a owl:AnnotationProperty .
+schema:name a owl:AnnotationProperty .
+
+<https://orcid.org/0000-0002-2033-859X> a vcard:Individual , schema:Person; 
+	vcard:fn    "Georg Ferdinand Schneider" ;
+	schema:name "Georg Ferdinand Schneider" .
+
+<https://github.com/jbkoh> a vcard:Individual , schema:Person; 
+	vcard:fn    "Jason Koh" ;
+	schema:name "Jason Koh" .
 
 #################################################################
 #    Object Properties

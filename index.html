@@ -106,10 +106,10 @@
                         <a href="#adjacentZone">bot:adjacentZone</a> , 
                         <a href="#containsElement">bot:containsElement</a> , 
                         <a href="#containsZone">bot:containsZone</a> , 
-                        <a href="#interfaceOf">bot:interfaceOf</a>
-                        <a href="#intersectingElement">bot:intersectingElement</a>
-                        <a href="#intersectsZone">bot:intersectsZone</a>
-                        <a href="#has3DModel">bot:has3DModel</a> 
+                        <a href="#interfaceOf">bot:interfaceOf</a> ,
+                        <a href="#intersectingElement">bot:intersectingElement</a> ,
+                        <a href="#intersectsZone">bot:intersectsZone</a> ,
+                        <a href="#has3DModel">bot:has3DModel</a> ,
                         <a href="#hasBuilding">bot:hasBuilding</a> , 
                         <a href="#hasElement">bot:hasElement</a> , 
                         <a href="#hasSubElement">bot:hasSubElement</a> , 
@@ -132,8 +132,7 @@
         <section class="informative" id="Zones-Overview">
             <h4>Overview and Examples</h4>
 
-            <p>Zones are defined area with spatial 3D volume that group space. This specification defines four sub types
-             of Zones: </p>
+            <p>Zones are defined as a part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent. Four sub types of Zones are defined: </p>
             <ul>
                <li>Site: An area containing one or more buildings;</li>
                <li>Building: An independent unit of the built environment with a characteristic spatial structure;</li>
@@ -164,7 +163,7 @@
                 <a href="#hasSpace"><code>bot:hasSpace</code></a> - therefore &lt;siteX&gt; contains all the other 
                 <a href="#Zone"><code>bot:Zone</code></a> instances.</li>
                 <li>A stairwell would be modeled as a <a href="#Zone">
-                <code>bot:Zone</code></a>, linked to the different <a href="#Storey"><code>bot:Storey</code>s</a> through the <a href="#intersectsZone">
+                <code>bot:Zone</code></a>, linked to the different <a href="#Storey"><code>bot:Storey</code></a>s through the <a href="#intersectsZone">
                 <code>bot:intersectsZone</code></a> relation.</li>
             </ul>
 
@@ -204,7 +203,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Zone</em> -
-                <span property="rdfs:comment skos:definition">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent; Sub-classes of <a href="#Zone">bot:Zone</a> include <a href="#Site">bot:Site</a>, <a href="#Building">bot:Building</a>, <a href="#Storey">bot:Storey</a>, or <a href="#Space">bot:Space</a>. An instance of <a href="#Zone">bot:Zone</a> can contain other <a href="#Zone">bot:Zone</a> instances, making it possible to group or subdivide zones. An instance of <a href="#Zone">bot:Zone</a> can be adjacent to other <a href="#Zone">bot:Zone</a> instances. Finally, a <a href="#Zone">bot:Zone</a> can instantiate two relations to <a href="#Element">bot:Element</a>, which are either contained in (<a href="#containsElement">bot:containsElement</a>), or adjacent to it (<a href="#adjacentElement">bot:adjacentElement</a>).</span>
+                <span property="rdfs:comment skos:definition">A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent; Sub-classes of <a href="#Zone">bot:Zone</a> include <a href="#Site">bot:Site</a>, <a href="#Building">bot:Building</a>, <a href="#Storey">bot:Storey</a>, or <a href="#Space">bot:Space</a>.  An instance of <a href="#Zone">bot:Zone</a> can contain other <a href="#Zone">bot:Zone</a> instances, making it possible to group or subdivide zones. An instance of <a href="#Zone">bot:Zone</a> can be adjacent to or intersecting other <a href="#Zone">bot:Zone</a> instances. Finally, a <a href="#Zone">bot:Zone</a> can instantiate three relations to <a href="#Element">bot:Element</a>, which are either contained in (<a href="#containsElement">bot:containsElement</a>), adjacent to it (<a href="#adjacentElement">bot:adjacentElement</a>) or intersecting (<a href="#intersectingElement">bot:intersectingElement</a>).</span>
                 <br>
                 <table>
                     <tbody>
@@ -230,7 +229,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Site</em> -
-                <span property="rdfs:comment skos:definition">Area containing one or more buildings.</span>
+                <span property="rdfs:comment skos:definition">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. It is intended to contain or contains one or more buildings.</span>
                 <br>
                 <table>
                     <tbody>
@@ -263,7 +262,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Building</em> -
-                <span property="rdfs:comment skos:definition">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [[ISO-12006]].</span>
+                <span property="rdfs:comment skos:definition">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [[ISO-12006]]. A <a href="#Building">bot:Building</a> is a part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent, is contained in a building site, and can contain one or more storeys that are vertically connected.</span>
                 <br>
                 <table>
                     <tbody>
@@ -296,7 +295,7 @@
                 <p><strong>a OWL Class</strong></p>
 
                 <em property="rdfs:label">Storey</em> -
-                <span property="rdfs:comment skos:definition">A level part of a building.</span>
+                <span property="rdfs:comment skos:definition">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. A <a href="#Storey">bot:Storey</a> is contained in one or more buildings, and is intended to contain one or more spaces that are horizontally connected. Storeys of a building are connected by means of vertical connections such as elevators and stairs. A <a href="#Storey">bot:Storey</a> encompasses both zones above and below ground, for example, a building with 21 floors above ground, one ground floor and 3 basements is equal to the sentence: A building has 25 instances of <a href="#Storey">bot:Storey</a>.</span>
                 <br>
                 <table>
                     <tbody>
@@ -362,7 +361,7 @@
                 <p><strong>a OWL Object Property</strong></p>
 
                 <em property="rdfs:label">contains zone</em> -
-                <span property="rdfs:comment skos:definition">Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property meaning that in the previous example the space zone would also be contained in the building zone.</span>
+                <span property="rdfs:comment skos:definition">Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. <a href="#containsZone">bot:containsZone</a> is a transitive property. This implies that in the previous example a <a href="#containsZone">bot:containsZone</a> relationship holds between the space zone and the building zone.</span>
                 <br>
                 <table>
                     <tbody>
@@ -400,7 +399,7 @@
                 <p><strong>a OWL Object Property</strong></p>
 
                 <em property="rdfs:label">has building</em> -
-                <span property="rdfs:comment skos:definition">Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site.</span>
+                <span property="rdfs:comment skos:definition">Relation to buildings contained in a zone. The typical domains of <a href="#hasBuilding">bot:hasBuilding</a> are instances of <a href="#Site">bot:Site</a>.</span>
                 <br>
                 <table>
                     <tbody>
@@ -433,7 +432,7 @@
                 <p><strong>a OWL Object Property</strong></p>
 
                 <em property="rdfs:label">has storey</em> -
-                <span property="rdfs:comment skos:definition">Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building.</span>
+                <span property="rdfs:comment skos:definition">Relation to storeys contained in a zone. The typical domains of <a href="#hasStorey">bot:hasStorey</a> are instances of <a href="#Building">bot:Building</a>.</span>
                 <br>
                 <table>
                     <tbody>
@@ -466,7 +465,8 @@
                 <p><strong>a OWL Object Property</strong></p>
 
                 <em property="rdfs:label">has space</em> -
-                <span property="rdfs:comment skos:definition">Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building.</span>
+                <span property="rdfs:comment skos:definition">
+				Relation to spaces contained in a zone. The typical domains of <a href="#hasSpace">bot:hasSpace</a> are instances of <a href="#Storey">bot:Storey</a> or <a href="#Building">bot:Building</a>.</span>
                 <br>
                 <table>
                     <tbody>
@@ -638,7 +638,7 @@
                 <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasSubElement</p>
                 <p><strong>a OWL Object Property</strong></p>
                 <em property="rdfs:label">hosts element</em> -
-                <span property="rdfs:comment skos:definition">Relation between an element a) and another element b) hosted by element a).</span>
+                <span property="rdfs:comment skos:definition">Relation between two building elements, either one element hosting another (e.g. a wall hosts a window) or a subcomposition of a building element into smaller parts (e.g. an air handling unit has as a part a fan).</span>
                 <br>
                 <table>
                     <tbody>
@@ -664,7 +664,7 @@
                 <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#hasElement</p>
                 <p><strong>a OWL Object Property</strong></p>
                 <em property="rdfs:label">has element</em> -
-                <span property="rdfs:comment skos:definition">Links a <code>Zone</code> to an <code>Element</code> that is contained in, or adjacent to, the <code>Zone</code>. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building.</span>
+                <span property="rdfs:comment skos:definition">Links a Zone to an Element that is either contained in, adjacent to or intersecting with the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building.</span>
                 <br>
                 <table>
                     <tbody>
@@ -697,7 +697,7 @@
                 <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#containsElement</p>
                 <p><strong>a OWL Object Property</strong></p>
                 <em property="rdfs:label">contains element</em> -
-                <span property="rdfs:comment skos:definition">Relation between a <code>Zone</code> and a building <code>Element</code> it contains.</span>
+                <span property="rdfs:comment skos:definition">Relation to a building element contained in a zone.</span>
                 <br>
                 <table>
                     <tbody>
@@ -730,7 +730,7 @@
                 <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#adjacentElement</p>
                 <p><strong>a OWL Object Property</strong></p>
                 <em property="rdfs:label">adjacent element</em> -
-                <span property="rdfs:comment skos:definition">Relation between a <code>Zone</code> and its adjacent building <code>Element</code>, bounding the <code>Zone</code>.</span>
+                <span property="rdfs:comment skos:definition">Relation between a zone and its adjacent building elements, bounding the zone.</span>
                 <br>
                 <table>
                     <tbody>
@@ -753,7 +753,7 @@
                 <p class="crossreference"><strong>IRI:</strong> https://w3id.org/bot#intersectingElement</p>
                 <p><strong>a OWL Object Property</strong></p>
                 <em property="rdfs:label">intersecting element</em> -
-                <span property="rdfs:comment skos:definition">Relation between a <code>Zone</code> and a building <code>Element</code> that intersects it.</span>
+                <span property="rdfs:comment skos:definition">Relation between a Zone and a building Element that intersects it.</span>
                 <br>
                 <table>
                     <tbody>
@@ -814,13 +814,14 @@
                     <p><strong>a OWL Class</strong></p>
     
                     <em property="rdfs:label">Interface</em> -
-                    <span property="rdfs:comment skos:definition">An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones.</span>
+                    <span property="rdfs:comment skos:definition">
+					A generic concept to qualify the relationship of two or more things in the world, where at least one is a building element or zone. Examples: (1) Qualification of heat transmission between zones through one or more building elements. This includes one-dimensional (surface) heat losses from one zone to another through a single building element, a two dimensional (line) loss from one zone to another through the connection in which the two elements meet or a three dimensional (point) loss from one zone to another through the connection where three elements (typically two walls and a slab) meet. (2) Connection of an electric device to the electric system of a building. (3) A door between one room and another.</span>
                     <br>
                     <table>
                         <tbody>
                             <tr>
                                 <th>Example</th>
-                                <td><span property="skos:example">A heat transfer area between a space and an adjecent wall, the pipe surface facing the space that the pipe passes through, a joint between two concrete elements or connection between a window and a wall.</span></td>
+                                <td><span property="skos:example">A heat transfer area between a space and an adjacent wall, the pipe surface facing the space that the pipe passes through, a joint between two concrete elements or connection between a window and a wall.</span></td>
                             </tr>
                             <tr>
                                 <th class="restrictions">Disjoint with</th>
@@ -840,7 +841,7 @@
                 <p><strong>a OWL Object Property</strong></p>
 
                 <em property="rdfs:label">interface of</em> -
-                <span property="rdfs:comment skos:definition">Relationship between an interface and its adjacent zone(s) and/or element(s).</span>
+                <span property="rdfs:comment skos:definition">Relationship between an interface and another thing (building zone, element or owl:Thing).</span>
                 <br>
                 <table>
                     <tbody>
@@ -891,7 +892,8 @@
                     <p><strong>a OWL Object Property</strong></p>
 
                     <em property="rdfs:label">has Zero Point</em> -
-                    <span property="rdfs:comment skos:definition">Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><code>wgs84:Point</code></a>. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology.</span>
+                    <span property="rdfs:comment skos:definition">
+					Links a <a href="#Site">bot:Site</a> to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a <a href="http://www.w3.org/2003/01/geo/wgs84_pos#Point"><code>wgs84:Point</code></a>. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology.</span>
                     <br>
                     <table>
                         <tbody>
@@ -930,7 +932,7 @@
                     <p><strong>a OWL Object Property</strong></p>
 
                     <em property="rdfs:label">has 3D Model</em> -
-                    <span property="rdfs:comment skos:definition">Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.</span>
+                    <span property="rdfs:comment skos:definition">Links any <a href="#Zone">bot:Zone</a> or <a href="#Element">bot:Element</a> to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models.</span>
                     <br>
                     <table>
                         <tbody>
@@ -969,64 +971,63 @@ ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
         <!-- BRICK alignment -->
         <section id="BRICK_Alignment" class="informative">
             <h3>BRICK Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the BRICK ontology (v1.0.2)</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the BRICK ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/BRICKAlignment.ttl</a>.</p>
         </section>    
 
         <!-- DERIROOMS alignment -->
         <section id="DERIROOMS_Alignment" class="informative">
             <h3>DERIROOMS Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the DERIROOMS ontology</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the DERIROOMS ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DERIROOMAlignment.ttl</a>.
+            </p>
         </section>
 
         <!-- DogOnt alignment -->
         <section id="DOGONT_Alignment" class="informative">
             <h3>DogOnt Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the DogOnt ontology</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the DogOnt ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DOGONTAlignment.ttl</a>.
+            </p>
         </section>
 
 		<!-- DUL alignment -->
         <section id="DUL_Alignment" class="informative">
             <h3>DUL Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the DUL ontology</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the DUL ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl</a>.
+            </p>
         </section>
 
         <!-- ifcOWL alignment -->
         <section id="IFCOWL_Alignment" class="informative">
             <h3>ifcOWL Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the ifcOWL ontology</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the ifcOWL ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/IFCOWL4_ADD2Alignment.ttl</a>.
+			</p>
         </section>
 		<!-- SAREF4Building alignment -->
         <section id="SAREF4Bldg_Alignment" class="informative">
             <h3>SAREF4Bldg Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the SAREF4Bldg ontology</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the SAREF4Bldg ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/SAREF4BLDGAlignment.ttl</a>.
+		</p>
         </section>
 		
 		<!-- ThinkHome alignment -->
         <section id="ThinkHome_Alignment" class="informative">
             <h3>ThinkHome Alignment Module</h3>
-            <p>This section introduces the alignment of BOT to the ThinkHome ontology</p>
-            The alignment is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl</a>.
-            
-			<p></p>
+            <p>An alignment of BOT to the ThinkHome ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/THINKHOMEAlignment.ttl</a>.</p>
         </section>
+		
+		<!-- RECore alignment -->
+        <section id="REC_Alignment" class="informative">
+            <h3>Realestate Core Alignment Module</h3>
+            <p>An alignment of BOT to the Realestate Core ontology is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/RECAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/RECAlignment.ttl</a>.</p>
+        </section>
+
+		<!-- RECore alignment -->
+        <section id="REC_Alignment" class="informative">
+            <h3>DUL Alignment Module</h3>
+            <p>An alignment of BOT to Dolce Ultralite ontology (DUL) is available at <a href="https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl">https://raw.githubusercontent.com/w3c-lbd-cg/bot/master/DULAlignment.ttl</a>. While other alignments can be seen as extending domain ontologies from BOT, this alignment extends BOT from DUL.</p>
+        </section>
+
+
+
     </section>
 
     <section class="informative" id="common-modeling-questions">
@@ -1034,9 +1035,8 @@ ifcOWL [Ontology](http://www.buildingsmart-tech.org/ifcOWL/IFC4_ADD2#)
 
         <section id="zones">
             <h3>Zones - appartment example</h3>
-            <p>BOT defines a Zone as <em>"An area or stretch of land having a particular characteristic, 
-                purpose, or use, or subject to particular restrictions."</em>. Any area of interest is hence 
-                a <a href="#Zone"><code>bot:Zone</code></a>. The building itself is a zone and so are all the spaces within it. 
+            <p>BOT defines a Zone as <em>"A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent. [...]"</em>. Any area of interest is hence 
+                a <a href="#Zone"><code>bot:Zone</code></a>. A building itself is a zone and so are all the spaces within it. 
                 Grouping sub-zones into one zone can be handled with the <a href="#containsZone"><code>bot:containsZone</code></a> property. 
                 In the example below, <a href="#Zone"><code>bot:Zone</code></a> is used to group spaces into an appartment.
             </p>
@@ -1356,10 +1356,13 @@ h:heatedBy a owl:ObjectProperty ;
         </section>
     </section>
     <section class="appendix" id="acknowledgments">
-        <h2>Acknowledgments</h2> The editors recognize the major contribution of the members of the W3C Linked Building Data Community Group.</section>
+        <h2>Acknowledgments</h2> BOT is a product of the W3C Linked Building Data Community Group and recommendations and improvements have been received from many members of the group. The editors are thankful for all received inputs.</section>
     <section class="appendix" id="changes">
         <h2>Change History</h2>
-        <p><em>List not complete</em></p>
+        <p><em>This list is not fully complete</em></p>
+		<!-- v0.3.2 -->
+		<h3>Revisions of BOT to version v0.3.2</h3>
+        <p>The minor revision to BOT version v0.3.2 include no logical changes. The definitions of concepts and properties have been revised. All changes are documented in the github repository.</p>
 		
 		<h3>Revisions of BOT to version v0.3.1</h3>
         <p>These changes are documented via a <a href="https://github.com/w3c-lbd-cg/bot/pull/49">Pull Request (PR)</a> in the groups Github repository.</p>
