@@ -1,0 +1,71 @@
+# Copyright 2017 W3C Linked Building Data Community Group.
+# 
+# This work is licensed under a Creative Commons Attribution License. 
+# This copyright applies to the Vocabulary Specification and
+# accompanying documentation in RDF. Regarding underlying technology,
+# the Vocabulary uses W3C's RDF technology, an open Web standard that can be freely 
+# used by anyone.
+
+@prefix : <https://w3id.org/bot/BRICKAlignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .  
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix bot: <https://w3id.org/bot#> .
+@prefix brick: <https://brickschema.org/schema/1.0.2/Brick#> .
+@base <https://w3id.org/bot/BRICKAlignment> .
+
+<https://w3id.org/bot/BRICKAlignment> rdf:type owl:Ontology , voaf:Vocabulary ;
+	dcterms:title "BRICK to BOT alignment."@en ;
+	dcterms:description """This ontology defines proposed alignments with the BRICK ontology."""@en ;
+	owl:versionInfo "v0.1.0" ;
+    owl:versionIRI <https://w3id.org/bot/BRICKAlignment/0.1.0> ;
+	dcterms:issued "2017-09-12"^^xsd:date ;
+	dcterms:modified "2017-09-12"^^xsd:date ;
+	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
+	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
+	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
+	owl:imports 	<https://w3id.org/bot> ,
+					<https://brickschema.org/schema/1.0.2/Brick#> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:issued a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+dcterms:creator a owl:AnnotationProperty .
+dcterms:contributor a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+vann:preferredNamespacePrefix a owl:AnnotationProperty .
+vann:preferredNamespaceUri a owl:AnnotationProperty .
+foaf:Person a owl:Class .
+foaf:name a owl:DatatypeProperty .
+
+											   
+#################################################################
+#    Object Properties
+#################################################################
+
+brick:contains rdfs:subPropertyOf bot:containsElement .
+
+#################################################################
+#    Classes
+#################################################################
+
+bot:Zone rdfs:subClassOf brick:Location .
+brick:Basement rdfs:subClassOf bot:Space .
+brick:Outside rdfs:subClassOf bot:Space .
+brick:Room rdfs:subClassOf bot:Space .
+brick:Space rdfs:subClassOf bot:Space .
+brick:Wing rdfs:subClassOf bot:Space .
+brick:Zone rdfs:subClassOf bot:Space .
+
+brick:Building rdfs:subClassOf bot:Building .
+brick:Floor rdfs:subClassOf bot:Storey .
+brick:Equipment rdfs:subClassOf bot:Element .
+brick:Point rdfs:subClassOf bot:Element .
+brick:contains rdfs:subPropertyOf bot:containsElement  .
+
