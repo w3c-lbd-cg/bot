@@ -27,7 +27,7 @@
   dcterms:title "SAREF4BLDG Alignment."@en ;
   dcterms:description """This ontology defines proposed alignments of SAREF4BLDG with the BOT ontology."""@en ;
   dcterms:issued "2017-07-13"^^xsd:date ;
-  dce:modified "2019-03-02"^^xsd:date ;
+  dce:modified "2021-01-21"^^xsd:date ;
   dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
   dcterms:creator "Georg Ferdinand Schneider" ;
   dcterms:contributor "Mads Holten Rasmussen" ;
