@@ -7,78 +7,73 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix voaf:  <http://purl.org/vocommons/voaf#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix brick: <https://brickschema.org/schema/1.0.2/Brick#> .
+@prefix brick: <https://brickschema.org/schema/1.1/Brick#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix vann:  <http://purl.org/vocab/vann/> .
 
-brick:Outside  rdfs:subClassOf  bot:Space .
-
 dcterms:description  a  owl:AnnotationProperty .
+
+brick:Location  rdfs:subClassOf  bot:Zone .
 
 dcterms:creator  a  owl:AnnotationProperty .
 
 vcard:fn  a     owl:AnnotationProperty .
 
-brick:Zone  rdfs:subClassOf  bot:Space .
-
 dcterms:modified  a  owl:AnnotationProperty .
 
 dcterms:contributor  a  owl:AnnotationProperty .
+
+brick:Building  owl:equivalentClass  bot:Building .
 
 <https://orcid.org/0000-0002-2033-859X>
         a            schema:Person , vcard:Individual ;
         vcard:fn     "Georg Ferdinand Schneider" ;
         schema:name  "Georg Ferdinand Schneider" .
 
-brick:hasPoint  rdfs:subPropertyOf  bot:containsElement , bot:containsZone .
-
-brick:hasPart  rdfs:subPropertyOf  bot:hasSubElement , bot:containsElement , bot:containsZone .
-
-brick:Room  rdfs:subClassOf  bot:Space .
-
-dcterms:issued  a  owl:AnnotationProperty .
-
-brick:Floor  rdfs:subClassOf  bot:Storey .
-
-brick:contains  rdfs:subPropertyOf  bot:containsElement .
+brick:isLocationOf  rdfs:subPropertyOf  bot:containsElement .
 
 brick:Equipment  rdfs:subClassOf  bot:Element .
 
-brick:Location  rdfs:subClassOf  bot:Zone .
+dcterms:issued  a  owl:AnnotationProperty .
 
-brick:Point  rdfs:subClassOf  bot:Element .
+bot:containsZone  rdfs:subPropertyOf  brick:hasPart .
 
-brick:Wing  rdfs:subClassOf  bot:Space .
+bot:hasSubElement  rdfs:subPropertyOf  brick:hasPart .
+
+bot:Site  rdfs:subClassOf  brick:Site .
 
 <https://w3id.org/bot/BRICKAlignment>
         a                    owl:Ontology , voaf:Vocabulary ;
         rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
-        dcterms:creator      "Georg Ferdinand Schneider" ;
-        dcterms:creator      <https://orcid.org/0000-0002-2033-859X> ;
-        dcterms:description  "This ontology defines proposed alignments with the BRICK ontology."@en ;
+        dcterms:creator      "Jason Koh" , "Georg Ferdinand Schneider" ;
+        dcterms:creator      <https://orcid.org/0000-0002-2033-859X> , <https://github.com/jbkoh> ;
+        dcterms:description  "This ontology defines correspondences with the BRICK ontology. Alignment holds for BOT v0.3.2 and BRICK v.1.1.1"@en ;
         dcterms:issued       "2017-09-12"^^xsd:date ;
         dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
-        dcterms:modified     "2020-08-05"^^xsd:date ;
+        dcterms:modified     "2021-01-29"^^xsd:date ;
         dcterms:title        "BRICK to BOT alignment."@en ;
-        owl:imports          brick: , <https://w3id.org/bot> ;
-        owl:priorVersion     <https://w3id.org/bot/BRICKAlignment-0.1.0> ;
-        owl:versionIRI       <https://w3id.org/bot/BRICKAlignment-1.0.0> ;
-        owl:versionInfo      "v1.0.0" .
+        owl:imports          <https://brickschema.org/schema/1.1/Brick> , <https://w3id.org/bot-0.3.2> ;
+        owl:priorVersion     <https://w3id.org/bot/BRICKAlignment/1.0.0> ;
+        owl:versionIRI       <https://w3id.org/bot/BRICKAlignment/2.0.0> ;
+        owl:versionInfo      "v2.0.0" .
 
 schema:name  a  owl:AnnotationProperty .
 
-brick:Building  rdfs:subClassOf  bot:Building .
+brick:Space  rdfs:subClassOf  bot:Space .
 
 dcterms:license  a  owl:AnnotationProperty .
 
 dcterms:title  a  owl:AnnotationProperty .
 
-brick:Basement  rdfs:subClassOf  bot:Space .
+bot:Storey  owl:equivalentClass  brick:Floor .
 
 vann:preferredNamespaceUri
         a       owl:AnnotationProperty .
 
-brick:Space  rdfs:subClassOf  bot:Space .
+<https://github.com/jbkoh>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Jason Koh" ;
+        schema:name  "Jason Koh" .
 
 vann:preferredNamespacePrefix
         a       owl:AnnotationProperty .

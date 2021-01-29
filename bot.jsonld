@@ -1542,11 +1542,11 @@
       "@language" : "tr",
       "@value" : "Elemanı var"
     }, {
-      "@language" : "es",
-      "@value" : "alberga elemento"
-    }, {
       "@language" : "fr",
       "@value" : "a élément"
+    }, {
+      "@language" : "es",
+      "@value" : "alberga elemento"
     }, {
       "@language" : "de",
       "@value" : "hat Bauteil"
@@ -2448,6 +2448,14 @@
       "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
       "@type" : "@id"
     },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
     "rangeIncludes" : {
       "@id" : "https://schema.org/rangeIncludes",
       "@type" : "@id"
@@ -2468,14 +2476,6 @@
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
-      "@type" : "@id"
-    },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
     "subClassOf" : {

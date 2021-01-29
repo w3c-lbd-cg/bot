@@ -1,10 +1,10 @@
 {
   "@graph" : [ {
     "@id" : "_:b0",
-    "inverseOf" : "bot:hasElement"
+    "inverseOf" : "bot:adjacentZone"
   }, {
     "@id" : "_:b1",
-    "inverseOf" : "bot:adjacentZone"
+    "inverseOf" : "bot:hasElement"
   }, {
     "@id" : "dcterms:creator",
     "@type" : "owl:AnnotationProperty"
@@ -121,13 +121,13 @@
     "subPropertyOf" : "bot:interfaceOf"
   }, {
     "@id" : "th:hasDefinedAdjacentSpace",
-    "subPropertyOf" : "_:b1"
+    "subPropertyOf" : "_:b0"
   }, {
     "@id" : "th:isDefinedAdjacentSurfaceOf",
     "subPropertyOf" : "bot:interfaceOf"
   }, {
     "@id" : "thsv:isEquipmentOf",
-    "subPropertyOf" : "_:b0"
+    "subPropertyOf" : "_:b1"
   } ],
   "@context" : {
     "subClassOf" : {

@@ -1,0 +1,153 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "rdf:type" : {
+      "@id" : "foaf:Person"
+    },
+    "name" : "Georg Ferdinand Schneider"
+  }, {
+    "@id" : "dcterms:contributor",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:creator",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:description",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:issued",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:license",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:modified",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "dcterms:title",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespacePrefix",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "vann:preferredNamespaceUri",
+    "@type" : "owl:AnnotationProperty"
+  }, {
+    "@id" : "foaf:Person",
+    "@type" : "owl:Class"
+  }, {
+    "@id" : "foaf:name",
+    "@type" : "owl:DatatypeProperty"
+  }, {
+    "@id" : "brick:Basement",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "brick:Building",
+    "subClassOf" : "bot:Building"
+  }, {
+    "@id" : "brick:Equipment",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "brick:Floor",
+    "subClassOf" : "bot:Storey"
+  }, {
+    "@id" : "brick:Outside",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "brick:Point",
+    "subClassOf" : "bot:Element"
+  }, {
+    "@id" : "brick:Room",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "brick:Space",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "brick:Wing",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "brick:Zone",
+    "subClassOf" : "bot:Space"
+  }, {
+    "@id" : "brick:contains",
+    "subPropertyOf" : "bot:containsElement"
+  }, {
+    "@id" : "bot:Zone",
+    "subClassOf" : "brick:Location"
+  }, {
+    "@id" : "https://w3id.org/bot/BRICKAlignment",
+    "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
+    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
+    "description" : {
+      "@language" : "en",
+      "@value" : "This ontology defines proposed alignments with the BRICK ontology."
+    },
+    "issued" : "2017-09-12",
+    "license" : "http://creativecommons.org/licenses/by/3.0/",
+    "modified" : "2017-09-12",
+    "title" : {
+      "@language" : "en",
+      "@value" : "BRICK to BOT alignment."
+    },
+    "imports" : [ "https://brickschema.org/schema/1.0.2/Brick#", "https://w3id.org/bot" ],
+    "versionIRI" : "https://w3id.org/bot/BRICKAlignment/0.1.0",
+    "versionInfo" : "v0.1.0"
+  } ],
+  "@context" : {
+    "subClassOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "versionIRI" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
+      "@type" : "@id"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "imports" : {
+      "@id" : "http://www.w3.org/2002/07/owl#imports",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "@vocab" : "https://w3id.org/bot/BRICKAlignment#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "bot" : "https://w3id.org/bot#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "voaf" : "http://purl.org/vocommons/voaf#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "brick" : "https://brickschema.org/schema/1.0.2/Brick#",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/"
+  }
+}

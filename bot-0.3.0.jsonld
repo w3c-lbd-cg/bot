@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b3",
+    "@id" : "_:b0",
     "@type" : "owl:Restriction",
     "owl:minCardinality" : 1,
     "onProperty" : "bot:interfaceOf"
@@ -234,7 +234,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b3",
+    "subClassOf" : "_:b0",
     "disjointWith" : [ "bot:Zone", "bot:Element" ]
   }, {
     "@id" : "bot:Site",
@@ -1034,6 +1034,14 @@
     "rangeIncludes" : [ "bot:Space", "bot:Building", "bot:Site", "bot:Storey" ]
   } ],
   "@context" : {
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
@@ -1060,14 +1068,6 @@
       "@id" : "https://schema.org/domainIncludes",
       "@type" : "@id"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
-    },
     "propertyDisjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
       "@type" : "@id"
@@ -1086,20 +1086,20 @@
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
     "disjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
       "@type" : "@id"
     },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
-    "minCardinality" : {
-      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "onProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
       "@type" : "@id"
     },
     "contributor" : {
