@@ -1,0 +1,94 @@
+@prefix schema: <https://schema.org/> .
+@prefix :      <https://w3id.org/bot/SCHEMAORGAlignment#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix bot:   <https://w3id.org/bot#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix voaf:  <http://purl.org/vocommons/voaf#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix vann:  <http://purl.org/vocab/vann/> .
+
+schema:PublicToilet  rdfs:subClassOf  bot:Zone .
+
+schema:PlaceOfWorship
+        rdfs:subClassOf  bot:Building .
+
+schema:PerformingArtsTheater
+        rdfs:subClassOf  bot:Building .
+
+dcterms:description  a  owl:AnnotationProperty .
+
+dcterms:creator  a  owl:AnnotationProperty .
+
+schema:Hospital  rdfs:subClassOf  bot:Building .
+
+bot:Zone  rdfs:subClassOf  schema:CivicStructure .
+
+vcard:fn  a     owl:AnnotationProperty .
+
+dcterms:modified  a  owl:AnnotationProperty .
+
+dcterms:contributor  a  owl:AnnotationProperty .
+
+<https://orcid.org/0000-0002-2033-859X>
+        a            schema:Person , vcard:Individual ;
+        vcard:fn     "Georg Ferdinand Schneider" ;
+        schema:name  "Georg Ferdinand Schneider" .
+
+schema:FireStation  rdfs:subClassOf  bot:Building .
+
+schema:PoliceStation  rdfs:subClassOf  bot:Building .
+
+schema:MovieTheater  rdfs:subClassOf  bot:Building .
+
+dcterms:issued  a  owl:AnnotationProperty .
+
+bot:containsZone  rdfs:subPropertyOf  schema:containsPlace .
+
+schema:GovernmentBuilding
+        rdfs:subClassOf  bot:Building .
+
+schema:Residence  rdfs:subClassOf  bot:Building .
+
+schema:TrainStation  rdfs:subClassOf  bot:Building .
+
+schema:MusicVenue  rdfs:subClassOf  bot:Building .
+
+schema:StadiumOrArena
+        rdfs:subClassOf  bot:Building .
+
+schema:name  a  owl:AnnotationProperty .
+
+schema:LocalBusiness  rdfs:subClassOf  bot:Zone .
+
+dcterms:license  a  owl:AnnotationProperty .
+
+dcterms:title  a  owl:AnnotationProperty .
+
+schema:Museum  rdfs:subClassOf  bot:Building .
+
+vann:preferredNamespaceUri
+        a       owl:AnnotationProperty .
+
+schema:House  rdfs:subClassOf  bot:Building .
+
+schema:Accomodation  rdfs:subClassOf  bot:Zone .
+
+<https://w3id.org/bot/SCHEMAORGAlignment>
+        a                    voaf:Vocabulary , owl:Ontology ;
+        rdfs:seeAlso         <https://doi.org/10.13140/RG.2.2.21802.52169> ;
+        dcterms:creator      "Georg Ferdinand Schneider" ;
+        dcterms:creator      <https://orcid.org/0000-0002-2033-859X> ;
+        dcterms:description  "This ontology defines proposed alignments with the schema.org schema."@en ;
+        dcterms:issued       "2020-11-11"^^xsd:date ;
+        dcterms:license      <http://creativecommons.org/licenses/by/3.0/> ;
+        dcterms:modified     "2021-03-23"^^xsd:date ;
+        dcterms:title        "Schema.org to BOT alignment."@en ;
+        owl:imports          schema: , <https://w3id.org/bot> ;
+        owl:versionIRI       <https://w3id.org/bot/SCHEMAORGAlignment-0.1.0> ;
+        owl:versionInfo      "v0.1.0" .
+
+vann:preferredNamespacePrefix
+        a       owl:AnnotationProperty .

@@ -13,10 +13,6 @@
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 bot:hasSpace  a             owl:ObjectProperty ;
         rdfs:comment        "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da , "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ;
         rdfs:domain         bot:Zone ;
@@ -83,6 +79,10 @@ bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:label    "heeft element"@nl , "hosts element"@en , "hoster element"@da , "hoster element"@nl ;
         rdfs:range    bot:Element .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .
+
 vs:term_status  a  owl:AnnotationProperty .
 
 bot:Site  a              owl:Class ;
@@ -94,10 +94,6 @@ bot:Site  a              owl:Class ;
         a            schema:Person , vcard:Individual ;
         vcard:fn     "Maxime Lefrançois" ;
         schema:name  "Maxime Lefrançois" .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
-] .
 
 bot:Interface  a         owl:Class ;
         rdfs:comment     "En grænseflade er fladen hvor to bygningsdele, to zoner eller en bygningsdel og en zone mødes. Den kan benyttes til at kvalificere forbindelsen mellem de to. En use case kunne være kvalifikation af varmetransmissionsarealet mellem en zone og en væg som dækker flere zoner."@da , "An interface is the surface where two building elements, two zones or a building element and a zone meet. It can be used for qualification of the connection between the two. A use case could be qualification of the heat transmission area between a zone and a wall covering several zones."@en ;
@@ -185,3 +181,7 @@ bot:Storey  a            owl:Class ;
         rdfs:comment     "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de , "Een horizontaal gedeelte van een gebouw"@nl , "A level part of a building"@en , "Et plan i en bygning"@da ;
         rdfs:label       "Verdieping"@nl , "Piano di edificio"@it , "Storey"@en , "Etage"@da , "Geschoss (Architektur)"@de ;
         rdfs:subClassOf  bot:Zone .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .

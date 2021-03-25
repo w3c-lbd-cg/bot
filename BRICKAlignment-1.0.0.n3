@@ -22,11 +22,11 @@ dcterms:modified  a  owl:AnnotationProperty .
 
 dcterms:contributor  a  owl:AnnotationProperty .
 
-brick:Room  rdfs:subClassOf  bot:Space .
-
 brick:hasPoint  rdfs:subPropertyOf  bot:containsElement , bot:containsZone .
 
 brick:hasPart  rdfs:subPropertyOf  bot:hasSubElement , bot:containsElement , bot:containsZone .
+
+brick:Room  rdfs:subClassOf  bot:Space .
 
 dcterms:issued  a  owl:AnnotationProperty .
 

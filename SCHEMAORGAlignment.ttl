@@ -1,4 +1,4 @@
-# Copyright 2017-2020 W3C Linked Building Data Community Group.
+# Copyright 2017-2021 W3C Linked Building Data Community Group.
 # 
 # This work is licensed under a Creative Commons Attribution License. 
 # This copyright applies to the Vocabulary Specification and
@@ -23,10 +23,10 @@
 	dcterms:title "Schema.org to BOT alignment."@en ;
 	dcterms:description """This ontology defines proposed alignments with the schema.org schema."""@en ;
 	dcterms:issued "2020-11-11"^^xsd:date ;
-	dcterms:modified "2020-11-13"^^xsd:date ;
+	dcterms:modified "2021-03-23"^^xsd:date ;
 	dcterms:license <http://creativecommons.org/licenses/by/3.0/> ;
     owl:versionInfo "v0.1.0" ;
-    owl:versionIRI <https://w3id.org/bot/SCHEMAORGAlignment-1.0.0> ;
+    owl:versionIRI <https://w3id.org/bot/SCHEMAORGAlignment-0.1.0> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
 	dcterms:creator "Georg Ferdinand Schneider" ;

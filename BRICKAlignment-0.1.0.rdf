@@ -22,10 +22,6 @@
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Building">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
   </rdf:Description>
@@ -33,12 +29,12 @@
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot/BRICKAlignment">
-    <dcterms:creator rdf:nodeID="A0"/>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:modified>
     <owl:versionIRI rdf:resource="https://w3id.org/bot/BRICKAlignment/0.1.0"/>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-12</dcterms:issued>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <owl:versionInfo>v0.1.0</owl:versionInfo>
+    <dcterms:creator rdf:nodeID="A0"/>
     <owl:imports rdf:resource="https://brickschema.org/schema/1.0.2/Brick#"/>
     <dcterms:description xml:lang="en">This ontology defines proposed alignments with the BRICK ontology.</dcterms:description>
     <dcterms:title xml:lang="en">BRICK to BOT alignment.</dcterms:title>
@@ -91,6 +87,10 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
