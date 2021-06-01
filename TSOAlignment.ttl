@@ -1,0 +1,36 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix tso: <https://w3id.org/tso#> .
+@prefix bot: <https://w3id.org/bot#> .
+
+@base <https://w3id.org/tso/TSOAlignment#> .
+
+dc:creator rdf:type owl:AnnotationProperty .
+dc:description rdf:type owl:AnnotationProperty .
+dc:issued rdf:type owl:AnnotationProperty .
+dc:license rdf:type owl:AnnotationProperty .
+dc:modified rdf:type owl:AnnotationProperty .
+dc:title rdf:type owl:AnnotationProperty .
+
+<https://w3id.org/tso/TSOAlignment#> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/tso/TSOAlignment#/v0.2.0> ;
+                                      owl:imports bot: ,
+                                                  tso: ;
+                                      dc:creator "Dominik Schlütter" ,
+                                                 "Nicolas Pauen" ;
+                                      dc:description "This ontology defines correspondences with the BOT ontology. Alignment holds for BOT v0.3.2 and TSO v0.2.0." ;
+                                      dc:issued "2021-02-22T15:00:00"^^xsd:dateTime ;
+                                      dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                      dc:modified "2021-05-30T15:00:00"^^xsd:dateTime ;
+                                      dc:title "TSO to BOT alignment"@en ;
+                                      owl:versionInfo "v0.2.0" .
+
+tso:contains rdfs:subPropertyOf bot:hasElement .
+tso:hasSubSystem rdfs:subPropertyOf bot:hasSubElement .
+
+bot:Zone owl:equivalentClass tso:Zone .
+tso:System rdfs:subClassOf bot:Element .
