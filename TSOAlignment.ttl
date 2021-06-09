@@ -33,4 +33,4 @@ tso:contains rdfs:subPropertyOf bot:hasElement .
 tso:hasSubSystem rdfs:subPropertyOf bot:hasSubElement .
 
 bot:Zone owl:equivalentClass tso:Zone .
-tso:System rdfs:subClassOf bot:Element .
+tso:Component rdfs:subClassOf bot:Element .
