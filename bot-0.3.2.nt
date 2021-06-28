@@ -184,11 +184,11 @@
 <https://w3id.org/bot#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
-_:B8182c193X2D5991X2D42d8X2D835aX2Da602137ced8e <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
-_:B8182c193X2D5991X2D42d8X2D835aX2Da602137ced8e <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc6141b19X2D2ed3X2D4611X2Dbb32X2D0add37ae9aa3 .
-_:Bc6141b19X2D2ed3X2D4611X2Dbb32X2D0add37ae9aa3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
-_:Bc6141b19X2D2ed3X2D4611X2Dbb32X2D0add37ae9aa3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B8182c193X2D5991X2D42d8X2D835aX2Da602137ced8e .
+_:B7008303cX2D3c27X2D4433X2Db1c7X2D13db23b4b769 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:B7008303cX2D3c27X2D4433X2Db1c7X2D13db23b4b769 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B37339e63X2De1a9X2D41f3X2D8725X2Dc674aa73455f .
+_:B37339e63X2De1a9X2D41f3X2D8725X2Dc674aa73455f <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
+_:B37339e63X2De1a9X2D41f3X2D8725X2Dc674aa73455f <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B7008303cX2D3c27X2D4433X2Db1c7X2D13db23b4b769 .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -198,11 +198,11 @@ _:Bc6141b19X2D2ed3X2D4611X2Dbb32X2D0add37ae9aa3 <http://www.w3.org/1999/02/22-rd
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasElement> .
-_:B04c1ccc0X2Da4ccX2D4c33X2Da30bX2Df9a26e944f63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
-_:B04c1ccc0X2Da4ccX2D4c33X2Da30bX2Df9a26e944f63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B77d7a94cX2D5f25X2D4ba5X2Dbba5X2D4710cce65439 .
-_:B77d7a94cX2D5f25X2D4ba5X2Dbba5X2D4710cce65439 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
-_:B77d7a94cX2D5f25X2D4ba5X2Dbba5X2D4710cce65439 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B04c1ccc0X2Da4ccX2D4c33X2Da30bX2Df9a26e944f63 .
+_:B2c762d83X2D4911X2D4014X2Db8d4X2Dd057b7f3cc11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:B2c762d83X2D4911X2D4014X2Db8d4X2Dd057b7f3cc11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B9585ee5aX2D4c5cX2D4cfaX2D8ed1X2D91d400c8d6d1 .
+_:B9585ee5aX2D4c5cX2D4cfaX2D8ed1X2D91d400c8d6d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
+_:B9585ee5aX2D4c5cX2D4cfaX2D8ed1X2D91d400c8d6d1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B2c762d83X2D4911X2D4014X2Db8d4X2Dd057b7f3cc11 .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#intersectingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -938,3 +938,22 @@ _:B77d7a94cX2D5f25X2D4ba5X2Dbba5X2D4710cce65439 <http://www.w3.org/1999/02/22-rd
 <https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "má 3D model"@cs .
 <https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "má 3D model"@sk .
 <https://w3id.org/bot#has3DModel> <http://www.w3.org/2000/01/rdf-schema#label> "مدل سه بعدی دارد"@fa .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/bot#hasSubElement> .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#label> "hosts element"@en .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#label> "hoster element"@nl .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#label> "hoster element"@da .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#label> "heeft element"@nl .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"@nl .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hostsElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/bot#hasSubElement> .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "aggregates"@en .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "aggregerer"@da .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.\n        \nExample of how to use bot:aggregates in a product ontology:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"@en .
+<https://w3id.org/bot#aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.\n        \nEksempel på brug af bot:aggregates i en produkt-ontologi:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"@da .

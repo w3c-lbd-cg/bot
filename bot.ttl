@@ -44,7 +44,7 @@ schema:name a owl:AnnotationProperty .
     owl:versionInfo    "0.3.2" ;
     owl:versionIRI <https://w3id.org/bot-0.3.2> ;
     owl:priorVersion <https://w3id.org/bot-0.3.1> ;
-  rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> , <http://www.semantic-web-journal.net/system/files/swj2279.pdf> ;
+	rdfs:seeAlso <https://doi.org/10.24928/JC3-2017/0153> , <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> , <http://www.semantic-web-journal.net/system/files/swj2279.pdf> ;
     dcterms:title    "The Building Topology Ontology (BOT)"@en ;
     dcterms:description    """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
 It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
@@ -54,16 +54,16 @@ The version 0.2.0 of the ontology is documented in:
 Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology
 The initial version 0.1.0 of the ontology was documented in:
 Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"""@en ;
-  dcterms:creator "Mads Holten Rasmussen" ;
-  dcterms:creator "Pieter Pauwels" ;
-  dcterms:creator "Maxime Lefrançois" ;
-  dcterms:creator "Georg Ferdinand Schneider" ;
-  dcterms:creator <http://maxime-lefrancois.info/me#> ;
-  dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
-  dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
-  dcterms:creator <https://orcid.org/0000-0001-8020-4609> ;
-  dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
-  dcterms:contributor "Mathias Bonduel" , "Sjoerd Rongen" , "Katja Breitenfelder" , "Edison Chung" , "María Poveda-Villalón" , "Ville Kukkonen" , "Lars Wikström" , "Karl Hammar" , "Hervé Pruvost" , "Ana Roxin" , "Gonçal Costa", "Walter Terkaj", "Rui de Klerk", "Rui Ma", "Richard Pinka", "Jyrki Oraskari" , "Edison Chung", "Ali Kücükavci" , "Sjoerd Rongen" , "Pouya Zangeneh" ;
+	dcterms:creator "Mads Holten Rasmussen" ;
+	dcterms:creator "Pieter Pauwels" ;
+	dcterms:creator "Maxime Lefrançois" ;
+	dcterms:creator "Georg Ferdinand Schneider" ;
+	dcterms:creator <http://maxime-lefrancois.info/me#> ;
+	dcterms:creator <https://orcid.org/0000-0002-2033-859X> ;
+	dcterms:creator <https://orcid.org/0000-0002-6519-7057> ;
+	dcterms:creator <https://orcid.org/0000-0001-8020-4609> ;
+	dcterms:contributor "All contributing members of the W3C Linked Building Data Community Group" ;
+	dcterms:contributor "Mathias Bonduel" , "Sjoerd Rongen" , "Katja Breitenfelder" , "Edison Chung" , "María Poveda-Villalón" , "Ville Kukkonen" , "Lars Wikström" , "Karl Hammar" , "Hervé Pruvost" , "Ana Roxin" , "Gonçal Costa", "Walter Terkaj", "Rui de Klerk", "Rui Ma", "Richard Pinka", "Jyrki Oraskari" , "Edison Chung", "Ali Kücükavci" , "Sjoerd Rongen" , "Pouya Zangeneh" ;
     dcterms:license <https://creativecommons.org/licenses/by/1.0/> ;
     vann:preferredNamespacePrefix    "bot" ;
     vann:preferredNamespaceUri <https://w3id.org/bot#> .
@@ -77,7 +77,7 @@ Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (
 	schema:name "Georg Ferdinand Schneider" .
 
 <https://orcid.org/0000-0002-6519-7057> a vcard:Individual , schema:Person ; 
-  vcard:fn    "Mads Holten Rasmussen" ;
+	vcard:fn    "Mads Holten Rasmussen" ;
 	schema:name "Mads Holten Rasmussen" .
 
 <https://orcid.org/0000-0001-8020-4609> a vcard:Individual , schema:Person ; 
@@ -1074,3 +1074,54 @@ bot:has3DModel rdfs:label
         "má 3D model"@cs ,
         "má 3D model"@sk ,
         "مدل سه بعدی دارد"@fa .
+		
+##-----------------------------------------------------------------------------------		
+## Depreciated concepts
+##-----------------------------------------------------------------------------------	
+
+bot:hostsElement a owl:ObjectProperty ;
+		owl:deprecated true ;
+		rdfs:seeAlso bot:hasSubElement ;
+        rdfs:label      "hosts element"@en ,
+                        "hoster element"@nl ,
+                        "hoster element"@da ,
+						"heeft element"@nl ;
+        rdfs:comment    "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en ,
+                        "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"@nl ,
+                        "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da ;
+        rdfs:domain     bot:Element ;
+        rdfs:range      bot:Element .
+
+bot:aggregates a owl:ObjectProperty ;
+		owl:deprecated true ;
+		rdfs:seeAlso bot:hasSubElement ;
+        rdfs:label      "aggregates"@en ,
+                        "aggregerer"@da ;
+        rdfs:comment    """This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.
+        
+Example of how to use bot:aggregates in a product ontology:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```"""@en ,
+                        """This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
+        
+Eksempel på brug af bot:aggregates i en produkt-ontologi:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```"""@da .

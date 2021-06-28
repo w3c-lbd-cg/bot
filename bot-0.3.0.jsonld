@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
+    "@id" : "_:b1",
     "@type" : "owl:Restriction",
     "owl:minCardinality" : 1,
     "onProperty" : "bot:interfaceOf"
@@ -234,7 +234,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b0",
+    "subClassOf" : "_:b1",
     "disjointWith" : [ "bot:Zone", "bot:Element" ]
   }, {
     "@id" : "bot:Site",
@@ -1064,14 +1064,6 @@
       "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
       "@type" : "@id"
     },
-    "minCardinality" : {
-      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "onProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
-      "@type" : "@id"
-    },
     "rangeIncludes" : {
       "@id" : "https://schema.org/rangeIncludes",
       "@type" : "@id"
@@ -1085,6 +1077,14 @@
     },
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
+    "minCardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#minCardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
     },
     "disjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#disjointWith",

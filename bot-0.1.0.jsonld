@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b9",
+    "@id" : "_:b8",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
@@ -254,11 +254,11 @@
     } ],
     "range" : "bot:Element",
     "propertyChainAxiom" : [ {
+      "@list" : [ "bot:hasSpace", "bot:containsElement" ]
+    }, {
       "@list" : [ "bot:hasStorey", "bot:hasElement" ]
     }, {
       "@list" : [ "bot:hasSpace", "bot:adjacentElement" ]
-    }, {
-      "@list" : [ "bot:hasSpace", "bot:containsElement" ]
     } ]
   }, {
     "@id" : "bot:hasSpace",
@@ -355,6 +355,12 @@
       "@id" : "http://www.w3.org/2002/07/owl#versionIRI",
       "@type" : "@id"
     },
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
     "rest" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
       "@type" : "@id"
@@ -362,12 +368,6 @@
     "first" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "https://schema.org/name"
-    },
-    "fn" : {
-      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"

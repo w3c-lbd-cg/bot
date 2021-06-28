@@ -13,6 +13,10 @@
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Floor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Georg Ferdinand Schneider</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
   <rdf:Description rdf:about="https://brickschema.org/schema/1.0.2/Brick#Zone">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
   </rdf:Description>
@@ -87,10 +91,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <foaf:name>Georg Ferdinand Schneider</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/license">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>

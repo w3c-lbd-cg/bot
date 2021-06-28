@@ -1115,6 +1115,12 @@
       "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
     },
+    "name" : {
+      "@id" : "https://schema.org/name"
+    },
+    "fn" : {
+      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
+    },
     "rest" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
       "@type" : "@id"
@@ -1122,12 +1128,6 @@
     "first" : {
       "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "https://schema.org/name"
-    },
-    "fn" : {
-      "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
     "disjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#disjointWith",

@@ -1036,6 +1036,25 @@
     "domainIncludes" : [ "bot:Storey", "bot:Space", "bot:Building", "bot:Site" ],
     "rangeIncludes" : [ "bot:Storey", "bot:Site", "bot:Space", "bot:Building" ]
   }, {
+    "@id" : "bot:aggregates",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "da",
+      "@value" : "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.\n        \nEksempel på brug af bot:aggregates i en produkt-ontologi:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"
+    }, {
+      "@language" : "en",
+      "@value" : "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.\n        \nExample of how to use bot:aggregates in a product ontology:\n```\nproduct:Fan             rdfs:subClassOf     bot:Element .\nproduct:Filter          rdfs:subClassOf     bot:Element .\nproduct:hasFan          rdfs:subPropertyOf  bot:aggregates ;\n                        rdfs:range          product:Fan .\nproduct:hasFilter       rdfs:subPropertyOf  product:aggregates ;\n                        rdfs:range          product:Filter .\nproduct:AirHandlingUnit rdfs:subClassOf     bot:Element ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;\n                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .\n```"
+    } ],
+    "label" : [ {
+      "@language" : "da",
+      "@value" : "aggregerer"
+    }, {
+      "@language" : "en",
+      "@value" : "aggregates"
+    } ],
+    "seeAlso" : "bot:hasSubElement",
+    "owl:deprecated" : true
+  }, {
     "@id" : "bot:containsElement",
     "@type" : "owl:ObjectProperty",
     "comment" : [ {
@@ -2097,6 +2116,36 @@
     "seeAlso" : "https://github.com/w3c-lbd-cg/bot/issues/41",
     "term_status" : "unstable"
   }, {
+    "@id" : "bot:hostsElement",
+    "@type" : "owl:ObjectProperty",
+    "comment" : [ {
+      "@language" : "en",
+      "@value" : "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"
+    }, {
+      "@language" : "da",
+      "@value" : "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"
+    }, {
+      "@language" : "nl",
+      "@value" : "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"
+    } ],
+    "domain" : "bot:Element",
+    "label" : [ {
+      "@language" : "nl",
+      "@value" : "heeft element"
+    }, {
+      "@language" : "en",
+      "@value" : "hosts element"
+    }, {
+      "@language" : "da",
+      "@value" : "hoster element"
+    }, {
+      "@language" : "nl",
+      "@value" : "hoster element"
+    } ],
+    "range" : "bot:Element",
+    "seeAlso" : "bot:hasSubElement",
+    "owl:deprecated" : true
+  }, {
     "@id" : "bot:interfaceOf",
     "@type" : "owl:ObjectProperty",
     "comment" : [ {
@@ -2462,6 +2511,14 @@
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
     "disjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#disjointWith",
       "@type" : "@id"
@@ -2470,13 +2527,9 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
+    "deprecated" : {
+      "@id" : "http://www.w3.org/2002/07/owl#deprecated",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",

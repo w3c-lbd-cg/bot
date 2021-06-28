@@ -13,6 +13,10 @@
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
+] .
+
 bot:    a                              voaf:Vocabulary , owl:Ontology ;
         dce:Language                   "en" ;
         dce:description                "A simple ontology describing the topology of a building" ;
@@ -76,9 +80,9 @@ bot:hasElement  a               owl:ObjectProperty ;
         rdfs:domain             owl:Thing ;
         rdfs:label              "hat bauteil"@de , "har bygningsdel"@da , "has element"@en ;
         rdfs:range              bot:Element ;
+        owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) ;
         owl:propertyChainAxiom  ( bot:hasSpace bot:adjacentElement ) ;
-        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) ;
-        owl:propertyChainAxiom  ( bot:hasStorey bot:hasElement ) .
+        owl:propertyChainAxiom  ( bot:hasSpace bot:containsElement ) .
 
 bot:adjacentElement  a  owl:ObjectProperty ;
         rdfs:comment  "Relation til bygningsdele, som afgrænser et fysisk rum"@da , "Beziehung eines Raumes zu Bauteilen die in begrenzen"@de , "Relation of a space to its bounding building elements"@en ;
@@ -118,10 +122,6 @@ bot:containsElement  a  owl:ObjectProperty ;
         rdfs:domain   bot:Space ;
         rdfs:label    "indeholder bygningsdel"@da , "enthält"@de , "contains element"@en ;
         rdfs:range    bot:Element .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Element bot:Space bot:Storey bot:Building )
-] .
 
 vann:preferredNamespacePrefix
         a       owl:AnnotationProperty .

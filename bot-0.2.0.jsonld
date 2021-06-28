@@ -1,17 +1,17 @@
 {
   "@graph" : [ {
-    "@id" : "_:b0",
+    "@id" : "_:b10",
+    "@type" : "owl:Restriction",
+    "owl:cardinality" : 2,
+    "onProperty" : "bot:interfaceOf"
+  }, {
+    "@id" : "_:b4",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
     }
   }, {
-    "@id" : "_:b2",
-    "@type" : "owl:Restriction",
-    "owl:cardinality" : 2,
-    "onProperty" : "bot:interfaceOf"
-  }, {
-    "@id" : "_:b6",
+    "@id" : "_:b9",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Zone", "bot:Element" ]
@@ -187,7 +187,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b2"
+    "subClassOf" : "_:b10"
   }, {
     "@id" : "bot:Site",
     "@type" : "owl:Class",
@@ -532,6 +532,14 @@
     } ]
   } ],
   "@context" : {
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
@@ -552,22 +560,6 @@
     },
     "members" : {
       "@id" : "http://www.w3.org/2002/07/owl#members",
-      "@type" : "@id"
-    },
-    "cardinality" : {
-      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "onProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
-      "@type" : "@id"
-    },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
       "@type" : "@id"
     },
     "propertyChainAxiom" : {
@@ -633,6 +625,14 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
     },
     "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",

@@ -346,11 +346,11 @@
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Beziehung zwischen einer Zone und einem Bauteil, dass entweder in der Zone enthalten ist, oder sich mit ihr schneidet. Diese Beziehung sollte nicht explizit benutzt werden, sondern ergibt sich implizit aus den Unterbeziehungen. Es ermöglicht, zum Beispiel, dass mit einer Abfrage alle Türen eines Gebäudes, die sich mit einer Zone schneiden ermittelt werden können."@de .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
-_:Bb42b791aX2D6d35X2D4992X2Da3dbX2Da8449a451114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
-_:Bb42b791aX2D6d35X2D4992X2Da3dbX2Da8449a451114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:Bc8a2310eX2D6244X2D45a8X2Da437X2D6b1a36722e59 .
-_:Bc8a2310eX2D6244X2D45a8X2Da437X2D6b1a36722e59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
-_:Bc8a2310eX2D6244X2D45a8X2Da437X2D6b1a36722e59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bb42b791aX2D6d35X2D4992X2Da3dbX2Da8449a451114 .
+_:Bcbe7059eX2D141cX2D4cc0X2D9c1bX2D2e3d513684cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:Bcbe7059eX2D141cX2D4cc0X2D9c1bX2D2e3d513684cf <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B104af53cX2D16c8X2D42ffX2Db78dX2Df382280399c9 .
+_:B104af53cX2D16c8X2D42ffX2Db78dX2Df382280399c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#hasElement> .
+_:B104af53cX2D16c8X2D42ffX2Db78dX2Df382280399c9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bcbe7059eX2D141cX2D4cc0X2D9c1bX2D2e3d513684cf .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#adjacentElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -388,11 +388,11 @@ _:Bc8a2310eX2D6244X2D45a8X2Da437X2D6b1a36722e59 <http://www.w3.org/1999/02/22-rd
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation till en byggdel som inryms i en zon."@sv .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation à définir entre un élément de bâti et la zone le contenant"@fr .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasElement> .
-_:B35382deaX2Dfa47X2D4da6X2Db0b9X2D69d2fb56ca48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
-_:B35382deaX2Dfa47X2D4da6X2Db0b9X2D69d2fb56ca48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B3624c728X2Dae63X2D46a0X2D9a1bX2Dba0ad557317b .
-_:B3624c728X2Dae63X2D46a0X2D9a1bX2Dba0ad557317b <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
-_:B3624c728X2Dae63X2D46a0X2D9a1bX2Dba0ad557317b <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B35382deaX2Dfa47X2D4da6X2Db0b9X2D69d2fb56ca48 .
+_:B9ad89da7X2Db6afX2D444cX2D9aabX2D29e138974fa8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsZone> .
+_:B9ad89da7X2Db6afX2D444cX2D9aabX2D29e138974fa8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:B44fc3461X2D19f9X2D45d0X2D861fX2De82bdd632eff .
+_:B44fc3461X2D19f9X2D45d0X2D861fX2De82bdd632eff <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/bot#containsElement> .
+_:B44fc3461X2D19f9X2D45d0X2D861fX2De82bdd632eff <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/bot#containsElement> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B9ad89da7X2Db6afX2D444cX2D9aabX2D29e138974fa8 .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 <https://w3id.org/bot#containsElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/bot#> .
 <https://w3id.org/bot#intersectingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

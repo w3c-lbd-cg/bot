@@ -13,6 +13,10 @@
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .
+
 bot:hasSpace  a             owl:ObjectProperty ;
         rdfs:comment        "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da , "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ;
         rdfs:domain         bot:Zone ;
@@ -80,7 +84,7 @@ bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:range    bot:Element .
 
 [ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
 ] .
 
 vs:term_status  a  owl:AnnotationProperty .
@@ -181,7 +185,3 @@ bot:Storey  a            owl:Class ;
         rdfs:comment     "Die Gesamtheit aller Räume in einem Gebäude, die auf einer Zugangsebene liegen und horizontal verbunden sind"@de , "Een horizontaal gedeelte van een gebouw"@nl , "A level part of a building"@en , "Et plan i en bygning"@da ;
         rdfs:label       "Verdieping"@nl , "Piano di edificio"@it , "Storey"@en , "Etage"@da , "Geschoss (Architektur)"@de ;
         rdfs:subClassOf  bot:Zone .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
