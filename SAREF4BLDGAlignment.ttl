@@ -21,7 +21,7 @@
 @prefix saref4bldg:	<https://saref.etsi.org/saref4bldg/> .
 
 @prefix bot: <https://w3id.org/bot#> .
-@base <https://w3id.org/bot/SAREF4BLDGAlignment#> .
+@prefix : <https://w3id.org/bot/SAREF4BLDGAlignment#> .
 
 :SAREFG4BLDGAlignment a owl:Ontology , voaf:Vocabulary ;
   dcterms:title "SAREF4BLDG Alignment."@en ;
