@@ -32,7 +32,7 @@
 	dcterms:creator <https://www.researchgate.net/profile/Georg_Schneider3> ;
     rdfs:seeAlso <https://doi.org/10.13140/RG.2.2.21802.52169> ;
 	dcterms:creator [a foaf:Person ; foaf:name "Georg Ferdinand Schneider" ] ;
-	dcterms:creator [a foaf:Person ; foaf:name "Jason Koh" ; vcard:hasEmail mailto:jbkoh@eng.ucsd.edu ; ] ;
+	dcterms:creator [a foaf:Person ; foaf:name "Jason Koh" ; vcard:hasEmail "mailto:jbkoh@eng.ucsd.edu"^^xsd:anyURI ; ] ;
 	owl:imports <https://w3id.org/bot-0.3.2> ,
 	            <https://brickschema.org/schema/1.1/Brick#> .
 
