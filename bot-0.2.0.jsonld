@@ -1,21 +1,21 @@
 {
   "@graph" : [ {
-    "@id" : "_:b10",
+    "@id" : "_:b1",
+    "@type" : "owl:Restriction",
+    "owl:cardinality" : 2,
+    "onProperty" : "bot:interfaceOf"
+  }, {
+    "@id" : "_:b11",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Zone", "bot:Element" ]
     }
   }, {
-    "@id" : "_:b11",
+    "@id" : "_:b8",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Site", "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
     }
-  }, {
-    "@id" : "_:b8",
-    "@type" : "owl:Restriction",
-    "owl:cardinality" : 2,
-    "onProperty" : "bot:interfaceOf"
   }, {
     "@id" : "http://maxime-lefrancois.info/me#",
     "@type" : [ "schema:Person", "vcard:Individual" ],
@@ -187,7 +187,7 @@
       "@language" : "en",
       "@value" : "Interface"
     } ],
-    "subClassOf" : "_:b8"
+    "subClassOf" : "_:b1"
   }, {
     "@id" : "bot:Site",
     "@type" : "owl:Class",
@@ -550,6 +550,22 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
     },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "cardinality" : {
+      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "onProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
+      "@type" : "@id"
+    },
     "propertyChainAxiom" : {
       "@id" : "http://www.w3.org/2002/07/owl#propertyChainAxiom",
       "@type" : "@id"
@@ -560,20 +576,12 @@
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
     },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+    "members" : {
+      "@id" : "http://www.w3.org/2002/07/owl#members",
       "@type" : "@id"
     },
     "subClassOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subClassOf",
-      "@type" : "@id"
-    },
-    "members" : {
-      "@id" : "http://www.w3.org/2002/07/owl#members",
       "@type" : "@id"
     },
     "contributor" : {
@@ -625,14 +633,6 @@
     },
     "description" : {
       "@id" : "http://purl.org/dc/elements/1.1/description"
-    },
-    "cardinality" : {
-      "@id" : "http://www.w3.org/2002/07/owl#cardinality",
-      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
-    },
-    "onProperty" : {
-      "@id" : "http://www.w3.org/2002/07/owl#onProperty",
-      "@type" : "@id"
     },
     "schema" : "https://schema.org/",
     "owl" : "http://www.w3.org/2002/07/owl#",

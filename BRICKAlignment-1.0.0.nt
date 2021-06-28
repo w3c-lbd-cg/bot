@@ -10,9 +10,9 @@
 <https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/BRICKAlignment/0.1.0> .
 <https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
 <https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
-_:B433ad5600e953f03f8ea3d2eb0cd389e <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:B433ad5600e953f03f8ea3d2eb0cd389e <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
-<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/creator> _:B433ad5600e953f03f8ea3d2eb0cd389e .
+_:B87e339212f73bca6332444a746490b3d <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B87e339212f73bca6332444a746490b3d <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/creator> _:B87e339212f73bca6332444a746490b3d .
 <https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot> .
 <https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#imports> <https://brickschema.org/schema/1.0.2/Brick#> .
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

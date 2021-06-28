@@ -25,10 +25,6 @@ bot:interfaceOf  a    owl:ObjectProperty ;
         rdfs:domain   bot:Interface ;
         rdfs:label    "grænseflade for"@da , "interface of"@en .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
-
 dcterms:license  a  owl:AnnotationProperty .
 
 bot:containsElement  a          owl:ObjectProperty ;
@@ -64,10 +60,6 @@ bot:Zone  a           owl:Class ;
 
 dcterms:contributor  a  owl:AnnotationProperty .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
-] .
-
 bot:hasStorey  a            owl:ObjectProperty ;
         rdfs:comment        "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da , "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ;
         rdfs:domain         bot:Zone ;
@@ -88,6 +80,14 @@ bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:range    bot:Element .
 
 vs:term_status  a  owl:AnnotationProperty .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .
 
 bot:Site  a              owl:Class ;
         rdfs:comment     "Area containing one or more buildings."@en , "Område som indeholder en eller flere bygninger."@da , "Omgeving die één of meerdere gebouwen bevat."@nl , "Abgegrenzter Teil der Erdoberfläche auf dem ein oder mehrere Gebäude stehen."@de ;

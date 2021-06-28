@@ -36,11 +36,11 @@ foaf:name  a    owl:DatatypeProperty .
 
 brick:Equipment  rdfs:subClassOf  bot:Element .
 
-brick:Point  rdfs:subClassOf  bot:Element .
-
 foaf:Person  a  owl:Class .
 
 brick:Wing  rdfs:subClassOf  bot:Space .
+
+brick:Point  rdfs:subClassOf  bot:Element .
 
 <https://w3id.org/bot/BRICKAlignment>
         a                    owl:Ontology , voaf:Vocabulary ;

@@ -1,1 +1,42 @@
-RIOT error
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/title> "BRICK to BOT alignment."@en .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/description> "This ontology defines correspondences with the BRICK ontology. Alignment holds for BOT v0.3.2 and BRICK v.1.1.1"@en .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/issued> "2017-09-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/modified> "2021-01-28"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#versionInfo> "v2.0.0" .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/bot/BRICKAlignment/2.0.0> .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/bot/BRICKAlignment/1.0.0> .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://doi.org/10.13140/RG.2.2.21802.52169> .
+_:Bed81dd91fb4ba00a316835683a75a651 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:Bed81dd91fb4ba00a316835683a75a651 <http://xmlns.com/foaf/0.1/name> "Georg Ferdinand Schneider" .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/creator> _:Bed81dd91fb4ba00a316835683a75a651 .
+_:B98eca4186c6c0b8a870ac069925195b5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+_:B98eca4186c6c0b8a870ac069925195b5 <http://xmlns.com/foaf/0.1/name> "Jason Koh" .
+_:B98eca4186c6c0b8a870ac069925195b5 <http://www.w3.org/2006/vcard/ns#hasEmail> "mailto:jbkoh@eng.ucsd.edu"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/bot/BRICKAlignment> <http://purl.org/dc/terms/creator> _:B98eca4186c6c0b8a870ac069925195b5 .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/bot-0.3.2> .
+<https://w3id.org/bot/BRICKAlignment> <http://www.w3.org/2002/07/owl#imports> <https://brickschema.org/schema/1.1/Brick#> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2006/vcard/ns#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://brickschema.org/schema/1.1/Brick#hasPart> .
+<https://brickschema.org/schema/1.1/Brick#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsElement> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://brickschema.org/schema/1.1/Brick#hasPart> .
+<https://brickschema.org/schema/1.1/Brick#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://brickschema.org/schema/1.1/Brick#Site> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2002/07/owl#equivalentClass> <https://brickschema.org/schema/1.1/Brick#Floor> .
+<https://brickschema.org/schema/1.1/Brick#Building> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/bot#Building> .
+<https://brickschema.org/schema/1.1/Brick#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Space> .
+<https://brickschema.org/schema/1.1/Brick#Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .

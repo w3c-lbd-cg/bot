@@ -14,9 +14,6 @@
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Floor">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Interface"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A0">
-    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#Terrace">
     <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
   </rdf:Description>
@@ -87,6 +84,9 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://elite.polito.it/ontologies/dogont.owl#floorOf">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#interfaceOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:inverseOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/bot#Zone">
     <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Environment"/>
