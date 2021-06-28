@@ -1,6 +1,6 @@
 {
   "@graph" : [ {
-    "@id" : "_:b8",
+    "@id" : "_:b10",
     "@type" : "owl:AllDisjointClasses",
     "members" : {
       "@list" : [ "bot:Element", "bot:Space", "bot:Storey", "bot:Building" ]
@@ -254,11 +254,11 @@
     } ],
     "range" : "bot:Element",
     "propertyChainAxiom" : [ {
-      "@list" : [ "bot:hasSpace", "bot:containsElement" ]
+      "@list" : [ "bot:hasSpace", "bot:adjacentElement" ]
     }, {
       "@list" : [ "bot:hasStorey", "bot:hasElement" ]
     }, {
-      "@list" : [ "bot:hasSpace", "bot:adjacentElement" ]
+      "@list" : [ "bot:hasSpace", "bot:containsElement" ]
     } ]
   }, {
     "@id" : "bot:hasSpace",
@@ -312,6 +312,14 @@
     "range" : "bot:Storey"
   } ],
   "@context" : {
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator",
       "@type" : "@id"
@@ -360,14 +368,6 @@
     },
     "fn" : {
       "@id" : "http://www.w3.org/2006/vcard/ns#fn"
-    },
-    "rest" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
-      "@type" : "@id"
-    },
-    "first" : {
-      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
-      "@type" : "@id"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"

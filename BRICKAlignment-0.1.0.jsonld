@@ -77,7 +77,7 @@
   }, {
     "@id" : "https://w3id.org/bot/BRICKAlignment",
     "@type" : [ "owl:Ontology", "voaf:Vocabulary" ],
-    "creator" : [ "https://www.researchgate.net/profile/Georg_Schneider3", "_:b0" ],
+    "creator" : [ "_:b0", "https://www.researchgate.net/profile/Georg_Schneider3" ],
     "description" : {
       "@language" : "en",
       "@value" : "This ontology defines proposed alignments with the BRICK ontology."
@@ -101,6 +101,9 @@
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "modified" : {
       "@id" : "http://purl.org/dc/terms/modified",
@@ -134,9 +137,6 @@
     "license" : {
       "@id" : "http://purl.org/dc/terms/license",
       "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "@vocab" : "https://w3id.org/bot/BRICKAlignment#",
     "owl" : "http://www.w3.org/2002/07/owl#",

@@ -13,10 +13,6 @@
 @prefix vs:    <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf:  <http://xmlns.com/foaf/0.1/> .
 
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Zone bot:Element )
-] .
-
 bot:hasSpace  a             owl:ObjectProperty ;
         rdfs:comment        "Relation til rum indeholdt i en zone. De typiske domæner for bot:hasSpace er forekomster af bot:Storey og bot:Building."@da , "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ;
         rdfs:domain         bot:Zone ;
@@ -28,6 +24,10 @@ bot:interfaceOf  a    owl:ObjectProperty ;
         rdfs:comment  "Relation mellem en grænseflade og en tilstødende zone eller bygningsdel."@da , "Relationship between an interface and an adjacent zone or element."@en ;
         rdfs:domain   bot:Interface ;
         rdfs:label    "grænseflade for"@da , "interface of"@en .
+
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
+] .
 
 dcterms:license  a  owl:AnnotationProperty .
 
@@ -64,6 +64,10 @@ bot:Zone  a           owl:Class ;
 
 dcterms:contributor  a  owl:AnnotationProperty .
 
+[ a            owl:AllDisjointClasses ;
+  owl:members  ( bot:Zone bot:Element )
+] .
+
 bot:hasStorey  a            owl:ObjectProperty ;
         rdfs:comment        "Relation til etager indeholdt i en zone. De typiske domæner for bot:hasStorey er forekomster af bot:Building."@da , "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ;
         rdfs:domain         bot:Zone ;
@@ -82,10 +86,6 @@ bot:hostsElement  a   owl:ObjectProperty ;
         rdfs:domain   bot:Element ;
         rdfs:label    "heeft element"@nl , "hosts element"@en , "hoster element"@da , "hoster element"@nl ;
         rdfs:range    bot:Element .
-
-[ a            owl:AllDisjointClasses ;
-  owl:members  ( bot:Site bot:Element bot:Space bot:Storey bot:Building )
-] .
 
 vs:term_status  a  owl:AnnotationProperty .
 
